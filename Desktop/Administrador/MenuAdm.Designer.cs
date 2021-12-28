@@ -64,7 +64,7 @@ namespace Desktop.Administrador
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(235, 749);
+            this.MenuVertical.Size = new System.Drawing.Size(275, 849);
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
@@ -77,13 +77,12 @@ namespace Desktop.Administrador
             this.button4.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::Desktop.Properties.Resources.reportes;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 621);
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button4.Location = new System.Drawing.Point(6, 704);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(232, 48);
+            this.button4.Size = new System.Drawing.Size(258, 54);
             this.button4.TabIndex = 12;
             this.button4.Text = "Reporte Pro-Prov  ";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -97,12 +96,11 @@ namespace Desktop.Administrador
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Desktop.Properties.Resources.reportes;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 567);
+            this.button3.Location = new System.Drawing.Point(6, 644);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(232, 48);
+            this.button3.Size = new System.Drawing.Size(258, 54);
             this.button3.TabIndex = 11;
             this.button3.Text = "Reporte Proveedor";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -116,12 +114,11 @@ namespace Desktop.Administrador
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::Desktop.Properties.Resources.reportes;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-1, 517);
+            this.button2.Location = new System.Drawing.Point(6, 586);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(230, 48);
+            this.button2.Size = new System.Drawing.Size(259, 54);
             this.button2.TabIndex = 10;
             this.button2.Text = "Reporte Productos";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -135,12 +132,11 @@ namespace Desktop.Administrador
             this.btnEmpleados.ForeColor = System.Drawing.Color.White;
             this.btnEmpleados.Image = global::Desktop.Properties.Resources.reportes;
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(-1, 463);
+            this.btnEmpleados.Location = new System.Drawing.Point(6, 526);
             this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(243, 48);
+            this.btnEmpleados.Size = new System.Drawing.Size(259, 54);
             this.btnEmpleados.TabIndex = 9;
             this.btnEmpleados.Text = "Reporte Empleados ";
-            this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEmpleados.UseVisualStyleBackColor = false;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
@@ -154,9 +150,9 @@ namespace Desktop.Administrador
             this.btnCatalogo.ForeColor = System.Drawing.Color.White;
             this.btnCatalogo.Image = global::Desktop.Properties.Resources.empleados;
             this.btnCatalogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCatalogo.Location = new System.Drawing.Point(-3, 291);
+            this.btnCatalogo.Location = new System.Drawing.Point(-3, 330);
             this.btnCatalogo.Name = "btnCatalogo";
-            this.btnCatalogo.Size = new System.Drawing.Size(231, 48);
+            this.btnCatalogo.Size = new System.Drawing.Size(268, 54);
             this.btnCatalogo.TabIndex = 8;
             this.btnCatalogo.Text = "Categoria";
             this.btnCatalogo.UseVisualStyleBackColor = false;
@@ -172,12 +168,11 @@ namespace Desktop.Administrador
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Image = global::Desktop.Properties.Resources.reportes;
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(0, 413);
+            this.btnReporte.Location = new System.Drawing.Point(6, 465);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(228, 48);
+            this.btnReporte.Size = new System.Drawing.Size(258, 54);
             this.btnReporte.TabIndex = 7;
             this.btnReporte.Text = "Reporte Clientes   ";
-            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReporte.UseVisualStyleBackColor = false;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
@@ -191,9 +186,9 @@ namespace Desktop.Administrador
             this.btnProveedor.ForeColor = System.Drawing.Color.White;
             this.btnProveedor.Image = global::Desktop.Properties.Resources.compras;
             this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(-2, 353);
+            this.btnProveedor.Location = new System.Drawing.Point(-2, 400);
             this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(230, 48);
+            this.btnProveedor.Size = new System.Drawing.Size(267, 54);
             this.btnProveedor.TabIndex = 6;
             this.btnProveedor.Text = "Proveedor";
             this.btnProveedor.UseVisualStyleBackColor = false;
@@ -209,9 +204,9 @@ namespace Desktop.Administrador
             this.btnProducto.ForeColor = System.Drawing.Color.White;
             this.btnProducto.Image = global::Desktop.Properties.Resources.producto;
             this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducto.Location = new System.Drawing.Point(-4, 230);
+            this.btnProducto.Location = new System.Drawing.Point(-4, 261);
             this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(232, 48);
+            this.btnProducto.Size = new System.Drawing.Size(268, 54);
             this.btnProducto.TabIndex = 5;
             this.btnProducto.Text = "Productos";
             this.btnProducto.UseVisualStyleBackColor = false;
@@ -227,9 +222,9 @@ namespace Desktop.Administrador
             this.btnEmpleado.ForeColor = System.Drawing.Color.White;
             this.btnEmpleado.Image = global::Desktop.Properties.Resources.empleados;
             this.btnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleado.Location = new System.Drawing.Point(-3, 174);
+            this.btnEmpleado.Location = new System.Drawing.Point(-3, 197);
             this.btnEmpleado.Name = "btnEmpleado";
-            this.btnEmpleado.Size = new System.Drawing.Size(231, 48);
+            this.btnEmpleado.Size = new System.Drawing.Size(268, 54);
             this.btnEmpleado.TabIndex = 4;
             this.btnEmpleado.Text = "Empleado";
             this.btnEmpleado.UseVisualStyleBackColor = false;
@@ -246,9 +241,9 @@ namespace Desktop.Administrador
             this.btnCliente.ForeColor = System.Drawing.Color.White;
             this.btnCliente.Image = global::Desktop.Properties.Resources.clientes;
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(-2, 119);
+            this.btnCliente.Location = new System.Drawing.Point(-2, 135);
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(203, 48);
+            this.btnCliente.Size = new System.Drawing.Size(267, 54);
             this.btnCliente.TabIndex = 3;
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = false;
@@ -259,9 +254,9 @@ namespace Desktop.Administrador
             this.btnMenu.BackgroundImage = global::Desktop.Properties.Resources.pngegg;
             this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenu.Location = new System.Drawing.Point(12, 12);
+            this.btnMenu.Location = new System.Drawing.Point(12, 51);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(47, 48);
+            this.btnMenu.Size = new System.Drawing.Size(57, 60);
             this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMenu.TabIndex = 2;
             this.btnMenu.TabStop = false;
@@ -271,25 +266,25 @@ namespace Desktop.Administrador
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(235, 0);
+            this.panel1.Location = new System.Drawing.Point(275, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(985, 10);
+            this.panel1.Size = new System.Drawing.Size(945, 11);
             this.panel1.TabIndex = 1;
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.White;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(235, 10);
+            this.panelContenedor.Location = new System.Drawing.Point(275, 11);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(985, 739);
+            this.panelContenedor.Size = new System.Drawing.Size(945, 838);
             this.panelContenedor.TabIndex = 2;
             // 
             // MenuAdm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1220, 749);
+            this.ClientSize = new System.Drawing.Size(1220, 849);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MenuVertical);
