@@ -1,0 +1,534 @@
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\bin\Debug\net5.0-windows\Desktop.exe
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\bin\Debug\net5.0-windows\Desktop.dll
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.dll
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
+C:\Users\Alexis\Downloads\ProyectoIOsDesktop\Desktop\obj\Debug\net5.0-windows\Desktop.csprojAssemblyReference.cache
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.exe
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.csprojAssemblyReference.cache
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Empleados.resources
+C:\Users\WILLIAM\Downloads\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
+E:\IOS PROYECTO\Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.exe
+E:\IOS PROYECTO\Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
+E:\IOS PROYECTO\Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
+E:\IOS PROYECTO\Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
+E:\IOS PROYECTO\Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.dll
+E:\IOS PROYECTO\Desktop\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
+E:\IOS PROYECTO\Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.csprojAssemblyReference.cache
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Empleados.resources
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.dll
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Clientes.resources
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.MenuVend.resources
+E:\IOS PROYECTO\Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Producto.resources
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Desktop.exe
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.csprojAssemblyReference.cache
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Empleados.resources
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Reportes.resources
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Clientes.resources
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.MenuVend.resources
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Producto.resources
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Azure.Core.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Azure.Identity.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\WILLIAM\Downloads\Desktop3.2\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CopyComplete
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Desktop.exe
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Desktop.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Azure.Core.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Azure.Identity.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Empleados.resources
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Reportes.resources
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.MenuVend.resources
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CopyComplete
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.csprojAssemblyReference.cache
+E:\IOS PROYECTO\Desktop\Desktop3.3\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Catalogo.resources
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Desktop.exe
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Azure.Core.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Azure.Identity.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.csprojAssemblyReference.cache
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Empleados.resources
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Reportes.resources
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Catalogo.resources
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.MenuVend.resources
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CopyComplete
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
+C:\Users\WILLIAM\Downloads\Desktop4.0\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.csprojAssemblyReference.cache
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Empleados.resources
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Reportes.resources
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Catalogo.resources
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.MenuVend.resources
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Desktop.exe
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Azure.Core.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Azure.Identity.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CopyComplete
+C:\Users\WILLIAM\Downloads\Desktop4.1\Desktop4.1\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Desktop.exe
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Azure.Core.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Azure.Identity.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\itextsharp.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.csprojAssemblyReference.cache
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Empleados.resources
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Reportes.resources
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Catalogo.resources
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.MenuVend.resources
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CopyComplete
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+C:\Users\WILLIAM\Downloads\Desktop4.2\Desktop\bin\Debug\net5.0-windows\Resources\Logotipo.png
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Desktop.exe
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Resources\Logotipo.png
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Desktop.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Azure.Core.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Azure.Identity.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\itextsharp.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.csprojAssemblyReference.cache
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Empleados.resources
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Reportes.resources
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Catalogo.resources
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.MenuVend.resources
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CopyComplete
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
+C:\Users\Alexis\Downloads\w\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Desktop.exe
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Resources\Logotipo.png
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Desktop.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Azure.Core.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Azure.Identity.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\itextsharp.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.csprojAssemblyReference.cache
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Empleados.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Reportes.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Catalogo.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.MenuVend.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CopyComplete
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Categoria.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteEmpleados.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProd.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProveedor.resources
+E:\Proyecto IOS\Desktop4.3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProPro.resources
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.exe
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Resources\Logotipo.png
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Azure.Core.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Azure.Identity.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\itextsharp.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\IOS Web y Desktop\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.csprojAssemblyReference.cache
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Categoria.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Empleados.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteEmpleados.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProd.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProPro.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProveedor.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Reportes.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Catalogo.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.MenuVend.resources
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CopyComplete
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.dll
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
+E:\IOS Web y Desktop\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Desktop.exe
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Resources\Logotipo.png
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Desktop.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Azure.Core.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Azure.Identity.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\itextsharp.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.AssemblyReference.cache
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Categoria.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Empleados.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteEmpleados.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProd.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProPro.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProveedor.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Reportes.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Catalogo.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.MenuVend.resources
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfoInputs.cache
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CopyComplete
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
+C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
