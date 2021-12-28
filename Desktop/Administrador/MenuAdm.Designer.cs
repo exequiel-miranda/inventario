@@ -41,13 +41,10 @@ namespace Desktop.Administrador
             this.btnEmpleado = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -67,8 +64,9 @@ namespace Desktop.Administrador
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(217, 808);
+            this.MenuVertical.Size = new System.Drawing.Size(235, 749);
             this.MenuVertical.TabIndex = 0;
+            this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
             // button4
             // 
@@ -82,7 +80,7 @@ namespace Desktop.Administrador
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(0, 621);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(217, 48);
+            this.button4.Size = new System.Drawing.Size(232, 48);
             this.button4.TabIndex = 12;
             this.button4.Text = "Reporte Pro-Prov  ";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -99,9 +97,9 @@ namespace Desktop.Administrador
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Desktop.Properties.Resources.reportes;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 569);
+            this.button3.Location = new System.Drawing.Point(0, 567);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(217, 48);
+            this.button3.Size = new System.Drawing.Size(232, 48);
             this.button3.TabIndex = 11;
             this.button3.Text = "Reporte Proveedor";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -118,9 +116,9 @@ namespace Desktop.Administrador
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::Desktop.Properties.Resources.reportes;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-3, 517);
+            this.button2.Location = new System.Drawing.Point(-1, 517);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(217, 48);
+            this.button2.Size = new System.Drawing.Size(230, 48);
             this.button2.TabIndex = 10;
             this.button2.Text = "Reporte Productos";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -137,9 +135,9 @@ namespace Desktop.Administrador
             this.btnEmpleados.ForeColor = System.Drawing.Color.White;
             this.btnEmpleados.Image = global::Desktop.Properties.Resources.reportes;
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(-1, 465);
+            this.btnEmpleados.Location = new System.Drawing.Point(-1, 463);
             this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(227, 48);
+            this.btnEmpleados.Size = new System.Drawing.Size(243, 48);
             this.btnEmpleados.TabIndex = 9;
             this.btnEmpleados.Text = "Reporte Empleados ";
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -156,9 +154,9 @@ namespace Desktop.Administrador
             this.btnCatalogo.ForeColor = System.Drawing.Color.White;
             this.btnCatalogo.Image = global::Desktop.Properties.Resources.empleados;
             this.btnCatalogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCatalogo.Location = new System.Drawing.Point(0, 291);
+            this.btnCatalogo.Location = new System.Drawing.Point(-3, 291);
             this.btnCatalogo.Name = "btnCatalogo";
-            this.btnCatalogo.Size = new System.Drawing.Size(217, 48);
+            this.btnCatalogo.Size = new System.Drawing.Size(231, 48);
             this.btnCatalogo.TabIndex = 8;
             this.btnCatalogo.Text = "Categoria";
             this.btnCatalogo.UseVisualStyleBackColor = false;
@@ -174,9 +172,9 @@ namespace Desktop.Administrador
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Image = global::Desktop.Properties.Resources.reportes;
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(0, 416);
+            this.btnReporte.Location = new System.Drawing.Point(0, 413);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(217, 48);
+            this.btnReporte.Size = new System.Drawing.Size(228, 48);
             this.btnReporte.TabIndex = 7;
             this.btnReporte.Text = "Reporte Clientes   ";
             this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -193,9 +191,9 @@ namespace Desktop.Administrador
             this.btnProveedor.ForeColor = System.Drawing.Color.White;
             this.btnProveedor.Image = global::Desktop.Properties.Resources.compras;
             this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(0, 353);
+            this.btnProveedor.Location = new System.Drawing.Point(-2, 353);
             this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(217, 48);
+            this.btnProveedor.Size = new System.Drawing.Size(230, 48);
             this.btnProveedor.TabIndex = 6;
             this.btnProveedor.Text = "Proveedor";
             this.btnProveedor.UseVisualStyleBackColor = false;
@@ -211,9 +209,9 @@ namespace Desktop.Administrador
             this.btnProducto.ForeColor = System.Drawing.Color.White;
             this.btnProducto.Image = global::Desktop.Properties.Resources.producto;
             this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducto.Location = new System.Drawing.Point(0, 230);
+            this.btnProducto.Location = new System.Drawing.Point(-4, 230);
             this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(217, 48);
+            this.btnProducto.Size = new System.Drawing.Size(232, 48);
             this.btnProducto.TabIndex = 5;
             this.btnProducto.Text = "Productos";
             this.btnProducto.UseVisualStyleBackColor = false;
@@ -229,9 +227,9 @@ namespace Desktop.Administrador
             this.btnEmpleado.ForeColor = System.Drawing.Color.White;
             this.btnEmpleado.Image = global::Desktop.Properties.Resources.empleados;
             this.btnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleado.Location = new System.Drawing.Point(0, 174);
+            this.btnEmpleado.Location = new System.Drawing.Point(-3, 174);
             this.btnEmpleado.Name = "btnEmpleado";
-            this.btnEmpleado.Size = new System.Drawing.Size(217, 48);
+            this.btnEmpleado.Size = new System.Drawing.Size(231, 48);
             this.btnEmpleado.TabIndex = 4;
             this.btnEmpleado.Text = "Empleado";
             this.btnEmpleado.UseVisualStyleBackColor = false;
@@ -248,9 +246,9 @@ namespace Desktop.Administrador
             this.btnCliente.ForeColor = System.Drawing.Color.White;
             this.btnCliente.Image = global::Desktop.Properties.Resources.clientes;
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(0, 119);
+            this.btnCliente.Location = new System.Drawing.Point(-2, 119);
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(217, 48);
+            this.btnCliente.Size = new System.Drawing.Size(203, 48);
             this.btnCliente.TabIndex = 3;
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = false;
@@ -269,50 +267,37 @@ namespace Desktop.Administrador
             this.btnMenu.TabStop = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Desktop.Properties.Resources.Logotipo;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(184, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(585, 71);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(217, 0);
+            this.panel1.Location = new System.Drawing.Point(235, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1003, 78);
+            this.panel1.Size = new System.Drawing.Size(985, 10);
             this.panel1.TabIndex = 1;
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.White;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(217, 78);
+            this.panelContenedor.Location = new System.Drawing.Point(235, 10);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1003, 730);
+            this.panelContenedor.Size = new System.Drawing.Size(985, 739);
             this.panelContenedor.TabIndex = 2;
             // 
             // MenuAdm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1220, 808);
+            this.ClientSize = new System.Drawing.Size(1220, 749);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MenuVertical);
             this.Name = "MenuAdm";
             this.Text = "MenuAdm";
+            this.Load += new System.EventHandler(this.MenuAdm_Load);
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -322,7 +307,6 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnMenu;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button btnProducto;

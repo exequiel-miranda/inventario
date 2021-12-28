@@ -85,7 +85,6 @@ namespace Desktop.Vendedor
             GridCatalogo.DataSource = dt;
 
             btnIngresar.Visible = false;
-            btnCarrito.Visible = false;
             label3.Visible = false;
             fechaingreso.Visible = false;
 
@@ -238,6 +237,11 @@ namespace Desktop.Vendedor
         }
 
         private void txtCompra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEncabezado_Click(object sender, EventArgs e)
         {
 
         }

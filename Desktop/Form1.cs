@@ -17,7 +17,7 @@ namespace Desktop
         public Form1()
         {
             InitializeComponent();
-            pictureBox1.BackColor = Color.Transparent;
+            
             txtContraseña.PasswordChar = '*';
         }
 
@@ -57,6 +57,16 @@ namespace Desktop
 
             }
             conexion.cerrar();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

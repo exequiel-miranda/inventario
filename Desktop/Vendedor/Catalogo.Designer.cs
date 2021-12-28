@@ -34,7 +34,6 @@ namespace Desktop.Vendedor
             this.Mostrarlbl = new System.Windows.Forms.Label();
             this.fechaingreso = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnCarrito = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.lvListaEmpleado = new System.Windows.Forms.ListView();
             this.label4 = new System.Windows.Forms.Label();
@@ -105,19 +104,6 @@ namespace Desktop.Vendedor
             this.label3.TabIndex = 82;
             this.label3.Text = "FECHA:";
             // 
-            // btnCarrito
-            // 
-            this.btnCarrito.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnCarrito.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCarrito.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCarrito.Location = new System.Drawing.Point(675, 469);
-            this.btnCarrito.Name = "btnCarrito";
-            this.btnCarrito.Size = new System.Drawing.Size(149, 34);
-            this.btnCarrito.TabIndex = 80;
-            this.btnCarrito.Text = "CARRITO";
-            this.btnCarrito.UseVisualStyleBackColor = false;
-            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
-            // 
             // btnIngresar
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.DarkTurquoise;
@@ -180,9 +166,10 @@ namespace Desktop.Vendedor
             this.lblEncabezado.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblEncabezado.Location = new System.Drawing.Point(347, 41);
             this.lblEncabezado.Name = "lblEncabezado";
-            this.lblEncabezado.Size = new System.Drawing.Size(356, 44);
+            this.lblEncabezado.Size = new System.Drawing.Size(310, 43);
             this.lblEncabezado.TabIndex = 88;
-            this.lblEncabezado.Text = "Catalogo de productos";
+            this.lblEncabezado.Text = "Venta de productos";
+            this.lblEncabezado.Click += new System.EventHandler(this.lblEncabezado_Click);
             // 
             // lblCodigo
             // 
@@ -305,7 +292,6 @@ namespace Desktop.Vendedor
             this.Controls.Add(this.Mostrarlbl);
             this.Controls.Add(this.fechaingreso);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnCarrito);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.lvListaEmpleado);
             this.Controls.Add(this.label4);
@@ -327,7 +313,6 @@ namespace Desktop.Vendedor
         private System.Windows.Forms.Label Mostrarlbl;
         private System.Windows.Forms.DateTimePicker fechaingreso;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnCarrito;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.ListView lvListaEmpleado;
         private System.Windows.Forms.Label label4;

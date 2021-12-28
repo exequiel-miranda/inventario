@@ -88,5 +88,15 @@ namespace Desktop.Administrador
         {
             AbrirFormularios(new Desktop.Administrador.ReporteProPro());
         }
+
+        private void MenuVertical_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MenuAdm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
