@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vvWiVDChwY8KAS5pPSlDmuSjMt/D4YoFklxz4sphIbcppRMj47iGALlXYwiUahkUkdt/MnrZVq08Fo/jrUQk1w==",
+  "dgSpecHash": "5rIQJHV1OPsy7uinhFBZHtD3qccggFPHnnfBD4hlQQqrOBiH+KnSI8j1j6iUi+IGcS9Feu+Rs0bdjiXzfZLMOg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\exequ\\Downloads\\GRUPO 04-ETPS4-T-AVANCE 3\\Desktop\\Desktop.csproj",
+  "projectFilePath": "C:\\Users\\exequ\\OneDrive\\Documents\\GitHub\\inventario\\Desktop\\Desktop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\exequ\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\exequ\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
