@@ -64,7 +64,7 @@ namespace Desktop.Administrador
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(235, 749);
+            this.MenuVertical.Size = new System.Drawing.Size(255, 749);
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
@@ -156,9 +156,9 @@ namespace Desktop.Administrador
             this.btnCatalogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCatalogo.Location = new System.Drawing.Point(-3, 291);
             this.btnCatalogo.Name = "btnCatalogo";
-            this.btnCatalogo.Size = new System.Drawing.Size(231, 48);
+            this.btnCatalogo.Size = new System.Drawing.Size(245, 48);
             this.btnCatalogo.TabIndex = 8;
-            this.btnCatalogo.Text = "Categoria";
+            this.btnCatalogo.Text = "Categorias";
             this.btnCatalogo.UseVisualStyleBackColor = false;
             this.btnCatalogo.Click += new System.EventHandler(this.btnCatalogo_Click);
             // 
@@ -193,9 +193,9 @@ namespace Desktop.Administrador
             this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProveedor.Location = new System.Drawing.Point(-2, 353);
             this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(230, 48);
+            this.btnProveedor.Size = new System.Drawing.Size(244, 48);
             this.btnProveedor.TabIndex = 6;
-            this.btnProveedor.Text = "Proveedor";
+            this.btnProveedor.Text = "Proveedores";
             this.btnProveedor.UseVisualStyleBackColor = false;
             this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
@@ -231,7 +231,7 @@ namespace Desktop.Administrador
             this.btnEmpleado.Name = "btnEmpleado";
             this.btnEmpleado.Size = new System.Drawing.Size(231, 48);
             this.btnEmpleado.TabIndex = 4;
-            this.btnEmpleado.Text = "Empleado";
+            this.btnEmpleado.Text = "Empleados";
             this.btnEmpleado.UseVisualStyleBackColor = false;
             this.btnEmpleado.Click += new System.EventHandler(this.btnEmpleado_Click);
             // 
@@ -248,9 +248,9 @@ namespace Desktop.Administrador
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCliente.Location = new System.Drawing.Point(-2, 119);
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(203, 48);
+            this.btnCliente.Size = new System.Drawing.Size(215, 48);
             this.btnCliente.TabIndex = 3;
-            this.btnCliente.Text = "Cliente";
+            this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = false;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
@@ -271,18 +271,18 @@ namespace Desktop.Administrador
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(235, 0);
+            this.panel1.Location = new System.Drawing.Point(255, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(985, 10);
+            this.panel1.Size = new System.Drawing.Size(965, 10);
             this.panel1.TabIndex = 1;
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.White;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(235, 10);
+            this.panelContenedor.Location = new System.Drawing.Point(255, 10);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(985, 739);
+            this.panelContenedor.Size = new System.Drawing.Size(965, 739);
             this.panelContenedor.TabIndex = 2;
             // 
             // MenuAdm
@@ -294,7 +294,7 @@ namespace Desktop.Administrador
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MenuVertical);
             this.Name = "MenuAdm";
-            this.Text = "MenuAdm";
+            this.Text = "Control de inventario";
             this.Load += new System.EventHandler(this.MenuAdm_Load);
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
