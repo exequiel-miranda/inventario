@@ -44,9 +44,12 @@ namespace Desktop.Administrador
             this.btnEmpleado = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Salir = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Salir)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -285,19 +288,32 @@ namespace Desktop.Administrador
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.Salir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(255, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(965, 10);
+            this.panel1.Size = new System.Drawing.Size(965, 35);
             this.panel1.TabIndex = 1;
+            // 
+            // Salir
+            // 
+            this.Salir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Salir.Image = ((System.Drawing.Image)(resources.GetObject("Salir.Image")));
+            this.Salir.Location = new System.Drawing.Point(930, 0);
+            this.Salir.Name = "Salir";
+            this.Salir.Size = new System.Drawing.Size(35, 35);
+            this.Salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Salir.TabIndex = 0;
+            this.Salir.TabStop = false;
+            this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.White;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(255, 10);
+            this.panelContenedor.Location = new System.Drawing.Point(255, 35);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(965, 739);
+            this.panelContenedor.Size = new System.Drawing.Size(965, 714);
             this.panelContenedor.TabIndex = 2;
             // 
             // MenuAdm
@@ -308,12 +324,15 @@ namespace Desktop.Administrador
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MenuVertical);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuAdm";
             this.Text = "Control de inventario";
             this.Load += new System.EventHandler(this.MenuAdm_Load);
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Salir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -335,5 +354,6 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox Salir;
     }
 }
