@@ -21,7 +21,7 @@ namespace Desktop.Administrador
         {
             if(MenuVertical.Width == 68)
             {
-                MenuVertical.Width = 217;
+                MenuVertical.Width = 255;
             }
             else
             {
@@ -95,6 +95,11 @@ namespace Desktop.Administrador
         }
 
         private void MenuAdm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
