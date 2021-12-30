@@ -102,7 +102,7 @@ namespace Desktop.Administrador
             // 
             // button4
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -121,7 +121,7 @@ namespace Desktop.Administrador
             // 
             // button3
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -140,7 +140,7 @@ namespace Desktop.Administrador
             // 
             // button2
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -159,7 +159,7 @@ namespace Desktop.Administrador
             // 
             // btnEmpleados
             // 
-            this.btnEmpleados.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEmpleados.BackgroundImage")));
+            this.btnEmpleados.BackColor = System.Drawing.Color.Transparent;
             this.btnEmpleados.FlatAppearance.BorderSize = 0;
             this.btnEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -178,7 +178,7 @@ namespace Desktop.Administrador
             // 
             // btnCatalogo
             // 
-            this.btnCatalogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCatalogo.BackgroundImage")));
+            this.btnCatalogo.BackColor = System.Drawing.Color.Transparent;
             this.btnCatalogo.FlatAppearance.BorderSize = 0;
             this.btnCatalogo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -196,7 +196,7 @@ namespace Desktop.Administrador
             // 
             // btnReporte
             // 
-            this.btnReporte.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReporte.BackgroundImage")));
+            this.btnReporte.BackColor = System.Drawing.Color.Transparent;
             this.btnReporte.FlatAppearance.BorderSize = 0;
             this.btnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -215,7 +215,7 @@ namespace Desktop.Administrador
             // 
             // btnProveedor
             // 
-            this.btnProveedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProveedor.BackgroundImage")));
+            this.btnProveedor.BackColor = System.Drawing.Color.Transparent;
             this.btnProveedor.FlatAppearance.BorderSize = 0;
             this.btnProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -233,7 +233,7 @@ namespace Desktop.Administrador
             // 
             // btnProducto
             // 
-            this.btnProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProducto.BackgroundImage")));
+            this.btnProducto.BackColor = System.Drawing.Color.Transparent;
             this.btnProducto.FlatAppearance.BorderSize = 0;
             this.btnProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -251,7 +251,7 @@ namespace Desktop.Administrador
             // 
             // btnEmpleado
             // 
-            this.btnEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEmpleado.BackgroundImage")));
+            this.btnEmpleado.BackColor = System.Drawing.Color.Transparent;
             this.btnEmpleado.FlatAppearance.BorderSize = 0;
             this.btnEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -269,7 +269,7 @@ namespace Desktop.Administrador
             // 
             // btnCliente
             // 
-            this.btnCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCliente.BackgroundImage")));
+            this.btnCliente.BackColor = System.Drawing.Color.Transparent;
             this.btnCliente.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnCliente.FlatAppearance.BorderSize = 0;
             this.btnCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
@@ -302,14 +302,14 @@ namespace Desktop.Administrador
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(933, 7);
+            this.btnCerrar.Location = new System.Drawing.Point(922, 7);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(18, 20);
+            this.btnCerrar.Size = new System.Drawing.Size(40, 20);
             this.btnCerrar.TabIndex = 3;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -321,7 +321,7 @@ namespace Desktop.Administrador
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMinimizar.FlatAppearance.BorderSize = 0;
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Location = new System.Drawing.Point(860, 7);
             this.btnMinimizar.Name = "btnMinimizar";
