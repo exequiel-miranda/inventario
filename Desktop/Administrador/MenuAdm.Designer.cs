@@ -31,6 +31,7 @@ namespace Desktop.Administrador
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAdm));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMenu = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -55,7 +56,8 @@ namespace Desktop.Administrador
             // 
             // MenuVertical
             // 
-            this.MenuVertical.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MenuVertical.BackgroundImage")));
+            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
+            this.MenuVertical.Controls.Add(this.label2);
             this.MenuVertical.Controls.Add(this.label1);
             this.MenuVertical.Controls.Add(this.btnMenu);
             this.MenuVertical.Controls.Add(this.button4);
@@ -75,24 +77,37 @@ namespace Desktop.Administrador
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(21, 424);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(207, 15);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "________________________________________";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(87, 21);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
+            this.label1.Font = new System.Drawing.Font("Book Antiqua", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(90, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 32);
+            this.label1.Size = new System.Drawing.Size(124, 29);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Nombre";
+            this.label1.Text = "Inventario";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnMenu
             // 
+            this.btnMenu.BackColor = System.Drawing.Color.Transparent;
             this.btnMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenu.BackgroundImage")));
             this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenu.Location = new System.Drawing.Point(12, 12);
+            this.btnMenu.Location = new System.Drawing.Point(5, 12);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(58, 57);
             this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -107,10 +122,10 @@ namespace Desktop.Administrador
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 534);
+            this.button4.Location = new System.Drawing.Point(0, 679);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(242, 48);
             this.button4.TabIndex = 12;
@@ -126,10 +141,10 @@ namespace Desktop.Administrador
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 484);
+            this.button3.Location = new System.Drawing.Point(0, 624);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(242, 48);
             this.button3.TabIndex = 11;
@@ -145,10 +160,10 @@ namespace Desktop.Administrador
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-1, 435);
+            this.button2.Location = new System.Drawing.Point(-1, 566);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(243, 48);
             this.button2.TabIndex = 10;
@@ -164,10 +179,10 @@ namespace Desktop.Administrador
             this.btnEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpleados.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEmpleados.ForeColor = System.Drawing.Color.Black;
+            this.btnEmpleados.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpleados.Image")));
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(-1, 386);
+            this.btnEmpleados.Location = new System.Drawing.Point(-1, 505);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Size = new System.Drawing.Size(253, 48);
             this.btnEmpleados.TabIndex = 9;
@@ -183,10 +198,10 @@ namespace Desktop.Administrador
             this.btnCatalogo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCatalogo.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCatalogo.ForeColor = System.Drawing.Color.Black;
+            this.btnCatalogo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCatalogo.Image = ((System.Drawing.Image)(resources.GetObject("btnCatalogo.Image")));
             this.btnCatalogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCatalogo.Location = new System.Drawing.Point(-3, 238);
+            this.btnCatalogo.Location = new System.Drawing.Point(-3, 296);
             this.btnCatalogo.Name = "btnCatalogo";
             this.btnCatalogo.Size = new System.Drawing.Size(252, 48);
             this.btnCatalogo.TabIndex = 8;
@@ -201,10 +216,10 @@ namespace Desktop.Administrador
             this.btnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporte.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnReporte.ForeColor = System.Drawing.Color.Black;
+            this.btnReporte.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(0, 337);
+            this.btnReporte.Location = new System.Drawing.Point(0, 445);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(242, 48);
             this.btnReporte.TabIndex = 7;
@@ -220,10 +235,10 @@ namespace Desktop.Administrador
             this.btnProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProveedor.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnProveedor.ForeColor = System.Drawing.Color.Black;
+            this.btnProveedor.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnProveedor.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedor.Image")));
             this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(-2, 288);
+            this.btnProveedor.Location = new System.Drawing.Point(-2, 365);
             this.btnProveedor.Name = "btnProveedor";
             this.btnProveedor.Size = new System.Drawing.Size(266, 48);
             this.btnProveedor.TabIndex = 6;
@@ -238,10 +253,10 @@ namespace Desktop.Administrador
             this.btnProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProducto.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnProducto.ForeColor = System.Drawing.Color.Black;
+            this.btnProducto.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnProducto.Image")));
             this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducto.Location = new System.Drawing.Point(-2, 187);
+            this.btnProducto.Location = new System.Drawing.Point(-2, 224);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(251, 48);
             this.btnProducto.TabIndex = 5;
@@ -256,10 +271,10 @@ namespace Desktop.Administrador
             this.btnEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpleado.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEmpleado.ForeColor = System.Drawing.Color.Black;
+            this.btnEmpleado.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpleado.Image")));
             this.btnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleado.Location = new System.Drawing.Point(-3, 131);
+            this.btnEmpleado.Location = new System.Drawing.Point(-3, 154);
             this.btnEmpleado.Name = "btnEmpleado";
             this.btnEmpleado.Size = new System.Drawing.Size(252, 48);
             this.btnEmpleado.TabIndex = 4;
@@ -275,10 +290,10 @@ namespace Desktop.Administrador
             this.btnCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCliente.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCliente.ForeColor = System.Drawing.Color.Black;
+            this.btnCliente.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(-2, 75);
+            this.btnCliente.Location = new System.Drawing.Point(-2, 88);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(254, 48);
             this.btnCliente.TabIndex = 3;
@@ -396,5 +411,6 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Label label2;
     }
 }
