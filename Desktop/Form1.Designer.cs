@@ -31,12 +31,12 @@ namespace Desktop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
-            this.btnIngresar = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.botonesSalir = new Desktop.Botones.Botones();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,18 +49,6 @@ namespace Desktop
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 21);
             this.label1.TabIndex = 2;
-            // 
-            // btnIngresar
-            // 
-            this.btnIngresar.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnIngresar.Location = new System.Drawing.Point(543, 509);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(145, 34);
-            this.btnIngresar.TabIndex = 10;
-            this.btnIngresar.Text = "INGRESAR";
-            this.btnIngresar.UseVisualStyleBackColor = false;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // txtContraseña
             // 
@@ -111,6 +99,25 @@ namespace Desktop
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // botonesSalir
+            // 
+            this.botonesSalir.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.botonesSalir.BackGroundColor = System.Drawing.Color.DarkSlateBlue;
+            this.botonesSalir.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.botonesSalir.BorderRadius = 45;
+            this.botonesSalir.BorderSize = 0;
+            this.botonesSalir.FlatAppearance.BorderSize = 0;
+            this.botonesSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonesSalir.ForeColor = System.Drawing.Color.White;
+            this.botonesSalir.Location = new System.Drawing.Point(560, 531);
+            this.botonesSalir.Name = "botonesSalir";
+            this.botonesSalir.Size = new System.Drawing.Size(150, 40);
+            this.botonesSalir.TabIndex = 12;
+            this.botonesSalir.Text = "INGRESAR";
+            this.botonesSalir.TextGroundColor = System.Drawing.Color.White;
+            this.botonesSalir.UseVisualStyleBackColor = false;
+            this.botonesSalir.Click += new System.EventHandler(this.botonesSalir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -118,8 +125,8 @@ namespace Desktop
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1220, 661);
+            this.Controls.Add(this.botonesSalir);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
@@ -137,12 +144,12 @@ namespace Desktop
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Botones.Botones botonesSalir;
     }
 }
 
