@@ -46,7 +46,7 @@ namespace Desktop.Administrador
 
         private void btnEmpleado_Click(object sender, EventArgs e)
         {
-            AbrirFormularios(new Desktop.Administrador.Empleados());
+            AbrirFormularios(new Desktop.Administrador.Compras());
         }
 
         private void btnProveedor_Click(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace Desktop.Administrador
 
         private void btnCatalogo_Click(object sender, EventArgs e)
         {
-            AbrirFormularios(new Desktop.Administrador.Categoria());
+            AbrirFormularios(new Desktop.Administrador.Ventas());
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)

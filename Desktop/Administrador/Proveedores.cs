@@ -31,7 +31,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select IdProveedor as N, Nombre, Direccion, Contacto, Telefono from Proveedor ";
+            String consulta = "SELECT IDProveedor as N,nombre as Nombre,correo as Correo,telefono as Telefono FROM Proveedor";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -41,7 +41,7 @@ namespace Desktop.Administrador
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtnameprov.Text.Trim()) || string.IsNullOrEmpty(txtDireccion.Text.Trim()) || string.IsNullOrEmpty(txtperson.Text.Trim()) || string.IsNullOrEmpty(txtTelefono.Text.Trim()))
+            if (string.IsNullOrEmpty(txtnombre.Text.Trim()) || string.IsNullOrEmpty(txtCorreo.Text.Trim()) || string.IsNullOrEmpty(txtTelefono.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -53,17 +53,15 @@ namespace Desktop.Administrador
 
                 string insertar = "INSERT INTO Proveedor (Nombre, Direccion, Contacto, Telefono) Values (@Nombre,@Direccion,@Contacto,@Telefono)";
                 SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
-                cmd.Parameters.AddWithValue("@Nombre", txtnameprov.Text);
-                cmd.Parameters.AddWithValue("@Direccion", txtDireccion.Text);
-                cmd.Parameters.AddWithValue("@Contacto", txtperson.Text);
+                cmd.Parameters.AddWithValue("@Nombre", txtnombre.Text);
+                cmd.Parameters.AddWithValue("@Contacto", txtCorreo.Text);
                 cmd.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron agregados con exito");
 
                 GridProveedor.DataSource = llenar_grid();
-                txtnameprov.Clear();
-                txtDireccion.Clear();
-                txtperson.Clear();
+                txtnombre.Clear();
+                txtCorreo.Clear();
                 txtTelefono.Clear();
                 //conexion.abrir();
                 //conexion.cerrar();
@@ -72,7 +70,7 @@ namespace Desktop.Administrador
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtnameprov.Text.Trim()) || string.IsNullOrEmpty(txtDireccion.Text.Trim()) || string.IsNullOrEmpty(txtperson.Text.Trim()) || string.IsNullOrEmpty(txtTelefono.Text.Trim()))
+            if (string.IsNullOrEmpty(txtnombre.Text.Trim()) ||  string.IsNullOrEmpty(txtCorreo.Text.Trim()) || string.IsNullOrEmpty(txtTelefono.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -86,17 +84,16 @@ namespace Desktop.Administrador
                 SqlCommand cmd = new SqlCommand(actualizar, conexion.conectarbd);
                 string id = Convert.ToString(GridProveedor.CurrentRow.Cells[0].Value);
                 cmd.Parameters.AddWithValue("@IdProveedor", id);
-                cmd.Parameters.AddWithValue("@Nombre", txtnameprov.Text);
-                cmd.Parameters.AddWithValue("@Direccion", txtDireccion.Text);
-                cmd.Parameters.AddWithValue("@Contacto", txtperson.Text);
+                cmd.Parameters.AddWithValue("@Nombre", txtnombre.Text);
+                cmd.Parameters.AddWithValue("@Contacto", txtCorreo.Text);
                 cmd.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Los datos fueron actualizados con exito");
                 GridProveedor.DataSource = llenar_grid();
-                txtnameprov.Clear();
-                txtDireccion.Clear();
-                txtperson.Clear();
+                txtnombre.Clear();
+  
+                txtCorreo.Clear();
                 txtTelefono.Clear();
                 //conexion.abrir();
                 //conexion.cerrar();
@@ -112,9 +109,8 @@ namespace Desktop.Administrador
             cmd.ExecuteNonQuery();
             MessageBox.Show("Los datos han sido eliminados correctamente");
             GridProveedor.DataSource = llenar_grid();
-            txtnameprov.Clear();
-            txtDireccion.Clear();
-            txtperson.Clear();
+            txtnombre.Clear();
+            txtCorreo.Clear();
             txtTelefono.Clear();
             //conexion.abrir();
         }
@@ -123,10 +119,9 @@ namespace Desktop.Administrador
         {
             try
             {
-                txtnameprov.Text = GridProveedor.CurrentRow.Cells[1].Value.ToString();
-                txtDireccion.Text = GridProveedor.CurrentRow.Cells[2].Value.ToString();
-                txtperson.Text = GridProveedor.CurrentRow.Cells[3].Value.ToString();
-                txtTelefono.Text = GridProveedor.CurrentRow.Cells[4].Value.ToString();
+                txtnombre.Text = GridProveedor.CurrentRow.Cells[1].Value.ToString();
+                txtCorreo.Text = GridProveedor.CurrentRow.Cells[2].Value.ToString();
+                txtTelefono.Text = GridProveedor.CurrentRow.Cells[3].Value.ToString();
             }
             catch { }
         }

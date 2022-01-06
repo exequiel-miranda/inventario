@@ -23,7 +23,7 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             llenar_ComboPro();
-            llenar_ComboCat();
+            //llenar_ComboCat();
             GridProductos.DataSource = llenar_grid();
         }
 
@@ -31,7 +31,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select p.IdProducto as [Codigo], p.Nombre as [Producto],c.Nombre as [Categoria],a.Cantidad, p.PrecioU as [Precio Unitario], pro.Nombre as [Proveedor] from Producto as p inner join Categoria as c on p.IdCategoria = c.IdCategoria inner join Almacen as a on P.IdProducto = a.IdProducto inner join Proveedor as pro on pro.IdProveedor = a.IdProveedor";
+            String consulta = "SELECT IDProducto as N,Prod.nombre as Nombre,categoria as Categoria,marca as Marca,precioUnitario as 'Precio Unitario',cantidad as Cantidad,disponibilidad as Disponibilidad, Prov.nombre as Proveedor FROM Producto as Prod inner join Proveedor as Prov on Prod.proveedorID = Prov.IDProveedor";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -43,7 +43,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select IdProveedor,Nombre from Proveedor ";
+            String consulta = "SELECT IDProveedor,nombre FROM Proveedor";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -54,6 +54,7 @@ namespace Desktop.Administrador
             cmbProveedor.SelectedIndex = 0;
         }
 
+        /*
         public void llenar_ComboCat()
         {
             //conexion.abrir();
@@ -67,7 +68,7 @@ namespace Desktop.Administrador
             cbCategoria.DisplayMember = "Nombre";
             cbCategoria.ValueMember = "IdCategoria"; //identificador
             cbCategoria.SelectedIndex = 0;
-        }
+        }*/
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -96,7 +97,7 @@ namespace Desktop.Administrador
                 cmd.Parameters.AddWithValue("@IdProducto", txtCodigo.Text);
                 cmd.Parameters.AddWithValue("@IdProveedor", cmbProveedor.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
-                cmd.Parameters.AddWithValue("@FechaIngreso", fechaingreso.Text);
+                //cmd.Parameters.AddWithValue("@FechaIngreso", fechaingreso.Text);
                 cmd.ExecuteNonQuery();
 
 
@@ -118,8 +119,9 @@ namespace Desktop.Administrador
             {
                 txtCodigo.Text = GridProductos.CurrentRow.Cells[0].Value.ToString();
                 txtNombre.Text = GridProductos.CurrentRow.Cells[1].Value.ToString();
-                txtCantidad.Text = GridProductos.CurrentRow.Cells[3].Value.ToString();
+                txtCantidad.Text = GridProductos.CurrentRow.Cells[5].Value.ToString();
                 txtPrecio.Text = GridProductos.CurrentRow.Cells[4].Value.ToString();
+                txtDisponibilidadP.Text = GridProductos.CurrentRow.Cells[6].Value.ToString();
             }
             catch { }
         }
@@ -151,7 +153,7 @@ namespace Desktop.Administrador
                 cmd.Parameters.AddWithValue("@IdProducto", txtCodigo.Text);
                 cmd.Parameters.AddWithValue("@IdProveedor", cmbProveedor.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
-                cmd.Parameters.AddWithValue("@FechaIngreso", fechaingreso.Text);
+                //cmd.Parameters.AddWithValue("@FechaIngreso", fechaingreso.Text);
                 cmd.ExecuteNonQuery();
 
 

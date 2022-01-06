@@ -38,11 +38,11 @@ namespace Desktop.Administrador
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
-            this.btnCatalogo = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnProducto = new System.Windows.Forms.Button();
-            this.btnEmpleado = new System.Windows.Forms.Button();
+            this.btnCompras = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -64,11 +64,11 @@ namespace Desktop.Administrador
             this.MenuVertical.Controls.Add(this.button3);
             this.MenuVertical.Controls.Add(this.button2);
             this.MenuVertical.Controls.Add(this.btnEmpleados);
-            this.MenuVertical.Controls.Add(this.btnCatalogo);
+            this.MenuVertical.Controls.Add(this.btnVentas);
             this.MenuVertical.Controls.Add(this.btnReporte);
             this.MenuVertical.Controls.Add(this.btnProveedor);
             this.MenuVertical.Controls.Add(this.btnProducto);
-            this.MenuVertical.Controls.Add(this.btnEmpleado);
+            this.MenuVertical.Controls.Add(this.btnCompras);
             this.MenuVertical.Controls.Add(this.btnCliente);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
@@ -191,23 +191,23 @@ namespace Desktop.Administrador
             this.btnEmpleados.UseVisualStyleBackColor = false;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
-            // btnCatalogo
+            // btnVentas
             // 
-            this.btnCatalogo.BackColor = System.Drawing.Color.Transparent;
-            this.btnCatalogo.FlatAppearance.BorderSize = 0;
-            this.btnCatalogo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCatalogo.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCatalogo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCatalogo.Image = ((System.Drawing.Image)(resources.GetObject("btnCatalogo.Image")));
-            this.btnCatalogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCatalogo.Location = new System.Drawing.Point(-3, 296);
-            this.btnCatalogo.Name = "btnCatalogo";
-            this.btnCatalogo.Size = new System.Drawing.Size(252, 63);
-            this.btnCatalogo.TabIndex = 8;
-            this.btnCatalogo.Text = "Categorias";
-            this.btnCatalogo.UseVisualStyleBackColor = false;
-            this.btnCatalogo.Click += new System.EventHandler(this.btnCatalogo_Click);
+            this.btnVentas.BackColor = System.Drawing.Color.Transparent;
+            this.btnVentas.FlatAppearance.BorderSize = 0;
+            this.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnVentas.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.Location = new System.Drawing.Point(-3, 296);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(252, 63);
+            this.btnVentas.TabIndex = 8;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.UseVisualStyleBackColor = false;
+            this.btnVentas.Click += new System.EventHandler(this.btnCatalogo_Click);
             // 
             // btnReporte
             // 
@@ -256,7 +256,7 @@ namespace Desktop.Administrador
             this.btnProducto.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnProducto.Image")));
             this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducto.Location = new System.Drawing.Point(-2, 224);
+            this.btnProducto.Location = new System.Drawing.Point(-2, 156);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(251, 66);
             this.btnProducto.TabIndex = 5;
@@ -264,23 +264,23 @@ namespace Desktop.Administrador
             this.btnProducto.UseVisualStyleBackColor = false;
             this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
-            // btnEmpleado
+            // btnCompras
             // 
-            this.btnEmpleado.BackColor = System.Drawing.Color.Transparent;
-            this.btnEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpleado.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEmpleado.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpleado.Image")));
-            this.btnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleado.Location = new System.Drawing.Point(-3, 154);
-            this.btnEmpleado.Name = "btnEmpleado";
-            this.btnEmpleado.Size = new System.Drawing.Size(252, 64);
-            this.btnEmpleado.TabIndex = 4;
-            this.btnEmpleado.Text = "Empleados";
-            this.btnEmpleado.UseVisualStyleBackColor = false;
-            this.btnEmpleado.Click += new System.EventHandler(this.btnEmpleado_Click);
+            this.btnCompras.BackColor = System.Drawing.Color.Transparent;
+            this.btnCompras.FlatAppearance.BorderSize = 0;
+            this.btnCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCompras.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnCompras.Image")));
+            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompras.Location = new System.Drawing.Point(-3, 226);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Size = new System.Drawing.Size(252, 64);
+            this.btnCompras.TabIndex = 4;
+            this.btnCompras.Text = "Compras";
+            this.btnCompras.UseVisualStyleBackColor = false;
+            this.btnCompras.Click += new System.EventHandler(this.btnEmpleado_Click);
             // 
             // btnCliente
             // 
@@ -399,10 +399,10 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button btnProducto;
-        private System.Windows.Forms.Button btnEmpleado;
+        private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Button btnProveedor;
         private System.Windows.Forms.Button btnReporte;
-        private System.Windows.Forms.Button btnCatalogo;
+        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;

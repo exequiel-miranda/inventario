@@ -31,7 +31,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select IdCliente as N, Nombre, DUI,Correo, Telefono, Sexo from Cliente ";
+            String consulta = "SELECT IDCliente as N, nombre as Nombre, creditoFiscal as 'Credito Fiscal', telefono as Telefono  FROM Clientes ";
             SqlCommand cmd = new SqlCommand(consulta,conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -42,7 +42,7 @@ namespace Desktop.Administrador
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()) || string.IsNullOrEmpty(txtCorreoC.Text.Trim()) || string.IsNullOrEmpty(txtDuiC.Text.Trim()) || string.IsNullOrEmpty(txtTelefonoC.Text.Trim()) || string.IsNullOrEmpty(txtSexoC.Text.Trim()))
+            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()) || string.IsNullOrEmpty(txtTelefonoC.Text.Trim()) || string.IsNullOrEmpty(txtSexoC.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -54,8 +54,8 @@ namespace Desktop.Administrador
                 string insertar = "INSERT INTO CLIENTE (Nombre, DUI, Correo, Telefono, Sexo) Values (@Nombre,@DUI,@Correo,@Telefono,@Sexo)";
                 SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
                 cmd.Parameters.AddWithValue("@Nombre", txtNombreC.Text);
-                cmd.Parameters.AddWithValue("@DUI", txtDuiC.Text);
-                cmd.Parameters.AddWithValue("@Correo", txtCorreoC.Text);
+                //cmd.Parameters.AddWithValue("@DUI", txtDuiC.Text);
+                //cmd.Parameters.AddWithValue("@Correo", txtCorreoC.Text);
                 cmd.Parameters.AddWithValue("@Telefono", txtTelefonoC.Text);
                 cmd.Parameters.AddWithValue("@Sexo", txtSexoC.Text);
                 cmd.ExecuteNonQuery();
@@ -63,32 +63,36 @@ namespace Desktop.Administrador
 
                 GridClientes.DataSource = llenar_grid();
                 txtNombreC.Clear();
-                txtDuiC.Clear();
+                //txtDuiC.Clear();
                 txtTelefonoC.Clear();
-                txtCorreoC.Clear();
+                //txtCorreoC.Clear();
                 txtSexoC.Clear();
                 //conexion.abrir();
                 //conexion.cerrar();
             }
         }
 
+        ///////////////////////////////////////////////////
         private void GridClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //conexion.abrir();
             try
             {
                 txtNombreC.Text = GridClientes.CurrentRow.Cells[1].Value.ToString();
-                txtDuiC.Text = GridClientes.CurrentRow.Cells[2].Value.ToString();
+                txtSexoC.Text = GridClientes.CurrentRow.Cells[2].Value.ToString();
+                txtTelefonoC.Text = GridClientes.CurrentRow.Cells[3].Value.ToString();
+                /*
                 txtCorreoC.Text = GridClientes.CurrentRow.Cells[3].Value.ToString();
                 txtTelefonoC.Text = GridClientes.CurrentRow.Cells[4].Value.ToString();
                 txtSexoC.Text = GridClientes.CurrentRow.Cells[5].Value.ToString();
+                */
             }
             catch { }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()) || string.IsNullOrEmpty(txtCorreoC.Text.Trim()) || string.IsNullOrEmpty(txtDuiC.Text.Trim()) || string.IsNullOrEmpty(txtTelefonoC.Text.Trim()) || string.IsNullOrEmpty(txtSexoC.Text.Trim()))
+            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()) || string.IsNullOrEmpty(txtTelefonoC.Text.Trim()) || string.IsNullOrEmpty(txtSexoC.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -103,8 +107,8 @@ namespace Desktop.Administrador
                 string id = Convert.ToString(GridClientes.CurrentRow.Cells[0].Value);
                 cmd.Parameters.AddWithValue("@IdCliente", id);
                 cmd.Parameters.AddWithValue("@Nombre", txtNombreC.Text);
-                cmd.Parameters.AddWithValue("@DUI", txtDuiC.Text);
-                cmd.Parameters.AddWithValue("@Correo", txtCorreoC.Text);
+               // cmd.Parameters.AddWithValue("@DUI", txtDuiC.Text);
+              //  cmd.Parameters.AddWithValue("@Correo", txtCorreoC.Text);
                 cmd.Parameters.AddWithValue("@Telefono", txtTelefonoC.Text);
                 cmd.Parameters.AddWithValue("@Sexo", txtSexoC.Text);
                 cmd.ExecuteNonQuery();
@@ -112,9 +116,9 @@ namespace Desktop.Administrador
                 MessageBox.Show("Los datos fueron actualizados con exito");
                 GridClientes.DataSource = llenar_grid();
                 txtNombreC.Clear();
-                txtDuiC.Clear();
+               // txtDuiC.Clear();
                 txtTelefonoC.Clear();
-                txtCorreoC.Clear();
+              //  txtCorreoC.Clear();
                 txtSexoC.Clear();
                 //conexion.abrir();
                 //conexion.cerrar();
@@ -131,9 +135,9 @@ namespace Desktop.Administrador
             MessageBox.Show("Los datos han sido eliminados correctamente");
             GridClientes.DataSource = llenar_grid();
             txtNombreC.Clear();
-            txtDuiC.Clear();
+            //txtDuiC.Clear();
             txtTelefonoC.Clear();
-            txtCorreoC.Clear();
+           // txtCorreoC.Clear();
             txtSexoC.Clear();
             //conexion.abrir();
 
@@ -149,6 +153,21 @@ namespace Desktop.Administrador
                     return;
                 }
             
+        }
+
+        private void txtSexoC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefonoC_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

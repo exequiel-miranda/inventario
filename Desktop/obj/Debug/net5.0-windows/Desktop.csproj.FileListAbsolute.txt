@@ -563,9 +563,7 @@ C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-win
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.AssemblyReference.cache
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Categoria.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Empleados.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
@@ -644,3 +642,5 @@ C:\Users\exequ\Downloads\29 4 y 29\inventario-main\Desktop\obj\Debug\net5.0-wind
 C:\Users\exequ\Downloads\29 4 y 29\inventario-main\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
 C:\Users\exequ\Downloads\29 4 y 29\inventario-main\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
 C:\Users\exequ\Downloads\29 4 y 29\inventario-main\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Compras.resources
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Ventas.resources

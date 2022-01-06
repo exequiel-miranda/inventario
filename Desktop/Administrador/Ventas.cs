@@ -11,11 +11,11 @@ using Microsoft.Data.SqlClient;
 
 namespace Desktop.Administrador
 {
-    public partial class Categoria : Form
+    public partial class Ventas : Form
     {
         conexion conexion = new conexion();
 
-        public Categoria()
+        public Ventas()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select  IdCategoria as Codigo, Nombre from Categoria ";
+            String consulta = "SELECT IDVentas as N,p.nombre as Producto,c.nombre as Cliente,v.cantidad as Cantidad,fechaVenta as 'Fecha Venta' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -40,7 +40,7 @@ namespace Desktop.Administrador
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()))
+            if (string.IsNullOrEmpty(txtProducto.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -51,18 +51,18 @@ namespace Desktop.Administrador
             {
                 string insertar = "INSERT INTO CATEGORIA (Nombre) Values (@Nombre)";
                 SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
-                cmd.Parameters.AddWithValue("@Nombre", txtNombreC.Text);
+                cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron agregados con exito");
 
                 GridCategoria.DataSource = llenar_grid();
-                txtNombreC.Clear();
+                txtProducto.Clear();
             }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()))
+            if (string.IsNullOrEmpty(txtProducto.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -76,12 +76,12 @@ namespace Desktop.Administrador
                 SqlCommand cmd = new SqlCommand(actualizar, conexion.conectarbd);
                 string id = Convert.ToString(GridCategoria.CurrentRow.Cells[0].Value);
                 cmd.Parameters.AddWithValue("@IdCategoria", id);
-                cmd.Parameters.AddWithValue("@Nombre", txtNombreC.Text);
+                cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Los datos fueron actualizados con exito");
                 GridCategoria.DataSource = llenar_grid();
-                txtNombreC.Clear();
+                txtProducto.Clear();
             }
         }
 
@@ -89,9 +89,17 @@ namespace Desktop.Administrador
         {
             try
             {
-                txtNombreC.Text = GridCategoria.CurrentRow.Cells[1].Value.ToString();
+                txtProducto.Text = GridCategoria.CurrentRow.Cells[1].Value.ToString();
+                txtCliente.Text = GridCategoria.CurrentRow.Cells[2].Value.ToString();
+                txtCantidad.Text = GridCategoria.CurrentRow.Cells[3].Value.ToString();
+                txtFechaVenta.Text = GridCategoria.CurrentRow.Cells[4].Value.ToString();
             }
             catch { }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

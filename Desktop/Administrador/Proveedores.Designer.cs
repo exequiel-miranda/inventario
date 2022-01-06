@@ -30,11 +30,9 @@ namespace Desktop.Administrador
         private void InitializeComponent()
         {
             this.label6 = new System.Windows.Forms.Label();
-            this.txtperson = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtnameprov = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtnombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -50,64 +48,45 @@ namespace Desktop.Administrador
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(530, 215);
+            this.label6.Location = new System.Drawing.Point(122, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 21);
             this.label6.TabIndex = 36;
             this.label6.Text = "TELEFONO:";
             // 
-            // txtperson
+            // txtCorreo
             // 
-            this.txtperson.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtperson.Location = new System.Drawing.Point(611, 168);
-            this.txtperson.Name = "txtperson";
-            this.txtperson.Size = new System.Drawing.Size(224, 29);
-            this.txtperson.TabIndex = 35;
+            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCorreo.Location = new System.Drawing.Point(611, 138);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(224, 29);
+            this.txtCorreo.TabIndex = 35;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(530, 138);
+            this.label5.Location = new System.Drawing.Point(530, 146);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(192, 21);
+            this.label5.Size = new System.Drawing.Size(61, 21);
             this.label5.TabIndex = 34;
-            this.label5.Text = "PERSONA DE CONTACTO:";
+            this.label5.Text = "Correo:";
             // 
-            // txtDireccion
+            // txtnombre
             // 
-            this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDireccion.Location = new System.Drawing.Point(163, 239);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(311, 29);
-            this.txtDireccion.TabIndex = 30;
-            // 
-            // txtnameprov
-            // 
-            this.txtnameprov.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtnameprov.Location = new System.Drawing.Point(163, 168);
-            this.txtnameprov.Name = "txtnameprov";
-            this.txtnameprov.Size = new System.Drawing.Size(311, 29);
-            this.txtnameprov.TabIndex = 29;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(122, 215);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 21);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "DIRECCION:";
+            this.txtnombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtnombre.Location = new System.Drawing.Point(251, 138);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(177, 29);
+            this.txtnombre.TabIndex = 29;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(122, 138);
+            this.label1.Location = new System.Drawing.Point(122, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 21);
             this.label1.TabIndex = 27;
@@ -120,7 +99,7 @@ namespace Desktop.Administrador
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(412, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 44);
+            this.label3.Size = new System.Drawing.Size(207, 43);
             this.label3.TabIndex = 26;
             this.label3.Text = "Proveedores";
             // 
@@ -180,7 +159,7 @@ namespace Desktop.Administrador
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(611, 244);
+            this.txtTelefono.Location = new System.Drawing.Point(217, 213);
             this.txtTelefono.Mask = "0000-0000";
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 23);
@@ -198,11 +177,9 @@ namespace Desktop.Administrador
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtperson);
+            this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.txtnameprov);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -217,11 +194,9 @@ namespace Desktop.Administrador
 
         #endregion
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtperson;
+        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtnameprov;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnEliminar;
