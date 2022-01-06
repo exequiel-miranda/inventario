@@ -109,5 +109,35 @@ namespace Desktop
             }
             conexion.cerrar();
         }
+
+        private void textBoxTest_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                botonesSalir_Click(sender, new KeyEventArgs(Keys.Enter));
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            txtContraseña.PasswordChar = txtContraseña.PasswordChar == '\0' ? '*' : '\0';
+
+            if (txtContraseña.PasswordChar == '\0')
+            {
+                this.pictureBox2.Image = System.Drawing.Image.FromFile(@"C:\Users\ruben\Desktop\inventario\Desktop\Resources\hidepassword.png", true);
+            }
+            else
+            {
+                this.pictureBox2.Image = System.Drawing.Image.FromFile(@"C:\Users\ruben\Desktop\inventario\Desktop\Resources\showpassword.png", true);
+            }
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                botonesSalir_Click(sender, new KeyEventArgs(Keys.Enter));
+            }
+        }
     }
 }

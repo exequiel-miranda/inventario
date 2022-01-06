@@ -9,9 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Desktop.Administrador
+    
 {
     public partial class MenuAdm : Form
     {
+        Form1 f1 = new Form1();
+
         public MenuAdm()
         {
             InitializeComponent();
@@ -133,6 +136,15 @@ namespace Desktop.Administrador
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea Cerrar Sesion?", "Warning",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
+            f1.ShowDialog();
 
         }
     }
