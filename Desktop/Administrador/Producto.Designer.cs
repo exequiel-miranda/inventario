@@ -44,12 +44,12 @@ namespace Desktop.Administrador
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbProveedor = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.fechaingreso = new System.Windows.Forms.DateTimePicker();
             this.Mostrarlbl = new System.Windows.Forms.Label();
             this.GridProductos = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDisponibilidadP = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,7 +199,7 @@ namespace Desktop.Administrador
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label7.Location = new System.Drawing.Point(416, 38);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(170, 44);
+            this.label7.Size = new System.Drawing.Size(170, 43);
             this.label7.TabIndex = 46;
             this.label7.Text = "Productos";
             // 
@@ -210,27 +210,6 @@ namespace Desktop.Administrador
             this.cmbProveedor.Name = "cmbProveedor";
             this.cmbProveedor.Size = new System.Drawing.Size(182, 23);
             this.cmbProveedor.TabIndex = 61;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(517, 242);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 21);
-            this.label3.TabIndex = 62;
-            this.label3.Text = "FECHA INGRESO:";
-            // 
-            // fechaingreso
-            // 
-            this.fechaingreso.Checked = false;
-            this.fechaingreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechaingreso.Location = new System.Drawing.Point(653, 240);
-            this.fechaingreso.Name = "fechaingreso";
-            this.fechaingreso.Size = new System.Drawing.Size(182, 23);
-            this.fechaingreso.TabIndex = 63;
-            this.fechaingreso.Value = new System.DateTime(2021, 10, 7, 0, 0, 0, 0);
             // 
             // Mostrarlbl
             // 
@@ -272,18 +251,37 @@ namespace Desktop.Administrador
             this.txtCodigo.TabIndex = 67;
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(544, 242);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 21);
+            this.label3.TabIndex = 68;
+            this.label3.Text = "Disponibilidad:";
+            // 
+            // txtDisponibilidadP
+            // 
+            this.txtDisponibilidadP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDisponibilidadP.Location = new System.Drawing.Point(663, 234);
+            this.txtDisponibilidadP.Name = "txtDisponibilidadP";
+            this.txtDisponibilidadP.Size = new System.Drawing.Size(172, 29);
+            this.txtDisponibilidadP.TabIndex = 69;
+            // 
             // Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(971, 691);
+            this.Controls.Add(this.txtDisponibilidadP);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.GridProductos);
             this.Controls.Add(this.Mostrarlbl);
-            this.Controls.Add(this.fechaingreso);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbProveedor);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -326,11 +324,11 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbProveedor;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker fechaingreso;
         private System.Windows.Forms.Label Mostrarlbl;
         private System.Windows.Forms.DataGridView GridProductos;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtDisponibilidadP;
     }
 }

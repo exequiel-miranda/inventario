@@ -10,8 +10,9 @@ namespace Desktop
 {
     class conexion
     {
-        string cadena = @"Data Source=DESKTOP-015KCQB\SQLEXPRESS;Initial Catalog=Medilife;Integrated Security=True";
-                  
+        //string cadena = @"Data Source=TIBO\SQLEXPRESS; Initial Catalog=Medilife; Integrated Security=True";
+        string cadena = @"Data Source=TIBO\SQLEXPRESS; Initial Catalog=Inventario; Integrated Security=True";
+
         public SqlConnection conectarbd = new SqlConnection();
         public conexion()
         {

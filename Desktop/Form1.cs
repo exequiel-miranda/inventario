@@ -80,20 +80,20 @@ namespace Desktop
             conexion.abrir();
             if (txtUsuario.Text != "" || txtContraseña.Text != "")
             {
-                String consulta = "select Nombre,Correo from Empleado where Nombre= '" + txtUsuario.Text + "' and Correo='" + txtContraseña.Text + "'";
+                String consulta = "select usuario, password from Usuarios where usuario= '" + txtUsuario.Text + "' and password='" + txtContraseña.Text + "'";
                 SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
                     this.Hide();
-                    Desktop.Vendedor.MenuVend frm = new Desktop.Vendedor.MenuVend();
+                    Desktop.Administrador.MenuAdm frm = new Desktop.Administrador.MenuAdm();
                     frm.Show();
                 }
 
-                else if (txtUsuario.Text.Equals("Administrador") && txtContraseña.Text.Equals("admin1234"))
+                else if (txtUsuario.Text.Equals("Vendedor") && txtContraseña.Text.Equals("vendedor1234"))
                 {
                     this.Hide();
-                    Desktop.Administrador.MenuAdm frm = new Desktop.Administrador.MenuAdm();
+                    Desktop.Vendedor.MenuVend frm = new Desktop.Vendedor.MenuVend();
                     frm.Show();
                 }
                 else

@@ -11,10 +11,10 @@ using Microsoft.Data.SqlClient;
 
 namespace Desktop.Administrador
 {
-    public partial class Empleados : Form
+    public partial class Compras : Form
     {
         conexion conexion = new conexion();
-        public Empleados()
+        public Compras()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select IdEmpleado as N, Nombre, DUI,Correo, Telefono, Sexo from Empleado ";
+            String consulta = "SELECT IDCompras as N,p.nombre as Producto,c.cantidad as Cantidad,precio as Precio,pro.nombre as Proveedor,fechaCompra as 'Fecha Compra' FROM Compras as c inner join Producto as p on c.IDProducto = p.IDProducto inner join Proveedor as pro on c.IDProveedor = pro.IDProveedor ";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -43,7 +43,7 @@ namespace Desktop.Administrador
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txtNombre.Text.Trim()) || string.IsNullOrEmpty(txtDui.Text.Trim()) || string.IsNullOrEmpty(txtCorreo.Text.Trim()) || string.IsNullOrEmpty(txtTelefono.Text.Trim()) || string.IsNullOrEmpty(txtSexo.Text.Trim()))
+            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtProveedor.Text.Trim()) || string.IsNullOrEmpty(txtFechaCompra.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -54,20 +54,20 @@ namespace Desktop.Administrador
             {
                 string insertar = "INSERT INTO Empleado (Nombre, DUI, Correo, Telefono, Sexo) Values (@Nombre,@DUI,@Correo,@Telefono,@Sexo)";
                 SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
-                cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                cmd.Parameters.AddWithValue("@DUI", txtDui.Text);
-                cmd.Parameters.AddWithValue("@Correo", txtCorreo.Text);
-                cmd.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
-                cmd.Parameters.AddWithValue("@Sexo", txtSexo.Text);
+                cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
+                cmd.Parameters.AddWithValue("@DUI", txtCantidad.Text);
+                cmd.Parameters.AddWithValue("@Correo", txtPrecio.Text);
+                cmd.Parameters.AddWithValue("@Telefono", txtProveedor.Text);
+                cmd.Parameters.AddWithValue("@Sexo", txtFechaCompra.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron agregados con exito");
 
                 GridEmpleados.DataSource = llenar_grid();
-                txtNombre.Clear();
-                txtDui.Clear();
-                txtTelefono.Clear();
-                txtCorreo.Clear();
-                txtSexo.Clear();
+                txtProducto.Clear();
+                txtCantidad.Clear();
+                txtPrecio.Clear();
+                txtProveedor.Clear();
+                txtFechaCompra.Clear();
                 //conexion.abrir();
                 //conexion.cerrar();
             }
@@ -77,18 +77,18 @@ namespace Desktop.Administrador
         {
             try
             {
-                txtNombre.Text = GridEmpleados.CurrentRow.Cells[1].Value.ToString();
-                txtDui.Text = GridEmpleados.CurrentRow.Cells[2].Value.ToString();
-                txtCorreo.Text = GridEmpleados.CurrentRow.Cells[3].Value.ToString();
-                txtTelefono.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
-                txtSexo.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
+                txtProducto.Text = GridEmpleados.CurrentRow.Cells[1].Value.ToString();
+                txtCantidad.Text = GridEmpleados.CurrentRow.Cells[2].Value.ToString();
+                txtPrecio.Text = GridEmpleados.CurrentRow.Cells[3].Value.ToString();
+                txtProveedor.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
+                txtFechaCompra.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
             }
             catch { }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNombre.Text.Trim()) || string.IsNullOrEmpty(txtDui.Text.Trim()) || string.IsNullOrEmpty(txtCorreo.Text.Trim()) || string.IsNullOrEmpty(txtTelefono.Text.Trim()) || string.IsNullOrEmpty(txtSexo.Text.Trim()))
+            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtProveedor.Text.Trim()) || string.IsNullOrEmpty(txtFechaCompra.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -102,20 +102,20 @@ namespace Desktop.Administrador
                 SqlCommand cmd = new SqlCommand(actualizar, conexion.conectarbd);
                 string id = Convert.ToString(GridEmpleados.CurrentRow.Cells[0].Value);
                 cmd.Parameters.AddWithValue("@IdEmpleado", id);
-                cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                cmd.Parameters.AddWithValue("@DUI", txtDui.Text);
-                cmd.Parameters.AddWithValue("@Correo", txtCorreo.Text);
-                cmd.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
-                cmd.Parameters.AddWithValue("@Sexo", txtSexo.Text);
+                cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
+                cmd.Parameters.AddWithValue("@DUI", txtCantidad.Text);
+                cmd.Parameters.AddWithValue("@Correo", txtPrecio.Text);
+                cmd.Parameters.AddWithValue("@Telefono", txtProveedor.Text);
+                cmd.Parameters.AddWithValue("@Sexo", txtFechaCompra.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron actualizados con exito");
 
                 GridEmpleados.DataSource = llenar_grid();
-                txtNombre.Clear();
-                txtDui.Clear();
-                txtTelefono.Clear();
-                txtCorreo.Clear();
-                txtSexo.Clear();
+                txtProducto.Clear();
+                txtCantidad.Clear();
+                txtPrecio.Clear();
+                txtProveedor.Clear();
+                txtFechaCompra.Clear();
                 //conexion.abrir();
                 //conexion.cerrar();;
             }
@@ -130,11 +130,11 @@ namespace Desktop.Administrador
             cmd.ExecuteNonQuery();
             MessageBox.Show("Los datos han sido eliminados correctamente");
             GridEmpleados.DataSource = llenar_grid();
-            txtNombre.Clear();
-            txtDui.Clear();
-            txtTelefono.Clear();
-            txtCorreo.Clear();
-            txtSexo.Clear();
+            txtProducto.Clear();
+            txtCantidad.Clear();
+            txtPrecio.Clear();
+            txtProveedor.Clear();
+            txtFechaCompra.Clear();
             //conexion.abrir();
         }
 
@@ -148,6 +148,11 @@ namespace Desktop.Administrador
                     return;
                 }
             
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
