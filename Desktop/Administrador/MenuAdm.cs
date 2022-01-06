@@ -14,7 +14,6 @@ namespace Desktop.Administrador
     public partial class MenuAdm : Form
     {
         Form1 f1 = new Form1();
-
         public MenuAdm()
         {
             InitializeComponent();
@@ -146,6 +145,14 @@ namespace Desktop.Administrador
                 this.Close();
             f1.ShowDialog();
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro que desea cerrar sesión?", "Warning",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
+            f1.ShowDialog();
         }
     }
 }
