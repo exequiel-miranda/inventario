@@ -43,8 +43,8 @@ namespace Desktop.Administrador
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.txtProveedor = new System.Windows.Forms.TextBox();
-            this.txtFechaCompra = new System.Windows.Forms.TextBox();
+            this.DTPfechaCompra = new System.Windows.Forms.DateTimePicker();
+            this.cmbProveedor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,19 +201,21 @@ namespace Desktop.Administrador
             this.txtPrecio.Size = new System.Drawing.Size(209, 23);
             this.txtPrecio.TabIndex = 56;
             // 
-            // txtProveedor
+            // DTPfechaCompra
             // 
-            this.txtProveedor.Location = new System.Drawing.Point(623, 194);
-            this.txtProveedor.Name = "txtProveedor";
-            this.txtProveedor.Size = new System.Drawing.Size(209, 23);
-            this.txtProveedor.TabIndex = 57;
+            this.DTPfechaCompra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTPfechaCompra.Location = new System.Drawing.Point(243, 244);
+            this.DTPfechaCompra.Name = "DTPfechaCompra";
+            this.DTPfechaCompra.Size = new System.Drawing.Size(200, 23);
+            this.DTPfechaCompra.TabIndex = 58;
             // 
-            // txtFechaCompra
+            // cmbProveedor
             // 
-            this.txtFechaCompra.Location = new System.Drawing.Point(242, 245);
-            this.txtFechaCompra.Name = "txtFechaCompra";
-            this.txtFechaCompra.Size = new System.Drawing.Size(209, 23);
-            this.txtFechaCompra.TabIndex = 58;
+            this.cmbProveedor.FormattingEnabled = true;
+            this.cmbProveedor.Location = new System.Drawing.Point(624, 197);
+            this.cmbProveedor.Name = "cmbProveedor";
+            this.cmbProveedor.Size = new System.Drawing.Size(197, 23);
+            this.cmbProveedor.TabIndex = 59;
             // 
             // Compras
             // 
@@ -221,8 +223,8 @@ namespace Desktop.Administrador
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1003, 730);
-            this.Controls.Add(this.txtFechaCompra);
-            this.Controls.Add(this.txtProveedor);
+            this.Controls.Add(this.cmbProveedor);
+            this.Controls.Add(this.DTPfechaCompra);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtProducto);
@@ -262,7 +264,7 @@ namespace Desktop.Administrador
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.TextBox txtProveedor;
-        private System.Windows.Forms.TextBox txtFechaCompra;
+        private System.Windows.Forms.DateTimePicker DTPfechaCompra;
+        private System.Windows.Forms.ComboBox cmbProveedor;
     }
 }

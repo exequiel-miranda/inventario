@@ -11,11 +11,11 @@ using Microsoft.Data.SqlClient;
 
 namespace Desktop.Administrador
 {
-    public partial class Ventas : Form
+    public partial class cmbFechaVenta : Form
     {
         conexion conexion = new conexion();
 
-        public Ventas()
+        public cmbFechaVenta()
         {
             InitializeComponent();
         }
@@ -92,7 +92,7 @@ namespace Desktop.Administrador
                 txtProducto.Text = GridCategoria.CurrentRow.Cells[1].Value.ToString();
                 txtCliente.Text = GridCategoria.CurrentRow.Cells[2].Value.ToString();
                 txtCantidad.Text = GridCategoria.CurrentRow.Cells[3].Value.ToString();
-                txtFechaVenta.Text = GridCategoria.CurrentRow.Cells[4].Value.ToString();
+                dtpFechaVenta.Text = GridCategoria.CurrentRow.Cells[4].Value.ToString();
             }
             catch { }
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop.Administrador
 {
-    partial class Ventas
+    partial class cmbFechaVenta
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,7 @@ namespace Desktop.Administrador
             this.label4 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtFechaVenta = new System.Windows.Forms.TextBox();
+            this.dtpFechaVenta = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.GridCategoria)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,20 +162,21 @@ namespace Desktop.Administrador
             this.label5.Text = "Fecha Venta:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // txtFechaVenta
+            // dtpFechaVenta
             // 
-            this.txtFechaVenta.Location = new System.Drawing.Point(616, 230);
-            this.txtFechaVenta.Name = "txtFechaVenta";
-            this.txtFechaVenta.Size = new System.Drawing.Size(162, 23);
-            this.txtFechaVenta.TabIndex = 41;
+            this.dtpFechaVenta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaVenta.Location = new System.Drawing.Point(617, 229);
+            this.dtpFechaVenta.Name = "dtpFechaVenta";
+            this.dtpFechaVenta.Size = new System.Drawing.Size(200, 23);
+            this.dtpFechaVenta.TabIndex = 41;
             // 
-            // Ventas
+            // cmbFechaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1003, 730);
-            this.Controls.Add(this.txtFechaVenta);
+            this.Controls.Add(this.dtpFechaVenta);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label4);
@@ -188,7 +189,7 @@ namespace Desktop.Administrador
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Ventas";
+            this.Name = "cmbFechaVenta";
             this.Text = "Categoria";
             this.Load += new System.EventHandler(this.Categoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridCategoria)).EndInit();
@@ -210,6 +211,6 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtFechaVenta;
+        private System.Windows.Forms.DateTimePicker dtpFechaVenta;
     }
 }

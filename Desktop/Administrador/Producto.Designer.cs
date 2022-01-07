@@ -210,6 +210,7 @@ namespace Desktop.Administrador
             this.cmbProveedor.Name = "cmbProveedor";
             this.cmbProveedor.Size = new System.Drawing.Size(182, 23);
             this.cmbProveedor.TabIndex = 61;
+            this.cmbProveedor.SelectedIndexChanged += new System.EventHandler(this.cmbProveedor_SelectedIndexChanged);
             // 
             // Mostrarlbl
             // 

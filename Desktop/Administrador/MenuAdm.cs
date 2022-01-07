@@ -68,7 +68,7 @@ namespace Desktop.Administrador
 
         private void btnCatalogo_Click(object sender, EventArgs e)
         {
-            AbrirFormularios(new Desktop.Administrador.Ventas());
+            AbrirFormularios(new Desktop.Administrador.cmbFechaVenta());
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)

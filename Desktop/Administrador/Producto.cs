@@ -23,7 +23,7 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             llenar_ComboPro();
-            //llenar_ComboCat();
+            llenar_ComboCat();
             GridProductos.DataSource = llenar_grid();
         }
 
@@ -41,7 +41,7 @@ namespace Desktop.Administrador
 
         public void llenar_ComboPro()
         {
-            //conexion.abrir();
+            //conexion.abrir(); 
             DataTable dt = new DataTable();
             String consulta = "SELECT IDProveedor,nombre FROM Proveedor";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
@@ -54,21 +54,21 @@ namespace Desktop.Administrador
             cmbProveedor.SelectedIndex = 0;
         }
 
-        /*
+        
         public void llenar_ComboCat()
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select IdCategoria,Nombre from Categoria ";
+            String consulta = "Select IDProducto,Categoria from Producto";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             //conexion.cerrar();
             cbCategoria.DataSource = dt;
-            cbCategoria.DisplayMember = "Nombre";
-            cbCategoria.ValueMember = "IdCategoria"; //identificador
+            cbCategoria.DisplayMember = "Categoria";
+            cbCategoria.ValueMember = "IdProducto"; //identificador
             cbCategoria.SelectedIndex = 0;
-        }*/
+        }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -201,6 +201,11 @@ namespace Desktop.Administrador
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void cmbProveedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

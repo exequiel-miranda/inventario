@@ -643,4 +643,4 @@ C:\Users\exequ\Downloads\29 4 y 29\inventario-main\Desktop\obj\Debug\net5.0-wind
 C:\Users\exequ\Downloads\29 4 y 29\inventario-main\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
 C:\Users\exequ\Downloads\29 4 y 29\inventario-main\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Compras.resources
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Ventas.resources
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.cmbFechaVenta.resources
