@@ -89,7 +89,7 @@ namespace Desktop.Administrador
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 22);
             this.label5.TabIndex = 19;
-            this.label5.Text = "Credito Fiscal:";
+            this.label5.Text = "Crédito Fiscal:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6

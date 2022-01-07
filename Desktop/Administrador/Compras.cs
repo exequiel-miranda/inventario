@@ -59,7 +59,7 @@ namespace Desktop.Administrador
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()))
+            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -68,13 +68,13 @@ namespace Desktop.Administrador
 
             else
             {
-                string insertar = "INSERT INTO Empleado (Nombre, DUI, Correo, Telefono, Sexo) Values (@Nombre,@DUI,@Correo,@Telefono,@Sexo)";
+                string insertar = "INSERT INTO COMPRAS (Producto, Cantidad, Precio, Proveedor, fechaCompra) Values (@IDProducto,@cantidad,@precio,@IDProveedor,@fechaCompra)";
                 SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
-                cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
-                cmd.Parameters.AddWithValue("@DUI", txtCantidad.Text);
-                cmd.Parameters.AddWithValue("@Correo", txtPrecio.Text);
-              //  cmd.Parameters.AddWithValue("@Telefono", txtProveedor.Text);
-                //cmd.Parameters.AddWithValue("@Sexo", txtFechaCompra.Text);
+                cmd.Parameters.AddWithValue("@IDProducto", txtProducto.Text);
+                cmd.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
+                cmd.Parameters.AddWithValue("@precio", txtPrecio.Text);
+                cmd.Parameters.AddWithValue("@IDProveedor", cmbProveedor.Text);
+                cmd.Parameters.AddWithValue("@fechaCompra", DTPfechaCompra.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron agregados con exito");
 
