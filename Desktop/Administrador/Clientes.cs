@@ -42,7 +42,7 @@ namespace Desktop.Administrador
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()) || string.IsNullOrEmpty(txtTelefonoC.Text.Trim()) || string.IsNullOrEmpty(txtSexoC.Text.Trim()))
+            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()) || string.IsNullOrEmpty(txtTelefonoC.Text.Trim()) || string.IsNullOrEmpty(txtCreditoF.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -51,13 +51,13 @@ namespace Desktop.Administrador
 
             else
             {
-                string insertar = "INSERT INTO CLIENTE (Nombre, DUI, Correo, Telefono, Sexo) Values (@Nombre,@DUI,@Correo,@Telefono,@Sexo)";
+                string insertar = "INSERT INTO CLIENTES (nombre, creditoFiscal, telefono) Values (@nombre,@creditoFiscal,@telefono)";
                 SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
-                cmd.Parameters.AddWithValue("@Nombre", txtNombreC.Text);
+                cmd.Parameters.AddWithValue("@nombre", txtNombreC.Text);
                 //cmd.Parameters.AddWithValue("@DUI", txtDuiC.Text);
                 //cmd.Parameters.AddWithValue("@Correo", txtCorreoC.Text);
-                cmd.Parameters.AddWithValue("@Telefono", txtTelefonoC.Text);
-                cmd.Parameters.AddWithValue("@Sexo", txtSexoC.Text);
+                cmd.Parameters.AddWithValue("@telefono", txtTelefonoC.Text);
+                cmd.Parameters.AddWithValue("@creditoFiscal", txtCreditoF.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron agregados con exito");
 
@@ -66,7 +66,7 @@ namespace Desktop.Administrador
                 //txtDuiC.Clear();
                 txtTelefonoC.Clear();
                 //txtCorreoC.Clear();
-                txtSexoC.Clear();
+                txtCreditoF.Clear();
                 //conexion.abrir();
                 //conexion.cerrar();
             }
@@ -79,7 +79,7 @@ namespace Desktop.Administrador
             try
             {
                 txtNombreC.Text = GridClientes.CurrentRow.Cells[1].Value.ToString();
-                txtSexoC.Text = GridClientes.CurrentRow.Cells[2].Value.ToString();
+                txtCreditoF.Text = GridClientes.CurrentRow.Cells[2].Value.ToString();
                 txtTelefonoC.Text = GridClientes.CurrentRow.Cells[3].Value.ToString();
                 /*
                 txtCorreoC.Text = GridClientes.CurrentRow.Cells[3].Value.ToString();
@@ -92,7 +92,7 @@ namespace Desktop.Administrador
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()) || string.IsNullOrEmpty(txtTelefonoC.Text.Trim()) || string.IsNullOrEmpty(txtSexoC.Text.Trim()))
+            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()) || string.IsNullOrEmpty(txtTelefonoC.Text.Trim()) || string.IsNullOrEmpty(txtCreditoF.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -102,15 +102,15 @@ namespace Desktop.Administrador
             else
             {
                 //conexion.abrir();
-                string actualizar = "UPDATE Cliente set Nombre = @Nombre, DUI = @DUI, Correo = @Correo, Telefono = @Telefono, Sexo = @Sexo where IdCliente = @IdCliente";
+                string actualizar = "UPDATE CLIENTES set nombre = @nombre, creditoFiscal = @creditoFiscal, telefono = @telefono where IDCliente = @IDCliente";
                 SqlCommand cmd = new SqlCommand(actualizar, conexion.conectarbd);
                 string id = Convert.ToString(GridClientes.CurrentRow.Cells[0].Value);
-                cmd.Parameters.AddWithValue("@IdCliente", id);
-                cmd.Parameters.AddWithValue("@Nombre", txtNombreC.Text);
+                cmd.Parameters.AddWithValue("@IDCliente", id);
+                cmd.Parameters.AddWithValue("@nombre", txtNombreC.Text);
                // cmd.Parameters.AddWithValue("@DUI", txtDuiC.Text);
               //  cmd.Parameters.AddWithValue("@Correo", txtCorreoC.Text);
-                cmd.Parameters.AddWithValue("@Telefono", txtTelefonoC.Text);
-                cmd.Parameters.AddWithValue("@Sexo", txtSexoC.Text);
+                cmd.Parameters.AddWithValue("@telefono", txtTelefonoC.Text);
+                cmd.Parameters.AddWithValue("@creditoFiscal", txtCreditoF.Text);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Los datos fueron actualizados con exito");
@@ -119,7 +119,7 @@ namespace Desktop.Administrador
                // txtDuiC.Clear();
                 txtTelefonoC.Clear();
               //  txtCorreoC.Clear();
-                txtSexoC.Clear();
+                txtCreditoF.Clear();
                 //conexion.abrir();
                 //conexion.cerrar();
             }
@@ -127,10 +127,10 @@ namespace Desktop.Administrador
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string eliminar = "Delete from cliente where IdCliente = @IdCliente";
+            string eliminar = "DELETE FROM CLIENTES where IDCliente = @IDCliente";
             SqlCommand cmd = new SqlCommand(eliminar,conexion.conectarbd);
             string id = Convert.ToString(GridClientes.CurrentRow.Cells[0].Value);
-            cmd.Parameters.AddWithValue("@IdCliente", id);
+            cmd.Parameters.AddWithValue("@IDCliente", id);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Los datos han sido eliminados correctamente");
             GridClientes.DataSource = llenar_grid();
@@ -138,7 +138,7 @@ namespace Desktop.Administrador
             //txtDuiC.Clear();
             txtTelefonoC.Clear();
            // txtCorreoC.Clear();
-            txtSexoC.Clear();
+            txtCreditoF.Clear();
             //conexion.abrir();
 
         }
@@ -166,6 +166,21 @@ namespace Desktop.Administrador
         }
 
         private void txtTelefonoC_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreC_TextChanged(object sender, EventArgs e)
         {
 
         }

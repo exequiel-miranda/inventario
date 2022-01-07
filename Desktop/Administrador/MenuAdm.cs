@@ -138,15 +138,6 @@ namespace Desktop.Administrador
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("¿Desea Cerrar Sesion?", "Warning",
-               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                this.Close();
-            f1.ShowDialog();
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Esta seguro que desea cerrar sesión?", "Warning",
