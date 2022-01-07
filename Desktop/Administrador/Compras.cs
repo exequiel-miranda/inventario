@@ -23,6 +23,7 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             GridEmpleados.DataSource = llenar_grid();
+            llenar_ComboPro();
             //conexion.cerrar();
         }
 
@@ -40,10 +41,25 @@ namespace Desktop.Administrador
 
         }
 
+        public void llenar_ComboPro()
+        {
+            //conexion.abrir(); 
+            DataTable dt = new DataTable();
+            String consulta = "SELECT IDProveedor,nombre FROM Proveedor";
+            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            //conexion.cerrar();
+            cmbProveedor.DataSource = dt;
+            cmbProveedor.DisplayMember = "Nombre";
+            cmbProveedor.ValueMember = "IdProveedor"; //identificador
+            cmbProveedor.SelectedIndex = 0;
+        }
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtProveedor.Text.Trim()) || string.IsNullOrEmpty(txtFechaCompra.Text.Trim()))
+            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -57,8 +73,8 @@ namespace Desktop.Administrador
                 cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
                 cmd.Parameters.AddWithValue("@DUI", txtCantidad.Text);
                 cmd.Parameters.AddWithValue("@Correo", txtPrecio.Text);
-                cmd.Parameters.AddWithValue("@Telefono", txtProveedor.Text);
-                cmd.Parameters.AddWithValue("@Sexo", txtFechaCompra.Text);
+              //  cmd.Parameters.AddWithValue("@Telefono", txtProveedor.Text);
+                //cmd.Parameters.AddWithValue("@Sexo", txtFechaCompra.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron agregados con exito");
 
@@ -66,8 +82,8 @@ namespace Desktop.Administrador
                 txtProducto.Clear();
                 txtCantidad.Clear();
                 txtPrecio.Clear();
-                txtProveedor.Clear();
-                txtFechaCompra.Clear();
+              //  txtProveedor.Clear();
+               // txtFechaCompra.Clear();
                 //conexion.abrir();
                 //conexion.cerrar();
             }
@@ -80,15 +96,16 @@ namespace Desktop.Administrador
                 txtProducto.Text = GridEmpleados.CurrentRow.Cells[1].Value.ToString();
                 txtCantidad.Text = GridEmpleados.CurrentRow.Cells[2].Value.ToString();
                 txtPrecio.Text = GridEmpleados.CurrentRow.Cells[3].Value.ToString();
-                txtProveedor.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
-                txtFechaCompra.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
+               // txtProveedor.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
+                //txtFechaCompra.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
+                DTPfechaCompra.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
             }
             catch { }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtProveedor.Text.Trim()) || string.IsNullOrEmpty(txtFechaCompra.Text.Trim()))
+            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -105,8 +122,8 @@ namespace Desktop.Administrador
                 cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
                 cmd.Parameters.AddWithValue("@DUI", txtCantidad.Text);
                 cmd.Parameters.AddWithValue("@Correo", txtPrecio.Text);
-                cmd.Parameters.AddWithValue("@Telefono", txtProveedor.Text);
-                cmd.Parameters.AddWithValue("@Sexo", txtFechaCompra.Text);
+                //cmd.Parameters.AddWithValue("@Telefono", txtProveedor.Text);
+                //cmd.Parameters.AddWithValue("@Sexo", txtFechaCompra.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron actualizados con exito");
 
@@ -114,8 +131,8 @@ namespace Desktop.Administrador
                 txtProducto.Clear();
                 txtCantidad.Clear();
                 txtPrecio.Clear();
-                txtProveedor.Clear();
-                txtFechaCompra.Clear();
+               // txtProveedor.Clear();
+                //txtFechaCompra.Clear();
                 //conexion.abrir();
                 //conexion.cerrar();;
             }
@@ -133,8 +150,8 @@ namespace Desktop.Administrador
             txtProducto.Clear();
             txtCantidad.Clear();
             txtPrecio.Clear();
-            txtProveedor.Clear();
-            txtFechaCompra.Clear();
+          //  txtProveedor.Clear();
+            //txtFechaCompra.Clear();
             //conexion.abrir();
         }
 
