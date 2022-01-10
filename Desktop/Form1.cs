@@ -118,18 +118,19 @@ namespace Desktop
             }
         }
 
+        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             txtContraseña.PasswordChar = txtContraseña.PasswordChar == '\0' ? '*' : '\0';
 
-            if (txtContraseña.PasswordChar == '\0')
+            /*if (txtContraseña.PasswordChar == '\0')
             {
-                this.pictureBox2.Image = System.Drawing.Image.FromFile(@"C:\Users\ruben\Desktop\inventario\Desktop\Resources\hidepassword.png", true);
+                //this.pictureBox2.Image = System.Drawing.Image.FromFile(@"C:\Users\ruben\Desktop\inventario\Desktop\Resources\hidepassword.png", true);
             }
-            else
+            else 
             {
-                this.pictureBox2.Image = System.Drawing.Image.FromFile(@"C:\Users\ruben\Desktop\inventario\Desktop\Resources\showpassword.png", true);
-            }
+               // this.pictureBox2.Image = System.Drawing.Image.FromFile(@"C:\Users\ruben\Desktop\inventario\Desktop\Resources\showpassword.png", true);
+            }*/
         }
 
         private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)

@@ -23,7 +23,7 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             GridEmpleados.DataSource = llenar_grid();
-            llenar_ComboPro();
+           // llenar_ComboPro();
             //conexion.cerrar();
         }
 
@@ -32,7 +32,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDCompras as N,p.nombre as Producto,c.cantidad as Cantidad,precio as Precio,pro.nombre as Proveedor,fechaCompra as 'Fecha Compra' FROM Compras as c inner join Producto as p on c.IDProducto = p.IDProducto inner join Proveedor as pro on c.IDProveedor = pro.IDProveedor ";
+            String consulta = "SELECT IDCompras,nombreProducto,cantidad,precio,categoria,marca,fechaCompra FROM Compras";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -41,7 +41,7 @@ namespace Desktop.Administrador
 
         }
 
-        public void llenar_ComboPro()
+        /*public void llenar_ComboPro()
         {
             //conexion.abrir(); 
             DataTable dt = new DataTable();
@@ -55,6 +55,7 @@ namespace Desktop.Administrador
             cmbProveedor.ValueMember = "IdProveedor"; //identificador
             cmbProveedor.SelectedIndex = 0;
         }
+        */
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -68,20 +69,39 @@ namespace Desktop.Administrador
 
             else
             {
+
+                //Hago el procedimiento almacenado por string
+                string insertar22 = "Declare @Pnombre varchar(75) select @Pnombre = Producto.nombre from Producto where @CNombreProducto = Producto.nombre IF(@CNombreProducto = @Pnombre) Begin insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca) values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca) update Producto set cantidad = cantidad + @Ccantidad where @CNombreProducto = nombre End Else Begin insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca) values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca) insert into Producto(nombre, categoria, marca,precioUnitario,cantidad, Disponibilidad) values (@CNombreProducto, @Ccategoria,@Cmarca, @Cprecio,@Ccantidad, 'True') End";
+                SqlCommand cmd2 = new SqlCommand(insertar22, conexion.conectarbd);
+                cmd2.Parameters.AddWithValue("@CNombreProducto", txtProducto.Text);
+                cmd2.Parameters.AddWithValue("@Ccantidad", txtCantidad.Text);
+                cmd2.Parameters.AddWithValue("@CMarca", txtMarca.Text);
+                cmd2.Parameters.AddWithValue("@CPrecio", txtPrecio.Text);
+                cmd2.Parameters.AddWithValue("@Precio", txtPrecio.Text);
+                cmd2.Parameters.AddWithValue("@CCategoria", txtCategoria.Text);
+                cmd2.Parameters.AddWithValue("@CFechaCompra", DTPfechaCompra.Text);
+                cmd2.ExecuteNonQuery();
+                MessageBox.Show("Los datos fueron agregados con exito");
+
+
+
+                /*
                 string insertar = "INSERT INTO COMPRAS (Producto, Cantidad, Precio, Proveedor, fechaCompra) Values (@IDProducto,@cantidad,@precio,@IDProveedor,@fechaCompra)";
                 SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
                 cmd.Parameters.AddWithValue("@IDProducto", txtProducto.Text);
                 cmd.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
                 cmd.Parameters.AddWithValue("@precio", txtPrecio.Text);
-                cmd.Parameters.AddWithValue("@IDProveedor", cmbProveedor.Text);
+               // cmd.Parameters.AddWithValue("@IDProveedor", cmbProveedor.Text);
                 cmd.Parameters.AddWithValue("@fechaCompra", DTPfechaCompra.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron agregados con exito");
-
+                */
                 GridEmpleados.DataSource = llenar_grid();
                 txtProducto.Clear();
                 txtCantidad.Clear();
                 txtPrecio.Clear();
+                txtCategoria.Clear();
+                txtMarca.Clear();
               //  txtProveedor.Clear();
                // txtFechaCompra.Clear();
                 //conexion.abrir();
@@ -96,9 +116,10 @@ namespace Desktop.Administrador
                 txtProducto.Text = GridEmpleados.CurrentRow.Cells[1].Value.ToString();
                 txtCantidad.Text = GridEmpleados.CurrentRow.Cells[2].Value.ToString();
                 txtPrecio.Text = GridEmpleados.CurrentRow.Cells[3].Value.ToString();
-               // txtProveedor.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
-                //txtFechaCompra.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
-                DTPfechaCompra.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
+                txtCategoria.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
+                txtMarca.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
+                DTPfechaCompra.Text = GridEmpleados.CurrentRow.Cells[6].Value.ToString();
+
             }
             catch { }
         }

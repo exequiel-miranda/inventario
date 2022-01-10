@@ -32,7 +32,6 @@ namespace Desktop.Administrador
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
-            this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.lvListaEmpleado = new System.Windows.Forms.ListView();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -43,13 +42,14 @@ namespace Desktop.Administrador
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cmbProveedor = new System.Windows.Forms.ComboBox();
             this.Mostrarlbl = new System.Windows.Forms.Label();
             this.GridProductos = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDisponibilidadP = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,14 +95,6 @@ namespace Desktop.Administrador
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-            // cbCategoria
-            // 
-            this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(224, 282);
-            this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(137, 23);
-            this.cbCategoria.TabIndex = 57;
-            // 
             // lvListaEmpleado
             // 
             this.lvListaEmpleado.HideSelection = false;
@@ -139,9 +131,9 @@ namespace Desktop.Administrador
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(544, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 21);
+            this.label5.Size = new System.Drawing.Size(56, 21);
             this.label5.TabIndex = 53;
-            this.label5.Text = "PROVEEDOR:";
+            this.label5.Text = "Marca:";
             // 
             // label4
             // 
@@ -203,15 +195,6 @@ namespace Desktop.Administrador
             this.label7.TabIndex = 46;
             this.label7.Text = "Productos";
             // 
-            // cmbProveedor
-            // 
-            this.cmbProveedor.FormattingEnabled = true;
-            this.cmbProveedor.Location = new System.Drawing.Point(653, 188);
-            this.cmbProveedor.Name = "cmbProveedor";
-            this.cmbProveedor.Size = new System.Drawing.Size(182, 23);
-            this.cmbProveedor.TabIndex = 61;
-            this.cmbProveedor.SelectedIndexChanged += new System.EventHandler(this.cmbProveedor_SelectedIndexChanged);
-            // 
             // Mostrarlbl
             // 
             this.Mostrarlbl.AutoSize = true;
@@ -271,23 +254,39 @@ namespace Desktop.Administrador
             this.txtDisponibilidadP.Size = new System.Drawing.Size(172, 29);
             this.txtDisponibilidadP.TabIndex = 69;
             // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCategoria.Location = new System.Drawing.Point(224, 281);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(202, 29);
+            this.txtCategoria.TabIndex = 70;
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMarca.Location = new System.Drawing.Point(663, 182);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(182, 29);
+            this.txtMarca.TabIndex = 71;
+            // 
             // Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(971, 691);
+            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.txtDisponibilidadP);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.GridProductos);
             this.Controls.Add(this.Mostrarlbl);
-            this.Controls.Add(this.cmbProveedor);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.lvListaEmpleado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCantidad);
@@ -324,12 +323,13 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cmbProveedor;
         private System.Windows.Forms.Label Mostrarlbl;
         private System.Windows.Forms.DataGridView GridProductos;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDisponibilidadP;
+        private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.TextBox txtMarca;
     }
 }

@@ -22,8 +22,8 @@ namespace Desktop.Administrador
         private void Producto_Load(object sender, EventArgs e)
         {
             conexion.abrir();
-            llenar_ComboPro();
-            llenar_ComboCat();
+           // llenar_ComboPro();
+            //llenar_ComboCat();
             GridProductos.DataSource = llenar_grid();
         }
 
@@ -31,7 +31,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDProducto as N,Prod.nombre as Nombre,categoria as Categoria,marca as Marca,precioUnitario as 'Precio Unitario',cantidad as Cantidad,disponibilidad as Disponibilidad, Prov.nombre as Proveedor FROM Producto as Prod inner join Proveedor as Prov on Prod.proveedorID = Prov.IDProveedor";
+            String consulta = "SELECT IDProducto,nombre,categoria,marca,precioUnitario,cantidad,Disponibilidad FROM Producto";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -39,6 +39,7 @@ namespace Desktop.Administrador
             return dt;
         }
 
+        /*
         public void llenar_ComboPro()
         {
             //conexion.abrir(); 
@@ -53,7 +54,7 @@ namespace Desktop.Administrador
             cmbProveedor.ValueMember = "IdProveedor"; //identificador
             cmbProveedor.SelectedIndex = 0;
         }
-
+        
         
         public void llenar_ComboCat()
         {
@@ -69,6 +70,7 @@ namespace Desktop.Administrador
             cbCategoria.ValueMember = "IdProducto"; //identificador
             cbCategoria.SelectedIndex = 0;
         }
+        */
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -81,6 +83,11 @@ namespace Desktop.Administrador
 
             else
             {
+
+             
+
+
+                /*
                 //Se ingresa a la tabla Productos
                 string insertar2 = "INSERT INTO PRODUCTO (IdProducto,IdCategoria, Nombre, PrecioU) Values (@IdProducto,@IdCategoria,@Nombre,@Precio)";
                 SqlCommand cmd2 = new SqlCommand(insertar2, conexion.conectarbd);
@@ -89,25 +96,29 @@ namespace Desktop.Administrador
                 cmd2.Parameters.AddWithValue("@Nombre", txtNombre.Text);
                 cmd2.Parameters.AddWithValue("@Precio", txtPrecio.Text);
                 cmd2.ExecuteNonQuery();
+                */
 
-
+                /*
                 //Se ingresa a la tabla Almacen
                 string insertar = "INSERT INTO ALMACEN (IdProducto,IdProveedor, Cantidad, FechaIngreso) Values (@IdProducto,@IdProveedor,@Cantidad,@FechaIngreso)";
                 SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
                 cmd.Parameters.AddWithValue("@IdProducto", txtCodigo.Text);
-                cmd.Parameters.AddWithValue("@IdProveedor", cmbProveedor.SelectedValue.ToString());
+                //cmd.Parameters.AddWithValue("@IdProveedor", cmbProveedor.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
                 //cmd.Parameters.AddWithValue("@FechaIngreso", fechaingreso.Text);
                 cmd.ExecuteNonQuery();
-
+                */
 
                 MessageBox.Show("Los datos fueron agregados con exito");
 
                 GridProductos.DataSource = llenar_grid();
-                txtNombre.Clear();
-                txtPrecio.Clear();
-                txtCantidad.Clear();
                 txtCodigo.Clear();
+                txtNombre.Clear();
+                txtCantidad.Clear();
+                txtMarca.Clear();
+                txtPrecio.Clear();
+                txtDisponibilidadP.Clear();
+                txtCategoria.Clear();
             }
         }
 
@@ -119,8 +130,10 @@ namespace Desktop.Administrador
             {
                 txtCodigo.Text = GridProductos.CurrentRow.Cells[0].Value.ToString();
                 txtNombre.Text = GridProductos.CurrentRow.Cells[1].Value.ToString();
-                txtCantidad.Text = GridProductos.CurrentRow.Cells[5].Value.ToString();
+                txtCategoria.Text = GridProductos.CurrentRow.Cells[2].Value.ToString();
+                txtMarca.Text = GridProductos.CurrentRow.Cells[3].Value.ToString();
                 txtPrecio.Text = GridProductos.CurrentRow.Cells[4].Value.ToString();
+                txtCantidad.Text = GridProductos.CurrentRow.Cells[5].Value.ToString();
                 txtDisponibilidadP.Text = GridProductos.CurrentRow.Cells[6].Value.ToString();
             }
             catch { }
@@ -151,7 +164,7 @@ namespace Desktop.Administrador
                 string actualizar2 = "UPDATE Almacen set  IdProveedor = @IdProveedor, Cantidad = @Cantidad, FechaIngreso = @FechaIngreso where IdProducto = @IdProducto";
                 SqlCommand cmd = new SqlCommand(actualizar2, conexion.conectarbd);
                 cmd.Parameters.AddWithValue("@IdProducto", txtCodigo.Text);
-                cmd.Parameters.AddWithValue("@IdProveedor", cmbProveedor.SelectedValue.ToString());
+              //  cmd.Parameters.AddWithValue("@IdProveedor", cmbProveedor.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
                 //cmd.Parameters.AddWithValue("@FechaIngreso", fechaingreso.Text);
                 cmd.ExecuteNonQuery();
