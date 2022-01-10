@@ -74,7 +74,7 @@ namespace Desktop.Administrador
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtCodigo.Text.Trim()) || string.IsNullOrEmpty(txtNombre.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()))
+            if (/*string.IsNullOrEmpty(txtCodigo.Text.Trim()) ||*/ string.IsNullOrEmpty(txtNombre.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -83,24 +83,18 @@ namespace Desktop.Administrador
 
             else
             {
-
-             
-
-
-                /*
                 //Se ingresa a la tabla Productos
-                string insertar2 = "INSERT INTO PRODUCTO (nombre, categoria, marca, precioUnitario, cantidad, disponibilidad, proveedorID) Values (@nombre,@categoria, @marca, @precioUnitario, @cantidad, @disponibilidad, @proveedorID)";
+                string insertar2 = "INSERT INTO PRODUCTO (nombre, categoria, marca, precioUnitario, cantidad, disponibilidad) Values (@nombre,@categoria, @marca, @precioUnitario, @cantidad, @disponibilidad)";
                 SqlCommand cmd2 = new SqlCommand(insertar2, conexion.conectarbd);
                // cmd2.Parameters.AddWithValue("@IDProducto", txtCodigo.Text);
-                cmd2.Parameters.AddWithValue("@categoria", cbCategoria.SelectedValue.ToString());
+                cmd2.Parameters.AddWithValue("@categoria", txtCategoria.Text);
                 cmd2.Parameters.AddWithValue("@nombre", txtNombre.Text);
                 cmd2.Parameters.AddWithValue("@precioUnitario", txtPrecio.Text);
                 cmd2.Parameters.AddWithValue("@marca", txtMarca.Text);
                 cmd2.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
-                cmd2.Parameters.AddWithValue("@proveedorId", Convert.ToInt32(cmbProveedor.SelectedItem).ToString());
                 cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
                 cmd2.ExecuteNonQuery();
-                */
+                
 
                 /*
                 //Se ingresa a la tabla Almacen
@@ -113,15 +107,15 @@ namespace Desktop.Administrador
 <<<<<<< Updated upstream
                 cmd.ExecuteNonQuery();
                 */
-=======
-                cmd.ExecuteNonQuery();*/
+//=======
+                //cmd.ExecuteNonQuery();
 
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
 
                 MessageBox.Show("Los datos fueron agregados con exito");
 
                 GridProductos.DataSource = llenar_grid();
-                txtCodigo.Clear();
+                //txtCodigo.Clear();
                 txtNombre.Clear();
                 txtCantidad.Clear();
                 txtMarca.Clear();
@@ -137,7 +131,7 @@ namespace Desktop.Administrador
             //conexion.abrir();
             try
             {
-                txtCodigo.Text = GridProductos.CurrentRow.Cells[0].Value.ToString();
+                //txtCodigo.Text = GridProductos.CurrentRow.Cells[0].Value.ToString();
                 txtNombre.Text = GridProductos.CurrentRow.Cells[1].Value.ToString();
                 txtCategoria.Text = GridProductos.CurrentRow.Cells[2].Value.ToString();
                 txtMarca.Text = GridProductos.CurrentRow.Cells[3].Value.ToString();
@@ -150,7 +144,7 @@ namespace Desktop.Administrador
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtCodigo.Text.Trim()) || string.IsNullOrEmpty(txtNombre.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()))
+            if (/*string.IsNullOrEmpty(txtCodigo.Text.Trim()) ||*/ string.IsNullOrEmpty(txtNombre.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -160,41 +154,46 @@ namespace Desktop.Administrador
             else
             {
                 //Se ingresa a la tabla Productos
-                string actualizar = "UPDATE Producto set  IdCategoria = @IdCategoria, Nombre = @Nombre, PrecioU = @Precio where IdProducto = @IdProducto ";
+                string actualizar = "UPDATE PRODUCTO SET nombre = @nombre, categoria = @categoria,  precioUnitario = @precioUnitario, cantidad = @cantidad, disponibilidad = @disponibilidad where IDProducto = @IDProducto";
                 SqlCommand cmd2 = new SqlCommand(actualizar, conexion.conectarbd);
-                cmd2.Parameters.AddWithValue("@categoria", cbCategoria.SelectedValue.ToString());
+                string id = Convert.ToString(GridProductos.CurrentRow.Cells[0].Value);
+                cmd2.Parameters.AddWithValue("@IDProducto", id);
+                cmd2.Parameters.AddWithValue("@categoria", txtCategoria.Text);
                 cmd2.Parameters.AddWithValue("@nombre", txtNombre.Text);
                 cmd2.Parameters.AddWithValue("@precioUnitario", txtPrecio.Text);
                 cmd2.Parameters.AddWithValue("@marca", txtMarca.Text);
                 cmd2.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
-                cmd2.Parameters.AddWithValue("@proveedorId", cmbProveedor.Text);
+                //cmd2.Parameters.AddWithValue("@proveedorId", cmbProveedor.Text);
                 cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
                 cmd2.ExecuteNonQuery();
 
-
+                /*
                 //Se ingresa a la tabla Almacen
                 string actualizar2 = "UPDATE Almacen set  IdProveedor = @IdProveedor, Cantidad = @Cantidad, FechaIngreso = @FechaIngreso where IdProducto = @IdProducto";
                 SqlCommand cmd = new SqlCommand(actualizar2, conexion.conectarbd);
-                cmd.Parameters.AddWithValue("@IdProducto", txtCodigo.Text);
+                //cmd.Parameters.AddWithValue("@IdProducto", txtCodigo.Text);
               //  cmd.Parameters.AddWithValue("@IdProveedor", cmbProveedor.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
                 //cmd.Parameters.AddWithValue("@FechaIngreso", fechaingreso.Text);
-                cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();*/
 
 
                 MessageBox.Show("Los datos fueron actualizados con exito");
 
                 GridProductos.DataSource = llenar_grid();
                 txtNombre.Clear();
-                txtPrecio.Clear();
                 txtCantidad.Clear();
-                txtCodigo.Clear();
+                txtMarca.Clear();
+                txtPrecio.Clear();
+                txtDisponibilidadP.Clear();
+                txtCategoria.Clear();
+                //txtCodigo.Clear();
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string eliminar = "Delete from Producto where IdProducto = @IdProducto";
+            string eliminar = "Delete from Producto where IDProducto = @IDProducto";
             SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
             string id = Convert.ToString(GridProductos.CurrentRow.Cells[0].Value);
             cmd.Parameters.AddWithValue("@IdProducto", id);
@@ -203,9 +202,12 @@ namespace Desktop.Administrador
 
             GridProductos.DataSource = llenar_grid();
             txtNombre.Clear();
-            txtPrecio.Clear();
             txtCantidad.Clear();
-            txtCodigo.Clear();
+            txtMarca.Clear();
+            txtPrecio.Clear();
+            txtDisponibilidadP.Clear();
+            txtCategoria.Clear();
+            //txtCodigo.Clear();
         }
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
@@ -234,6 +236,21 @@ namespace Desktop.Administrador
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDisponibilidadP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCategoria_TextChanged(object sender, EventArgs e)
         {
 
         }

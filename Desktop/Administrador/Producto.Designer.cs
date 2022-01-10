@@ -35,7 +35,6 @@ namespace Desktop.Administrador
             this.lvListaEmpleado = new System.Windows.Forms.ListView();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -44,15 +43,10 @@ namespace Desktop.Administrador
             this.label7 = new System.Windows.Forms.Label();
             this.Mostrarlbl = new System.Windows.Forms.Label();
             this.GridProductos = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDisponibilidadP = new System.Windows.Forms.TextBox();
-<<<<<<< Updated upstream
             this.txtCategoria = new System.Windows.Forms.TextBox();
-=======
             this.label9 = new System.Windows.Forms.Label();
->>>>>>> Stashed changes
             this.txtMarca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridProductos)).BeginInit();
             this.SuspendLayout();
@@ -99,18 +93,6 @@ namespace Desktop.Administrador
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-<<<<<<< Updated upstream
-=======
-            // cbCategoria
-            // 
-            this.cbCategoria.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(233, 313);
-            this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(237, 31);
-            this.cbCategoria.TabIndex = 57;
-            // 
->>>>>>> Stashed changes
             // lvListaEmpleado
             // 
             this.lvListaEmpleado.HideSelection = false;
@@ -125,7 +107,7 @@ namespace Desktop.Administrador
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(122, 322);
+            this.label6.Location = new System.Drawing.Point(123, 288);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 22);
             this.label6.TabIndex = 55;
@@ -134,35 +116,19 @@ namespace Desktop.Administrador
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCantidad.Location = new System.Drawing.Point(659, 200);
+            this.txtCantidad.Location = new System.Drawing.Point(626, 223);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(172, 30);
+            this.txtCantidad.Size = new System.Drawing.Size(210, 30);
             this.txtCantidad.TabIndex = 54;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(531, 265);
-            this.label5.Name = "label5";
-<<<<<<< Updated upstream
-            this.label5.Size = new System.Drawing.Size(56, 21);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "Marca:";
-=======
-            this.label5.Size = new System.Drawing.Size(92, 22);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "Proveedor:";
->>>>>>> Stashed changes
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(531, 203);
+            this.label4.Location = new System.Drawing.Point(500, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 22);
             this.label4.TabIndex = 51;
@@ -171,17 +137,17 @@ namespace Desktop.Administrador
             // txtPrecio
             // 
             this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPrecio.Location = new System.Drawing.Point(233, 265);
+            this.txtPrecio.Location = new System.Drawing.Point(234, 223);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(237, 30);
+            this.txtPrecio.Size = new System.Drawing.Size(210, 30);
             this.txtPrecio.TabIndex = 50;
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNombre.Location = new System.Drawing.Point(233, 208);
+            this.txtNombre.Location = new System.Drawing.Point(234, 166);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(237, 30);
+            this.txtNombre.Size = new System.Drawing.Size(210, 30);
             this.txtNombre.TabIndex = 49;
             // 
             // label2
@@ -189,7 +155,7 @@ namespace Desktop.Administrador
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(122, 274);
+            this.label2.Location = new System.Drawing.Point(123, 232);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 22);
             this.label2.TabIndex = 48;
@@ -200,7 +166,7 @@ namespace Desktop.Administrador
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(122, 213);
+            this.label1.Location = new System.Drawing.Point(123, 171);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 22);
             this.label1.TabIndex = 47;
@@ -211,25 +177,12 @@ namespace Desktop.Administrador
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Sitka Small", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(416, 43);
+            this.label7.Location = new System.Drawing.Point(396, 43);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(176, 45);
             this.label7.TabIndex = 46;
             this.label7.Text = "Productos";
             // 
-<<<<<<< Updated upstream
-=======
-            // cmbProveedor
-            // 
-            this.cmbProveedor.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cmbProveedor.FormattingEnabled = true;
-            this.cmbProveedor.Location = new System.Drawing.Point(659, 263);
-            this.cmbProveedor.Name = "cmbProveedor";
-            this.cmbProveedor.Size = new System.Drawing.Size(172, 31);
-            this.cmbProveedor.TabIndex = 61;
-            this.cmbProveedor.SelectedIndexChanged += new System.EventHandler(this.cmbProveedor_SelectedIndexChanged);
-            // 
->>>>>>> Stashed changes
             // Mostrarlbl
             // 
             this.Mostrarlbl.AutoSize = true;
@@ -251,33 +204,12 @@ namespace Desktop.Administrador
             this.GridProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridProductos_CellContentClick);
             this.GridProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridProductos_CellContentClick);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(122, 153);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 22);
-            this.label8.TabIndex = 66;
-            this.label8.Text = "Código:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCodigo.Location = new System.Drawing.Point(233, 153);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(237, 30);
-            this.txtCodigo.TabIndex = 67;
-            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(531, 324);
+            this.label3.Location = new System.Drawing.Point(500, 288);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 22);
             this.label3.TabIndex = 68;
@@ -286,32 +218,26 @@ namespace Desktop.Administrador
             // txtDisponibilidadP
             // 
             this.txtDisponibilidadP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDisponibilidadP.Location = new System.Drawing.Point(659, 314);
+            this.txtDisponibilidadP.Location = new System.Drawing.Point(628, 280);
             this.txtDisponibilidadP.Name = "txtDisponibilidadP";
-            this.txtDisponibilidadP.Size = new System.Drawing.Size(172, 30);
+            this.txtDisponibilidadP.Size = new System.Drawing.Size(210, 30);
             this.txtDisponibilidadP.TabIndex = 69;
+            this.txtDisponibilidadP.TextChanged += new System.EventHandler(this.txtDisponibilidadP_TextChanged);
             // 
-<<<<<<< Updated upstream
             // txtCategoria
             // 
             this.txtCategoria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCategoria.Location = new System.Drawing.Point(224, 281);
+            this.txtCategoria.Location = new System.Drawing.Point(234, 280);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(202, 29);
+            this.txtCategoria.Size = new System.Drawing.Size(210, 30);
             this.txtCategoria.TabIndex = 70;
+            this.txtCategoria.TextChanged += new System.EventHandler(this.txtCategoria_TextChanged);
             // 
-            // txtMarca
-            // 
-            this.txtMarca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMarca.Location = new System.Drawing.Point(663, 182);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(182, 29);
-=======
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Emoji", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(531, 153);
+            this.label9.Location = new System.Drawing.Point(500, 171);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 22);
             this.label9.TabIndex = 70;
@@ -320,10 +246,9 @@ namespace Desktop.Administrador
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMarca.Location = new System.Drawing.Point(659, 148);
+            this.txtMarca.Location = new System.Drawing.Point(626, 163);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(172, 30);
->>>>>>> Stashed changes
+            this.txtMarca.Size = new System.Drawing.Size(210, 30);
             this.txtMarca.TabIndex = 71;
             // 
             // Producto
@@ -331,19 +256,12 @@ namespace Desktop.Administrador
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
-            this.ClientSize = new System.Drawing.Size(971, 691);
-            this.Controls.Add(this.txtMarca);
-            this.Controls.Add(this.txtCategoria);
-=======
             this.ClientSize = new System.Drawing.Size(971, 783);
+            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label9);
->>>>>>> Stashed changes
             this.Controls.Add(this.txtDisponibilidadP);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.GridProductos);
             this.Controls.Add(this.Mostrarlbl);
             this.Controls.Add(this.btnEliminar);
@@ -352,7 +270,6 @@ namespace Desktop.Administrador
             this.Controls.Add(this.lvListaEmpleado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtNombre);
@@ -378,7 +295,6 @@ namespace Desktop.Administrador
         private System.Windows.Forms.ListView lvListaEmpleado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtNombre;
@@ -387,15 +303,13 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label Mostrarlbl;
         private System.Windows.Forms.DataGridView GridProductos;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDisponibilidadP;
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
         private System.Windows.Forms.TextBox txtCategoria;
-=======
+//=======
         private System.Windows.Forms.Label label9;
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
         private System.Windows.Forms.TextBox txtMarca;
     }
 }
