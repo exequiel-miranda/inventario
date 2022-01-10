@@ -48,18 +48,18 @@ namespace Desktop.Administrador
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(122, 215);
+            this.label6.Location = new System.Drawing.Point(122, 244);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 21);
+            this.label6.Size = new System.Drawing.Size(80, 22);
             this.label6.TabIndex = 36;
-            this.label6.Text = "TELEFONO:";
+            this.label6.Text = "Teléfono:";
             // 
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCorreo.Location = new System.Drawing.Point(611, 138);
+            this.txtCorreo.Location = new System.Drawing.Point(610, 162);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(224, 29);
+            this.txtCorreo.Size = new System.Drawing.Size(224, 30);
             this.txtCorreo.TabIndex = 35;
             // 
             // label5
@@ -67,18 +67,18 @@ namespace Desktop.Administrador
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(530, 146);
+            this.label5.Location = new System.Drawing.Point(530, 165);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 21);
+            this.label5.Size = new System.Drawing.Size(66, 22);
             this.label5.TabIndex = 34;
             this.label5.Text = "Correo:";
             // 
             // txtnombre
             // 
             this.txtnombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtnombre.Location = new System.Drawing.Point(251, 138);
+            this.txtnombre.Location = new System.Drawing.Point(251, 156);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(177, 29);
+            this.txtnombre.Size = new System.Drawing.Size(177, 30);
             this.txtnombre.TabIndex = 29;
             // 
             // label1
@@ -86,20 +86,21 @@ namespace Desktop.Administrador
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(122, 146);
+            this.label1.Location = new System.Drawing.Point(122, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 21);
+            this.label1.Size = new System.Drawing.Size(97, 22);
             this.label1.TabIndex = 27;
-            this.label1.Text = " PROVEEDOR:";
+            this.label1.Text = " Proveedor:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(412, 44);
+            this.label3.Location = new System.Drawing.Point(412, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 43);
+            this.label3.Size = new System.Drawing.Size(214, 45);
             this.label3.TabIndex = 26;
             this.label3.Text = "Proveedores";
             // 
@@ -109,9 +110,9 @@ namespace Desktop.Administrador
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = global::Desktop.Properties.Resources.icons8_eliminar_propiedad_48;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(685, 581);
+            this.btnEliminar.Location = new System.Drawing.Point(685, 658);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(149, 39);
             this.btnEliminar.TabIndex = 43;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -123,9 +124,9 @@ namespace Desktop.Administrador
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnModificar.Image = global::Desktop.Properties.Resources.icons8_editar_propiedad_48;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(530, 581);
+            this.btnModificar.Location = new System.Drawing.Point(530, 658);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(149, 34);
+            this.btnModificar.Size = new System.Drawing.Size(149, 39);
             this.btnModificar.TabIndex = 42;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -137,9 +138,9 @@ namespace Desktop.Administrador
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresar.Image = global::Desktop.Properties.Resources.icons8_agregar_propiedad_48;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(375, 581);
+            this.btnIngresar.Location = new System.Drawing.Point(375, 658);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(149, 34);
+            this.btnIngresar.Size = new System.Drawing.Size(149, 39);
             this.btnIngresar.TabIndex = 41;
             this.btnIngresar.Text = "GUARDAR";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -149,28 +150,29 @@ namespace Desktop.Administrador
             // 
             this.GridProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridProveedor.Location = new System.Drawing.Point(122, 292);
+            this.GridProveedor.Location = new System.Drawing.Point(122, 331);
             this.GridProveedor.Name = "GridProveedor";
+            this.GridProveedor.RowHeadersWidth = 43;
             this.GridProveedor.RowTemplate.Height = 25;
-            this.GridProveedor.Size = new System.Drawing.Size(713, 267);
+            this.GridProveedor.Size = new System.Drawing.Size(713, 303);
             this.GridProveedor.TabIndex = 44;
             this.GridProveedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridProveedor_CellContentClick);
             this.GridProveedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridProveedor_CellContentClick);
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(217, 213);
+            this.txtTelefono.Location = new System.Drawing.Point(251, 241);
             this.txtTelefono.Mask = "0000-0000";
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 23);
+            this.txtTelefono.Size = new System.Drawing.Size(177, 25);
             this.txtTelefono.TabIndex = 45;
             // 
             // Proveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1003, 730);
+            this.ClientSize = new System.Drawing.Size(1003, 827);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.GridProveedor);
             this.Controls.Add(this.btnEliminar);

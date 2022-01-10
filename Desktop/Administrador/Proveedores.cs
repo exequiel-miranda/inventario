@@ -125,5 +125,10 @@ namespace Desktop.Administrador
             }
             catch { }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

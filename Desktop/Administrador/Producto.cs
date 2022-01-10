@@ -89,12 +89,16 @@ namespace Desktop.Administrador
 
                 /*
                 //Se ingresa a la tabla Productos
-                string insertar2 = "INSERT INTO PRODUCTO (IdProducto,IdCategoria, Nombre, PrecioU) Values (@IdProducto,@IdCategoria,@Nombre,@Precio)";
+                string insertar2 = "INSERT INTO PRODUCTO (nombre, categoria, marca, precioUnitario, cantidad, disponibilidad, proveedorID) Values (@nombre,@categoria, @marca, @precioUnitario, @cantidad, @disponibilidad, @proveedorID)";
                 SqlCommand cmd2 = new SqlCommand(insertar2, conexion.conectarbd);
-                cmd2.Parameters.AddWithValue("@IdProducto", txtCodigo.Text);
-                cmd2.Parameters.AddWithValue("@IdCategoria", cbCategoria.SelectedValue.ToString());
-                cmd2.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                cmd2.Parameters.AddWithValue("@Precio", txtPrecio.Text);
+               // cmd2.Parameters.AddWithValue("@IDProducto", txtCodigo.Text);
+                cmd2.Parameters.AddWithValue("@categoria", cbCategoria.SelectedValue.ToString());
+                cmd2.Parameters.AddWithValue("@nombre", txtNombre.Text);
+                cmd2.Parameters.AddWithValue("@precioUnitario", txtPrecio.Text);
+                cmd2.Parameters.AddWithValue("@marca", txtMarca.Text);
+                cmd2.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
+                cmd2.Parameters.AddWithValue("@proveedorId", Convert.ToInt32(cmbProveedor.SelectedItem).ToString());
+                cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
                 cmd2.ExecuteNonQuery();
                 */
 
@@ -106,8 +110,13 @@ namespace Desktop.Administrador
                 //cmd.Parameters.AddWithValue("@IdProveedor", cmbProveedor.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
                 //cmd.Parameters.AddWithValue("@FechaIngreso", fechaingreso.Text);
+<<<<<<< Updated upstream
                 cmd.ExecuteNonQuery();
                 */
+=======
+                cmd.ExecuteNonQuery();*/
+
+>>>>>>> Stashed changes
 
                 MessageBox.Show("Los datos fueron agregados con exito");
 
@@ -153,10 +162,13 @@ namespace Desktop.Administrador
                 //Se ingresa a la tabla Productos
                 string actualizar = "UPDATE Producto set  IdCategoria = @IdCategoria, Nombre = @Nombre, PrecioU = @Precio where IdProducto = @IdProducto ";
                 SqlCommand cmd2 = new SqlCommand(actualizar, conexion.conectarbd);
-                cmd2.Parameters.AddWithValue("@IdProducto", txtCodigo.Text);
-                cmd2.Parameters.AddWithValue("@IdCategoria", cbCategoria.SelectedValue.ToString());
-                cmd2.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                cmd2.Parameters.AddWithValue("@Precio", Convert.ToDouble(txtPrecio.Text));
+                cmd2.Parameters.AddWithValue("@categoria", cbCategoria.SelectedValue.ToString());
+                cmd2.Parameters.AddWithValue("@nombre", txtNombre.Text);
+                cmd2.Parameters.AddWithValue("@precioUnitario", txtPrecio.Text);
+                cmd2.Parameters.AddWithValue("@marca", txtMarca.Text);
+                cmd2.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
+                cmd2.Parameters.AddWithValue("@proveedorId", cmbProveedor.Text);
+                cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
                 cmd2.ExecuteNonQuery();
 
 
@@ -217,6 +229,11 @@ namespace Desktop.Administrador
         }
 
         private void cmbProveedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }
