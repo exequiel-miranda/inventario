@@ -29,7 +29,6 @@ namespace Desktop.Administrador
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtProducto = new System.Windows.Forms.TextBox();
             this.GridCategoria = new System.Windows.Forms.DataGridView();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -41,15 +40,9 @@ namespace Desktop.Administrador
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpFechaVenta = new System.Windows.Forms.DateTimePicker();
+            this.cmbProducto = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridCategoria)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtProducto
-            // 
-            this.txtProducto.Location = new System.Drawing.Point(226, 167);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(198, 23);
-            this.txtProducto.TabIndex = 35;
             // 
             // GridCategoria
             // 
@@ -170,19 +163,27 @@ namespace Desktop.Administrador
             this.dtpFechaVenta.Size = new System.Drawing.Size(200, 23);
             this.dtpFechaVenta.TabIndex = 41;
             // 
+            // cmbProducto
+            // 
+            this.cmbProducto.FormattingEnabled = true;
+            this.cmbProducto.Location = new System.Drawing.Point(224, 167);
+            this.cmbProducto.Name = "cmbProducto";
+            this.cmbProducto.Size = new System.Drawing.Size(196, 23);
+            this.cmbProducto.TabIndex = 42;
+            // 
             // cmbFechaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1003, 730);
+            this.Controls.Add(this.cmbProducto);
             this.Controls.Add(this.dtpFechaVenta);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.GridCategoria);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnIngresar);
@@ -199,8 +200,6 @@ namespace Desktop.Administrador
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.DataGridView GridCategoria;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnIngresar;
@@ -212,5 +211,6 @@ namespace Desktop.Administrador
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpFechaVenta;
+        private System.Windows.Forms.ComboBox cmbProducto;
     }
 }

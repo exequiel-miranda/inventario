@@ -13,6 +13,7 @@ namespace Desktop.Administrador
 {
     public partial class cmbFechaVenta : Form
     {
+        string myformat = "dd/MM/yyyy";
         conexion conexion = new conexion();
 
         public cmbFechaVenta()
@@ -23,6 +24,7 @@ namespace Desktop.Administrador
         private void Categoria_Load(object sender, EventArgs e)
         {
             conexion.abrir();
+            llenar_ComboPro();
             GridCategoria.DataSource = llenar_grid();
         }
 
@@ -38,9 +40,24 @@ namespace Desktop.Administrador
             return dt;
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        public void llenar_ComboPro()
         {
-            if (string.IsNullOrEmpty(txtProducto.Text.Trim()))
+            //conexion.abrir(); 
+            DataTable dt = new DataTable();
+            String consulta = "select IDProducto, nombre from Producto ";
+            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            //conexion.cerrar();
+            cmbProducto.DataSource = dt;
+            cmbProducto.DisplayMember = "nombre";
+            cmbProducto.ValueMember = "IDProducto"; //identificador
+            //cmbProducto.SelectedIndex = 0;
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        { 
+            if (string.IsNullOrEmpty(cmbProducto.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -49,6 +66,21 @@ namespace Desktop.Administrador
 
             else
             {
+                string insertar = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto) begin insert into Ventas(IDProducto, IDCliente, cantidad, fechaVenta) values (@IDProducto, 1, @Cantidad, @Fecha) update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDProducto from Ventas end ";
+                SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
+                cmd.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
+                //Subir fecha
+                DateTime stdate = DateTime.ParseExact(dtpFechaVenta.Text, myformat, null);
+                cmd.Parameters.AddWithValue("@Fecha", stdate);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Los datos fueron agregados con exito");
+
+                GridCategoria.DataSource = llenar_grid();
+                //cmbProducto.Clear();
+
+
+                /*
                 string insertar = "INSERT INTO CATEGORIA (Nombre) Values (@Nombre)";
                 SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
                 cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
@@ -57,11 +89,12 @@ namespace Desktop.Administrador
 
                 GridCategoria.DataSource = llenar_grid();
                 txtProducto.Clear();
+                */
             }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
-        {
+        {/*
             if (string.IsNullOrEmpty(txtProducto.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
@@ -81,15 +114,15 @@ namespace Desktop.Administrador
 
                 MessageBox.Show("Los datos fueron actualizados con exito");
                 GridCategoria.DataSource = llenar_grid();
-                txtProducto.Clear();
-            }
+               // cmbProducto.Clear();
+            }*/
         }
 
         private void GridCategoria_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                txtProducto.Text = GridCategoria.CurrentRow.Cells[1].Value.ToString();
+                cmbProducto.Text = GridCategoria.CurrentRow.Cells[1].Value.ToString();
                 txtCliente.Text = GridCategoria.CurrentRow.Cells[2].Value.ToString();
                 txtCantidad.Text = GridCategoria.CurrentRow.Cells[3].Value.ToString();
                 dtpFechaVenta.Text = GridCategoria.CurrentRow.Cells[4].Value.ToString();
