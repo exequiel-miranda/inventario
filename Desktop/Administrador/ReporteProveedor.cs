@@ -139,5 +139,10 @@ namespace Desktop.Administrador
                 }
             }
         }
+
+        private void GridReporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

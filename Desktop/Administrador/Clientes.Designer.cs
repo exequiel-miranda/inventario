@@ -48,7 +48,7 @@ namespace Desktop.Administrador
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(471, 50);
+            this.label3.Location = new System.Drawing.Point(415, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 45);
             this.label3.TabIndex = 7;
@@ -85,7 +85,7 @@ namespace Desktop.Administrador
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(557, 159);
+            this.label5.Location = new System.Drawing.Point(533, 159);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 22);
             this.label5.TabIndex = 19;
@@ -97,7 +97,7 @@ namespace Desktop.Administrador
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(122, 255);
+            this.label6.Location = new System.Drawing.Point(122, 232);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 22);
             this.label6.TabIndex = 21;
@@ -136,7 +136,7 @@ namespace Desktop.Administrador
             // 
             this.GridClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridClientes.Location = new System.Drawing.Point(122, 340);
+            this.GridClientes.Location = new System.Drawing.Point(122, 311);
             this.GridClientes.Name = "GridClientes";
             this.GridClientes.ReadOnly = true;
             this.GridClientes.RowHeadersWidth = 43;
@@ -149,7 +149,7 @@ namespace Desktop.Administrador
             // txtCreditoF
             // 
             this.txtCreditoF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCreditoF.Location = new System.Drawing.Point(678, 155);
+            this.txtCreditoF.Location = new System.Drawing.Point(654, 155);
             this.txtCreditoF.Name = "txtCreditoF";
             this.txtCreditoF.Size = new System.Drawing.Size(194, 30);
             this.txtCreditoF.TabIndex = 20;
@@ -157,7 +157,7 @@ namespace Desktop.Administrador
             // 
             // txtTelefonoC
             // 
-            this.txtTelefonoC.Location = new System.Drawing.Point(224, 252);
+            this.txtTelefonoC.Location = new System.Drawing.Point(224, 229);
             this.txtTelefonoC.Mask = "0000-0000";
             this.txtTelefonoC.Name = "txtTelefonoC";
             this.txtTelefonoC.Size = new System.Drawing.Size(175, 25);
@@ -168,7 +168,7 @@ namespace Desktop.Administrador
             // 
             this.txtNombreC.Location = new System.Drawing.Point(224, 155);
             this.txtNombreC.Name = "txtNombreC";
-            this.txtNombreC.Size = new System.Drawing.Size(300, 25);
+            this.txtNombreC.Size = new System.Drawing.Size(269, 25);
             this.txtNombreC.TabIndex = 28;
             this.txtNombreC.TextChanged += new System.EventHandler(this.txtNombreC_TextChanged);
             this.txtNombreC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreC_KeyPress);

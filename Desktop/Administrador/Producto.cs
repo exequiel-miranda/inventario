@@ -92,7 +92,22 @@ namespace Desktop.Administrador
                 cmd2.Parameters.AddWithValue("@precioUnitario", txtPrecio.Text);
                 cmd2.Parameters.AddWithValue("@marca", txtMarca.Text);
                 cmd2.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
-                cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
+                if (cbmDis.Text == "Verdadera")
+                {
+                    cbmDis.Text = "True";
+                    cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
+                }
+                else if (cbmDis.Text == "Falsa")
+                {
+                    cbmDis.Text = "False";
+                    cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
+                }
+                else
+                {
+                    MessageBox.Show("No ha seleccionado Disponibilidad");
+                    return;
+                }
+                //cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
                 cmd2.ExecuteNonQuery();
                 
 
@@ -120,7 +135,7 @@ namespace Desktop.Administrador
                 txtCantidad.Clear();
                 txtMarca.Clear();
                 txtPrecio.Clear();
-                txtDisponibilidadP.Clear();
+                //txtDisponibilidadP.Clear();
                 txtCategoria.Clear();
             }
         }
@@ -137,14 +152,23 @@ namespace Desktop.Administrador
                 txtMarca.Text = GridProductos.CurrentRow.Cells[3].Value.ToString();
                 txtPrecio.Text = GridProductos.CurrentRow.Cells[4].Value.ToString();
                 txtCantidad.Text = GridProductos.CurrentRow.Cells[5].Value.ToString();
-                txtDisponibilidadP.Text = GridProductos.CurrentRow.Cells[6].Value.ToString();
+                cbmDis.Text = GridProductos.CurrentRow.Cells[6].Value.ToString();
+                if (cbmDis.Text == "True")
+                {
+                    cbmDis.Text = "Verdadera";
+                }
+                else
+                {
+                    cbmDis.Text = "Falso";
+                }
+                //txtDisponibilidadP.Text = GridProductos.CurrentRow.Cells[6].Value.ToString();
             }
             catch { }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (/*string.IsNullOrEmpty(txtCodigo.Text.Trim()) ||*/ string.IsNullOrEmpty(txtNombre.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()))
+            if (string.IsNullOrEmpty(cbmDis.Text.Trim()) || string.IsNullOrEmpty(txtNombre.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -164,7 +188,22 @@ namespace Desktop.Administrador
                 cmd2.Parameters.AddWithValue("@marca", txtMarca.Text);
                 cmd2.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
                 //cmd2.Parameters.AddWithValue("@proveedorId", cmbProveedor.Text);
-                cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
+                if (cbmDis.Text == "Verdadera")
+                {
+                    cbmDis.Text = "True";
+                    cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
+                }
+                else if (cbmDis.Text == "Falsa")
+                {
+                    cbmDis.Text = "False";
+                    cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
+                }
+                else
+                {
+                    MessageBox.Show("No ha seleccionado Disponibilidad");
+                    return;
+                }
+
                 cmd2.ExecuteNonQuery();
 
                 /*
@@ -185,7 +224,7 @@ namespace Desktop.Administrador
                 txtCantidad.Clear();
                 txtMarca.Clear();
                 txtPrecio.Clear();
-                txtDisponibilidadP.Clear();
+                //txtDisponibilidadP.Clear();
                 txtCategoria.Clear();
                 //txtCodigo.Clear();
             }
@@ -205,7 +244,7 @@ namespace Desktop.Administrador
             txtCantidad.Clear();
             txtMarca.Clear();
             txtPrecio.Clear();
-            txtDisponibilidadP.Clear();
+            //txtDisponibilidadP.Clear();
             txtCategoria.Clear();
             //txtCodigo.Clear();
         }

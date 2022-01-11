@@ -13,6 +13,7 @@ namespace Desktop.Administrador
 {
     public partial class Compras : Form
     {
+        string myformat = "dd/MM/yyyy";
         conexion conexion = new conexion();
         public Compras()
         {
@@ -79,7 +80,9 @@ namespace Desktop.Administrador
                 cmd2.Parameters.AddWithValue("@CPrecio", txtPrecio.Text);
                 cmd2.Parameters.AddWithValue("@Precio", txtPrecio.Text);
                 cmd2.Parameters.AddWithValue("@CCategoria", txtCategoria.Text);
-                cmd2.Parameters.AddWithValue("@CFechaCompra", DTPfechaCompra.Text);
+                //Subir fecha
+                DateTime stdate = DateTime.ParseExact(DTPfechaCompra.Text, myformat, null);
+                cmd2.Parameters.AddWithValue("@CFechaCompra", stdate);
                 cmd2.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron agregados con exito");
 
@@ -136,15 +139,18 @@ namespace Desktop.Administrador
             else
             {
                 //conexion.abrir();
-                string actualizar = "UPDATE Empleado set Nombre = @Nombre, DUI = @DUI, Correo = @Correo, Telefono = @Telefono, Sexo = @Sexo where IdEmpleado = @IdEmpleado";
+                string actualizar = "UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, fechaCompra = @fechaCompra, cantidad = @cantidad, categoria = @categoria, marca = @marca where IDCompras = @IDCompras";
                 SqlCommand cmd = new SqlCommand(actualizar, conexion.conectarbd);
                 string id = Convert.ToString(GridEmpleados.CurrentRow.Cells[0].Value);
-                cmd.Parameters.AddWithValue("@IdEmpleado", id);
-                cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
-                cmd.Parameters.AddWithValue("@DUI", txtCantidad.Text);
-                cmd.Parameters.AddWithValue("@Correo", txtPrecio.Text);
-                //cmd.Parameters.AddWithValue("@Telefono", txtProveedor.Text);
-                //cmd.Parameters.AddWithValue("@Sexo", txtFechaCompra.Text);
+                cmd.Parameters.AddWithValue("@IDCompras", id);
+                cmd.Parameters.AddWithValue("@nombreProducto", txtProducto.Text);
+                cmd.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
+                cmd.Parameters.AddWithValue("@precio", txtPrecio.Text);
+                cmd.Parameters.AddWithValue("@categoria", txtCategoria.Text);
+                cmd.Parameters.AddWithValue("@marca", txtMarca.Text);
+                //Subir fecha
+                DateTime stdate = DateTime.ParseExact(DTPfechaCompra.Text, myformat, null);
+                cmd.Parameters.AddWithValue("@fechaCompra", stdate);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron actualizados con exito");
 
@@ -152,7 +158,9 @@ namespace Desktop.Administrador
                 txtProducto.Clear();
                 txtCantidad.Clear();
                 txtPrecio.Clear();
-               // txtProveedor.Clear();
+                txtCategoria.Clear();
+                txtMarca.Clear();
+                // txtProveedor.Clear();
                 //txtFechaCompra.Clear();
                 //conexion.abrir();
                 //conexion.cerrar();;
@@ -161,16 +169,18 @@ namespace Desktop.Administrador
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string eliminar = "Delete from Empleado where IdEmpleado = @IdEmpleado";
+            string eliminar = "Delete from Compras where IDCompras = @IDCompras";
             SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
             string id = Convert.ToString(GridEmpleados.CurrentRow.Cells[0].Value);
-            cmd.Parameters.AddWithValue("@IdEmpleado", id);
+            cmd.Parameters.AddWithValue("@IDCompras", id);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Los datos han sido eliminados correctamente");
             GridEmpleados.DataSource = llenar_grid();
             txtProducto.Clear();
             txtCantidad.Clear();
             txtPrecio.Clear();
+            txtCategoria.Clear();
+            txtMarca.Clear();
           //  txtProveedor.Clear();
             //txtFechaCompra.Clear();
             //conexion.abrir();
@@ -189,6 +199,48 @@ namespace Desktop.Administrador
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+                {
+                    MessageBox.Show("Solo números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    e.Handled = true;
+                    return;
+                }
+
+                // only allow one decimal point
+                if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+                {
+                    MessageBox.Show("Solamente 2 números decimales", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    e.Handled = true;
+                    return;
+                }
+        }
+
+        private void DTPfechaCompra_FormatChanged(object sender, EventArgs e)
         {
 
         }

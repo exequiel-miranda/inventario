@@ -44,10 +44,10 @@ namespace Desktop.Administrador
             this.Mostrarlbl = new System.Windows.Forms.Label();
             this.GridProductos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDisponibilidadP = new System.Windows.Forms.TextBox();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
+            this.cbmDis = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,7 +128,7 @@ namespace Desktop.Administrador
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(500, 232);
+            this.label4.Location = new System.Drawing.Point(494, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 22);
             this.label4.TabIndex = 51;
@@ -137,7 +137,7 @@ namespace Desktop.Administrador
             // txtPrecio
             // 
             this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPrecio.Location = new System.Drawing.Point(234, 223);
+            this.txtPrecio.Location = new System.Drawing.Point(224, 224);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(210, 30);
             this.txtPrecio.TabIndex = 50;
@@ -146,7 +146,7 @@ namespace Desktop.Administrador
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNombre.Location = new System.Drawing.Point(234, 166);
+            this.txtNombre.Location = new System.Drawing.Point(224, 167);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(210, 30);
             this.txtNombre.TabIndex = 49;
@@ -210,25 +210,16 @@ namespace Desktop.Administrador
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(500, 288);
+            this.label3.Location = new System.Drawing.Point(494, 288);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 22);
             this.label3.TabIndex = 68;
             this.label3.Text = "Disponibilidad:";
             // 
-            // txtDisponibilidadP
-            // 
-            this.txtDisponibilidadP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDisponibilidadP.Location = new System.Drawing.Point(628, 280);
-            this.txtDisponibilidadP.Name = "txtDisponibilidadP";
-            this.txtDisponibilidadP.Size = new System.Drawing.Size(210, 30);
-            this.txtDisponibilidadP.TabIndex = 69;
-            this.txtDisponibilidadP.TextChanged += new System.EventHandler(this.txtDisponibilidadP_TextChanged);
-            // 
             // txtCategoria
             // 
             this.txtCategoria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCategoria.Location = new System.Drawing.Point(234, 280);
+            this.txtCategoria.Location = new System.Drawing.Point(224, 281);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(210, 30);
             this.txtCategoria.TabIndex = 70;
@@ -238,7 +229,7 @@ namespace Desktop.Administrador
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Emoji", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(500, 171);
+            this.label9.Location = new System.Drawing.Point(494, 171);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 22);
             this.label9.TabIndex = 70;
@@ -252,16 +243,27 @@ namespace Desktop.Administrador
             this.txtMarca.Size = new System.Drawing.Size(210, 30);
             this.txtMarca.TabIndex = 71;
             // 
+            // cbmDis
+            // 
+            this.cbmDis.FormattingEnabled = true;
+            this.cbmDis.Items.AddRange(new object[] {
+            "Verdadera",
+            "Falsa"});
+            this.cbmDis.Location = new System.Drawing.Point(626, 284);
+            this.cbmDis.Name = "cbmDis";
+            this.cbmDis.Size = new System.Drawing.Size(210, 25);
+            this.cbmDis.TabIndex = 72;
+            // 
             // Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(971, 783);
+            this.Controls.Add(this.cbmDis);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtDisponibilidadP);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.GridProductos);
             this.Controls.Add(this.Mostrarlbl);
@@ -305,12 +307,12 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Label Mostrarlbl;
         private System.Windows.Forms.DataGridView GridProductos;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDisponibilidadP;
 //<<<<<<< Updated upstream
         private System.Windows.Forms.TextBox txtCategoria;
 //=======
         private System.Windows.Forms.Label label9;
 //>>>>>>> Stashed changes
         private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.ComboBox cbmDis;
     }
 }
