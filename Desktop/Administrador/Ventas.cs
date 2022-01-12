@@ -84,19 +84,47 @@ namespace Desktop.Administrador
 
             else
             {
+                //-----------------------------------------------------------------
+                //aqui se asigna el valor a la variable si es menor o mayor
+                string validacion1 = "Declare @CantidadP int select @CantidadP = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@Cantidad <= @CantidadP) begin update Producto set sepuedeono='sepuede' where @IDProducto = IDProducto end else begin update Producto set sepuedeono='nosepuede' where @IDProducto = IDProducto end";
+                SqlCommand cmd3 = new SqlCommand(validacion1, conexion.conectarbd);
+                cmd3.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                cmd3.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
+                cmd3.ExecuteNonQuery();
 
-                string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad < @PCantidad) begin insert into Ventas(IDProducto, IDCliente, cantidad, fechaVenta) values (@IDProducto, @IDCliente, @Cantidad, @Fecha) update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
-                SqlCommand cmd = new SqlCommand(insertar44, conexion.conectarbd);
-                cmd.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
-                cmd.Parameters.AddWithValue("@IDCliente", cmbCliente.SelectedValue);
-                cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
-                //Subir fecha
-                DateTime stdate = DateTime.ParseExact(dtpFechaVenta.Text, myformat, null);
-                cmd.Parameters.AddWithValue("@Fecha", stdate);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Los datos fueron agregados con exito");
+                
 
-                GridCategoria.DataSource = llenar_grid();
+                
+                //-----------------------------------------------------------------
+                //ok aqui ya me muestra como esta la variable
+                string validacion2 = "select sepuedeono from Producto where @IDProducto = Producto.IDProducto ";
+                SqlCommand cmd2 = new SqlCommand(validacion2, conexion.conectarbd);
+                cmd2.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                cmd2.ExecuteNonQuery();
+
+                string sepuedeonosepuede = (string)cmd2.ExecuteScalar();
+                //-----------------------------------------------------------------
+
+
+                if (sepuedeonosepuede == "sepuede")
+                {
+                    string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad < @PCantidad) begin insert into Ventas(IDProducto, IDCliente, cantidad, fechaVenta) values (@IDProducto, @IDCliente, @Cantidad, @Fecha) update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
+                    SqlCommand cmd = new SqlCommand(insertar44, conexion.conectarbd);
+                    cmd.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                    cmd.Parameters.AddWithValue("@IDCliente", cmbCliente.SelectedValue);
+                    cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
+                    DateTime stdate = DateTime.ParseExact(dtpFechaVenta.Text, myformat, null);
+                    cmd.Parameters.AddWithValue("@Fecha", stdate);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Los datos fueron agregados con exito");
+                    GridCategoria.DataSource = llenar_grid();
+                }
+
+                else
+                {
+                    MessageBox.Show("No hay tanto stock de este producto");
+                }
+
 
                 //cmbProducto.Clear();
                 /*
