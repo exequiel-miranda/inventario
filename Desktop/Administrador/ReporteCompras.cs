@@ -69,13 +69,12 @@ namespace Desktop.Administrador
                         iTextSharp.text.Font font9 = FontFactory.GetFont(FontFactory.TIMES, 9);
 
                         iTextSharp.text.Font LineBreak = FontFactory.GetFont("Arial", size: 16);
-
                         iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Path.Combine(Application.StartupPath, "Resources/Logotipo.png"));
-                        img.ScaleAbsoluteWidth(200);
-                        img.ScaleAbsoluteHeight(70);
+                        img.ScaleAbsoluteWidth(150);
+                        img.ScaleAbsoluteHeight(40);
                         Paragraph parrafo2 = new Paragraph(string.Format("Reporte de las Compras"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 22));
                         parrafo2.SpacingBefore = 200;
-                        parrafo2.SpacingAfter = 0;
+                        parrafo2.SpacingAfter = 25;
                         parrafo2.Alignment = Element.ALIGN_CENTER;
                         document.Add(parrafo2);
 
@@ -84,8 +83,8 @@ namespace Desktop.Administrador
                         BaseFont btnAuthor = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
                         iTextSharp.text.Font fntAuthor = new iTextSharp.text.Font(btnAuthor, 12, 2, iTextSharp.text.BaseColor.BLUE);
                         prgGeneratedBY.Alignment = Element.ALIGN_CENTER;
-                        prgGeneratedBY.Add(new Chunk("Reporte generado por: MEDILIFE", fntAuthor));
-                        prgGeneratedBY.Add(new Chunk("\nFecha: " + DateTime.Now.ToShortDateString(), fntAuthor));
+                        //prgGeneratedBY.Add(new Chunk("Reporte generado por:", fntAuthor));
+                        prgGeneratedBY.Add(new Chunk("Reporte generado el: " + DateTime.Now.ToShortDateString(), fntAuthor));
                         document.Add(prgGeneratedBY);
 
                         document.Add(new Chunk("\n"));
