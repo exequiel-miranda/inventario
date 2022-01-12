@@ -134,6 +134,11 @@ namespace Desktop.Administrador
         {
 
         }
+
+        private void txtCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

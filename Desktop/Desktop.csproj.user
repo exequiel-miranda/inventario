@@ -19,19 +19,19 @@
     <Compile Update="Administrador\Proveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Administrador\ReporteProd.cs">
+    <Compile Update="Administrador\ReporteProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Administrador\ReporteEmpleados.cs">
+    <Compile Update="Administrador\ReporteCompras.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Administrador\ReporteProPro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Administrador\ReporteProveedor.cs">
+    <Compile Update="Administrador\ReporteVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Administrador\Reportes.cs">
+    <Compile Update="Administrador\ReporteClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Botones\Botones.cs">

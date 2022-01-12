@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop.Administrador
 {
-    partial class Reportes
+    partial class ReporteCompras
     {
         /// <summary>
         /// Required designer variable.
@@ -40,11 +40,12 @@ namespace Desktop.Administrador
             // 
             this.GridReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridReporte.Location = new System.Drawing.Point(107, 138);
+            this.GridReporte.Location = new System.Drawing.Point(119, 186);
             this.GridReporte.Name = "GridReporte";
+            this.GridReporte.RowHeadersWidth = 43;
             this.GridReporte.RowTemplate.Height = 25;
-            this.GridReporte.Size = new System.Drawing.Size(713, 320);
-            this.GridReporte.TabIndex = 57;
+            this.GridReporte.Size = new System.Drawing.Size(713, 363);
+            this.GridReporte.TabIndex = 63;
             // 
             // btnEliminar
             // 
@@ -52,10 +53,10 @@ namespace Desktop.Administrador
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = global::Desktop.Properties.Resources.ic_action_copy;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(671, 507);
+            this.btnEliminar.Location = new System.Drawing.Point(683, 611);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 34);
-            this.btnEliminar.TabIndex = 56;
+            this.btnEliminar.Size = new System.Drawing.Size(149, 39);
+            this.btnEliminar.TabIndex = 62;
             this.btnEliminar.Text = "PDF";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -65,35 +66,35 @@ namespace Desktop.Administrador
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(107, 198);
+            this.label2.Location = new System.Drawing.Point(119, 247);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 21);
-            this.label2.TabIndex = 47;
+            this.label2.Size = new System.Drawing.Size(0, 22);
+            this.label2.TabIndex = 61;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(346, 22);
+            this.label3.Location = new System.Drawing.Point(256, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(328, 44);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "Reportes de Clientes";
+            this.label3.Size = new System.Drawing.Size(411, 45);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Reportes de las Compras";
             // 
-            // Reportes
+            // ReporteCompras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(987, 691);
+            this.ClientSize = new System.Drawing.Size(971, 739);
             this.Controls.Add(this.GridReporte);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Reportes";
-            this.Text = "Reportes";
+            this.Name = "ReporteCompras";
+            this.Text = "ReporteEmpleados";
             ((System.ComponentModel.ISupportInitialize)(this.GridReporte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

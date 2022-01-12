@@ -15,12 +15,13 @@ using Microsoft.Data.SqlClient;
 
 namespace Desktop.Administrador
 {
-    public partial class ReporteProveedor : Form
+    public partial class ReporteProductos : Form
     {
         conexion conexion = new conexion();
-        public ReporteProveedor()
+        public ReporteProductos()
         {
             InitializeComponent();
+            llenar_ComboPro();
             conexion.abrir();
             GridReporte.DataSource = llenar_grid();
             conexion.cerrar();
@@ -29,14 +30,51 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select IdProveedor as[N], Nombre, Direccion, Contacto, Telefono from Proveedor";
+            String consulta = "SELECT IDProducto as [ID],nombre as [Producto],categoria as [Categoria],marca as [Marca],precioUnitario as [Precio Unitario],cantidad as [Cantidad],Disponibilidad as [Disponibilidad] FROM Producto where Disponibilidad ='" + btnCombo.SelectedValue.ToString() + "'";
+            //String consulta = "select p.IdProducto as [N],c.Nombre as [Categoria], p.Nombre, p.PrecioU as [Precio Unidad]  from Producto as p inner join Categoria as c on p.IdCategoria = c.IdCategoria where p.IdCategoria = '" + btnCombo.SelectedValue.ToString() + "'";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
+
             conexion.cerrar();
             return dt;
+
         }
 
+        public void llenar_ComboPro()
+        {
+            //conexion.abrir();
+            DataTable dt = new DataTable();
+            String consulta = "select Disponibilidad from Producto";
+            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            //conexion.cerrar();
+            btnCombo.DataSource = dt;
+            btnCombo.DisplayMember = "Nombre";
+            btnCombo.ValueMember = "Disponibilidad"; //identificador
+            btnCombo.SelectedIndex = 0;
+
+
+            /*
+            if (cbmDis.Text == "Verdadera")
+            {
+                cbmDis.Text = "True";
+                cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
+            }
+            else if (cbmDis.Text == "Falsa")
+            {
+                cbmDis.Text = "False";
+                cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
+            }
+            else
+            {
+                MessageBox.Show("No ha seleccionado Disponibilidad");
+                return;
+            }
+            //cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
+            cmd2.ExecuteNonQuery();*/
+        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -51,7 +89,7 @@ namespace Desktop.Administrador
                 Document document = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "PDF Files (*.pdf)|*.pdf|All Files (*.*)|*.*";
-                save.FileName = "ReporteProveedor";
+                save.FileName = "ReporteProductos " + btnCombo.DisplayMember.ToString();
 
                 if (save.ShowDialog() == DialogResult.OK)
                 {
@@ -72,7 +110,7 @@ namespace Desktop.Administrador
                         iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Path.Combine(Application.StartupPath, "Resources/Logotipo.png"));
                         img.ScaleAbsoluteWidth(200);
                         img.ScaleAbsoluteHeight(70);
-                        Paragraph parrafo2 = new Paragraph(string.Format("Reporte Proveedor"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 22));
+                        Paragraph parrafo2 = new Paragraph(string.Format("Reporte de Productos"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 22));
                         parrafo2.SpacingBefore = 200;
                         parrafo2.SpacingAfter = 0;
                         parrafo2.Alignment = Element.ALIGN_CENTER;
@@ -104,7 +142,7 @@ namespace Desktop.Administrador
 
                         table.SetWidths(widths);
                         table.WidthPercentage = 90;
-                        PdfPCell cell = new PdfPCell(new Phrase("Proveedor", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 14, 1, new BaseColor(System.Drawing.ColorTranslator.FromHtml("#ffffff")))));
+                        PdfPCell cell = new PdfPCell(new Phrase("Productos", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 14, 1, new BaseColor(System.Drawing.ColorTranslator.FromHtml("#ffffff")))));
                         cell.Colspan = dt.Columns.Count;
                         cell.BackgroundColor = new BaseColor(ColorTranslator.FromHtml("#008B8B"));
                         cell.HorizontalAlignment = Element.ALIGN_CENTER;
@@ -140,9 +178,9 @@ namespace Desktop.Administrador
             }
         }
 
-        private void GridReporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnCombo_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            GridReporte.DataSource = llenar_grid();
         }
     }
 }

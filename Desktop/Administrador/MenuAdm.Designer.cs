@@ -47,6 +47,7 @@ namespace Desktop.Administrador
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.panel1.SuspendLayout();
@@ -55,6 +56,7 @@ namespace Desktop.Administrador
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
+            this.MenuVertical.Controls.Add(this.button3);
             this.MenuVertical.Controls.Add(this.button1);
             this.MenuVertical.Controls.Add(this.label2);
             this.MenuVertical.Controls.Add(this.label1);
@@ -143,7 +145,7 @@ namespace Desktop.Administrador
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(243, 54);
             this.button2.TabIndex = 10;
-            this.button2.Text = "Reporte Productos";
+            this.button2.Text = "Reporte de Productos";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -158,11 +160,11 @@ namespace Desktop.Administrador
             this.btnEmpleados.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpleados.Image")));
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(3, 543);
+            this.btnEmpleados.Location = new System.Drawing.Point(4, 506);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Size = new System.Drawing.Size(253, 54);
             this.btnEmpleados.TabIndex = 9;
-            this.btnEmpleados.Text = "Reporte Empleados ";
+            this.btnEmpleados.Text = "Reporte de Compras";
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEmpleados.UseVisualStyleBackColor = false;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
@@ -195,7 +197,7 @@ namespace Desktop.Administrador
             this.btnReporte.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(3, 472);
+            this.btnReporte.Location = new System.Drawing.Point(4, 446);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(242, 54);
             this.btnReporte.TabIndex = 7;
@@ -328,6 +330,22 @@ namespace Desktop.Administrador
             this.panelContenedor.Size = new System.Drawing.Size(965, 757);
             this.panelContenedor.TabIndex = 2;
             // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Sitka Small", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Image = global::Desktop.Properties.Resources.venta;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(4, 566);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(253, 54);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Reporte de Ventas";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // MenuAdm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -368,5 +386,6 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }

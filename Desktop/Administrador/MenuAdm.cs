@@ -63,7 +63,7 @@ namespace Desktop.Administrador
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            AbrirFormularios(new Desktop.Administrador.Reportes());
+            AbrirFormularios(new Desktop.Administrador.ReporteClientes());
         }
 
         private void btnCatalogo_Click(object sender, EventArgs e)
@@ -73,17 +73,17 @@ namespace Desktop.Administrador
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            AbrirFormularios(new Desktop.Administrador.ReporteEmpleados());
+            AbrirFormularios(new Desktop.Administrador.ReporteCompras());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormularios(new Desktop.Administrador.ReporteProd());
+            AbrirFormularios(new Desktop.Administrador.ReporteProductos());
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AbrirFormularios(new Desktop.Administrador.ReporteProveedor());
+            AbrirFormularios(new Desktop.Administrador.ReporteVentas());
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -144,6 +144,11 @@ namespace Desktop.Administrador
                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 this.Close();
             f1.ShowDialog();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormularios(new Desktop.Administrador.ReporteVentas());
         }
     }
 }

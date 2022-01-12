@@ -1,4 +1,7 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,19 +12,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using Microsoft.Data.SqlClient;
-
 namespace Desktop.Administrador
 {
-    public partial class ReporteProd : Form
+    public partial class ReporteClientes : Form
     {
         conexion conexion = new conexion();
-        public ReporteProd()
+        public ReporteClientes()
         {
             InitializeComponent();
-            llenar_ComboPro();
             conexion.abrir();
             GridReporte.DataSource = llenar_grid();
             conexion.cerrar();
@@ -30,28 +28,12 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select p.IdProducto as [N],c.Nombre as [Categoria], p.Nombre, p.PrecioU as [Precio Unidad]  from Producto as p inner join Categoria as c on p.IdCategoria = c.IdCategoria where p.IdCategoria = '" + btnCombo.SelectedValue.ToString() + "'";
+            String consulta = "SELECT IDCliente as [ID], nombre as [Nombre], creditoFiscal as [Credito Fiscal], telefono as [Telefono]  FROM Clientes";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             conexion.cerrar();
             return dt;
-
-        }
-
-        public void llenar_ComboPro()
-        {
-            //conexion.abrir();
-            DataTable dt = new DataTable();
-            String consulta = "select IdCategoria,Nombre from Categoria";
-            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            //conexion.cerrar();
-            btnCombo.DataSource = dt;
-            btnCombo.DisplayMember = "Nombre";
-            btnCombo.ValueMember = "IdCategoria"; //identificador
-            btnCombo.SelectedIndex = 0;
 
         }
 
@@ -68,7 +50,7 @@ namespace Desktop.Administrador
                 Document document = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "PDF Files (*.pdf)|*.pdf|All Files (*.*)|*.*";
-                save.FileName = "ReporteProductos " + btnCombo.DisplayMember.ToString();
+                save.FileName = "ReporteClientes";
 
                 if (save.ShowDialog() == DialogResult.OK)
                 {
@@ -89,7 +71,7 @@ namespace Desktop.Administrador
                         iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Path.Combine(Application.StartupPath, "Resources/Logotipo.png"));
                         img.ScaleAbsoluteWidth(200);
                         img.ScaleAbsoluteHeight(70);
-                        Paragraph parrafo2 = new Paragraph(string.Format("Reporte Productos"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 22));
+                        Paragraph parrafo2 = new Paragraph(string.Format("Reporte de los Cliente"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 22));
                         parrafo2.SpacingBefore = 200;
                         parrafo2.SpacingAfter = 0;
                         parrafo2.Alignment = Element.ALIGN_CENTER;
@@ -121,7 +103,7 @@ namespace Desktop.Administrador
 
                         table.SetWidths(widths);
                         table.WidthPercentage = 90;
-                        PdfPCell cell = new PdfPCell(new Phrase("Productos", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 14, 1, new BaseColor(System.Drawing.ColorTranslator.FromHtml("#ffffff")))));
+                        PdfPCell cell = new PdfPCell(new Phrase("Clientes", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 14, 1, new BaseColor(System.Drawing.ColorTranslator.FromHtml("#ffffff")))));
                         cell.Colspan = dt.Columns.Count;
                         cell.BackgroundColor = new BaseColor(ColorTranslator.FromHtml("#008B8B"));
                         cell.HorizontalAlignment = Element.ALIGN_CENTER;
@@ -155,11 +137,6 @@ namespace Desktop.Administrador
                     document.Close();
                 }
             }
-        }
-
-        private void btnCombo_SelectedValueChanged(object sender, EventArgs e)
-        {
-            GridReporte.DataSource = llenar_grid();
         }
     }
 }

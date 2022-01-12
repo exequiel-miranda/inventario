@@ -680,11 +680,7 @@ C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Admin
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
-C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteEmpleados.resources
-C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProd.resources
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProPro.resources
-C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProveedor.resources
-C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Reportes.resources
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.cmbFechaVenta.resources
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
@@ -700,3 +696,7 @@ C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.dll
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
+C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteClientes.resources
+C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteCompras.resources
+C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProductos.resources
+C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteVentas.resources

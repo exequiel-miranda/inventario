@@ -15,29 +15,28 @@ using Microsoft.Data.SqlClient;
 
 namespace Desktop.Administrador
 {
-    public partial class ReporteEmpleados : Form
+    public partial class ReporteVentas : Form
     {
         conexion conexion = new conexion();
-        public ReporteEmpleados()
+        public ReporteVentas()
         {
             InitializeComponent();
             conexion.abrir();
             GridReporte.DataSource = llenar_grid();
             conexion.cerrar();
         }
-
         public DataTable llenar_grid()
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select IdEmpleado as [N], Nombre, Dui, Correo, Telefono, Sexo from Empleado";
+            String consulta = "SELECT IDVentas as [ID],p.nombre as [Producto],c.nombre as [Cliente],v.cantidad as [Cantidad],fechaVenta as [Fecha de Venta] FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             conexion.cerrar();
             return dt;
-
         }
+
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -52,7 +51,7 @@ namespace Desktop.Administrador
                 Document document = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "PDF Files (*.pdf)|*.pdf|All Files (*.*)|*.*";
-                save.FileName = "ReporteClientes";
+                save.FileName = "ReporteVentas";
 
                 if (save.ShowDialog() == DialogResult.OK)
                 {
@@ -73,7 +72,7 @@ namespace Desktop.Administrador
                         iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Path.Combine(Application.StartupPath, "Resources/Logotipo.png"));
                         img.ScaleAbsoluteWidth(200);
                         img.ScaleAbsoluteHeight(70);
-                        Paragraph parrafo2 = new Paragraph(string.Format("Reporte empleados"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 22));
+                        Paragraph parrafo2 = new Paragraph(string.Format("Reporte de las Ventas"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 22));
                         parrafo2.SpacingBefore = 200;
                         parrafo2.SpacingAfter = 0;
                         parrafo2.Alignment = Element.ALIGN_CENTER;
@@ -105,7 +104,7 @@ namespace Desktop.Administrador
 
                         table.SetWidths(widths);
                         table.WidthPercentage = 90;
-                        PdfPCell cell = new PdfPCell(new Phrase("Empleados", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 14, 1, new BaseColor(System.Drawing.ColorTranslator.FromHtml("#ffffff")))));
+                        PdfPCell cell = new PdfPCell(new Phrase("Ventas", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 14, 1, new BaseColor(System.Drawing.ColorTranslator.FromHtml("#ffffff")))));
                         cell.Colspan = dt.Columns.Count;
                         cell.BackgroundColor = new BaseColor(ColorTranslator.FromHtml("#008B8B"));
                         cell.HorizontalAlignment = Element.ALIGN_CENTER;
@@ -139,6 +138,11 @@ namespace Desktop.Administrador
                     document.Close();
                 }
             }
+        }
+
+        private void GridReporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

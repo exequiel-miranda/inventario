@@ -1,7 +1,4 @@
-﻿using iTextSharp.text;
-using iTextSharp.text.pdf;
-using Microsoft.Data.SqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,23 +9,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Microsoft.Data.SqlClient;
+
 namespace Desktop.Administrador
 {
-    public partial class Reportes : Form
+    public partial class ReporteCompras : Form
     {
         conexion conexion = new conexion();
-        public Reportes()
+        public ReporteCompras()
         {
             InitializeComponent();
             conexion.abrir();
             GridReporte.DataSource = llenar_grid();
             conexion.cerrar();
         }
+
         public DataTable llenar_grid()
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select idCliente as N, Nombre,DUI,Correo,Telefono,Sexo from Cliente";
+            String consulta = "SELECT IDCompras as [ID],nombreProducto as [Producto],cantidad as [Cantidad],precio as [Precio],categoria as [Categoria],marca as [Marca],fechaCompra as [Fecha de Compra] FROM Compras";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -50,7 +52,7 @@ namespace Desktop.Administrador
                 Document document = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "PDF Files (*.pdf)|*.pdf|All Files (*.*)|*.*";
-                save.FileName = "ReporteClientes";
+                save.FileName = "ReporteCompras";
 
                 if (save.ShowDialog() == DialogResult.OK)
                 {
@@ -71,7 +73,7 @@ namespace Desktop.Administrador
                         iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Path.Combine(Application.StartupPath, "Resources/Logotipo.png"));
                         img.ScaleAbsoluteWidth(200);
                         img.ScaleAbsoluteHeight(70);
-                        Paragraph parrafo2 = new Paragraph(string.Format("Reporte Cliente"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 22));
+                        Paragraph parrafo2 = new Paragraph(string.Format("Reporte de las Compras"), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 22));
                         parrafo2.SpacingBefore = 200;
                         parrafo2.SpacingAfter = 0;
                         parrafo2.Alignment = Element.ALIGN_CENTER;
@@ -103,7 +105,7 @@ namespace Desktop.Administrador
 
                         table.SetWidths(widths);
                         table.WidthPercentage = 90;
-                        PdfPCell cell = new PdfPCell(new Phrase("Clientes", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 14, 1, new BaseColor(System.Drawing.ColorTranslator.FromHtml("#ffffff")))));
+                        PdfPCell cell = new PdfPCell(new Phrase("Compras", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 14, 1, new BaseColor(System.Drawing.ColorTranslator.FromHtml("#ffffff")))));
                         cell.Colspan = dt.Columns.Count;
                         cell.BackgroundColor = new BaseColor(ColorTranslator.FromHtml("#008B8B"));
                         cell.HorizontalAlignment = Element.ALIGN_CENTER;
