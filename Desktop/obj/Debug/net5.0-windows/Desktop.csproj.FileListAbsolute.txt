@@ -567,11 +567,7 @@ C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-win
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteEmpleados.resources
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProd.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProPro.resources
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProveedor.resources
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Reportes.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Catalogo.resources
@@ -700,3 +696,7 @@ C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Admin
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteCompras.resources
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProductos.resources
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteVentas.resources
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteClientes.resources
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteCompras.resources
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProductos.resources
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteVentas.resources
