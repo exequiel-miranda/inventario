@@ -294,7 +294,7 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.ComboBox cbCategoria;
+        //private System.Windows.Forms.ComboBox cbCategoria;
         private System.Windows.Forms.ListView lvListaEmpleado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCantidad;
