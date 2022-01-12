@@ -25,6 +25,7 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             llenar_ComboPro();
+            llenar_ComboCliente();
             GridCategoria.DataSource = llenar_grid();
         }
 
@@ -55,6 +56,23 @@ namespace Desktop.Administrador
             //cmbProducto.SelectedIndex = 0;
         }
 
+        public void llenar_ComboCliente()
+        {
+            //conexion.abrir(); 
+            DataTable dt = new DataTable();
+            String consulta = "select IDCliente, nombre from Clientes";
+            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            //conexion.cerrar();
+            cmbCliente.DataSource = dt;
+            cmbCliente.DisplayMember = "nombre";
+            cmbCliente.ValueMember = "IDCliente"; //identificador
+            //cmbProducto.SelectedIndex = 0;
+        }
+
+
+
         private void btnIngresar_Click(object sender, EventArgs e)
         { 
             if (string.IsNullOrEmpty(cmbProducto.Text.Trim()))
@@ -66,9 +84,11 @@ namespace Desktop.Administrador
 
             else
             {
-                string insertar = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto) begin insert into Ventas(IDProducto, IDCliente, cantidad, fechaVenta) values (@IDProducto, 1, @Cantidad, @Fecha) update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDProducto from Ventas end ";
-                SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
+
+                string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad < @PCantidad) begin insert into Ventas(IDProducto, IDCliente, cantidad, fechaVenta) values (@IDProducto, @IDCliente, @Cantidad, @Fecha) update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
+                SqlCommand cmd = new SqlCommand(insertar44, conexion.conectarbd);
                 cmd.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                cmd.Parameters.AddWithValue("@IDCliente", cmbCliente.SelectedValue);
                 cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
                 //Subir fecha
                 DateTime stdate = DateTime.ParseExact(dtpFechaVenta.Text, myformat, null);
@@ -77,9 +97,8 @@ namespace Desktop.Administrador
                 MessageBox.Show("Los datos fueron agregados con exito");
 
                 GridCategoria.DataSource = llenar_grid();
+
                 //cmbProducto.Clear();
-
-
                 /*
                 string insertar = "INSERT INTO CATEGORIA (Nombre) Values (@Nombre)";
                 SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
@@ -123,7 +142,7 @@ namespace Desktop.Administrador
             try
             {
                 cmbProducto.Text = GridCategoria.CurrentRow.Cells[1].Value.ToString();
-                txtCliente.Text = GridCategoria.CurrentRow.Cells[2].Value.ToString();
+                cmbCliente.Text = GridCategoria.CurrentRow.Cells[2].Value.ToString();
                 txtCantidad.Text = GridCategoria.CurrentRow.Cells[3].Value.ToString();
                 dtpFechaVenta.Text = GridCategoria.CurrentRow.Cells[4].Value.ToString();
             }

@@ -35,12 +35,12 @@ namespace Desktop.Administrador
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpFechaVenta = new System.Windows.Forms.DateTimePicker();
             this.cmbProducto = new System.Windows.Forms.ComboBox();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridCategoria)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,13 +118,6 @@ namespace Desktop.Administrador
             this.label2.TabIndex = 36;
             this.label2.Text = "Cliente:";
             // 
-            // txtCliente
-            // 
-            this.txtCliente.Location = new System.Drawing.Point(580, 170);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(198, 23);
-            this.txtCliente.TabIndex = 37;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -171,18 +164,26 @@ namespace Desktop.Administrador
             this.cmbProducto.Size = new System.Drawing.Size(196, 23);
             this.cmbProducto.TabIndex = 42;
             // 
+            // cmbCliente
+            // 
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(617, 168);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(200, 23);
+            this.cmbCliente.TabIndex = 43;
+            // 
             // cmbFechaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1003, 730);
+            this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.cmbProducto);
             this.Controls.Add(this.dtpFechaVenta);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.GridCategoria);
             this.Controls.Add(this.btnModificar);
@@ -206,11 +207,11 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpFechaVenta;
         private System.Windows.Forms.ComboBox cmbProducto;
+        private System.Windows.Forms.ComboBox cmbCliente;
     }
 }
