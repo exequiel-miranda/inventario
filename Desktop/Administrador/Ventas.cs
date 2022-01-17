@@ -75,10 +75,10 @@ namespace Desktop.Administrador
 
         private void btnIngresar_Click(object sender, EventArgs e)
         { 
-            if (string.IsNullOrEmpty(cmbProducto.Text.Trim()))
+            if (string.IsNullOrEmpty(txtCantidad.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
-
+                txtCantidad.Focus();
                 return;
             }
 
@@ -92,9 +92,6 @@ namespace Desktop.Administrador
                 cmd3.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
                 cmd3.ExecuteNonQuery();
 
-                
-
-                
                 //-----------------------------------------------------------------
                 //ok aqui ya me muestra como esta la variable
                 string validacion2 = "select sepuedeono from Producto where @IDProducto = Producto.IDProducto ";
@@ -104,7 +101,6 @@ namespace Desktop.Administrador
 
                 string sepuedeonosepuede = (string)cmd2.ExecuteScalar();
                 //-----------------------------------------------------------------
-
 
                 if (sepuedeonosepuede == "sepuede")
                 {
@@ -177,21 +173,6 @@ namespace Desktop.Administrador
             catch { }
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCantidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
@@ -202,6 +183,4 @@ namespace Desktop.Administrador
             }
         }
     }
-
-
 }

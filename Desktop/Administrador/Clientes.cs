@@ -17,6 +17,7 @@ namespace Desktop.Administrador
         public Clientes()
         {
             InitializeComponent();
+            
         }
 
         private void Clientes_Load(object sender, EventArgs e)
@@ -42,9 +43,19 @@ namespace Desktop.Administrador
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()) || string.IsNullOrEmpty(txtTelefonoC.Text.Trim()) || string.IsNullOrEmpty(txtCreditoF.Text.Trim()))
+            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()) || !txtTelefonoC.MaskCompleted || !txtCreditoF.MaskCompleted)
             {
                 MessageBox.Show("Hay Campos Vacios");
+                if (string.IsNullOrEmpty(txtNombreC.Text.Trim())){
+                    txtNombreC.Focus();
+                }
+                else if (!txtTelefonoC.MaskCompleted) {
+                    txtTelefonoC.Focus();
+                }
+                else
+                {
+                    txtCreditoF.Focus();
+                }
 
                 return;
             }
@@ -155,34 +166,26 @@ namespace Desktop.Administrador
             
         }
 
-        private void txtSexoC_TextChanged(object sender, EventArgs e)
+        private void txtCreditoF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-
+            MessageBox.Show("Digite cantidades numericas", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            txtCreditoF.Focus();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void txtCreditoF_MouseDown(object sender, MouseEventArgs e)
         {
-
+            txtCreditoF.SelectionStart = 0;
         }
 
         private void txtTelefonoC_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-
+            MessageBox.Show("Digite cantidades numericas", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            txtTelefonoC.Focus();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void txtTelefonoC_MouseDown(object sender, MouseEventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombreC_TextChanged(object sender, EventArgs e)
-        {
-
+            txtTelefonoC.SelectionStart = 0;
         }
     }
 }

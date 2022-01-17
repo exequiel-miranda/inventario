@@ -136,7 +136,6 @@ namespace Desktop.Administrador
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(198, 25);
             this.txtCantidad.TabIndex = 39;
-            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // label5
@@ -149,7 +148,6 @@ namespace Desktop.Administrador
             this.label5.Size = new System.Drawing.Size(108, 22);
             this.label5.TabIndex = 40;
             this.label5.Text = "Fecha Venta:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // dtpFechaVenta
             // 

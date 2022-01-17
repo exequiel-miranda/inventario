@@ -61,10 +61,29 @@ namespace Desktop.Administrador
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()))
+            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtMarca.Text.Trim()) || string.IsNullOrEmpty(txtCategoria.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
-
+                if (string.IsNullOrEmpty(txtProducto.Text.Trim()))
+                {
+                    txtProducto.Focus();
+                }
+                else if (string.IsNullOrEmpty(txtCantidad.Text.Trim()))
+                {
+                    txtCantidad.Focus();
+                }
+                else if (string.IsNullOrEmpty(txtPrecio.Text.Trim()))
+                {
+                    txtPrecio.Focus();
+                }
+                else if (string.IsNullOrEmpty(txtMarca.Text.Trim()))
+                {
+                    txtMarca.Focus();
+                }
+                else
+                {
+                    txtCategoria.Focus();
+                }
                 return;
             }
 
@@ -198,16 +217,6 @@ namespace Desktop.Administrador
             
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCantidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
@@ -216,10 +225,6 @@ namespace Desktop.Administrador
                 e.Handled = true;
                 return;
             }
-        }
-
-        private void txtPrecio_TextChanged(object sender, EventArgs e)
-        {
         }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
@@ -238,11 +243,6 @@ namespace Desktop.Administrador
                     e.Handled = true;
                     return;
                 }
-        }
-
-        private void DTPfechaCompra_FormatChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

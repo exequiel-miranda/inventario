@@ -99,6 +99,7 @@ namespace Desktop
                 else
                 {
                     MessageBox.Show("Datos Incorrectos", "Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtContraseña.Clear();
                 }
 
             }

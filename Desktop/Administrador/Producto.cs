@@ -74,10 +74,29 @@ namespace Desktop.Administrador
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (/*string.IsNullOrEmpty(txtCodigo.Text.Trim()) ||*/ string.IsNullOrEmpty(txtNombre.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()))
+            if ( string.IsNullOrEmpty(txtNombre.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtCategoria.Text.Trim()) || string.IsNullOrEmpty(txtMarca.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
-
+                if (string.IsNullOrEmpty(txtNombre.Text.Trim()))
+                {
+                    txtNombre.Focus();
+                }
+                else if (string.IsNullOrEmpty(txtCantidad.Text.Trim()))
+                {
+                    txtCantidad.Focus();
+                }
+                else if (string.IsNullOrEmpty(txtPrecio.Text.Trim()))
+                {
+                    txtPrecio.Focus();
+                }
+                else if (string.IsNullOrEmpty(txtMarca.Text.Trim()))
+                {
+                    txtMarca.Focus();
+                }
+                else
+                {
+                    txtCategoria.Focus();
+                }
                 return;
             }
 
@@ -267,31 +286,6 @@ namespace Desktop.Administrador
                 e.Handled = true;
                 return;
             }
-        }
-
-        private void cmbProveedor_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCantidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDisponibilidadP_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCategoria_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)

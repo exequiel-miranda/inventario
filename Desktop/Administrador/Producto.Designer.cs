@@ -120,7 +120,6 @@ namespace Desktop.Administrador
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(210, 30);
             this.txtCantidad.TabIndex = 54;
-            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // label4
@@ -223,7 +222,6 @@ namespace Desktop.Administrador
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(210, 30);
             this.txtCategoria.TabIndex = 70;
-            this.txtCategoria.TextChanged += new System.EventHandler(this.txtCategoria_TextChanged);
             // 
             // label9
             // 

@@ -71,7 +71,6 @@ namespace Desktop.Administrador
             this.label7.Size = new System.Drawing.Size(158, 45);
             this.label7.TabIndex = 27;
             this.label7.Text = "Compras";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // btnEliminar
             // 
@@ -196,7 +195,6 @@ namespace Desktop.Administrador
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(210, 25);
             this.txtCantidad.TabIndex = 55;
-            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // txtPrecio
@@ -205,7 +203,6 @@ namespace Desktop.Administrador
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(210, 25);
             this.txtPrecio.TabIndex = 56;
-            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // DTPfechaCompra
@@ -215,7 +212,6 @@ namespace Desktop.Administrador
             this.DTPfechaCompra.Name = "DTPfechaCompra";
             this.DTPfechaCompra.Size = new System.Drawing.Size(210, 25);
             this.DTPfechaCompra.TabIndex = 58;
-            this.DTPfechaCompra.FormatChanged += new System.EventHandler(this.DTPfechaCompra_FormatChanged);
             // 
             // txtCategoria
             // 
