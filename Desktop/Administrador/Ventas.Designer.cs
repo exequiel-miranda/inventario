@@ -151,7 +151,8 @@ namespace Desktop.Administrador
             // 
             // dtpFechaVenta
             // 
-            this.dtpFechaVenta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaVenta.CustomFormat = "dd/MM/yyyy hh:mm tt";
+            this.dtpFechaVenta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaVenta.Location = new System.Drawing.Point(617, 260);
             this.dtpFechaVenta.Name = "dtpFechaVenta";
             this.dtpFechaVenta.Size = new System.Drawing.Size(200, 25);
@@ -164,6 +165,7 @@ namespace Desktop.Administrador
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.Size = new System.Drawing.Size(196, 25);
             this.cmbProducto.TabIndex = 42;
+            this.cmbProducto.SelectedIndexChanged += new System.EventHandler(this.cmbProducto_SelectedIndexChanged);
             // 
             // cmbCliente
             // 

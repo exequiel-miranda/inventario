@@ -699,4 +699,4 @@ C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-win
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteCompras.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProductos.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteVentas.resources
-C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Ventas.resources
+C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.VentasVend.resources

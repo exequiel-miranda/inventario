@@ -53,7 +53,7 @@ namespace Desktop.Vendedor
 
         private void btnCatalogo_Click(object sender, EventArgs e)
         {
-            AbrirFormularios(new Desktop.Vendedor.Ventas());
+            AbrirFormularios(new Desktop.Vendedor.VentasVend());
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

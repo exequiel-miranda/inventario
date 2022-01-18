@@ -1,7 +1,7 @@
 ﻿
 namespace Desktop.Vendedor
 {
-    partial class Ventas
+    partial class VentasVend
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@ namespace Desktop.Vendedor
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbmProductos = new System.Windows.Forms.ComboBox();
+            this.cmbProducto = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.dtpFechaVenta = new System.Windows.Forms.DateTimePicker();
@@ -57,10 +57,8 @@ namespace Desktop.Vendedor
             this.GridCatalogo.Name = "GridCatalogo";
             this.GridCatalogo.RowHeadersWidth = 43;
             this.GridCatalogo.RowTemplate.Height = 25;
-            this.GridCatalogo.Size = new System.Drawing.Size(462, 619);
+            this.GridCatalogo.Size = new System.Drawing.Size(493, 619);
             this.GridCatalogo.TabIndex = 85;
-            this.GridCatalogo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCatalogo_CellContentClick);
-            this.GridCatalogo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCatalogo_CellContentClick);
             // 
             // Mostrarlbl
             // 
@@ -144,7 +142,6 @@ namespace Desktop.Vendedor
             this.btnModificar.TabIndex = 96;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label1
             // 
@@ -186,13 +183,13 @@ namespace Desktop.Vendedor
             this.label4.TabIndex = 100;
             this.label4.Text = "Fecha de Venta:";
             // 
-            // cbmProductos
+            // cmbProducto
             // 
-            this.cbmProductos.FormattingEnabled = true;
-            this.cbmProductos.Location = new System.Drawing.Point(742, 283);
-            this.cbmProductos.Name = "cbmProductos";
-            this.cbmProductos.Size = new System.Drawing.Size(184, 25);
-            this.cbmProductos.TabIndex = 101;
+            this.cmbProducto.FormattingEnabled = true;
+            this.cmbProducto.Location = new System.Drawing.Point(742, 283);
+            this.cmbProducto.Name = "cmbProducto";
+            this.cmbProducto.Size = new System.Drawing.Size(184, 25);
+            this.cmbProducto.TabIndex = 101;
             // 
             // txtCantidad
             // 
@@ -200,6 +197,7 @@ namespace Desktop.Vendedor
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(184, 25);
             this.txtCantidad.TabIndex = 102;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // cmbCliente
             // 
@@ -211,13 +209,14 @@ namespace Desktop.Vendedor
             // 
             // dtpFechaVenta
             // 
-            this.dtpFechaVenta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaVenta.CustomFormat = "dd/MM/yyyy hh:mm tt";
+            this.dtpFechaVenta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaVenta.Location = new System.Drawing.Point(742, 479);
             this.dtpFechaVenta.Name = "dtpFechaVenta";
             this.dtpFechaVenta.Size = new System.Drawing.Size(184, 25);
             this.dtpFechaVenta.TabIndex = 104;
             // 
-            // Ventas
+            // VentasVend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,7 +225,7 @@ namespace Desktop.Vendedor
             this.Controls.Add(this.dtpFechaVenta);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.cbmProductos);
+            this.Controls.Add(this.cmbProducto);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -241,7 +240,7 @@ namespace Desktop.Vendedor
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.lvListaEmpleado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Ventas";
+            this.Name = "VentasVend";
             this.Text = "Catalogo";
             this.Load += new System.EventHandler(this.Catalogo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridCatalogo)).EndInit();
@@ -264,7 +263,7 @@ namespace Desktop.Vendedor
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbmProductos;
+        private System.Windows.Forms.ComboBox cmbProducto;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.DateTimePicker dtpFechaVenta;
