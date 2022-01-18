@@ -33,7 +33,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDVentas as N,p.nombre as Producto,c.nombre as Cliente,v.cantidad as Cantidad,fechaVenta as 'Fecha Venta' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
+            String consulta = "SELECT IDVentas as N,p.nombre as Producto,c.nombre as Cliente,v.cantidad as Cantidad,fechaVenta as 'Fecha Venta', vendedor as 'Vendedor' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente where v.vendedor = 'Vendedor'";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -70,9 +70,6 @@ namespace Desktop.Administrador
             cmbCliente.ValueMember = "IDCliente"; //identificador
             //cmbProducto.SelectedIndex = 0;
         }
-
-
-
         private void btnIngresar_Click(object sender, EventArgs e)
         { 
             if (string.IsNullOrEmpty(txtCantidad.Text.Trim()))
@@ -104,7 +101,7 @@ namespace Desktop.Administrador
 
                 if (sepuedeonosepuede == "sepuede")
                 {
-                    string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad < @PCantidad) begin insert into Ventas(IDProducto, IDCliente, cantidad, fechaVenta) values (@IDProducto, @IDCliente, @Cantidad, @Fecha) update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
+                    string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad < @PCantidad) begin insert into Ventas(IDProducto, IDCliente, cantidad, fechaVenta, vendedor) values (@IDProducto, @IDCliente, @Cantidad, @Fecha, 'Administrador') update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
                     SqlCommand cmd = new SqlCommand(insertar44, conexion.conectarbd);
                     cmd.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
                     cmd.Parameters.AddWithValue("@IDCliente", cmbCliente.SelectedValue);

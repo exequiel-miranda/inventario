@@ -154,6 +154,7 @@ namespace Desktop.Administrador
                 txtCantidad.Clear();
                 txtMarca.Clear();
                 txtPrecio.Clear();
+                cbmDis.ResetText();
                 //txtDisponibilidadP.Clear();
                 txtCategoria.Clear();
             }

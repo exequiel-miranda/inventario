@@ -41,6 +41,7 @@ namespace Desktop.Vendedor
             this.btnCatalogo = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
@@ -66,7 +67,6 @@ namespace Desktop.Vendedor
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(965, 40);
             this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnCerrar
             // 
@@ -119,6 +119,7 @@ namespace Desktop.Vendedor
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
+            this.MenuVertical.Controls.Add(this.button1);
             this.MenuVertical.Controls.Add(this.label1);
             this.MenuVertical.Controls.Add(this.btnProducto);
             this.MenuVertical.Controls.Add(this.btnCatalogo);
@@ -210,6 +211,24 @@ namespace Desktop.Vendedor
             this.btnMenu.TabStop = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(18, 748);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(212, 74);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Cerrar Sesion";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MenuVend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -221,8 +240,8 @@ namespace Desktop.Vendedor
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuVend";
-            this.Text = "MenuVend";
-            this.Load += new System.EventHandler(this.MenuVend_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Control de inventario";
             this.panel1.ResumeLayout(false);
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
@@ -244,5 +263,6 @@ namespace Desktop.Vendedor
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -48,12 +48,12 @@ namespace Desktop.Administrador
             // 
             this.GridCategoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridCategoria.Location = new System.Drawing.Point(141, 382);
+            this.GridCategoria.Location = new System.Drawing.Point(126, 338);
             this.GridCategoria.Name = "GridCategoria";
             this.GridCategoria.ReadOnly = true;
             this.GridCategoria.RowHeadersWidth = 43;
             this.GridCategoria.RowTemplate.Height = 25;
-            this.GridCategoria.Size = new System.Drawing.Size(733, 312);
+            this.GridCategoria.Size = new System.Drawing.Size(733, 350);
             this.GridCategoria.TabIndex = 34;
             this.GridCategoria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCategoria_CellClick);
             this.GridCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCategoria_CellClick);
@@ -64,7 +64,7 @@ namespace Desktop.Administrador
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnModificar.Image = global::Desktop.Properties.Resources.icons8_editar_propiedad_48;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(725, 711);
+            this.btnModificar.Location = new System.Drawing.Point(710, 709);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(149, 39);
             this.btnModificar.TabIndex = 32;
@@ -78,7 +78,7 @@ namespace Desktop.Administrador
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresar.Image = global::Desktop.Properties.Resources.icons8_agregar_propiedad_48;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(570, 709);
+            this.btnIngresar.Location = new System.Drawing.Point(555, 709);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(149, 39);
             this.btnIngresar.TabIndex = 31;
