@@ -91,21 +91,6 @@ namespace Desktop.Administrador
             AbrirFormularios(new Desktop.Administrador.ReporteProPro());
         }
 
-        private void MenuVertical_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void MenuAdm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -133,14 +118,9 @@ namespace Desktop.Administrador
             Application.Exit();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Esta seguro que desea cerrar sesión?", "Warning",
+            if (MessageBox.Show("¿Esta seguro que desea cerrar sesión?", "Advertencia",
                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 this.Close();
             f1.ShowDialog();

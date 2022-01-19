@@ -73,7 +73,6 @@ namespace Desktop.Administrador
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(255, 797);
             this.MenuVertical.TabIndex = 0;
-            this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
             // button3
             // 
@@ -97,7 +96,7 @@ namespace Desktop.Administrador
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(17, 695);
@@ -118,7 +117,6 @@ namespace Desktop.Administrador
             this.label2.Size = new System.Drawing.Size(208, 17);
             this.label2.TabIndex = 14;
             this.label2.Text = "________________________________________";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -131,7 +129,6 @@ namespace Desktop.Administrador
             this.label1.Size = new System.Drawing.Size(135, 32);
             this.label1.TabIndex = 13;
             this.label1.Text = "Inventario";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnMenu
             // 
@@ -358,7 +355,6 @@ namespace Desktop.Administrador
             this.Name = "MenuAdm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control de inventario";
-            this.Load += new System.EventHandler(this.MenuAdm_Load);
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();

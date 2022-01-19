@@ -8,37 +8,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
-namespace Desktop.Administrador
+namespace Desktop.Vendedor
 {
-    public partial class cmbFechaVenta : Form
+    public partial class VentasVend : Form
     {
         string myformat = "dd/MM/yyyy hh:mm tt";
         conexion conexion = new conexion();
-
-        public cmbFechaVenta()
+        public VentasVend()
         {
             InitializeComponent();
         }
 
-        private void Categoria_Load(object sender, EventArgs e)
+        private void Catalogo_Load(object sender, EventArgs e)
         {
             conexion.abrir();
             llenar_ComboPro();
             llenar_ComboCliente();
-            GridCategoria.DataSource = llenar_grid();
+            GridCatalogo.DataSource = llenar_grid();
+            
         }
-
         public DataTable llenar_grid()
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDVentas as N,p.nombre as Producto,c.nombre as Cliente,v.cantidad as Cantidad,fechaVenta as 'Fecha Venta', vendedor as 'Usuario' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
+            String consulta = "SELECT IDVentas as N,p.nombre as Producto,c.nombre as Cliente,v.cantidad as Cantidad,fechaVenta as 'Fecha Venta' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente where v.vendedor = 'Vendedor'";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             //conexion.cerrar();
             return dt;
+
         }
 
         public void llenar_ComboPro()
@@ -71,7 +74,7 @@ namespace Desktop.Administrador
             //cmbProducto.SelectedIndex = 0;
         }
         private void btnIngresar_Click(object sender, EventArgs e)
-        { 
+        {
             if (string.IsNullOrEmpty(txtCantidad.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
@@ -101,7 +104,7 @@ namespace Desktop.Administrador
 
                 if (sepuedeonosepuede == "sepuede")
                 {
-                    string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad < @PCantidad) begin insert into Ventas(IDProducto, IDCliente, cantidad, fechaVenta, vendedor) values (@IDProducto, @IDCliente, @Cantidad, @Fecha, 'Administrador') update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
+                    string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad < @PCantidad) begin insert into Ventas(IDProducto, IDCliente, cantidad, fechaVenta, vendedor) values (@IDProducto, @IDCliente, @Cantidad, @Fecha, 'Vendedor') update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
                     SqlCommand cmd = new SqlCommand(insertar44, conexion.conectarbd);
                     cmd.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
                     cmd.Parameters.AddWithValue("@IDCliente", cmbCliente.SelectedValue);
@@ -110,7 +113,7 @@ namespace Desktop.Administrador
                     cmd.Parameters.AddWithValue("@Fecha", stdate);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Los datos fueron agregados con exito");
-                    GridCategoria.DataSource = llenar_grid();
+                    GridCatalogo.DataSource = llenar_grid();
                 }
 
                 else
@@ -132,40 +135,14 @@ namespace Desktop.Administrador
                 */
             }
         }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {/*
-            if (string.IsNullOrEmpty(txtProducto.Text.Trim()))
-            {
-                MessageBox.Show("Hay Campos Vacios");
-
-                return;
-            }
-
-            else
-            {
-                //conexion.abrir();
-                string actualizar = "UPDATE Categoria set Nombre = @Nombre where IdCategoria = @IdCategoria";
-                SqlCommand cmd = new SqlCommand(actualizar, conexion.conectarbd);
-                string id = Convert.ToString(GridCategoria.CurrentRow.Cells[0].Value);
-                cmd.Parameters.AddWithValue("@IdCategoria", id);
-                cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Los datos fueron actualizados con exito");
-                GridCategoria.DataSource = llenar_grid();
-               // cmbProducto.Clear();
-            }*/
-        }
-
         private void GridCategoria_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                cmbProducto.Text = GridCategoria.CurrentRow.Cells[1].Value.ToString();
-                cmbCliente.Text = GridCategoria.CurrentRow.Cells[2].Value.ToString();
-                txtCantidad.Text = GridCategoria.CurrentRow.Cells[3].Value.ToString();
-                dtpFechaVenta.Text = GridCategoria.CurrentRow.Cells[4].Value.ToString();
+                cmbProducto.Text = GridCatalogo.CurrentRow.Cells[1].Value.ToString();
+                cmbCliente.Text = GridCatalogo.CurrentRow.Cells[2].Value.ToString();
+                txtCantidad.Text = GridCatalogo.CurrentRow.Cells[3].Value.ToString();
+                dtpFechaVenta.Text = GridCatalogo.CurrentRow.Cells[4].Value.ToString();
             }
             catch { }
         }
@@ -180,9 +157,74 @@ namespace Desktop.Administrador
             }
         }
 
-        private void cmbProducto_SelectedIndexChanged(object sender, EventArgs e)
+
+        /*
+        private void GridCatalogo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //conexion.abrir();
+            try
+            {
+                //lblCodigo.Text = GridCatalogo.CurrentRow.Cells[0].Value.ToString();
+                //lblNombre.Text = GridCatalogo.CurrentRow.Cells[1].Value.ToString();
+                //lblPrecio.Text = GridCatalogo.CurrentRow.Cells[2].Value.ToString();
+            }
+            catch { }
+        }
+        
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
 
+            string insertar = "INSERT INTO FACTURALOCAL (IdCompra, IdProducto, IdEmpleado, Cantidad, Fecha) Values (@IdCompra,@IdProducto,@IdEmpleado,@Cantidad,@Fecha)";
+            SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
+            //cmd.Parameters.AddWithValue("@IdCompra", txtCompra.Text);
+            cmd.Parameters.AddWithValue("@IdProducto", lblCodigo.Text);
+            cmd.Parameters.AddWithValue("@IdEmpleado", 2);
+            //cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
+            //cmd.Parameters.AddWithValue("@Fecha", fechaingreso.Text);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Los datos fueron agregados con exito");
+
+            GridCatalogo.DataSource = llenar_grid();
+            //txtCantidad.Clear();
+
         }
+        private void btnCarrito_Click(object sender, EventArgs e)
+        {
+
+            lblEncabezado.Text = "Listado de productos";
+
+            DataTable dt = new DataTable();
+            String consulta = "select p.IdProducto as [Codigo],p.Nombre as [Producto],p.PrecioU,fl.Cantidad from FacturaLocal as fl inner join Producto as p on fl.IdProducto = p.idProducto where IdCompra = @IdCompra";
+            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
+            //cmd.Parameters.AddWithValue("@IdCompra", txtCompra.Text);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            GridCatalogo.DataSource = dt;
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            string insertar = "UPDATE FacturaLocal set IdProducto = @IdProducto, IdEmpleado = @IdEmpleado, Cantidad = @Cantidad where IdCompra = @IdCompra";
+            SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
+            //cmd.Parameters.AddWithValue("@IdCompra", txtCompra.Text);
+            cmd.Parameters.AddWithValue("@IdProducto", lblCodigo.Text);
+            cmd.Parameters.AddWithValue("@IdEmpleado", 2);
+            //cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Los datos fueron actualizados con exito");
+
+            GridCatalogo.DataSource = llenar_grid();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string insertar = "Delete from FacturaLocal where IdCompra = @IdCompra";
+            SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Los datos fueron actualizados con exito");
+
+            GridCatalogo.DataSource = llenar_grid();
+        }*/
     }
 }

@@ -31,7 +31,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDProducto,nombre,categoria,marca,precioUnitario,cantidad,Disponibilidad FROM Producto";
+            String consulta = "SELECT nombre as 'Producto',categoria as 'Categoria',marca as 'Marca',precioUnitario as 'Precio Unitario',cantidad as 'Cantidad',Disponibilidad FROM Producto";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -154,6 +154,7 @@ namespace Desktop.Administrador
                 txtCantidad.Clear();
                 txtMarca.Clear();
                 txtPrecio.Clear();
+                cbmDis.ResetText();
                 //txtDisponibilidadP.Clear();
                 txtCategoria.Clear();
             }

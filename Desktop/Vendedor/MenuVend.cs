@@ -12,14 +12,10 @@ namespace Desktop.Vendedor
 {
     public partial class MenuVend : Form
     {
+        Form1 f1 = new Form1();
         public MenuVend()
         {
             InitializeComponent();
-        }
-
-        private void MenuVend_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -57,12 +53,7 @@ namespace Desktop.Vendedor
 
         private void btnCatalogo_Click(object sender, EventArgs e)
         {
-            AbrirFormularios(new Desktop.Vendedor.Ventas());
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            AbrirFormularios(new Desktop.Vendedor.VentasVend());
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -84,6 +75,14 @@ namespace Desktop.Vendedor
                     WindowState = FormWindowState.Minimized;
                 else if (WindowState == FormWindowState.Maximized)
                     WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro que desea cerrar sesión?", "Warning",
+   MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
+            f1.ShowDialog();
         }
     }
 }
