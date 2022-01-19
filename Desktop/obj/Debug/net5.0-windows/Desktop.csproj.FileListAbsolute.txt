@@ -570,7 +570,6 @@ C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-win
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProPro.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Catalogo.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.MenuVend.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.GenerateResource.cache
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.GeneratedMSBuildEditorConfig.editorconfig
@@ -700,3 +699,4 @@ C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-win
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProductos.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteVentas.resources
 C:\Users\ruben\Desktop\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Ventas.resources
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.Ventas.resources

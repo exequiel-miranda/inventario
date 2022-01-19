@@ -55,9 +55,9 @@ namespace Desktop.Administrador
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(328, -74);
+            this.label3.Location = new System.Drawing.Point(328, -65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 45);
+            this.label3.Size = new System.Drawing.Size(182, 43);
             this.label3.TabIndex = 26;
             this.label3.Text = "CLIENTES ";
             // 
@@ -66,9 +66,9 @@ namespace Desktop.Administrador
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Sitka Small", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(395, 59);
+            this.label7.Location = new System.Drawing.Point(395, 52);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 45);
+            this.label7.Size = new System.Drawing.Size(152, 43);
             this.label7.TabIndex = 27;
             this.label7.Text = "Compras";
             // 
@@ -78,9 +78,9 @@ namespace Desktop.Administrador
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = global::Desktop.Properties.Resources.icons8_eliminar_propiedad_48;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(686, 658);
+            this.btnEliminar.Location = new System.Drawing.Point(686, 581);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(149, 34);
             this.btnEliminar.TabIndex = 40;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -92,9 +92,9 @@ namespace Desktop.Administrador
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnModificar.Image = global::Desktop.Properties.Resources.icons8_editar_propiedad_48;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(531, 658);
+            this.btnModificar.Location = new System.Drawing.Point(531, 581);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(149, 39);
+            this.btnModificar.Size = new System.Drawing.Size(149, 34);
             this.btnModificar.TabIndex = 39;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -106,9 +106,9 @@ namespace Desktop.Administrador
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresar.Image = global::Desktop.Properties.Resources.icons8_agregar_propiedad_48;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(376, 658);
+            this.btnIngresar.Location = new System.Drawing.Point(376, 581);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(149, 39);
+            this.btnIngresar.Size = new System.Drawing.Size(149, 34);
             this.btnIngresar.TabIndex = 32;
             this.btnIngresar.Text = "GUARDAR";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -119,9 +119,9 @@ namespace Desktop.Administrador
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(131, 280);
+            this.label6.Location = new System.Drawing.Point(131, 247);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 22);
+            this.label6.Size = new System.Drawing.Size(53, 21);
             this.label6.TabIndex = 50;
             this.label6.Text = "Fecha:";
             // 
@@ -130,9 +130,9 @@ namespace Desktop.Administrador
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(505, 216);
+            this.label5.Location = new System.Drawing.Point(505, 191);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 22);
+            this.label5.Size = new System.Drawing.Size(80, 21);
             this.label5.TabIndex = 48;
             this.label5.Text = "Categoria:";
             // 
@@ -141,9 +141,9 @@ namespace Desktop.Administrador
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(505, 156);
+            this.label4.Location = new System.Drawing.Point(505, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 22);
+            this.label4.Size = new System.Drawing.Size(75, 21);
             this.label4.TabIndex = 46;
             this.label4.Text = "Cantidad:";
             // 
@@ -152,9 +152,9 @@ namespace Desktop.Administrador
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(131, 216);
+            this.label2.Location = new System.Drawing.Point(131, 191);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 22);
+            this.label2.Size = new System.Drawing.Size(56, 21);
             this.label2.TabIndex = 43;
             this.label2.Text = "Precio:";
             // 
@@ -163,9 +163,9 @@ namespace Desktop.Administrador
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(131, 156);
+            this.label1.Location = new System.Drawing.Point(131, 138);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 22);
+            this.label1.Size = new System.Drawing.Size(76, 21);
             this.label1.TabIndex = 42;
             this.label1.Text = "Producto:";
             // 
@@ -173,51 +173,53 @@ namespace Desktop.Administrador
             // 
             this.GridEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridEmpleados.Location = new System.Drawing.Point(123, 341);
+            this.GridEmpleados.Location = new System.Drawing.Point(123, 301);
             this.GridEmpleados.Name = "GridEmpleados";
             this.GridEmpleados.RowHeadersWidth = 43;
             this.GridEmpleados.RowTemplate.Height = 25;
-            this.GridEmpleados.Size = new System.Drawing.Size(713, 311);
+            this.GridEmpleados.Size = new System.Drawing.Size(713, 274);
             this.GridEmpleados.TabIndex = 52;
             this.GridEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridEmpleados_CellContentClick);
             this.GridEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridEmpleados_CellContentClick);
             // 
             // txtProducto
             // 
-            this.txtProducto.Location = new System.Drawing.Point(244, 158);
+            this.txtProducto.Location = new System.Drawing.Point(244, 139);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(210, 25);
+            this.txtProducto.Size = new System.Drawing.Size(210, 23);
             this.txtProducto.TabIndex = 53;
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(605, 153);
+            this.txtCantidad.Location = new System.Drawing.Point(605, 135);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(210, 25);
+            this.txtCantidad.Size = new System.Drawing.Size(210, 23);
             this.txtCantidad.TabIndex = 55;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(244, 217);
+            this.txtPrecio.Location = new System.Drawing.Point(244, 191);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(210, 25);
+            this.txtPrecio.Size = new System.Drawing.Size(210, 23);
             this.txtPrecio.TabIndex = 56;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // DTPfechaCompra
             // 
-            this.DTPfechaCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTPfechaCompra.Location = new System.Drawing.Point(244, 277);
+            this.DTPfechaCompra.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+            this.DTPfechaCompra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTPfechaCompra.Location = new System.Drawing.Point(244, 244);
             this.DTPfechaCompra.Name = "DTPfechaCompra";
-            this.DTPfechaCompra.Size = new System.Drawing.Size(210, 25);
+            this.DTPfechaCompra.Size = new System.Drawing.Size(210, 23);
             this.DTPfechaCompra.TabIndex = 58;
+            this.DTPfechaCompra.ValueChanged += new System.EventHandler(this.DTPfechaCompra_ValueChanged);
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(605, 217);
+            this.txtCategoria.Location = new System.Drawing.Point(605, 191);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(210, 25);
+            this.txtCategoria.Size = new System.Drawing.Size(210, 23);
             this.txtCategoria.TabIndex = 59;
             // 
             // label8
@@ -225,25 +227,25 @@ namespace Desktop.Administrador
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(505, 277);
+            this.label8.Location = new System.Drawing.Point(505, 244);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 22);
+            this.label8.Size = new System.Drawing.Size(56, 21);
             this.label8.TabIndex = 60;
             this.label8.Text = "Marca:";
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(605, 277);
+            this.txtMarca.Location = new System.Drawing.Point(605, 244);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(210, 25);
+            this.txtMarca.Size = new System.Drawing.Size(210, 23);
             this.txtMarca.TabIndex = 61;
             // 
             // Compras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1003, 788);
+            this.ClientSize = new System.Drawing.Size(1003, 695);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtCategoria);

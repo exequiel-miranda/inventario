@@ -13,7 +13,8 @@ namespace Desktop.Administrador
 {
     public partial class Compras : Form
     {
-        string myformat = "dd/MM/yyyy";
+        string myformat = "dd/MM/yyyy hh:mm:ss";
+
         conexion conexion = new conexion();
         public Compras()
         {
@@ -158,12 +159,12 @@ namespace Desktop.Administrador
             else
             {
                 //conexion.abrir();
-                string actualizar = "UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, fechaCompra = @fechaCompra, cantidad = @cantidad, categoria = @categoria, marca = @marca where IDCompras = @IDCompras";
+                string actualizar = "Declare @cantYa int Declare @CantTotal int select @cantYa = Compras.cantidad  from Compras where @IDCompras = Compras.IDCompras IF(@cantYa > @cantViene) begin  select @CantTotal = @cantYa -  @CantViene  update Producto set cantidad = cantidad - @CantTotal where Producto.nombre = @nombreProducto  UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, fechaCompra = @fechaCompra,   cantidad = @cantViene, categoria = @categoria, marca = @marca where IDCompras = @IDCompras end else begin  select @CantTotal = @CantViene - @cantYa  update Producto set cantidad = cantidad + @CantTotal where Producto.nombre = @nombreProducto  UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, fechaCompra = @fechaCompra,  cantidad = @cantViene, categoria = @categoria, marca = @marca where IDCompras = @IDCompras end";
                 SqlCommand cmd = new SqlCommand(actualizar, conexion.conectarbd);
                 string id = Convert.ToString(GridEmpleados.CurrentRow.Cells[0].Value);
                 cmd.Parameters.AddWithValue("@IDCompras", id);
                 cmd.Parameters.AddWithValue("@nombreProducto", txtProducto.Text);
-                cmd.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
+                cmd.Parameters.AddWithValue("@cantViene", txtCantidad.Text);
                 cmd.Parameters.AddWithValue("@precio", txtPrecio.Text);
                 cmd.Parameters.AddWithValue("@categoria", txtCategoria.Text);
                 cmd.Parameters.AddWithValue("@marca", txtMarca.Text);
@@ -188,10 +189,14 @@ namespace Desktop.Administrador
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string eliminar = "Delete from Compras where IDCompras = @IDCompras";
+            string eliminar = "Delete from Compras where IDCompras = @IDCompras update Producto set cantidad = cantidad - @cantidad where nombre = @NombreProducto	";
             SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
             string id = Convert.ToString(GridEmpleados.CurrentRow.Cells[0].Value);
+            string name = Convert.ToString(GridEmpleados.CurrentRow.Cells[1].Value);
+            string cant = Convert.ToString(GridEmpleados.CurrentRow.Cells[2].Value);
             cmd.Parameters.AddWithValue("@IDCompras", id);
+            cmd.Parameters.AddWithValue("@NombreProducto", name);
+            cmd.Parameters.AddWithValue("@cantidad", cant);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Los datos han sido eliminados correctamente");
             GridEmpleados.DataSource = llenar_grid();
@@ -231,7 +236,7 @@ namespace Desktop.Administrador
         {
                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
                 {
-                    MessageBox.Show("Solo números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Solo números acompañados de punto decimal", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     e.Handled = true;
                     return;
                 }
@@ -243,6 +248,11 @@ namespace Desktop.Administrador
                     e.Handled = true;
                     return;
                 }
+        }
+
+        private void DTPfechaCompra_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
