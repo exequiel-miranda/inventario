@@ -306,5 +306,11 @@ namespace Desktop.Administrador
                 return;
                 }
         }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            txtNombre.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNombre.Text);
+            txtNombre.SelectionStart = txtNombre.Text.Length;
+        }
     }
 }

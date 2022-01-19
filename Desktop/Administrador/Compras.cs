@@ -254,5 +254,11 @@ namespace Desktop.Administrador
         {
 
         }
+
+        private void txtProducto_TextChanged(object sender, EventArgs e)
+        {
+            txtProducto.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtProducto.Text);
+            txtProducto.SelectionStart = txtProducto.Text.Length;
+        }
     }
 }

@@ -188,6 +188,7 @@ namespace Desktop.Administrador
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(210, 23);
             this.txtProducto.TabIndex = 53;
+            this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
             // 
             // txtCantidad
             // 
