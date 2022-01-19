@@ -182,5 +182,10 @@ namespace Desktop.Administrador
         {
             GridReporte.DataSource = llenar_grid();
         }
+
+        private void ReporteProductos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

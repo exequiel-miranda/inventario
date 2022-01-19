@@ -43,11 +43,9 @@ namespace Desktop.Administrador
             this.label7 = new System.Windows.Forms.Label();
             this.Mostrarlbl = new System.Windows.Forms.Label();
             this.GridProductos = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
-            this.cbmDis = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,17 +203,6 @@ namespace Desktop.Administrador
             this.GridProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridProductos_CellContentClick);
             this.GridProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridProductos_CellContentClick);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(494, 254);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 21);
-            this.label3.TabIndex = 68;
-            this.label3.Text = "Disponibilidad:";
-            // 
             // txtCategoria
             // 
             this.txtCategoria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -242,28 +229,15 @@ namespace Desktop.Administrador
             this.txtMarca.Size = new System.Drawing.Size(210, 29);
             this.txtMarca.TabIndex = 71;
             // 
-            // cbmDis
-            // 
-            this.cbmDis.FormattingEnabled = true;
-            this.cbmDis.Items.AddRange(new object[] {
-            "Verdadera",
-            "Falsa"});
-            this.cbmDis.Location = new System.Drawing.Point(626, 251);
-            this.cbmDis.Name = "cbmDis";
-            this.cbmDis.Size = new System.Drawing.Size(210, 23);
-            this.cbmDis.TabIndex = 72;
-            // 
             // Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(971, 691);
-            this.Controls.Add(this.cbmDis);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.GridProductos);
             this.Controls.Add(this.Mostrarlbl);
             this.Controls.Add(this.btnEliminar);
@@ -305,13 +279,11 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label Mostrarlbl;
         private System.Windows.Forms.DataGridView GridProductos;
-        private System.Windows.Forms.Label label3;
 //<<<<<<< Updated upstream
         private System.Windows.Forms.TextBox txtCategoria;
 //=======
         private System.Windows.Forms.Label label9;
 //>>>>>>> Stashed changes
         private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.ComboBox cbmDis;
     }
 }

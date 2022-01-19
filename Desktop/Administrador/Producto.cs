@@ -31,7 +31,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT nombre as 'Producto',categoria as 'Categoria',marca as 'Marca',precioUnitario as 'Precio Unitario',cantidad as 'Cantidad',Disponibilidad FROM Producto";
+            String consulta = "SELECT IDProducto as 'ID', nombre as 'Producto',categoria as 'Categoria',marca as 'Marca',precioUnitario as 'Precio Unitario',cantidad as 'Cantidad',Disponibilidad FROM Producto";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -103,7 +103,7 @@ namespace Desktop.Administrador
             else
             {
                 //Se ingresa a la tabla Productos
-                string insertar2 = "INSERT INTO PRODUCTO (nombre, categoria, marca, precioUnitario, cantidad, disponibilidad) Values (@nombre,@categoria, @marca, @precioUnitario, @cantidad, @disponibilidad)";
+                string insertar2 = "INSERT INTO PRODUCTO (nombre, categoria, marca, precioUnitario, cantidad, disponibilidad) Values (@nombre,@categoria, @marca, @precioUnitario, @cantidad, 'True')";
                 SqlCommand cmd2 = new SqlCommand(insertar2, conexion.conectarbd);
                // cmd2.Parameters.AddWithValue("@IDProducto", txtCodigo.Text);
                 cmd2.Parameters.AddWithValue("@categoria", txtCategoria.Text);
@@ -111,6 +111,7 @@ namespace Desktop.Administrador
                 cmd2.Parameters.AddWithValue("@precioUnitario", txtPrecio.Text);
                 cmd2.Parameters.AddWithValue("@marca", txtMarca.Text);
                 cmd2.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
+                /*
                 if (cbmDis.Text == "Verdadera")
                 {
                     cbmDis.Text = "True";
@@ -127,6 +128,7 @@ namespace Desktop.Administrador
                     return;
                 }
                 //cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
+                */
                 cmd2.ExecuteNonQuery();
                 
 
@@ -154,7 +156,7 @@ namespace Desktop.Administrador
                 txtCantidad.Clear();
                 txtMarca.Clear();
                 txtPrecio.Clear();
-                cbmDis.ResetText();
+                //cbmDis.ResetText();
                 //txtDisponibilidadP.Clear();
                 txtCategoria.Clear();
             }
@@ -172,6 +174,8 @@ namespace Desktop.Administrador
                 txtMarca.Text = GridProductos.CurrentRow.Cells[3].Value.ToString();
                 txtPrecio.Text = GridProductos.CurrentRow.Cells[4].Value.ToString();
                 txtCantidad.Text = GridProductos.CurrentRow.Cells[5].Value.ToString();
+
+                /*
                 cbmDis.Text = GridProductos.CurrentRow.Cells[6].Value.ToString();
                 if (cbmDis.Text == "True")
                 {
@@ -182,13 +186,14 @@ namespace Desktop.Administrador
                     cbmDis.Text = "Falso";
                 }
                 //txtDisponibilidadP.Text = GridProductos.CurrentRow.Cells[6].Value.ToString();
+                */
             }
             catch { }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(cbmDis.Text.Trim()) || string.IsNullOrEmpty(txtNombre.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()))
+            if (string.IsNullOrEmpty(txtNombre.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -202,12 +207,17 @@ namespace Desktop.Administrador
                 SqlCommand cmd2 = new SqlCommand(actualizar, conexion.conectarbd);
                 string id = Convert.ToString(GridProductos.CurrentRow.Cells[0].Value);
                 cmd2.Parameters.AddWithValue("@IDProducto", id);
+                string disponibilidadCheque = Convert.ToString(GridProductos.CurrentRow.Cells[6].Value);
+            
                 cmd2.Parameters.AddWithValue("@categoria", txtCategoria.Text);
                 cmd2.Parameters.AddWithValue("@nombre", txtNombre.Text);
                 cmd2.Parameters.AddWithValue("@precioUnitario", txtPrecio.Text);
                 cmd2.Parameters.AddWithValue("@marca", txtMarca.Text);
                 cmd2.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
+                cmd2.Parameters.AddWithValue("@disponibilidad", disponibilidadCheque);
                 //cmd2.Parameters.AddWithValue("@proveedorId", cmbProveedor.Text);
+
+                /*
                 if (cbmDis.Text == "Verdadera")
                 {
                     cbmDis.Text = "True";
@@ -223,7 +233,7 @@ namespace Desktop.Administrador
                     MessageBox.Show("No ha seleccionado Disponibilidad");
                     return;
                 }
-
+                */
                 cmd2.ExecuteNonQuery();
 
                 /*
@@ -246,6 +256,7 @@ namespace Desktop.Administrador
                 txtPrecio.Clear();
                 //txtDisponibilidadP.Clear();
                 txtCategoria.Clear();
+                //cbmDis.ResetText();
                 //txtCodigo.Clear();
             }
         }

@@ -98,7 +98,7 @@ namespace Desktop
                 }
                 else
                 {
-                    MessageBox.Show("Datos Incorrectos", "Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Usuario o contraseña inválidos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtContraseña.Clear();
                 }
 
