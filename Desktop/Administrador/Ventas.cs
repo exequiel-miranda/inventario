@@ -134,7 +134,65 @@ namespace Desktop.Administrador
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
-        {/*
+        {
+            if (string.IsNullOrEmpty(txtCantidad.Text.Trim()))
+            {
+                MessageBox.Show("Hay Campos Vacios");
+
+                return;
+            }
+
+            else
+            {
+
+                //-----------------------------------------------------------------
+                //aqui se asigna el valor a la variable si es menor o mayor
+                string validacion1 = "Declare @CantidadP int select @CantidadP = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@Cantidad <= @CantidadP) begin update Producto set sepuedeono='sepuede' where @IDProducto = IDProducto end else begin update Producto set sepuedeono='nosepuede' where @IDProducto = IDProducto end";
+                SqlCommand cmd3 = new SqlCommand(validacion1, conexion.conectarbd);
+                cmd3.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                cmd3.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
+                cmd3.ExecuteNonQuery();
+
+                //-----------------------------------------------------------------
+                //ok aqui ya me muestra como esta la variable
+                string validacion2 = "select sepuedeono from Producto where @IDProducto = Producto.IDProducto ";
+                SqlCommand cmd2 = new SqlCommand(validacion2, conexion.conectarbd);
+                cmd2.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                cmd2.ExecuteNonQuery();
+
+                string sepuedeonosepuede = (string)cmd2.ExecuteScalar();
+                //-----------------------------------------------------------------
+
+
+                if (sepuedeonosepuede == "sepuede")
+                {
+
+                    //conexion.abrir();
+                    string actualizar = "Declare @cantYa int Declare @CantTotal int select @cantYa = Ventas.cantidad  from Ventas where @IDVentas = Ventas.IDVentas IF(@cantYa > @cantidad) begin  select @CantTotal = @cantYa - @Cantidad  update Producto set cantidad = cantidad + @CantTotal where Producto.nombre = @nombreProducto  update Ventas set IDProducto = @IDProducto, IDCliente = @IDCliente, cantidad = @Cantidad,   fechaVenta = @FechaVenta where IDVentas = @IDVentas  end else begin  select @CantTotal = @Cantidad - @cantYa  update Producto set cantidad = cantidad - @CantTotal where Producto.nombre = @nombreProducto  update Ventas set IDProducto = @IDProducto, IDCliente = @IDCliente, cantidad = @Cantidad,  fechaVenta = @FechaVenta where IDVentas = @IDVentas end";
+                    SqlCommand cmd7 = new SqlCommand(actualizar, conexion.conectarbd);
+                    string id = Convert.ToString(GridCategoria.CurrentRow.Cells[0].Value);
+                    string name = Convert.ToString(GridCategoria.CurrentRow.Cells[1].Value);
+                    cmd7.Parameters.AddWithValue("@IDVentas", id);
+                    cmd7.Parameters.AddWithValue("@nombreProducto", name);
+                    cmd7.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                    cmd7.Parameters.AddWithValue("@IDCliente", cmbCliente.SelectedValue);
+                    cmd7.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
+
+                    //Subir fecha
+                    DateTime stdate = DateTime.ParseExact(dtpFechaVenta.Text, myformat, null);
+                    cmd7.Parameters.AddWithValue("@FechaVenta", stdate);
+                    cmd7.ExecuteNonQuery();
+                    MessageBox.Show("Los datos fueron actualizados con exito");
+                    GridCategoria.DataSource = llenar_grid();
+                }
+                else
+                {
+                    MessageBox.Show("No hay tanto stock de este producto");
+                }
+
+            }
+
+            /*
             if (string.IsNullOrEmpty(txtProducto.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
@@ -183,6 +241,29 @@ namespace Desktop.Administrador
         private void cmbProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string eliminar = "Delete from Ventas where IDVentas = @IDVentas update Producto set cantidad = cantidad + @cantidad where nombre = @NombreProducto	";
+            SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
+            string id = Convert.ToString(GridCategoria.CurrentRow.Cells[0].Value);
+            string name = Convert.ToString(GridCategoria.CurrentRow.Cells[1].Value);
+            string cant = Convert.ToString(GridCategoria.CurrentRow.Cells[3].Value);
+            cmd.Parameters.AddWithValue("@IDVentas", id);
+            cmd.Parameters.AddWithValue("@NombreProducto", name);
+            cmd.Parameters.AddWithValue("@cantidad", cant);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Los datos han sido eliminados correctamente");
+            GridCategoria.DataSource = llenar_grid();
+           // txtProducto.Clear();
+            txtCantidad.Clear();
+            //txtPrecio.Clear();
+            //txtCategoria.Clear();
+            //txtMarca.Clear();
+            //  txtProveedor.Clear();
+            //txtFechaCompra.Clear();
+            //conexion.abrir();
         }
     }
 }
