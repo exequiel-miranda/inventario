@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Desktop": {
+      "commandName": "Project"
+    },
+    "Ejecutable": {
+      "commandName": "Executable"
+    }
+  }
+}

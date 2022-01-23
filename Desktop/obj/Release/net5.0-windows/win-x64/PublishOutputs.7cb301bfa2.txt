@@ -1,0 +1,13 @@
+C:\Users\ruben\Desktop\Instalador\Inventario.pdb
+C:\Users\ruben\Desktop\Instalador\Resources\Logotipo.png
+C:\Users\ruben\Desktop\Instalador\clrcompression.dll
+C:\Users\ruben\Desktop\Instalador\clrjit.dll
+C:\Users\ruben\Desktop\Instalador\coreclr.dll
+C:\Users\ruben\Desktop\Instalador\mscordaccore.dll
+C:\Users\ruben\Desktop\Instalador\D3DCompiler_47_cor3.dll
+C:\Users\ruben\Desktop\Instalador\PenImc_cor3.dll
+C:\Users\ruben\Desktop\Instalador\PresentationNative_cor3.dll
+C:\Users\ruben\Desktop\Instalador\vcruntime140_cor3.dll
+C:\Users\ruben\Desktop\Instalador\wpfgfx_cor3.dll
+C:\Users\ruben\Desktop\Instalador\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\ruben\Desktop\Instalador\Inventario.exe

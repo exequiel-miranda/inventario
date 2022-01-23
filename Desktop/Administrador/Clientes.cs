@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,12 +18,10 @@ namespace Desktop.Administrador
         public Clientes()
         {
             InitializeComponent();
-            
         }
 
         private void Clientes_Load(object sender, EventArgs e)
         {
-            
             conexion.abrir();
             GridClientes.DataSource = llenar_grid();
             //conexion.cerrar();
