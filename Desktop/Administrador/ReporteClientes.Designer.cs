@@ -52,6 +52,7 @@ namespace Desktop.Administrador
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = global::Desktop.Properties.Resources.ic_action_copy;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

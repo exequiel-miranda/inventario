@@ -64,6 +64,7 @@ namespace Desktop.Administrador
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnModificar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnModificar.Image = global::Desktop.Properties.Resources.icons8_editar_propiedad_48;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -136,6 +137,7 @@ namespace Desktop.Administrador
             // dtpFechaVenta
             // 
             this.dtpFechaVenta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpFechaVenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpFechaVenta.CustomFormat = "dd/MM/yyyy hh:mm tt";
             this.dtpFechaVenta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtpFechaVenta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -147,6 +149,7 @@ namespace Desktop.Administrador
             // cmbProducto
             // 
             this.cmbProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbProducto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbProducto.FormattingEnabled = true;
             this.cmbProducto.Location = new System.Drawing.Point(93, 135);
@@ -158,6 +161,7 @@ namespace Desktop.Administrador
             // cmbCliente
             // 
             this.cmbCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(419, 135);
@@ -169,6 +173,7 @@ namespace Desktop.Administrador
             // 
             this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIngresar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresar.Image = global::Desktop.Properties.Resources.icons8_agregar_propiedad_48;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,6 +189,7 @@ namespace Desktop.Administrador
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = global::Desktop.Properties.Resources.icons8_eliminar_propiedad_48;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

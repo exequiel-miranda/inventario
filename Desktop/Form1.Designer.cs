@@ -30,7 +30,6 @@ namespace Desktop
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.label1 = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,24 +40,13 @@ namespace Desktop
             this.btnShow = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnMaximizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(462, 332);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 22);
-            this.label1.TabIndex = 2;
             // 
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtContraseña.Location = new System.Drawing.Point(462, 485);
+            this.txtContraseña.Location = new System.Drawing.Point(442, 485);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(328, 30);
             this.txtContraseña.TabIndex = 9;
@@ -67,7 +55,7 @@ namespace Desktop
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUsuario.Location = new System.Drawing.Point(462, 400);
+            this.txtUsuario.Location = new System.Drawing.Point(442, 400);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(328, 30);
             this.txtUsuario.TabIndex = 8;
@@ -78,7 +66,7 @@ namespace Desktop
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12.25743F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(462, 456);
+            this.label2.Location = new System.Drawing.Point(442, 456);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 24);
             this.label2.TabIndex = 7;
@@ -90,7 +78,7 @@ namespace Desktop
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12.25743F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(462, 371);
+            this.label3.Location = new System.Drawing.Point(442, 371);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 24);
             this.label3.TabIndex = 6;
@@ -100,7 +88,7 @@ namespace Desktop
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(518, 110);
+            this.pictureBox1.Location = new System.Drawing.Point(498, 110);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(209, 193);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,10 +102,11 @@ namespace Desktop
             this.botonesSalir.BorderColor = System.Drawing.Color.DarkSlateBlue;
             this.botonesSalir.BorderRadius = 45;
             this.botonesSalir.BorderSize = 0;
+            this.botonesSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botonesSalir.FlatAppearance.BorderSize = 0;
             this.botonesSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonesSalir.ForeColor = System.Drawing.Color.White;
-            this.botonesSalir.Location = new System.Drawing.Point(559, 587);
+            this.botonesSalir.Location = new System.Drawing.Point(539, 587);
             this.botonesSalir.Name = "botonesSalir";
             this.botonesSalir.Size = new System.Drawing.Size(150, 45);
             this.botonesSalir.TabIndex = 12;
@@ -133,7 +122,7 @@ namespace Desktop
             this.btnHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHide.FlatAppearance.BorderSize = 0;
             this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHide.Location = new System.Drawing.Point(745, 487);
+            this.btnHide.Location = new System.Drawing.Point(725, 487);
             this.btnHide.Name = "btnHide";
             this.btnHide.Size = new System.Drawing.Size(34, 26);
             this.btnHide.TabIndex = 14;
@@ -148,7 +137,7 @@ namespace Desktop
             this.btnShow.FlatAppearance.BorderSize = 0;
             this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShow.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnShow.Location = new System.Drawing.Point(745, 487);
+            this.btnShow.Location = new System.Drawing.Point(725, 487);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(34, 26);
             this.btnShow.TabIndex = 15;
@@ -165,7 +154,7 @@ namespace Desktop
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1177, 5);
+            this.btnCerrar.Location = new System.Drawing.Point(1157, 6);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(40, 23);
             this.btnCerrar.TabIndex = 18;
@@ -182,29 +171,12 @@ namespace Desktop
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(1115, 5);
+            this.btnMinimizar.Location = new System.Drawing.Point(1132, 6);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(20, 23);
             this.btnMinimizar.TabIndex = 17;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.BackgroundImage")));
-            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximizar.FlatAppearance.BorderSize = 0;
-            this.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
-            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximizar.Location = new System.Drawing.Point(1151, 5);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(20, 23);
-            this.btnMaximizar.TabIndex = 16;
-            this.btnMaximizar.UseVisualStyleBackColor = true;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click_1);
             // 
             // Form1
             // 
@@ -212,10 +184,9 @@ namespace Desktop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1220, 749);
+            this.ClientSize = new System.Drawing.Size(1204, 809);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnMinimizar);
-            this.Controls.Add(this.btnMaximizar);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.btnHide);
             this.Controls.Add(this.botonesSalir);
@@ -224,7 +195,6 @@ namespace Desktop
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -239,7 +209,6 @@ namespace Desktop
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label2;
@@ -250,7 +219,6 @@ namespace Desktop
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnMinimizar;
-        private System.Windows.Forms.Button btnMaximizar;
     }
 }
 

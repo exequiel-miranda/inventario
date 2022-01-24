@@ -1519,21 +1519,6 @@
         W8y9I/hxi7l3BD9uMff+Qg1jCWMJYwljCWPHPS8GI7enMsYQAwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnMaximizar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGeYUxB9wAAACBjSFJNAACH
-        EAAAjBIAAP1NAACBPgAAWesAARIPAAA85gAAGc66ySIyAAABJmlDQ1BBZG9iZSBSR0IgKDE5OTgpAAAo
-        z2NgYDJwdHFyZRJgYMjNKykKcndSiIiMUmA/z8DGwMwABonJxQWOAQE+IHZefl4qAwb4do2BEURf1gWZ
-        xUAa4EouKCoB0n+A2CgltTiZgYHRAMjOLi8pAIozzgGyRZKywewNIHZRSJAzkH0EyOZLh7CvgNhJEPYT
-        ELsI6Akg+wtIfTqYzcQBNgfClgGxS1IrQPYyOOcXVBZlpmeUKBhaWloqOKbkJ6UqBFcWl6TmFit45iXn
-        FxXkFyWWpKYA1ULcBwaCEIWgENMAarTQZKAyAMUDhPU5EBy+jGJnEGIIkFxaVAZlMjIZE+YjzJgjwcDg
-        v5SBgeUPQsykl4FhgQ4DA/9UhJiaIQODgD4Dw745AMDGT/0ZOjZcAAAACXBIWXMAAAsMAAALDAE/QCLI
-        AAAAq0lEQVRoQ+3ZMQ7CQBBD0dwAcQKuzy2X2YKPEqZCSPZILl5kraaw6xxrrdHax0nax0k+4VmfQehN
-        aI6c0ZvQHDmjN6E5ckZvwvfRo9xN7C6nfvQmXA7Krex3B7vLqR+9CZeDkgF/lAFqGaCWAWoZoJYBahmg
-        lgFqGaCWAWoZoJYBahmglgFqGaCWAWo/DRj/h8YavQnNkTN6E5ojZ/QmNEfO6P0OU7WPc6zjBWKVhOxH
-        biAQAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/4QBKRXhpZgAATU0AKgAAAAgAAYKYAAIAAAAnAAAAGgAAAABGcmVl

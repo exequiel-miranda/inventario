@@ -47,6 +47,7 @@ namespace Desktop.Administrador
             // 
             this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIngresar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresar.Image = global::Desktop.Properties.Resources.icons8_agregar_propiedad_48;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -66,7 +67,7 @@ namespace Desktop.Administrador
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(101, 115);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 30);
+            this.label1.Size = new System.Drawing.Size(103, 31);
             this.label1.TabIndex = 12;
             this.label1.Text = "Nombre:";
             // 
@@ -78,7 +79,7 @@ namespace Desktop.Administrador
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(405, 115);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(169, 30);
+            this.label5.Size = new System.Drawing.Size(175, 31);
             this.label5.TabIndex = 19;
             this.label5.Text = "Número de NIT:";
             // 
@@ -90,7 +91,7 @@ namespace Desktop.Administrador
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label6.Location = new System.Drawing.Point(101, 197);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 30);
+            this.label6.Size = new System.Drawing.Size(107, 31);
             this.label6.TabIndex = 21;
             this.label6.Text = "Teléfono:";
             // 
@@ -98,6 +99,7 @@ namespace Desktop.Administrador
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnModificar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnModificar.Image = global::Desktop.Properties.Resources.icons8_editar_propiedad_48;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,6 +115,7 @@ namespace Desktop.Administrador
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = global::Desktop.Properties.Resources.icons8_eliminar_propiedad_48;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

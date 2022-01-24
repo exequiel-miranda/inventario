@@ -66,6 +66,7 @@ namespace Desktop.Administrador
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = global::Desktop.Properties.Resources.icons8_eliminar_propiedad_48;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -81,6 +82,7 @@ namespace Desktop.Administrador
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnModificar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnModificar.Image = global::Desktop.Properties.Resources.icons8_editar_propiedad_48;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -96,6 +98,7 @@ namespace Desktop.Administrador
             // 
             this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIngresar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresar.Image = global::Desktop.Properties.Resources.icons8_agregar_propiedad_48;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,7 +118,7 @@ namespace Desktop.Administrador
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label6.Location = new System.Drawing.Point(108, 247);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(211, 30);
+            this.label6.Size = new System.Drawing.Size(221, 31);
             this.label6.TabIndex = 50;
             this.label6.Text = "Fecha de la Compra:";
             // 
@@ -127,7 +130,7 @@ namespace Desktop.Administrador
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(405, 169);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 30);
+            this.label5.Size = new System.Drawing.Size(118, 31);
             this.label5.TabIndex = 48;
             this.label5.Text = "Categoria:";
             // 
@@ -139,7 +142,7 @@ namespace Desktop.Administrador
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label4.Location = new System.Drawing.Point(405, 88);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 30);
+            this.label4.Size = new System.Drawing.Size(112, 31);
             this.label4.TabIndex = 46;
             this.label4.Text = "Cantidad:";
             // 
@@ -151,7 +154,7 @@ namespace Desktop.Administrador
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(108, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 30);
+            this.label2.Size = new System.Drawing.Size(82, 31);
             this.label2.TabIndex = 43;
             this.label2.Text = "Precio:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -164,7 +167,7 @@ namespace Desktop.Administrador
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(108, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 30);
+            this.label1.Size = new System.Drawing.Size(112, 31);
             this.label1.TabIndex = 42;
             this.label1.Text = "Producto:";
             // 
@@ -215,6 +218,7 @@ namespace Desktop.Administrador
             // DTPfechaCompra
             // 
             this.DTPfechaCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DTPfechaCompra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DTPfechaCompra.CustomFormat = "dd/MM/yyyy hh:mm:ss";
             this.DTPfechaCompra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DTPfechaCompra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -241,7 +245,7 @@ namespace Desktop.Administrador
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label8.Location = new System.Drawing.Point(405, 247);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 30);
+            this.label8.Size = new System.Drawing.Size(83, 31);
             this.label8.TabIndex = 60;
             this.label8.Text = "Marca:";
             // 

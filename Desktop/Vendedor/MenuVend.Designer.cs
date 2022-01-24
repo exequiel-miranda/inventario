@@ -41,6 +41,8 @@ namespace Desktop.Vendedor
             this.btnProducto = new System.Windows.Forms.Button();
             this.btnCatalogo = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             this.SuspendLayout();
@@ -118,6 +120,8 @@ namespace Desktop.Vendedor
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
+            this.MenuVertical.Controls.Add(this.label2);
+            this.MenuVertical.Controls.Add(this.label5);
             this.MenuVertical.Controls.Add(this.button1);
             this.MenuVertical.Controls.Add(this.label1);
             this.MenuVertical.Controls.Add(this.btnProducto);
@@ -141,7 +145,7 @@ namespace Desktop.Vendedor
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(25, 699);
+            this.button1.Location = new System.Drawing.Point(25, 713);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(198, 68);
             this.button1.TabIndex = 15;
@@ -156,7 +160,7 @@ namespace Desktop.Vendedor
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
             this.label1.Font = new System.Drawing.Font("Book Antiqua", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(51, 40);
+            this.label1.Location = new System.Drawing.Point(51, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 35);
             this.label1.TabIndex = 14;
@@ -174,7 +178,7 @@ namespace Desktop.Vendedor
             this.btnProducto.ForeColor = System.Drawing.Color.White;
             this.btnProducto.Image = global::Desktop.Properties.Resources.producto;
             this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducto.Location = new System.Drawing.Point(3, 355);
+            this.btnProducto.Location = new System.Drawing.Point(3, 344);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnProducto.Size = new System.Drawing.Size(259, 68);
@@ -194,7 +198,7 @@ namespace Desktop.Vendedor
             this.btnCatalogo.ForeColor = System.Drawing.Color.White;
             this.btnCatalogo.Image = global::Desktop.Properties.Resources.empleados;
             this.btnCatalogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCatalogo.Location = new System.Drawing.Point(3, 429);
+            this.btnCatalogo.Location = new System.Drawing.Point(3, 418);
             this.btnCatalogo.Name = "btnCatalogo";
             this.btnCatalogo.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCatalogo.Size = new System.Drawing.Size(259, 68);
@@ -214,7 +218,7 @@ namespace Desktop.Vendedor
             this.btnCliente.ForeColor = System.Drawing.Color.White;
             this.btnCliente.Image = global::Desktop.Properties.Resources.clientes;
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(3, 281);
+            this.btnCliente.Location = new System.Drawing.Point(3, 270);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCliente.Size = new System.Drawing.Size(259, 68);
@@ -222,6 +226,28 @@ namespace Desktop.Vendedor
             this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = false;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(28, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(208, 17);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "________________________________________";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(28, 689);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(208, 17);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "________________________________________";
             // 
             // MenuVend
             // 
@@ -259,5 +285,7 @@ namespace Desktop.Vendedor
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
     }
 }
