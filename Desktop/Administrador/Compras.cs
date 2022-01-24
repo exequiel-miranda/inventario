@@ -34,7 +34,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDCompras,nombreProducto,cantidad,precio,categoria,marca,fechaCompra, vendedor as Usuario FROM Compras";
+            String consulta = "SELECT IDCompras as 'N',nombreProducto as 'Producto',cantidad as 'Cantidad',precio as 'Precio',categoria as 'Categoria',marca as 'Marca',fechaCompra as 'Fecha de Compra' FROM Compras";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -90,32 +90,9 @@ namespace Desktop.Administrador
 
             else
             {
-                //-----------------------------------------------------------------
-                //ok aqui vemos si la cantidad es mayor a cero y la leemos
-                string validacion1 = "Declare @CantidadVar int select @CantidadVar =  @Cantidad select @CantidadVar";
-                SqlCommand cmd2323 = new SqlCommand(validacion1, conexion.conectarbd);
-                cmd2323.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
-                cmd2323.ExecuteNonQuery();
-                int cantidad = Convert.ToInt32(cmd2323.ExecuteScalar());
-                //-----------------------------------------------------------------
 
-
-                //-----------------------------------------------------------------
-                //ok aqui vemos si el precio unitario es mayor a cero y la leemos
-                string validacion2 = "Declare @precioUnitarioVar decimal(9,2) select @precioUnitarioVar =  @precioUnitario select @precioUnitario";
-                SqlCommand cmd3434 = new SqlCommand(validacion2, conexion.conectarbd);
-                cmd3434.Parameters.AddWithValue("@precioUnitario", txtPrecio.Text);
-                cmd3434.ExecuteNonQuery();
-                decimal precioUnitario = Convert.ToDecimal(cmd3434.ExecuteScalar());
-                //-----------------------------------------------------------------
-
-
-                if (cantidad > 0 && precioUnitario > 0)
-                {
-
-                
                 //Hago el procedimiento almacenado por string
-                string insertar22 = "Declare @Pnombre varchar(75) select @Pnombre = Producto.nombre from Producto where @CNombreProducto = Producto.nombre IF(@CNombreProducto = @Pnombre) Begin insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca, vendedor) values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca, 'Administrador') update Producto set cantidad = cantidad + @Ccantidad, categoria = @Ccategoria where @CNombreProducto = nombre End Else Begin insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca, vendedor) values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca, 'Administrador') insert into Producto(nombre, categoria, marca,precioUnitario,cantidad, Disponibilidad) values (@CNombreProducto, @Ccategoria,@Cmarca, @Cprecio,@Ccantidad, 'True') End";
+                string insertar22 = "Declare @Pnombre varchar(75) select @Pnombre = Producto.nombre from Producto where @CNombreProducto = Producto.nombre IF(@CNombreProducto = @Pnombre) Begin insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca) values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca) update Producto set cantidad = cantidad + @Ccantidad where @CNombreProducto = nombre End Else Begin insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca) values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca) insert into Producto(nombre, categoria, marca,precioUnitario,cantidad, Disponibilidad) values (@CNombreProducto, @Ccategoria,@Cmarca, @Cprecio,@Ccantidad, 'True') End";
                 SqlCommand cmd2 = new SqlCommand(insertar22, conexion.conectarbd);
                 cmd2.Parameters.AddWithValue("@CNombreProducto", txtProducto.Text);
                 cmd2.Parameters.AddWithValue("@Ccantidad", txtCantidad.Text);
@@ -128,12 +105,6 @@ namespace Desktop.Administrador
                 cmd2.Parameters.AddWithValue("@CFechaCompra", stdate);
                 cmd2.ExecuteNonQuery();
                 MessageBox.Show("Los datos fueron agregados con exito");
-                }
-
-                else
-                {
-                    MessageBox.Show("ingrese un numero mayor de cero en Cantidad o Precio");
-                }
 
 
 
@@ -171,7 +142,6 @@ namespace Desktop.Administrador
                 txtCategoria.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
                 txtMarca.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
                 DTPfechaCompra.Text = GridEmpleados.CurrentRow.Cells[6].Value.ToString();
-                
 
             }
             catch { }
@@ -219,37 +189,25 @@ namespace Desktop.Administrador
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
-            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()))
-            {
-                MessageBox.Show("Hay Campos Vacios");
-
-                return;
-            }
-
-            else
-            {
-
-                string eliminar = "Delete from Compras where IDCompras = @IDCompras update Producto set cantidad = cantidad - @cantidad where nombre = @NombreProducto	";
-                SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
-                string id = Convert.ToString(GridEmpleados.CurrentRow.Cells[0].Value);
-                string name = Convert.ToString(GridEmpleados.CurrentRow.Cells[1].Value);
-                string cant = Convert.ToString(GridEmpleados.CurrentRow.Cells[2].Value);
-                cmd.Parameters.AddWithValue("@IDCompras", id);
-                cmd.Parameters.AddWithValue("@NombreProducto", name);
-                cmd.Parameters.AddWithValue("@cantidad", cant);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Los datos han sido eliminados correctamente");
-                GridEmpleados.DataSource = llenar_grid();
-                txtProducto.Clear();
-                txtCantidad.Clear();
-                txtPrecio.Clear();
-                txtCategoria.Clear();
-                txtMarca.Clear();
-                //  txtProveedor.Clear();
-                //txtFechaCompra.Clear();
-                //conexion.abrir();
-            }
+            string eliminar = "Delete from Compras where IDCompras = @IDCompras update Producto set cantidad = cantidad - @cantidad where nombre = @NombreProducto	";
+            SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
+            string id = Convert.ToString(GridEmpleados.CurrentRow.Cells[0].Value);
+            string name = Convert.ToString(GridEmpleados.CurrentRow.Cells[1].Value);
+            string cant = Convert.ToString(GridEmpleados.CurrentRow.Cells[2].Value);
+            cmd.Parameters.AddWithValue("@IDCompras", id);
+            cmd.Parameters.AddWithValue("@NombreProducto", name);
+            cmd.Parameters.AddWithValue("@cantidad", cant);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Los datos han sido eliminados correctamente");
+            GridEmpleados.DataSource = llenar_grid();
+            txtProducto.Clear();
+            txtCantidad.Clear();
+            txtPrecio.Clear();
+            txtCategoria.Clear();
+            txtMarca.Clear();
+          //  txtProveedor.Clear();
+            //txtFechaCompra.Clear();
+            //conexion.abrir();
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)

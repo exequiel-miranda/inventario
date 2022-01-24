@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\ruben\Desktop\inventario\Desktop\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Update="Administrador\Ventas.cs">
       <SubType>Form</SubType>
@@ -16,16 +19,10 @@
     <Compile Update="Administrador\Producto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Administrador\Proveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Administrador\ReporteProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Administrador\ReporteCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Administrador\ReporteProPro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Administrador\ReporteVentas.cs">

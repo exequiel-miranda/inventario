@@ -4,11 +4,23 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>Inventory-maintenance_25374.ico</ApplicationIcon>
+    <AssemblyName>Inventario</AssemblyName>
+    <RootNamespace>Desktop</RootNamespace>
+    <Company>Programmers</Company>
+    <Authors>Ruben Rivera, Brayan Miranda</Authors>
+    <Copyright>Copyright (©) 2022</Copyright>
+    <PackageId>Desktop</PackageId>
+    <Product>Desktop</Product>
+    <Win32Resource />
+    <UserSecretsId>eefcf2a0-1646-441a-ada7-3cbead70c593</UserSecretsId>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="iTextSharp" Version="5.5.13.2" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>

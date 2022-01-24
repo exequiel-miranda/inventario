@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,19 +15,21 @@ namespace Desktop
     public partial class Form1 : Form
     {
         conexion conexion = new conexion();
+
+        //Mover Formulario
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         public Form1()
         {
             InitializeComponent();
-            
             txtContraseña.PasswordChar = '*';
+            //this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             
@@ -58,21 +61,6 @@ namespace Desktop
 
             }
             conexion.cerrar();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void botonesSalir_Click(object sender, EventArgs e)
@@ -123,27 +111,61 @@ namespace Desktop
             }
         }
 
-        
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            txtContraseña.PasswordChar = txtContraseña.PasswordChar == '\0' ? '*' : '\0';
-
-            /*if (txtContraseña.PasswordChar == '\0')
-            {
-                //this.pictureBox2.Image = System.Drawing.Image.FromFile(@"C:\Users\ruben\Desktop\inventario\Desktop\Resources\hidepassword.png", true);
-            }
-            else 
-            {
-               // this.pictureBox2.Image = System.Drawing.Image.FromFile(@"C:\Users\ruben\Desktop\inventario\Desktop\Resources\showpassword.png", true);
-            }*/
-        }
-
         private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 botonesSalir_Click(sender, new KeyEventArgs(Keys.Enter));
             }
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            if (txtContraseña.PasswordChar == '*')
+            {
+                btnHide.BringToFront();
+                txtContraseña.PasswordChar = '\0';
+            }
+        }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            if (txtContraseña.PasswordChar == '\0')
+            {
+                btnShow.BringToFront();
+                txtContraseña.PasswordChar = '*';
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximizar_Click_1(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btnMinimizar_Click_1(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Minimized;
+            else if (WindowState == FormWindowState.Maximized)
+                WindowState = FormWindowState.Minimized;
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)

@@ -157,6 +157,29 @@ namespace Desktop.Vendedor
             }
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string eliminar = "Delete from Ventas where IDVentas = @IDVentas update Producto set cantidad = cantidad + @cantidad where nombre = @NombreProducto	";
+            SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
+            string id = Convert.ToString(GridCatalogo.CurrentRow.Cells[0].Value);
+            string name = Convert.ToString(GridCatalogo.CurrentRow.Cells[1].Value);
+            string cant = Convert.ToString(GridCatalogo.CurrentRow.Cells[3].Value);
+            cmd.Parameters.AddWithValue("@IDVentas", id);
+            cmd.Parameters.AddWithValue("@NombreProducto", name);
+            cmd.Parameters.AddWithValue("@cantidad", cant);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Los datos han sido eliminados correctamente");
+            GridCatalogo.DataSource = llenar_grid();
+            // txtProducto.Clear();
+            txtCantidad.Clear();
+            //txtPrecio.Clear();
+            //txtCategoria.Clear();
+            //txtMarca.Clear();
+            //  txtProveedor.Clear();
+            //txtFechaCompra.Clear();
+            //conexion.abrir();
+        }
+
 
         /*
         private void GridCatalogo_CellContentClick(object sender, DataGridViewCellEventArgs e)

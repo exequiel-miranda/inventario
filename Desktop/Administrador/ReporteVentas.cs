@@ -21,59 +21,21 @@ namespace Desktop.Administrador
         public ReporteVentas()
         {
             InitializeComponent();
-            
             conexion.abrir();
             GridReporte.DataSource = llenar_grid();
-            llenar_ComboPro();
             conexion.cerrar();
         }
         public DataTable llenar_grid()
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "Declare @IDFacturaVar varchar(50)  select @IDFacturaVar = IDFactura from Ventas  IF(@IDFacturaVar is not null)  begin  	SELECT IDVentas as [ID],p.nombre as [Producto no nulo], v.IDFactura,c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario,fechaVenta as [Fecha de Venta], vendedor  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where IDFactura = @cmbIDFacturaVar end else begin 	SELECT IDVentas as [ID],p.nombre as [Producto nulo], v.IDFactura,c.nombre as [Cliente],  v.cantidad as [Cantidad],v.PrecioUnitario,fechaVenta as [Fecha de Venta], vendedor   FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto   inner join Clientes as c on v.IDCliente = c.IDCliente   end"; 
+            String consulta = "SELECT IDVentas as [N],p.nombre as [Producto],c.nombre as [Cliente],v.cantidad as [Cantidad],fechaVenta as [Fecha de Venta], vendedor as [Usuario] FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
-            cmd.Parameters.AddWithValue("@cmbIDFacturaVar", btnCombo.Text);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
 
             conexion.cerrar();
             return dt;
-        }
-
-        public void llenar_ComboPro()
-        {
-            //conexion.abrir();
-            DataTable dt = new DataTable();
-            String consulta = "Declare @IDFacturaVar varchar(50) Declare @estavacio varchar(50) select @IDFacturaVar = Ventas.IDFactura from Ventas IF(@IDFacturaVar is not null) begin select IDFactura from Ventas group by IDFactura  having COUNT(*) > 0 order by IDFactura end else begin 	select @estavacio = null 	select @estavacio as IDFactura end ";
-            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            //conexion.cerrar();
-            btnCombo.DataSource = dt;
-            btnCombo.DisplayMember = "Nombre";
-            btnCombo.ValueMember = "IDFactura"; //identificador
-            btnCombo.SelectedIndex = 0;
-
-
-            /*
-            if (cbmDis.Text == "Verdadera")
-            {
-                cbmDis.Text = "True";
-                cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
-            }
-            else if (cbmDis.Text == "Falsa")
-            {
-                cbmDis.Text = "False";
-                cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
-            }
-            else
-            {
-                MessageBox.Show("No ha seleccionado Disponibilidad");
-                return;
-            }
-            //cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
-            cmd2.ExecuteNonQuery();*/
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -179,17 +141,7 @@ namespace Desktop.Administrador
             }
         }
 
-        private void btnCombo_SelectedValueChanged(object sender, EventArgs e)
-        {
-            GridReporte.DataSource = llenar_grid();
-        }
-
         private void GridReporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void ReporteVentas_Load(object sender, EventArgs e)
         {
 
         }

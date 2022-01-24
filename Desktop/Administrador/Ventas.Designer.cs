@@ -32,7 +32,6 @@ namespace Desktop.Administrador
             this.GridCategoria = new System.Windows.Forms.DataGridView();
             this.btnModificar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -42,36 +41,36 @@ namespace Desktop.Administrador
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtNFactura = new System.Windows.Forms.TextBox();
-            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridCategoria)).BeginInit();
             this.SuspendLayout();
             // 
             // GridCategoria
             // 
+            this.GridCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GridCategoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridCategoria.Location = new System.Drawing.Point(126, 298);
+            this.GridCategoria.Location = new System.Drawing.Point(3, 289);
             this.GridCategoria.Name = "GridCategoria";
             this.GridCategoria.ReadOnly = true;
             this.GridCategoria.RowHeadersWidth = 43;
             this.GridCategoria.RowTemplate.Height = 25;
-            this.GridCategoria.Size = new System.Drawing.Size(733, 309);
+            this.GridCategoria.Size = new System.Drawing.Size(725, 358);
             this.GridCategoria.TabIndex = 34;
             this.GridCategoria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCategoria_CellClick);
             this.GridCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCategoria_CellClick);
             // 
             // btnModificar
             // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnModificar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnModificar.Image = global::Desktop.Properties.Resources.icons8_editar_propiedad_48;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(555, 624);
+            this.btnModificar.Location = new System.Drawing.Point(404, 678);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(149, 34);
+            this.btnModificar.Size = new System.Drawing.Size(149, 39);
             this.btnModificar.TabIndex = 32;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -79,102 +78,108 @@ namespace Desktop.Administrador
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(141, 123);
+            this.label1.Location = new System.Drawing.Point(93, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 21);
+            this.label1.Size = new System.Drawing.Size(112, 31);
             this.label1.TabIndex = 30;
             this.label1.Text = "Producto:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sitka Small", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(429, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 43);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Ventas";
-            // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(513, 123);
+            this.label2.Location = new System.Drawing.Point(419, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 21);
+            this.label2.Size = new System.Drawing.Size(90, 31);
             this.label2.TabIndex = 36;
             this.label2.Text = "Cliente:";
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(141, 232);
+            this.label4.Location = new System.Drawing.Point(93, 183);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 21);
+            this.label4.Size = new System.Drawing.Size(112, 31);
             this.label4.TabIndex = 38;
             this.label4.Text = "Cantidad:";
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(248, 230);
+            this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCantidad.Location = new System.Drawing.Point(93, 216);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(172, 23);
+            this.txtCantidad.Size = new System.Drawing.Size(225, 30);
             this.txtCantidad.TabIndex = 39;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(513, 232);
+            this.label5.Location = new System.Drawing.Point(419, 183);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 21);
+            this.label5.Size = new System.Drawing.Size(199, 31);
             this.label5.TabIndex = 40;
-            this.label5.Text = "Fecha Venta:";
+            this.label5.Text = "Fecha de la Venta:";
             // 
             // dtpFechaVenta
             // 
+            this.dtpFechaVenta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpFechaVenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpFechaVenta.CustomFormat = "dd/MM/yyyy hh:mm tt";
+            this.dtpFechaVenta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtpFechaVenta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaVenta.Location = new System.Drawing.Point(635, 229);
+            this.dtpFechaVenta.Location = new System.Drawing.Point(419, 216);
             this.dtpFechaVenta.Name = "dtpFechaVenta";
-            this.dtpFechaVenta.Size = new System.Drawing.Size(182, 23);
+            this.dtpFechaVenta.Size = new System.Drawing.Size(225, 30);
             this.dtpFechaVenta.TabIndex = 41;
             // 
             // cmbProducto
             // 
+            this.cmbProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbProducto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbProducto.FormattingEnabled = true;
-            this.cmbProducto.Location = new System.Drawing.Point(248, 120);
+            this.cmbProducto.Location = new System.Drawing.Point(93, 135);
             this.cmbProducto.Name = "cmbProducto";
-            this.cmbProducto.Size = new System.Drawing.Size(172, 23);
+            this.cmbProducto.Size = new System.Drawing.Size(225, 31);
             this.cmbProducto.TabIndex = 42;
             this.cmbProducto.SelectedIndexChanged += new System.EventHandler(this.cmbProducto_SelectedIndexChanged);
             // 
             // cmbCliente
             // 
+            this.cmbCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(635, 121);
+            this.cmbCliente.Location = new System.Drawing.Point(419, 135);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(182, 23);
+            this.cmbCliente.Size = new System.Drawing.Size(225, 31);
             this.cmbCliente.TabIndex = 43;
             // 
             // btnIngresar
             // 
+            this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIngresar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresar.Image = global::Desktop.Properties.Resources.icons8_agregar_propiedad_48;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(400, 624);
+            this.btnIngresar.Location = new System.Drawing.Point(240, 678);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(149, 34);
+            this.btnIngresar.Size = new System.Drawing.Size(149, 39);
             this.btnIngresar.TabIndex = 31;
             this.btnIngresar.Text = "AGREGAR";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -182,66 +187,40 @@ namespace Desktop.Administrador
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = global::Desktop.Properties.Resources.icons8_eliminar_propiedad_48;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(710, 624);
+            this.btnEliminar.Location = new System.Drawing.Point(569, 678);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(149, 39);
             this.btnEliminar.TabIndex = 44;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(141, 182);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 21);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "N. de factura:";
-            // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Sitka Small", 36.35643F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(513, 182);
+            this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 21);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "Precio Unitario:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // txtNFactura
-            // 
-            this.txtNFactura.Location = new System.Drawing.Point(248, 180);
-            this.txtNFactura.Name = "txtNFactura";
-            this.txtNFactura.Size = new System.Drawing.Size(172, 23);
-            this.txtNFactura.TabIndex = 47;
-            // 
-            // txtPrecioUnitario
-            // 
-            this.txtPrecioUnitario.Location = new System.Drawing.Point(635, 180);
-            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
-            this.txtPrecioUnitario.Size = new System.Drawing.Size(182, 23);
-            this.txtPrecioUnitario.TabIndex = 48;
-            this.txtPrecioUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioUnitario_KeyPress);
+            this.label7.Size = new System.Drawing.Size(730, 73);
+            this.label7.TabIndex = 73;
+            this.label7.Text = "Ventas.";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cmbFechaVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1003, 695);
-            this.Controls.Add(this.txtPrecioUnitario);
-            this.Controls.Add(this.txtNFactura);
+            this.ClientSize = new System.Drawing.Size(730, 747);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.cmbProducto);
@@ -254,7 +233,7 @@ namespace Desktop.Administrador
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "cmbFechaVenta";
             this.Text = "Categoria";
@@ -269,7 +248,6 @@ namespace Desktop.Administrador
         private System.Windows.Forms.DataGridView GridCategoria;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCantidad;
@@ -279,9 +257,6 @@ namespace Desktop.Administrador
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtNFactura;
-        private System.Windows.Forms.TextBox txtPrecioUnitario;
     }
 }
