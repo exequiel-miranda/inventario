@@ -30,8 +30,7 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDProducto as [ID],nombre as [Producto],categoria as [Categoria],marca as [Marca],precioUnitario as [Precio Unitario],cantidad as [Cantidad],Disponibilidad as [Disponibilidad] FROM Producto where Disponibilidad ='" + btnCombo.SelectedValue.ToString() + "'";
-            //String consulta = "select p.IdProducto as [N],c.Nombre as [Categoria], p.Nombre, p.PrecioU as [Precio Unidad]  from Producto as p inner join Categoria as c on p.IdCategoria = c.IdCategoria where p.IdCategoria = '" + btnCombo.SelectedValue.ToString() + "'";
+            String consulta = "SELECT IDProducto as [N],nombre as [Producto],categoria as [Categoria],marca as [Marca],precioUnitario as [Precio Unitario],cantidad as [Cantidad] FROM Producto where Disponibilidad ='" + btnCombo.SelectedValue.ToString() + "'";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -54,26 +53,6 @@ namespace Desktop.Administrador
             btnCombo.DisplayMember = "Nombre";
             btnCombo.ValueMember = "Disponibilidad"; //identificador
             btnCombo.SelectedIndex = 0;
-
-
-            /*
-            if (cbmDis.Text == "Verdadera")
-            {
-                cbmDis.Text = "True";
-                cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
-            }
-            else if (cbmDis.Text == "Falsa")
-            {
-                cbmDis.Text = "False";
-                cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
-            }
-            else
-            {
-                MessageBox.Show("No ha seleccionado Disponibilidad");
-                return;
-            }
-            //cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
-            cmd2.ExecuteNonQuery();*/
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
