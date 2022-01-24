@@ -48,9 +48,9 @@ namespace Desktop.Administrador
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(415, 54);
+            this.label3.Location = new System.Drawing.Point(415, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 45);
+            this.label3.Size = new System.Drawing.Size(140, 43);
             this.label3.TabIndex = 7;
             this.label3.Text = "Clientes";
             // 
@@ -60,9 +60,9 @@ namespace Desktop.Administrador
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresar.Image = global::Desktop.Properties.Resources.icons8_agregar_propiedad_48;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(396, 672);
+            this.btnIngresar.Location = new System.Drawing.Point(396, 593);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(149, 39);
+            this.btnIngresar.Size = new System.Drawing.Size(149, 34);
             this.btnIngresar.TabIndex = 16;
             this.btnIngresar.Text = "AGREGAR";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -73,9 +73,9 @@ namespace Desktop.Administrador
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(145, 159);
+            this.label1.Location = new System.Drawing.Point(145, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 22);
+            this.label1.Size = new System.Drawing.Size(71, 21);
             this.label1.TabIndex = 12;
             this.label1.Text = "Nombre:";
             // 
@@ -84,9 +84,9 @@ namespace Desktop.Administrador
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(551, 159);
+            this.label5.Location = new System.Drawing.Point(551, 140);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 22);
+            this.label5.Size = new System.Drawing.Size(37, 21);
             this.label5.TabIndex = 19;
             this.label5.Text = "NIT:";
             // 
@@ -95,9 +95,9 @@ namespace Desktop.Administrador
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(145, 232);
+            this.label6.Location = new System.Drawing.Point(145, 205);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 22);
+            this.label6.Size = new System.Drawing.Size(73, 21);
             this.label6.TabIndex = 21;
             this.label6.Text = "Teléfono:";
             // 
@@ -107,9 +107,9 @@ namespace Desktop.Administrador
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnModificar.Image = global::Desktop.Properties.Resources.icons8_editar_propiedad_48;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(551, 672);
+            this.btnModificar.Location = new System.Drawing.Point(551, 593);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(149, 39);
+            this.btnModificar.Size = new System.Drawing.Size(149, 34);
             this.btnModificar.TabIndex = 23;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -121,9 +121,9 @@ namespace Desktop.Administrador
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = global::Desktop.Properties.Resources.icons8_eliminar_propiedad_48;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(706, 672);
+            this.btnEliminar.Location = new System.Drawing.Point(706, 593);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(149, 34);
             this.btnEliminar.TabIndex = 24;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -133,50 +133,51 @@ namespace Desktop.Administrador
             // 
             this.GridClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridClientes.Location = new System.Drawing.Point(122, 311);
+            this.GridClientes.Location = new System.Drawing.Point(122, 274);
             this.GridClientes.Name = "GridClientes";
             this.GridClientes.ReadOnly = true;
             this.GridClientes.RowHeadersWidth = 43;
             this.GridClientes.RowTemplate.Height = 25;
-            this.GridClientes.Size = new System.Drawing.Size(733, 312);
+            this.GridClientes.Size = new System.Drawing.Size(733, 275);
             this.GridClientes.TabIndex = 25;
             this.GridClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridClientes_CellContentClick);
             this.GridClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridClientes_CellContentClick);
             // 
             // txtTelefonoC
             // 
-            this.txtTelefonoC.Location = new System.Drawing.Point(228, 232);
+            this.txtTelefonoC.Location = new System.Drawing.Point(228, 205);
             this.txtTelefonoC.Mask = "0000-0000";
             this.txtTelefonoC.Name = "txtTelefonoC";
-            this.txtTelefonoC.Size = new System.Drawing.Size(250, 25);
+            this.txtTelefonoC.Size = new System.Drawing.Size(250, 23);
             this.txtTelefonoC.TabIndex = 27;
             this.txtTelefonoC.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtTelefonoC_MaskInputRejected);
             this.txtTelefonoC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtTelefonoC_MouseDown);
             // 
             // txtNombreC
             // 
-            this.txtNombreC.Location = new System.Drawing.Point(228, 160);
+            this.txtNombreC.Location = new System.Drawing.Point(228, 141);
             this.txtNombreC.Name = "txtNombreC";
-            this.txtNombreC.Size = new System.Drawing.Size(250, 25);
+            this.txtNombreC.Size = new System.Drawing.Size(250, 23);
             this.txtNombreC.TabIndex = 28;
+            this.txtNombreC.TextChanged += new System.EventHandler(this.txtNombreC_TextChanged);
             this.txtNombreC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreC_KeyPress);
             // 
             // txtCreditoF
             // 
-            this.txtCreditoF.Location = new System.Drawing.Point(598, 160);
+            this.txtCreditoF.Location = new System.Drawing.Point(598, 141);
             this.txtCreditoF.Mask = "0000-000000-000-0";
             this.txtCreditoF.Name = "txtCreditoF";
-            this.txtCreditoF.Size = new System.Drawing.Size(250, 25);
+            this.txtCreditoF.Size = new System.Drawing.Size(250, 23);
             this.txtCreditoF.TabIndex = 29;
             this.txtCreditoF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCreditoF_MaskInputRejected);
             this.txtCreditoF.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtCreditoF_MouseDown);
             // 
             // Clientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1003, 827);
+            this.ClientSize = new System.Drawing.Size(1003, 695);
             this.Controls.Add(this.txtCreditoF);
             this.Controls.Add(this.txtNombreC);
             this.Controls.Add(this.txtTelefonoC);

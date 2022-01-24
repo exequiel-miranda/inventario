@@ -33,6 +33,8 @@ namespace Desktop.Administrador
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnCombo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridReporte)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,11 +42,11 @@ namespace Desktop.Administrador
             // 
             this.GridReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridReporte.Location = new System.Drawing.Point(115, 206);
+            this.GridReporte.Location = new System.Drawing.Point(115, 182);
             this.GridReporte.Name = "GridReporte";
             this.GridReporte.RowHeadersWidth = 43;
             this.GridReporte.RowTemplate.Height = 25;
-            this.GridReporte.Size = new System.Drawing.Size(713, 363);
+            this.GridReporte.Size = new System.Drawing.Size(713, 320);
             this.GridReporte.TabIndex = 61;
             this.GridReporte.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridReporte_CellContentClick);
             // 
@@ -54,9 +56,9 @@ namespace Desktop.Administrador
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = global::Desktop.Properties.Resources.ic_action_copy;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(679, 624);
+            this.btnEliminar.Location = new System.Drawing.Point(679, 551);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(149, 34);
             this.btnEliminar.TabIndex = 60;
             this.btnEliminar.Text = "PDF";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -67,9 +69,9 @@ namespace Desktop.Administrador
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(115, 274);
+            this.label2.Location = new System.Drawing.Point(115, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 22);
+            this.label2.Size = new System.Drawing.Size(0, 21);
             this.label2.TabIndex = 59;
             // 
             // label3
@@ -77,18 +79,41 @@ namespace Desktop.Administrador
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(300, 70);
+            this.label3.Location = new System.Drawing.Point(300, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(378, 45);
+            this.label3.Size = new System.Drawing.Size(360, 43);
             this.label3.TabIndex = 58;
             this.label3.Text = "Reportes de las Ventas";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Sitka Small", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(209, 131);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(261, 24);
+            this.label5.TabIndex = 71;
+            this.label5.Text = "Seleccionar filtro de Factura:";
+            // 
+            // btnCombo
+            // 
+            this.btnCombo.DisplayMember = "4";
+            this.btnCombo.FormattingEnabled = true;
+            this.btnCombo.Location = new System.Drawing.Point(468, 132);
+            this.btnCombo.Name = "btnCombo";
+            this.btnCombo.Size = new System.Drawing.Size(156, 23);
+            this.btnCombo.TabIndex = 72;
+            this.btnCombo.ValueMember = "4";
+            this.btnCombo.SelectedValueChanged += new System.EventHandler(this.btnCombo_SelectedValueChanged);
+            // 
             // ReporteVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(971, 739);
+            this.ClientSize = new System.Drawing.Size(971, 652);
+            this.Controls.Add(this.btnCombo);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.GridReporte);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label2);
@@ -96,6 +121,7 @@ namespace Desktop.Administrador
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReporteVentas";
             this.Text = "ReporteProveedor";
+            this.Load += new System.EventHandler(this.ReporteVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridReporte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,5 +134,7 @@ namespace Desktop.Administrador
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox btnCombo;
     }
 }

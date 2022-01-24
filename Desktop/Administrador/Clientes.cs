@@ -32,7 +32,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDCliente as N, nombre as Nombre, creditoFiscal as 'Credito Fiscal', telefono as Telefono  FROM Clientes";
+            String consulta = "SELECT IDCliente as N, nombre as Nombre, creditoFiscal as 'Credito Fiscal', telefono as Telefono  FROM Clientes where creditoFiscal is not null";
             SqlCommand cmd = new SqlCommand(consulta,conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -138,7 +138,16 @@ namespace Desktop.Administrador
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string eliminar = "DELETE FROM CLIENTES where IDCliente = @IDCliente";
+            if (string.IsNullOrEmpty(txtNombreC.Text.Trim()) || string.IsNullOrEmpty(txtTelefonoC.Text.Trim()) || string.IsNullOrEmpty(txtCreditoF.Text.Trim()))
+            {
+                MessageBox.Show("Hay Campos Vacios");
+
+                return;
+            }
+
+            else { 
+
+            string eliminar = "UPDATE CLIENTES set creditoFiscal = null where IDCliente = @IDCliente";
             SqlCommand cmd = new SqlCommand(eliminar,conexion.conectarbd);
             string id = Convert.ToString(GridClientes.CurrentRow.Cells[0].Value);
             cmd.Parameters.AddWithValue("@IDCliente", id);
@@ -150,19 +159,14 @@ namespace Desktop.Administrador
             txtTelefonoC.Clear();
            // txtCorreoC.Clear();
             txtCreditoF.Clear();
-            //conexion.abrir();
-
+                //conexion.abrir();
+            }
         }
 
         private void txtNombreC_KeyPress(object sender, KeyPressEventArgs e)
         {
             
-                if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-                {
-                    MessageBox.Show("Solo letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    e.Handled = true;
-                    return;
-                }
+       
             
         }
 
@@ -186,6 +190,12 @@ namespace Desktop.Administrador
         private void txtTelefonoC_MouseDown(object sender, MouseEventArgs e)
         {
             txtTelefonoC.SelectionStart = 0;
+        }
+
+        private void txtNombreC_TextChanged(object sender, EventArgs e)
+        {
+            txtNombreC.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNombreC.Text);
+            txtNombreC.SelectionStart = txtNombreC.Text.Length;
         }
     }
 }

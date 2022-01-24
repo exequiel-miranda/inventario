@@ -70,6 +70,7 @@ namespace Desktop.Administrador
             this.btnCombo.Size = new System.Drawing.Size(156, 23);
             this.btnCombo.TabIndex = 69;
             this.btnCombo.ValueMember = "4";
+            this.btnCombo.SelectedIndexChanged += new System.EventHandler(this.btnCombo_SelectedIndexChanged);
             this.btnCombo.SelectedValueChanged += new System.EventHandler(this.btnCombo_SelectedValueChanged);
             // 
             // GridReporte
@@ -122,11 +123,11 @@ namespace Desktop.Administrador
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Small", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(263, 130);
+            this.label5.Location = new System.Drawing.Point(177, 130);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 24);
+            this.label5.Size = new System.Drawing.Size(322, 24);
             this.label5.TabIndex = 70;
-            this.label5.Text = "Filtro de Disponibilidad:";
+            this.label5.Text = "Seleccionar filtro de Disponibilidad:";
             // 
             // ReporteProductos
             // 

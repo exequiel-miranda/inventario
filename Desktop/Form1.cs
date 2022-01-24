@@ -80,17 +80,21 @@ namespace Desktop
             conexion.abrir();
             if (txtUsuario.Text != "" || txtContraseña.Text != "")
             {
-                String consulta = "select usuario, password from Usuarios where usuario= '" + txtUsuario.Text + "' and password='" + txtContraseña.Text + "'";
+                String consulta = "select nivel from Usuarios where usuario = @usuario and password = @password";
                 SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
+                //SqlDataReader dr = cmd.ExecuteReader();
+                cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
+                cmd.Parameters.AddWithValue("@password", txtContraseña.Text);
+                cmd.ExecuteNonQuery();
+                string nivel = (string)cmd.ExecuteScalar();
+                if (nivel == "Administrador")
                 {
                     this.Hide();
                     Desktop.Administrador.MenuAdm frm = new Desktop.Administrador.MenuAdm();
                     frm.Show();
                 }
 
-                else if (txtUsuario.Text.Equals("Vendedor") && txtContraseña.Text.Equals("vendedor1234"))
+                else if (nivel == "Vendedor")
                 {
                     this.Hide();
                     Desktop.Vendedor.MenuVend frm = new Desktop.Vendedor.MenuVend();
@@ -140,6 +144,12 @@ namespace Desktop
             {
                 botonesSalir_Click(sender, new KeyEventArgs(Keys.Enter));
             }
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            txtUsuario.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtUsuario.Text);
+            txtUsuario.SelectionStart = txtUsuario.Text.Length;
         }
     }
 }

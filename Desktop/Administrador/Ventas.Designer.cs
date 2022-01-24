@@ -42,6 +42,10 @@ namespace Desktop.Administrador
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNFactura = new System.Windows.Forms.TextBox();
+            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridCategoria)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +82,7 @@ namespace Desktop.Administrador
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(141, 170);
+            this.label1.Location = new System.Drawing.Point(141, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 21);
             this.label1.TabIndex = 30;
@@ -89,7 +93,7 @@ namespace Desktop.Administrador
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(429, 67);
+            this.label3.Location = new System.Drawing.Point(429, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 43);
             this.label3.TabIndex = 29;
@@ -100,7 +104,7 @@ namespace Desktop.Administrador
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(513, 170);
+            this.label2.Location = new System.Drawing.Point(513, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 21);
             this.label2.TabIndex = 36;
@@ -119,9 +123,9 @@ namespace Desktop.Administrador
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(222, 230);
+            this.txtCantidad.Location = new System.Drawing.Point(248, 230);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(198, 23);
+            this.txtCantidad.Size = new System.Drawing.Size(172, 23);
             this.txtCantidad.TabIndex = 39;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
@@ -140,26 +144,26 @@ namespace Desktop.Administrador
             // 
             this.dtpFechaVenta.CustomFormat = "dd/MM/yyyy hh:mm tt";
             this.dtpFechaVenta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaVenta.Location = new System.Drawing.Point(617, 229);
+            this.dtpFechaVenta.Location = new System.Drawing.Point(635, 229);
             this.dtpFechaVenta.Name = "dtpFechaVenta";
-            this.dtpFechaVenta.Size = new System.Drawing.Size(200, 23);
+            this.dtpFechaVenta.Size = new System.Drawing.Size(182, 23);
             this.dtpFechaVenta.TabIndex = 41;
             // 
             // cmbProducto
             // 
             this.cmbProducto.FormattingEnabled = true;
-            this.cmbProducto.Location = new System.Drawing.Point(224, 167);
+            this.cmbProducto.Location = new System.Drawing.Point(248, 120);
             this.cmbProducto.Name = "cmbProducto";
-            this.cmbProducto.Size = new System.Drawing.Size(196, 23);
+            this.cmbProducto.Size = new System.Drawing.Size(172, 23);
             this.cmbProducto.TabIndex = 42;
             this.cmbProducto.SelectedIndexChanged += new System.EventHandler(this.cmbProducto_SelectedIndexChanged);
             // 
             // cmbCliente
             // 
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(617, 168);
+            this.cmbCliente.Location = new System.Drawing.Point(635, 121);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(200, 23);
+            this.cmbCliente.Size = new System.Drawing.Size(182, 23);
             this.cmbCliente.TabIndex = 43;
             // 
             // btnIngresar
@@ -190,12 +194,54 @@ namespace Desktop.Administrador
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label6.Location = new System.Drawing.Point(141, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 21);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "N. de factura:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label7.Location = new System.Drawing.Point(513, 182);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 21);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Precio Unitario:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // txtNFactura
+            // 
+            this.txtNFactura.Location = new System.Drawing.Point(248, 180);
+            this.txtNFactura.Name = "txtNFactura";
+            this.txtNFactura.Size = new System.Drawing.Size(172, 23);
+            this.txtNFactura.TabIndex = 47;
+            // 
+            // txtPrecioUnitario
+            // 
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(635, 180);
+            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
+            this.txtPrecioUnitario.Size = new System.Drawing.Size(182, 23);
+            this.txtPrecioUnitario.TabIndex = 48;
+            this.txtPrecioUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioUnitario_KeyPress);
+            // 
             // cmbFechaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1003, 695);
+            this.Controls.Add(this.txtPrecioUnitario);
+            this.Controls.Add(this.txtNFactura);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.cmbProducto);
@@ -233,5 +279,9 @@ namespace Desktop.Administrador
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtNFactura;
+        private System.Windows.Forms.TextBox txtPrecioUnitario;
     }
 }

@@ -28,7 +28,7 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDCliente as [ID], nombre as [Nombre], creditoFiscal as [Credito Fiscal], telefono as [Telefono]  FROM Clientes";
+            String consulta = "SELECT IDCliente as [ID], nombre as [Nombre], creditoFiscal as [Credito Fiscal], telefono as [Telefono]  FROM Clientes where creditoFiscal is not null";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -137,6 +137,11 @@ namespace Desktop.Administrador
                     document.Close();
                 }
             }
+        }
+
+        private void ReporteClientes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

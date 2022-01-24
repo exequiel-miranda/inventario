@@ -33,7 +33,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDVentas as N,p.nombre as Producto,c.nombre as Cliente,v.cantidad as Cantidad,fechaVenta as 'Fecha Venta', vendedor as 'Usuario' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
+            String consulta = "SELECT IDVentas as N,p.nombre as Producto, IDFactura as NFactura,c.nombre as Cliente, v.cantidad as Cantidad,v.PrecioUnitario,fechaVenta as 'Fecha Venta', vendedor as 'Usuario' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -45,7 +45,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir(); 
             DataTable dt = new DataTable();
-            String consulta = "select IDProducto, nombre from Producto where Disponibilidad = 'True'";
+            String consulta = "select IDProducto, nombre from Producto where Disponibilidad = 'True' and categoria is not null";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -60,7 +60,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir(); 
             DataTable dt = new DataTable();
-            String consulta = "select IDCliente, nombre from Clientes";
+            String consulta = "select IDCliente, nombre from Clientes where creditoFiscal is not null";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -81,55 +81,97 @@ namespace Desktop.Administrador
 
             else
             {
-                //-----------------------------------------------------------------
-                //aqui se asigna el valor a la variable si es menor o mayor
-                string validacion1 = "Declare @CantidadP int select @CantidadP = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@Cantidad <= @CantidadP) begin update Producto set sepuedeono='sepuede' where @IDProducto = IDProducto end else begin update Producto set sepuedeono='nosepuede' where @IDProducto = IDProducto end";
-                SqlCommand cmd3 = new SqlCommand(validacion1, conexion.conectarbd);
-                cmd3.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
-                cmd3.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
-                cmd3.ExecuteNonQuery();
 
                 //-----------------------------------------------------------------
-                //ok aqui ya me muestra como esta la variable
-                string validacion2 = "select sepuedeono from Producto where @IDProducto = Producto.IDProducto ";
-                SqlCommand cmd2 = new SqlCommand(validacion2, conexion.conectarbd);
-                cmd2.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
-                cmd2.ExecuteNonQuery();
-
-                string sepuedeonosepuede = (string)cmd2.ExecuteScalar();
+                //ok aqui vemos si la cantidad es mayor a cero y la leemos
+                string validacion11 = "Declare @CantidadVar int select @CantidadVar =  @Cantidad select @CantidadVar";
+                SqlCommand cmd2323 = new SqlCommand(validacion11, conexion.conectarbd);
+                cmd2323.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
+                cmd2323.ExecuteNonQuery();
+                int cantidad = Convert.ToInt32(cmd2323.ExecuteScalar());
                 //-----------------------------------------------------------------
 
-                if (sepuedeonosepuede == "sepuede")
+
+                //-----------------------------------------------------------------
+                //ok aqui vemos si el precio unitario es mayor a cero y la leemos
+                string validacion22 = "Declare @precioUnitarioVar decimal(9,2) select @precioUnitarioVar =  @precioUnitario select @precioUnitario";
+                SqlCommand cmd3434 = new SqlCommand(validacion22, conexion.conectarbd);
+                cmd3434.Parameters.AddWithValue("@precioUnitario", txtPrecioUnitario.Text);
+                cmd3434.ExecuteNonQuery();
+                decimal precioUnitario = Convert.ToDecimal(cmd3434.ExecuteScalar());
+                //-----------------------------------------------------------------
+
+
+
+                if (precioUnitario > 0 && cantidad > 0)
                 {
-                    string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad < @PCantidad) begin insert into Ventas(IDProducto, IDCliente, cantidad, fechaVenta, vendedor) values (@IDProducto, @IDCliente, @Cantidad, @Fecha, 'Administrador') update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
-                    SqlCommand cmd = new SqlCommand(insertar44, conexion.conectarbd);
-                    cmd.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
-                    cmd.Parameters.AddWithValue("@IDCliente", cmbCliente.SelectedValue);
-                    cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
-                    DateTime stdate = DateTime.ParseExact(dtpFechaVenta.Text, myformat, null);
-                    cmd.Parameters.AddWithValue("@Fecha", stdate);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Los datos fueron agregados con exito");
-                    GridCategoria.DataSource = llenar_grid();
-                }
+
+                    //-----------------------------------------------------------------
+                    //aqui se asigna el valor a la variable si es menor o mayor
+                    string validacion1 = "Declare @CantidadP int select @CantidadP = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@Cantidad <= @CantidadP) begin update Producto set sepuedeono='sepuede' where @IDProducto = IDProducto end else begin update Producto set sepuedeono='nosepuede' where @IDProducto = IDProducto end";
+                    SqlCommand cmd3 = new SqlCommand(validacion1, conexion.conectarbd);
+                    cmd3.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                    cmd3.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
+                    cmd3.ExecuteNonQuery();
+
+                    //-----------------------------------------------------------------
+                    //ok aqui ya me muestra como esta la variable
+                    string validacion2 = "select sepuedeono from Producto where @IDProducto = Producto.IDProducto ";
+                    SqlCommand cmd2 = new SqlCommand(validacion2, conexion.conectarbd);
+                    cmd2.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                    cmd2.ExecuteNonQuery();
+
+                    string sepuedeonosepuede = (string)cmd2.ExecuteScalar();
+                    //-----------------------------------------------------------------
+
+                    if (sepuedeonosepuede == "sepuede")
+                    {
+                        string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad <= @PCantidad) begin insert into Ventas(IDProducto, IDFactura, IDCliente, cantidad, PrecioUnitario, fechaVenta, vendedor) values (@IDProducto,@IDFactura,@IDCliente, @Cantidad,@precioUnitario, @Fecha, 'Administrador') update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
+                        SqlCommand cmd = new SqlCommand(insertar44, conexion.conectarbd);
+                        cmd.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                        cmd.Parameters.AddWithValue("@IDFactura", txtNFactura.Text);
+                        cmd.Parameters.AddWithValue("@IDCliente", cmbCliente.SelectedValue);
+                        cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
+                        cmd.Parameters.AddWithValue("@precioUnitario", txtPrecioUnitario.Text);
+                        DateTime stdate = DateTime.ParseExact(dtpFechaVenta.Text, myformat, null);
+                        cmd.Parameters.AddWithValue("@Fecha", stdate);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Los datos fueron agregados con exito");
+                        GridCategoria.DataSource = llenar_grid();
+                    }
+                
+
 
                 else
                 {
-                    MessageBox.Show("No hay tanto stock de este producto");
+
+                    string validacion3 = "select cantidad from Producto where @IDProducto = Producto.IDProducto ";
+                    SqlCommand cmd0 = new SqlCommand(validacion3, conexion.conectarbd);
+                    cmd0.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                    cmd0.ExecuteNonQuery();
+
+                    int cantidadeninventario = (int)cmd0.ExecuteScalar();
+                    //
+                    MessageBox.Show("No hay tanto stock de este producto, solo hay: " + cantidadeninventario);
                 }
 
 
-                //cmbProducto.Clear();
-                /*
-                string insertar = "INSERT INTO CATEGORIA (Nombre) Values (@Nombre)";
-                SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
-                cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Los datos fueron agregados con exito");
+                    //cmbProducto.Clear();
+                    /*
+                    string insertar = "INSERT INTO CATEGORIA (Nombre) Values (@Nombre)";
+                    SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
+                    cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Los datos fueron agregados con exito");
 
-                GridCategoria.DataSource = llenar_grid();
-                txtProducto.Clear();
-                */
+                    GridCategoria.DataSource = llenar_grid();
+                    txtProducto.Clear();
+                    */
+                }
+                else
+                {
+                    MessageBox.Show("ingrese un numero mayor de cero en Cantidad o Precio");
+                }
             }
         }
 
@@ -187,7 +229,14 @@ namespace Desktop.Administrador
                 }
                 else
                 {
-                    MessageBox.Show("No hay tanto stock de este producto");
+                    string validacion3 = "select cantidad from Producto where @IDProducto = Producto.IDProducto ";
+                    SqlCommand cmd0 = new SqlCommand(validacion3, conexion.conectarbd);
+                    cmd0.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
+                    cmd0.ExecuteNonQuery();
+
+                    int cantidadeninventario = (int)cmd0.ExecuteScalar();
+                    //
+                    MessageBox.Show("No hay tanto stock de este producto, solo hay: " + cantidadeninventario);
                 }
 
             }
@@ -221,9 +270,12 @@ namespace Desktop.Administrador
             try
             {
                 cmbProducto.Text = GridCategoria.CurrentRow.Cells[1].Value.ToString();
-                cmbCliente.Text = GridCategoria.CurrentRow.Cells[2].Value.ToString();
-                txtCantidad.Text = GridCategoria.CurrentRow.Cells[3].Value.ToString();
-                dtpFechaVenta.Text = GridCategoria.CurrentRow.Cells[4].Value.ToString();
+        
+                txtNFactura.Text = GridCategoria.CurrentRow.Cells[2].Value.ToString();
+                cmbCliente.Text = GridCategoria.CurrentRow.Cells[3].Value.ToString();
+                txtCantidad.Text = GridCategoria.CurrentRow.Cells[4].Value.ToString();
+                txtPrecioUnitario.Text = GridCategoria.CurrentRow.Cells[5].Value.ToString();
+                dtpFechaVenta.Text = GridCategoria.CurrentRow.Cells[6].Value.ToString();
             }
             catch { }
         }
@@ -245,18 +297,32 @@ namespace Desktop.Administrador
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(txtCantidad.Text.Trim()))
+            {
+                MessageBox.Show("Hay Campos Vacios");
+
+                return;
+            }
+            else
+            {
+
+            
+
+
             string eliminar = "Delete from Ventas where IDVentas = @IDVentas update Producto set cantidad = cantidad + @cantidad where nombre = @NombreProducto	";
             SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
             string id = Convert.ToString(GridCategoria.CurrentRow.Cells[0].Value);
-            string name = Convert.ToString(GridCategoria.CurrentRow.Cells[1].Value);
-            string cant = Convert.ToString(GridCategoria.CurrentRow.Cells[3].Value);
+          //  string name = Convert.ToString(GridCategoria.CurrentRow.Cells[1].Value);
+           // string cant = Convert.ToString(GridCategoria.CurrentRow.Cells[3].Value);
             cmd.Parameters.AddWithValue("@IDVentas", id);
-            cmd.Parameters.AddWithValue("@NombreProducto", name);
-            cmd.Parameters.AddWithValue("@cantidad", cant);
+            cmd.Parameters.AddWithValue("@NombreProducto", cmbProducto.Text);
+           cmd.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Los datos han sido eliminados correctamente");
             GridCategoria.DataSource = llenar_grid();
-           // txtProducto.Clear();
+            }
+            // txtProducto.Clear();
             txtCantidad.Clear();
             //txtPrecio.Clear();
             //txtCategoria.Clear();
@@ -264,6 +330,29 @@ namespace Desktop.Administrador
             //  txtProveedor.Clear();
             //txtFechaCompra.Clear();
             //conexion.abrir();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrecioUnitario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                MessageBox.Show("Sólo números acompañados de punto decimal", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                MessageBox.Show("Solamente 2 números decimales", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
