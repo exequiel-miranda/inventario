@@ -41,11 +41,11 @@ namespace Desktop.Administrador
             this.GridReporte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GridReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridReporte.Location = new System.Drawing.Point(3, 125);
+            this.GridReporte.Location = new System.Drawing.Point(3, 110);
             this.GridReporte.Name = "GridReporte";
             this.GridReporte.RowHeadersWidth = 43;
             this.GridReporte.RowTemplate.Height = 25;
-            this.GridReporte.Size = new System.Drawing.Size(725, 491);
+            this.GridReporte.Size = new System.Drawing.Size(725, 433);
             this.GridReporte.TabIndex = 57;
             // 
             // btnEliminar
@@ -56,9 +56,9 @@ namespace Desktop.Administrador
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = global::Desktop.Properties.Resources.ic_action_copy;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(558, 668);
+            this.btnEliminar.Location = new System.Drawing.Point(558, 589);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(149, 34);
             this.btnEliminar.TabIndex = 56;
             this.btnEliminar.Text = "PDF";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -69,9 +69,9 @@ namespace Desktop.Administrador
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(5, 235);
+            this.label2.Location = new System.Drawing.Point(5, 207);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 22);
+            this.label2.Size = new System.Drawing.Size(0, 21);
             this.label2.TabIndex = 47;
             // 
             // label7
@@ -82,17 +82,17 @@ namespace Desktop.Administrador
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(730, 73);
+            this.label7.Size = new System.Drawing.Size(730, 64);
             this.label7.TabIndex = 73;
             this.label7.Text = "Reporte de Clientes.";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ReporteClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(730, 747);
+            this.ClientSize = new System.Drawing.Size(730, 659);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.GridReporte);
             this.Controls.Add(this.btnEliminar);
@@ -101,6 +101,7 @@ namespace Desktop.Administrador
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReporteClientes";
             this.Text = "Reportes";
+            this.Load += new System.EventHandler(this.ReporteClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridReporte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

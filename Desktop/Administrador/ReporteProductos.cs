@@ -30,8 +30,9 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDProducto as [N],nombre as [Producto],categoria as [Categoria],marca as [Marca],precioUnitario as [Precio Unitario],cantidad as [Cantidad] FROM Producto where Disponibilidad ='" + btnCombo.SelectedValue.ToString() + "'";
+            String consulta = "Declare @DisponibilidadVar bit   select @DisponibilidadVar = Disponibilidad from Producto IF(@DisponibilidadVar is not null)  begin SELECT IDProducto as [ID],nombre as [Producto],categoria as [Categoria],marca as [Marca], precioUnitario as [Precio Unitario],cantidad as [Cantidad],Disponibilidad as [Disponibilidad] FROM Producto where Disponibilidad = @cmbDisponibilidad and categoria is not null end else begin SELECT IDProducto as [ID],nombre as [Producto],categoria as [Categoria],marca as [Marca], precioUnitario as [Precio Unitario],cantidad as [Cantidad],Disponibilidad as [Disponibilidad] FROM Producto where categoria is not null end ";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
+            cmd.Parameters.AddWithValue("@cmbDisponibilidad", btnCombo.Text);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
 
@@ -40,11 +41,12 @@ namespace Desktop.Administrador
 
         }
 
+
         public void llenar_ComboPro()
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select Disponibilidad from Producto";
+            String consulta = "Declare @DisponibilidadVar bit Declare @estavacio varchar(50) select @DisponibilidadVar = Producto.Disponibilidad from Producto  IF(@DisponibilidadVar is null) begin 	select @estavacio = 'Reporte Vacio' 	select @estavacio as Disponibilidad end else begin select Disponibilidad from Producto group by Disponibilidad  having COUNT(*) > 0 order by Disponibilidad end";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -53,6 +55,26 @@ namespace Desktop.Administrador
             btnCombo.DisplayMember = "Nombre";
             btnCombo.ValueMember = "Disponibilidad"; //identificador
             btnCombo.SelectedIndex = 0;
+
+
+            /*
+            if (cbmDis.Text == "Verdadera")
+            {
+                cbmDis.Text = "True";
+                cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
+            }
+            else if (cbmDis.Text == "Falsa")
+            {
+                cbmDis.Text = "False";
+                cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
+            }
+            else
+            {
+                MessageBox.Show("No ha seleccionado Disponibilidad");
+                return;
+            }
+            //cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
+            cmd2.ExecuteNonQuery();*/
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -163,6 +185,11 @@ namespace Desktop.Administrador
         }
 
         private void ReporteProductos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

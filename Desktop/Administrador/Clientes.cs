@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
+using System.Runtime.InteropServices;  
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -117,8 +117,8 @@ namespace Desktop.Administrador
                 string id = Convert.ToString(GridClientes.CurrentRow.Cells[0].Value);
                 cmd.Parameters.AddWithValue("@IDCliente", id);
                 cmd.Parameters.AddWithValue("@nombre", txtNombreC.Text);
-               // cmd.Parameters.AddWithValue("@DUI", txtDuiC.Text);
-              //  cmd.Parameters.AddWithValue("@Correo", txtCorreoC.Text);
+                // cmd.Parameters.AddWithValue("@DUI", txtDuiC.Text);
+                //  cmd.Parameters.AddWithValue("@Correo", txtCorreoC.Text);
                 cmd.Parameters.AddWithValue("@telefono", txtTelefonoC.Text);
                 cmd.Parameters.AddWithValue("@creditoFiscal", txtCreditoF.Text);
                 cmd.ExecuteNonQuery();
@@ -126,9 +126,9 @@ namespace Desktop.Administrador
                 MessageBox.Show("Los datos fueron actualizados con exito");
                 GridClientes.DataSource = llenar_grid();
                 txtNombreC.Clear();
-               // txtDuiC.Clear();
+                // txtDuiC.Clear();
                 txtTelefonoC.Clear();
-              //  txtCorreoC.Clear();
+                //  txtCorreoC.Clear();
                 txtCreditoF.Clear();
                 //conexion.abrir();
                 //conexion.cerrar();
@@ -144,20 +144,21 @@ namespace Desktop.Administrador
                 return;
             }
 
-            else { 
+            else
+            {
 
-            string eliminar = "UPDATE CLIENTES set creditoFiscal = null where IDCliente = @IDCliente";
-            SqlCommand cmd = new SqlCommand(eliminar,conexion.conectarbd);
-            string id = Convert.ToString(GridClientes.CurrentRow.Cells[0].Value);
-            cmd.Parameters.AddWithValue("@IDCliente", id);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Los datos han sido eliminados correctamente");
-            GridClientes.DataSource = llenar_grid();
-            txtNombreC.Clear();
-            //txtDuiC.Clear();
-            txtTelefonoC.Clear();
-           // txtCorreoC.Clear();
-            txtCreditoF.Clear();
+                string eliminar = "UPDATE CLIENTES set creditoFiscal = null where IDCliente = @IDCliente";
+                SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
+                string id = Convert.ToString(GridClientes.CurrentRow.Cells[0].Value);
+                cmd.Parameters.AddWithValue("@IDCliente", id);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Los datos han sido eliminados correctamente");
+                GridClientes.DataSource = llenar_grid();
+                txtNombreC.Clear();
+                //txtDuiC.Clear();
+                txtTelefonoC.Clear();
+                // txtCorreoC.Clear();
+                txtCreditoF.Clear();
                 //conexion.abrir();
             }
         }
@@ -192,6 +193,12 @@ namespace Desktop.Administrador
         }
 
         private void txtNombreC_TextChanged(object sender, EventArgs e)
+        {
+            txtNombreC.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNombreC.Text);
+            txtNombreC.SelectionStart = txtNombreC.Text.Length;
+        }
+
+        private void txtNombreC_TextChanged_1(object sender, EventArgs e)
         {
             txtNombreC.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNombreC.Text);
             txtNombreC.SelectionStart = txtNombreC.Text.Length;

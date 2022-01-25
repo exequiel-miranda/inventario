@@ -532,14 +532,7 @@ C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-wind
 C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
 C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
 C:\Users\exequ\Downloads\GRUPO 04-ETPS4-T-AVANCE 3\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Desktop.exe
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Resources\Logotipo.png
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Desktop.deps.json
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.json
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Desktop.runtimeconfig.dev.json
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Desktop.dll
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\ref\Desktop.dll
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Desktop.pdb
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Azure.Core.dll
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Azure.Identity.dll
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
@@ -566,8 +559,6 @@ C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-win
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Clientes.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.MenuAdm.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Producto.resources
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.Proveedores.resources
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Administrador.ReporteProPro.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Form1.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Properties.Resources.resources
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.Vendedor.MenuVend.resources
@@ -577,9 +568,6 @@ C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-win
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.AssemblyInfo.cs
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CoreCompileInputs.cache
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.csproj.CopyComplete
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.dll
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\ref\Desktop.dll
-C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.pdb
 C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Desktop.genruntimeconfig.cache
 C:\Users\exequ\Downloads\29 4 y 29\inventario-main\Desktop\bin\Debug\net5.0-windows\Desktop.exe
 C:\Users\exequ\Downloads\29 4 y 29\inventario-main\Desktop\bin\Debug\net5.0-windows\Resources\Logotipo.png
@@ -707,3 +695,22 @@ C:\Users\ruben\Desktop\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Ext
 C:\Users\ruben\Desktop\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\ruben\Desktop\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\ruben\Desktop\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Inventario.exe
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Inventario.deps.json
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Inventario.runtimeconfig.json
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Inventario.runtimeconfig.dev.json
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Inventario.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\ref\Inventario.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Inventario.pdb
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Inventario.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\ref\Inventario.dll
+C:\Users\exequ\OneDrive\Documents\GitHub\inventario\Desktop\obj\Debug\net5.0-windows\Inventario.pdb

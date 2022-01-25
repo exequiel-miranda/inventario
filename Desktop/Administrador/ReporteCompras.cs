@@ -139,5 +139,10 @@ namespace Desktop.Administrador
                 }
             }
         }
+
+        private void ReporteCompras_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
