@@ -49,7 +49,7 @@ namespace Desktop
             this.txtContraseña.Location = new System.Drawing.Point(442, 485);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(328, 30);
-            this.txtContraseña.TabIndex = 9;
+            this.txtContraseña.TabIndex = 2;
             this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             // 
             // txtUsuario
@@ -58,7 +58,7 @@ namespace Desktop
             this.txtUsuario.Location = new System.Drawing.Point(442, 400);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(328, 30);
-            this.txtUsuario.TabIndex = 8;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // label2
@@ -110,7 +110,7 @@ namespace Desktop
             this.botonesSalir.Location = new System.Drawing.Point(539, 587);
             this.botonesSalir.Name = "botonesSalir";
             this.botonesSalir.Size = new System.Drawing.Size(150, 45);
-            this.botonesSalir.TabIndex = 12;
+            this.botonesSalir.TabIndex = 3;
             this.botonesSalir.Text = "INGRESAR";
             this.botonesSalir.TextGroundColor = System.Drawing.Color.White;
             this.botonesSalir.UseVisualStyleBackColor = false;
@@ -126,7 +126,7 @@ namespace Desktop
             this.btnHide.Location = new System.Drawing.Point(725, 487);
             this.btnHide.Name = "btnHide";
             this.btnHide.Size = new System.Drawing.Size(34, 26);
-            this.btnHide.TabIndex = 14;
+            this.btnHide.TabIndex = 0;
             this.btnHide.UseVisualStyleBackColor = false;
             this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
@@ -141,7 +141,7 @@ namespace Desktop
             this.btnShow.Location = new System.Drawing.Point(725, 487);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(34, 26);
-            this.btnShow.TabIndex = 15;
+            this.btnShow.TabIndex = 11;
             this.btnShow.UseVisualStyleBackColor = false;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
@@ -158,7 +158,7 @@ namespace Desktop
             this.btnCerrar.Location = new System.Drawing.Point(1157, 6);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(40, 23);
-            this.btnCerrar.TabIndex = 18;
+            this.btnCerrar.TabIndex = 5;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
@@ -175,7 +175,7 @@ namespace Desktop
             this.btnMinimizar.Location = new System.Drawing.Point(1132, 6);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(20, 23);
-            this.btnMinimizar.TabIndex = 17;
+            this.btnMinimizar.TabIndex = 4;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
             // 

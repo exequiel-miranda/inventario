@@ -34,7 +34,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDCompras as 'N',nombreProducto as 'Producto',cantidad as 'Cantidad',precio as 'Precio',categoria as 'Categoria',marca as 'Marca',fechaCompra as 'Fecha de Compra', vendedor as Usuario  FROM Compras";
+            String consulta = "SELECT IDCompras as 'N',nombreProducto as 'Producto',cantidad as 'Cantidad', categoria as 'Categoria',marca as 'Marca',fechaCompra as 'Fecha de Compra', precioUnitario as 'Precio Unitario', precioTotal as 'Precio Total' FROM Compras";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);

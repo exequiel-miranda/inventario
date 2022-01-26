@@ -26,6 +26,7 @@ namespace Desktop.Administrador
             conexion.abrir();
             llenar_ComboPro();
             llenar_ComboCliente();
+            llenar_txtPrecio();
             GridCategoria.DataSource = llenar_grid();
         }
 
@@ -33,7 +34,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDVentas as N,p.nombre as Producto, IDFactura as NFactura,c.nombre as Cliente, v.cantidad as Cantidad,v.PrecioUnitario,fechaVenta as 'Fecha Venta', vendedor as 'Usuario' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
+            String consulta = "SELECT IDVentas as N,p.nombre as Producto, IDFactura as NFactura,c.nombre as Cliente, v.cantidad as Cantidad,v.PrecioUnitario as Precio Unitario,fechaVenta as 'Fecha Venta', vendedor as 'Usuario' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -53,9 +54,30 @@ namespace Desktop.Administrador
             cmbProducto.DataSource = dt;
             cmbProducto.DisplayMember = "nombre";
             cmbProducto.ValueMember = "IDProducto"; //identificador
-            //cmbProducto.SelectedIndex = 0;
-        }
 
+            //String consulta1 = "select PrecioUnitario from Producto where Disponibilidad = 'True' and categoria is not null";
+            /*String consulta1 = "select PrecioUnitario from Producto where Disponibilidad = 'True' and categoria is not null and IDProducto ='" + cmbProducto + "'";
+            SqlCommand cmd1 = new SqlCommand(consulta1, conexion.conectarbd);
+            String text1 = Convert.ToString(cmd1.ExecuteScalar());
+            //String text = Convert.ToString(text1);
+            txtPrecioUnitario.Text = text1;*/
+            //cmbProducto.SelectedIndex = 0;*/
+        }
+        
+        public void llenar_txtPrecio()
+        {
+            int s = 0;
+            
+            if (int.TryParse(cmbProducto.SelectedValue.ToString(), out s))
+            {
+                String consulta = "select PrecioUnitario from Producto where Disponibilidad = 'True' and categoria is not null and IDProducto = @cmb";
+                SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
+                cmd.Parameters.AddWithValue("@cmb", s);
+                String text = Convert.ToString(cmd.ExecuteScalar());
+                txtPrecioUnitario.Text = text;
+            }
+        }
+        
         public void llenar_ComboCliente()
         {
             //conexion.abrir(); 
@@ -81,7 +103,6 @@ namespace Desktop.Administrador
 
             else
             {
-
                 //-----------------------------------------------------------------
                 //ok aqui vemos si la cantidad es mayor a cero y la leemos
                 string validacion11 = "Declare @CantidadVar int select @CantidadVar =  @Cantidad select @CantidadVar";
@@ -91,7 +112,6 @@ namespace Desktop.Administrador
                 int cantidad = Convert.ToInt32(cmd2323.ExecuteScalar());
                 //-----------------------------------------------------------------
 
-
                 //-----------------------------------------------------------------
                 //ok aqui vemos si el precio unitario es mayor a cero y la leemos
                 string validacion22 = "Declare @precioUnitarioVar decimal(9,2) select @precioUnitarioVar =  @precioUnitario select @precioUnitario";
@@ -100,8 +120,6 @@ namespace Desktop.Administrador
                 cmd3434.ExecuteNonQuery();
                 decimal precioUnitario = Convert.ToDecimal(cmd3434.ExecuteScalar());
                 //-----------------------------------------------------------------
-
-
 
                 if (precioUnitario > 0 && cantidad > 0)
                 {
@@ -140,11 +158,8 @@ namespace Desktop.Administrador
                         GridCategoria.DataSource = llenar_grid();
                     }
 
-
-
                     else
                     {
-
                         string validacion3 = "select cantidad from Producto where @IDProducto = Producto.IDProducto ";
                         SqlCommand cmd0 = new SqlCommand(validacion3, conexion.conectarbd);
                         cmd0.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
@@ -154,19 +169,6 @@ namespace Desktop.Administrador
                         //
                         MessageBox.Show("No hay tanto stock de este producto, solo hay: " + cantidadeninventario);
                     }
-
-
-                    //cmbProducto.Clear();
-                    /*
-                    string insertar = "INSERT INTO CATEGORIA (Nombre) Values (@Nombre)";
-                    SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
-                    cmd.Parameters.AddWithValue("@Nombre", txtProducto.Text);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Los datos fueron agregados con exito");
-
-                    GridCategoria.DataSource = llenar_grid();
-                    txtProducto.Clear();
-                    */
                 }
                 else
                 {
@@ -186,7 +188,6 @@ namespace Desktop.Administrador
 
             else
             {
-
                 //-----------------------------------------------------------------
                 //aqui se asigna el valor a la variable si es menor o mayor
                 string validacion1 = "Declare @CantidadP int select @CantidadP = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@Cantidad <= @CantidadP) begin update Producto set sepuedeono='sepuede' where @IDProducto = IDProducto end else begin update Producto set sepuedeono='nosepuede' where @IDProducto = IDProducto end";
@@ -205,10 +206,8 @@ namespace Desktop.Administrador
                 string sepuedeonosepuede = (string)cmd2.ExecuteScalar();
                 //-----------------------------------------------------------------
 
-
                 if (sepuedeonosepuede == "sepuede")
                 {
-
                     //conexion.abrir();
                     string actualizar = "Declare @cantYa int Declare @CantTotal int select @cantYa = Ventas.cantidad  from Ventas where @IDVentas = Ventas.IDVentas IF(@cantYa > @cantidad) begin  select @CantTotal = @cantYa - @Cantidad  update Producto set cantidad = cantidad + @CantTotal where Producto.nombre = @nombreProducto  update Ventas set IDProducto = @IDProducto, IDCliente = @IDCliente, cantidad = @Cantidad,   fechaVenta = @FechaVenta where IDVentas = @IDVentas  end else begin  select @CantTotal = @Cantidad - @cantYa  update Producto set cantidad = cantidad - @CantTotal where Producto.nombre = @nombreProducto  update Ventas set IDProducto = @IDProducto, IDCliente = @IDCliente, cantidad = @Cantidad,  fechaVenta = @FechaVenta where IDVentas = @IDVentas end";
                     SqlCommand cmd7 = new SqlCommand(actualizar, conexion.conectarbd);
@@ -292,7 +291,7 @@ namespace Desktop.Administrador
 
         private void cmbProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            llenar_txtPrecio();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -305,10 +304,6 @@ namespace Desktop.Administrador
             }
             else
             {
-
-
-
-
                 string eliminar = "Delete from Ventas where IDVentas = @IDVentas update Producto set cantidad = cantidad + @cantidad where nombre = @NombreProducto	";
                 SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
                 string id = Convert.ToString(GridCategoria.CurrentRow.Cells[0].Value);
@@ -348,5 +343,6 @@ namespace Desktop.Administrador
                 return;
             }
         }
+
     }
 }

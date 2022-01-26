@@ -30,7 +30,7 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "Declare @DisponibilidadVar bit   select @DisponibilidadVar = Disponibilidad from Producto IF(@DisponibilidadVar is not null)  begin SELECT IDProducto as [ID],nombre as [Producto],categoria as [Categoria],marca as [Marca], precioUnitario as [Precio Unitario],cantidad as [Cantidad],Disponibilidad as [Disponibilidad] FROM Producto where Disponibilidad = @cmbDisponibilidad and categoria is not null end else begin SELECT IDProducto as [ID],nombre as [Producto],categoria as [Categoria],marca as [Marca], precioUnitario as [Precio Unitario],cantidad as [Cantidad],Disponibilidad as [Disponibilidad] FROM Producto where categoria is not null end ";
+            String consulta = "Declare @DisponibilidadVar bit   select @DisponibilidadVar = Disponibilidad from Producto IF(@DisponibilidadVar is not null)  begin SELECT IDProducto as [ID],nombre as [Producto],categoria as [Categoria],marca as [Marca], precioUnitario as [Precio Unitario],cantidad as [Cantidad],Disponibilidad as [Disponibilidad] FROM Producto where Disponibilidad = @cmbDisponibilidad and categoria is not null end else begin SELECT IDProducto as [ID],nombre as [Producto],categoria as [Categoria],marca as [Marca], precioUnitario as [Precio Unitario],cantidad as [Cantidad],Disponibilidad as [Disponibilidad] FROM Producto where categoria is not null end "; 
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             cmd.Parameters.AddWithValue("@cmbDisponibilidad", btnCombo.Text);
             SqlDataAdapter da = new SqlDataAdapter(cmd);

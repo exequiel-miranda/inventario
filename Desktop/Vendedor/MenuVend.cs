@@ -143,5 +143,20 @@ namespace Desktop.Vendedor
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            Reset();
+        }
     }
 }

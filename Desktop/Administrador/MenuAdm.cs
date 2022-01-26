@@ -34,18 +34,6 @@ namespace Desktop.Administrador
             this.ControlBox = false;
             this.DoubleBuffered = true;
         }
-        //Menu Lateral
-        /*private void btnMenu_Click(object sender, EventArgs e)
-        {
-            if(MenuVertical.Width == 93)
-            {
-                MenuVertical.Width = 255;
-            }
-            else
-            {
-                MenuVertical.Width = 93;
-            }
-        }*/
         private void AbrirFormularios(object Formhijo)
         {
             if (this.Contenedor.Controls.Count > 0)
@@ -66,7 +54,6 @@ namespace Desktop.Administrador
         {
             ActiveButton(sender, RGBColors.color1);
             AbrirFormularios(new Desktop.Administrador.Clientes());
- 
         }
 
         private void btnEmpleado_Click(object sender, EventArgs e)
@@ -124,9 +111,7 @@ namespace Desktop.Administrador
             else if (WindowState == FormWindowState.Maximized)
             {
                 WindowState = FormWindowState.Normal;
-            }
-
-                
+            }   
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -150,10 +135,6 @@ namespace Desktop.Administrador
                 this.Close();
                 f1.ShowDialog();
             }
-            else
-            {
- 
-            }
         }
 
         private struct RGBColors
@@ -163,9 +144,9 @@ namespace Desktop.Administrador
             public static Color color3 = Color.FromArgb(253,138,114);
             public static Color color4 = Color.FromArgb(95,77,221);
             public static Color color5 = Color.FromArgb(249,88,155);
-            public static Color color6 = Color.FromArgb(24,161,251);
-            public static Color color7 = Color.FromArgb(255, 0, 255);
-            public static Color color8 = Color.FromArgb(0, 255, 0);
+            public static Color color6 = Color.FromArgb(0, 255, 204);
+            public static Color color7 = Color.FromArgb(255, 255, 0);
+            public static Color color8 = Color.FromArgb(46, 204, 113);
         }
 
         private void ActiveButton(object senderBtn, Color color)
@@ -202,6 +183,21 @@ namespace Desktop.Administrador
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            if (this.Contenedor.Controls.Count > 0)
+                this.Contenedor.Controls.RemoveAt(0);
+
+        }
+
+        private void button4_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            Reset();
         }
     }
 }

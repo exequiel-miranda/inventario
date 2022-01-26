@@ -29,6 +29,7 @@ namespace Desktop.Administrador
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReporteCompras));
             this.GridReporte = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,26 +42,28 @@ namespace Desktop.Administrador
             this.GridReporte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GridReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridReporte.Location = new System.Drawing.Point(3, 110);
+            this.GridReporte.Location = new System.Drawing.Point(3, 125);
             this.GridReporte.Name = "GridReporte";
             this.GridReporte.RowHeadersWidth = 43;
             this.GridReporte.RowTemplate.Height = 25;
-            this.GridReporte.Size = new System.Drawing.Size(725, 433);
-            this.GridReporte.TabIndex = 63;
+            this.GridReporte.Size = new System.Drawing.Size(725, 491);
+            this.GridReporte.TabIndex = 0;
+            this.GridReporte.TabStop = false;
             // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnEliminar.BackColor = System.Drawing.Color.Silver;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEliminar.Image = global::Desktop.Properties.Resources.ic_action_copy;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(558, 589);
+            this.btnEliminar.Location = new System.Drawing.Point(525, 660);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 34);
-            this.btnEliminar.TabIndex = 62;
-            this.btnEliminar.Text = "PDF";
+            this.btnEliminar.Size = new System.Drawing.Size(174, 54);
+            this.btnEliminar.TabIndex = 1;
+            this.btnEliminar.Text = "GENERAR PDF";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -70,9 +73,9 @@ namespace Desktop.Administrador
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(-1, 221);
+            this.label2.Location = new System.Drawing.Point(-1, 250);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 21);
+            this.label2.Size = new System.Drawing.Size(0, 22);
             this.label2.TabIndex = 61;
             // 
             // label7
@@ -83,17 +86,17 @@ namespace Desktop.Administrador
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(730, 64);
-            this.label7.TabIndex = 74;
+            this.label7.Size = new System.Drawing.Size(730, 73);
+            this.label7.TabIndex = 0;
             this.label7.Text = "Reporte de las Compras.";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ReporteCompras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(730, 659);
+            this.ClientSize = new System.Drawing.Size(730, 747);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.GridReporte);
             this.Controls.Add(this.btnEliminar);
