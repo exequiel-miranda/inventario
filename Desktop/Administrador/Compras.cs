@@ -34,7 +34,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDCompras as 'N',nombreProducto as 'Producto',cantidad as 'Cantidad', categoria as 'Categoria',marca as 'Marca',fechaCompra as 'Fecha de Compra', precioUnitario as 'Precio Unitario', precioTotal as 'Precio Total' FROM Compras";
+            String consulta = "SELECT IDCompras as 'N',nombreProducto as 'Producto',cantidad as 'Cantidad', categoria as 'Categoria',marca as 'Marca',fechaCompra as 'Fecha de Compra', precio as 'Precio Unitario', precioTotal as 'Precio Total' FROM Compras";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -62,7 +62,7 @@ namespace Desktop.Administrador
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtMarca.Text.Trim()) || string.IsNullOrEmpty(txtCategoria.Text.Trim()))
+            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtMarca.Text.Trim()) || string.IsNullOrEmpty(txtCategoria.Text.Trim()) || string.IsNullOrEmpty(txtPrecioTotal.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
                 if (string.IsNullOrEmpty(txtProducto.Text.Trim()))
@@ -80,6 +80,10 @@ namespace Desktop.Administrador
                 else if (string.IsNullOrEmpty(txtMarca.Text.Trim()))
                 {
                     txtMarca.Focus();
+                }
+                else if (string.IsNullOrEmpty(txtPrecioTotal.Text.Trim()))
+                {
+                    txtPrecioTotal.Focus();
                 }
                 else
                 {
@@ -109,20 +113,27 @@ namespace Desktop.Administrador
                 decimal precioUnitario = Convert.ToDecimal(cmd3434.ExecuteScalar());
                 //-----------------------------------------------------------------
 
+                //-----------------------------------------------------------------
+                //ok aqui vemos si el precio total es mayor a cero y la leemos
+                string validacion3 = "Declare @precioTotalVar decimal(9,2) select @precioTotalVar =  @precioTotal select @precioTotal";
+                SqlCommand cmd4434 = new SqlCommand(validacion3, conexion.conectarbd);
+                cmd4434.Parameters.AddWithValue("@precioTotal", txtPrecioTotal.Text);
+                cmd4434.ExecuteNonQuery();
+                decimal precioTotal = Convert.ToDecimal(cmd4434.ExecuteScalar());
+                //-----------------------------------------------------------------
 
-                if (cantidad > 0 && precioUnitario > 0)
+
+                if (cantidad > 0 && precioUnitario > 0 && precioTotal > 0)
                 {
-
-
                     //Hago el procedimiento almacenado por string
-                    string insertar22 = "Declare @Pnombre varchar(75) select @Pnombre = Producto.nombre from Producto where @CNombreProducto = Producto.nombre IF(@CNombreProducto = @Pnombre) Begin insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca, vendedor) values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca, 'Administrador') update Producto set cantidad = cantidad + @Ccantidad, categoria = @Ccategoria where @CNombreProducto = nombre End Else Begin insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca, vendedor) values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca, 'Administrador') insert into Producto(nombre, categoria, marca,precioUnitario,cantidad, Disponibilidad) values (@CNombreProducto, @Ccategoria,@Cmarca, @Cprecio,@Ccantidad, 'True') End";
+                    string insertar22 = "Declare @Pnombre varchar(75) select @Pnombre = Producto.nombre from Producto where @CNombreProducto = Producto.nombre IF(@CNombreProducto = @Pnombre) Begin insert into Compras(NombreProducto, cantidad,precio, fechaCompra, categoria, marca, vendedor, precioTotal) values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca, 'Administrador',@CPrecioTotal) update Producto set cantidad = cantidad + @Ccantidad, categoria = @Ccategoria where @CNombreProducto = nombre End Else Begin insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca, vendedor,precioTotal) values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca, 'Administrador', @CPrecioTotal) insert into Producto(nombre, categoria, marca,precioUnitario, cantidad, Disponibilidad) values (@CNombreProducto, @Ccategoria,@Cmarca, @Cprecio,@Ccantidad, 'True') End";
                     SqlCommand cmd2 = new SqlCommand(insertar22, conexion.conectarbd);
                     cmd2.Parameters.AddWithValue("@CNombreProducto", txtProducto.Text);
                     cmd2.Parameters.AddWithValue("@Ccantidad", txtCantidad.Text);
                     cmd2.Parameters.AddWithValue("@CMarca", txtMarca.Text);
                     cmd2.Parameters.AddWithValue("@CPrecio", txtPrecio.Text);
-                    cmd2.Parameters.AddWithValue("@Precio", txtPrecio.Text);
                     cmd2.Parameters.AddWithValue("@CCategoria", txtCategoria.Text);
+                    cmd2.Parameters.AddWithValue("@CPrecioTotal", txtPrecioTotal.Text);
                     //Subir fecha
                     DateTime stdate = DateTime.ParseExact(DTPfechaCompra.Text, myformat, null);
                     cmd2.Parameters.AddWithValue("@CFechaCompra", stdate);
@@ -154,6 +165,7 @@ namespace Desktop.Administrador
                 txtPrecio.Clear();
                 txtCategoria.Clear();
                 txtMarca.Clear();
+                txtPrecioTotal.Clear();
                 //  txtProveedor.Clear();
                 // txtFechaCompra.Clear();
                 //conexion.abrir();
@@ -167,18 +179,18 @@ namespace Desktop.Administrador
             {
                 txtProducto.Text = GridEmpleados.CurrentRow.Cells[1].Value.ToString();
                 txtCantidad.Text = GridEmpleados.CurrentRow.Cells[2].Value.ToString();
-                txtPrecio.Text = GridEmpleados.CurrentRow.Cells[3].Value.ToString();
-                txtCategoria.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
-                txtMarca.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
-                DTPfechaCompra.Text = GridEmpleados.CurrentRow.Cells[6].Value.ToString();
-
+                txtCategoria.Text = GridEmpleados.CurrentRow.Cells[3].Value.ToString();
+                txtMarca.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
+                DTPfechaCompra.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
+                txtPrecio.Text = GridEmpleados.CurrentRow.Cells[6].Value.ToString();
+                txtPrecioTotal.Text = GridEmpleados.CurrentRow.Cells[7].Value.ToString();
             }
             catch { }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()))
+            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtPrecioTotal.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -188,7 +200,7 @@ namespace Desktop.Administrador
             else
             {
                 //conexion.abrir();
-                string actualizar = "Declare @cantYa int Declare @CantTotal int select @cantYa = Compras.cantidad  from Compras where @IDCompras = Compras.IDCompras IF(@cantYa > @cantViene) begin  select @CantTotal = @cantYa -  @CantViene  update Producto set cantidad = cantidad - @CantTotal where Producto.nombre = @nombreProducto  UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, fechaCompra = @fechaCompra,   cantidad = @cantViene, categoria = @categoria, marca = @marca where IDCompras = @IDCompras end else begin  select @CantTotal = @CantViene - @cantYa  update Producto set cantidad = cantidad + @CantTotal where Producto.nombre = @nombreProducto  UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, fechaCompra = @fechaCompra,  cantidad = @cantViene, categoria = @categoria, marca = @marca where IDCompras = @IDCompras end";
+                string actualizar = "Declare @cantYa int Declare @CantTotal int select @cantYa = Compras.cantidad  from Compras where @IDCompras = Compras.IDCompras IF(@cantYa > @cantViene) begin  select @CantTotal = @cantYa -  @CantViene  update Producto set cantidad = cantidad - @CantTotal where Producto.nombre = @nombreProducto  UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, precioTotal = @precioTotal, fechaCompra = @fechaCompra,   cantidad = @cantViene, categoria = @categoria, marca = @marca where IDCompras = @IDCompras end else begin  select @CantTotal = @CantViene - @cantYa  update Producto set cantidad = cantidad + @CantTotal where Producto.nombre = @nombreProducto  UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, precioTotal = @precioTotal,fechaCompra = @fechaCompra,  cantidad = @cantViene, categoria = @categoria, marca = @marca where IDCompras = @IDCompras end";
                 SqlCommand cmd = new SqlCommand(actualizar, conexion.conectarbd);
                 string id = Convert.ToString(GridEmpleados.CurrentRow.Cells[0].Value);
                 cmd.Parameters.AddWithValue("@IDCompras", id);
@@ -197,6 +209,7 @@ namespace Desktop.Administrador
                 cmd.Parameters.AddWithValue("@precio", txtPrecio.Text);
                 cmd.Parameters.AddWithValue("@categoria", txtCategoria.Text);
                 cmd.Parameters.AddWithValue("@marca", txtMarca.Text);
+                cmd.Parameters.AddWithValue("@precioTotal", txtPrecioTotal.Text);
                 //Subir fecha
                 DateTime stdate = DateTime.ParseExact(DTPfechaCompra.Text, myformat, null);
                 cmd.Parameters.AddWithValue("@fechaCompra", stdate);
@@ -219,7 +232,7 @@ namespace Desktop.Administrador
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()))
+            if (string.IsNullOrEmpty(txtProducto.Text.Trim()) || string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(txtPrecio.Text.Trim()) || string.IsNullOrEmpty(txtPrecioTotal.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
 
@@ -243,6 +256,7 @@ namespace Desktop.Administrador
                 txtProducto.Clear();
                 txtCantidad.Clear();
                 txtPrecio.Clear();
+                txtPrecioTotal.Clear();
                 txtCategoria.Clear();
                 txtMarca.Clear();
                 //  txtProveedor.Clear();
@@ -260,7 +274,6 @@ namespace Desktop.Administrador
                     e.Handled = true;
                     return;
                 }
-            
         }
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
@@ -291,15 +304,43 @@ namespace Desktop.Administrador
                 }
         }
 
-        private void DTPfechaCompra_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtProducto_TextChanged(object sender, EventArgs e)
         {
             txtProducto.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtProducto.Text);
             txtProducto.SelectionStart = txtProducto.Text.Length;
+        }
+
+        private void txtPrecioTotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                MessageBox.Show("Solo números acompañados de punto decimal", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                MessageBox.Show("Solamente 2 números decimales", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        Double s1, s2, suma;
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            Suma();
+        }
+        
+        private void Suma()
+ {
+            Double.TryParse(txtPrecio.Text, out s1);
+            Double.TryParse(txtCantidad.Text, out s2);
+         suma = s1 *s2;
+            txtPrecioTotal.Text = Convert.ToString(Math.Round(suma, 2));
         }
     }
 }

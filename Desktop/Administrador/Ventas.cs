@@ -34,7 +34,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDVentas as N,p.nombre as Producto, IDFactura as NFactura,c.nombre as Cliente, v.cantidad as Cantidad,v.PrecioUnitario as Precio Unitario,fechaVenta as 'Fecha Venta', vendedor as 'Usuario' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
+            String consulta = "SELECT IDVentas as N,p.nombre as Producto, IDFactura as NFactura,c.nombre as Cliente, v.cantidad as Cantidad, v.PrecioUnitario as 'Precio Unitario',fechaVenta as 'Fecha Venta', vendedor as 'Usuario' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -343,6 +343,5 @@ namespace Desktop.Administrador
                 return;
             }
         }
-
     }
 }
