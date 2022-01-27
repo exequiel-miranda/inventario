@@ -64,8 +64,6 @@ namespace Desktop.Administrador
                 string insertar = "INSERT INTO CLIENTES (nombre, creditoFiscal, telefono) Values (@nombre,@creditoFiscal,@telefono)";
                 SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
                 cmd.Parameters.AddWithValue("@nombre", txtNombreC.Text);
-                //cmd.Parameters.AddWithValue("@DUI", txtDuiC.Text);
-                //cmd.Parameters.AddWithValue("@Correo", txtCorreoC.Text);
                 cmd.Parameters.AddWithValue("@telefono", txtTelefonoC.Text);
                 cmd.Parameters.AddWithValue("@creditoFiscal", txtCreditoF.Text);
                 cmd.ExecuteNonQuery();
@@ -73,16 +71,11 @@ namespace Desktop.Administrador
 
                 GridClientes.DataSource = llenar_grid();
                 txtNombreC.Clear();
-                //txtDuiC.Clear();
                 txtTelefonoC.Clear();
-                //txtCorreoC.Clear();
                 txtCreditoF.Clear();
-                //conexion.abrir();
-                //conexion.cerrar();
             }
         }
 
-        ///////////////////////////////////////////////////
         private void GridClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //conexion.abrir();
@@ -91,11 +84,6 @@ namespace Desktop.Administrador
                 txtNombreC.Text = GridClientes.CurrentRow.Cells[1].Value.ToString();
                 txtCreditoF.Text = GridClientes.CurrentRow.Cells[2].Value.ToString();
                 txtTelefonoC.Text = GridClientes.CurrentRow.Cells[3].Value.ToString();
-                /*
-                txtCorreoC.Text = GridClientes.CurrentRow.Cells[3].Value.ToString();
-                txtTelefonoC.Text = GridClientes.CurrentRow.Cells[4].Value.ToString();
-                txtSexoC.Text = GridClientes.CurrentRow.Cells[5].Value.ToString();
-                */
             }
             catch { }
         }
@@ -111,27 +99,28 @@ namespace Desktop.Administrador
 
             else
             {
-                //conexion.abrir();
-                string actualizar = "UPDATE CLIENTES set nombre = @nombre, creditoFiscal = @creditoFiscal, telefono = @telefono where IDCliente = @IDCliente";
-                SqlCommand cmd = new SqlCommand(actualizar, conexion.conectarbd);
-                string id = Convert.ToString(GridClientes.CurrentRow.Cells[0].Value);
-                cmd.Parameters.AddWithValue("@IDCliente", id);
-                cmd.Parameters.AddWithValue("@nombre", txtNombreC.Text);
-                // cmd.Parameters.AddWithValue("@DUI", txtDuiC.Text);
-                //  cmd.Parameters.AddWithValue("@Correo", txtCorreoC.Text);
-                cmd.Parameters.AddWithValue("@telefono", txtTelefonoC.Text);
-                cmd.Parameters.AddWithValue("@creditoFiscal", txtCreditoF.Text);
-                cmd.ExecuteNonQuery();
+                if (MessageBox.Show("¿Esta seguro que desea modificar este registro?", "Advertencia",
+         MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string actualizar = "UPDATE CLIENTES set nombre = @nombre, creditoFiscal = @creditoFiscal, telefono = @telefono where IDCliente = @IDCliente";
+                    SqlCommand cmd = new SqlCommand(actualizar, conexion.conectarbd);
+                    string id = Convert.ToString(GridClientes.CurrentRow.Cells[0].Value);
+                    cmd.Parameters.AddWithValue("@IDCliente", id);
+                    cmd.Parameters.AddWithValue("@nombre", txtNombreC.Text);
+                    cmd.Parameters.AddWithValue("@telefono", txtTelefonoC.Text);
+                    cmd.Parameters.AddWithValue("@creditoFiscal", txtCreditoF.Text);
+                    cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Los datos fueron actualizados con exito");
-                GridClientes.DataSource = llenar_grid();
-                txtNombreC.Clear();
-                // txtDuiC.Clear();
-                txtTelefonoC.Clear();
-                //  txtCorreoC.Clear();
-                txtCreditoF.Clear();
-                //conexion.abrir();
-                //conexion.cerrar();
+                    MessageBox.Show("Los datos fueron actualizados con exito");
+                    GridClientes.DataSource = llenar_grid();
+                    txtNombreC.Clear();
+                    txtTelefonoC.Clear();
+                    txtCreditoF.Clear();
+                }
+                else
+                {
+
+                }
             }
         }
 
@@ -147,27 +136,32 @@ namespace Desktop.Administrador
             else
             {
 
-                string eliminar = "UPDATE CLIENTES set creditoFiscal = null where IDCliente = @IDCliente";
-                SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
-                string id = Convert.ToString(GridClientes.CurrentRow.Cells[0].Value);
-                cmd.Parameters.AddWithValue("@IDCliente", id);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Los datos han sido eliminados correctamente");
-                GridClientes.DataSource = llenar_grid();
-                txtNombreC.Clear();
-                //txtDuiC.Clear();
-                txtTelefonoC.Clear();
-                // txtCorreoC.Clear();
-                txtCreditoF.Clear();
-                //conexion.abrir();
+                if (MessageBox.Show("¿Esta seguro que desea eliminar este registro?", "Advertencia",
+         MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string eliminar = "UPDATE CLIENTES set creditoFiscal = null where IDCliente = @IDCliente";
+                    SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
+                    string id = Convert.ToString(GridClientes.CurrentRow.Cells[0].Value);
+                    cmd.Parameters.AddWithValue("@IDCliente", id);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Los datos han sido eliminados correctamente");
+                    GridClientes.DataSource = llenar_grid();
+                    txtNombreC.Clear();
+                    txtTelefonoC.Clear();
+                    txtCreditoF.Clear();
+                }
+                else
+                {
+
+                }
+
+
             }
         }
 
         private void txtNombreC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
-       
-            
+
         }
 
         private void txtCreditoF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)

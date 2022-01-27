@@ -31,9 +31,24 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "Declare @IDFacturaVar varchar(50)  select @IDFacturaVar = IDFactura from Ventas  IF(@IDFacturaVar is not null)  begin  	SELECT IDVentas as [ID],p.nombre as [Producto no nulo], v.IDFactura,c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario,fechaVenta as [Fecha de Venta], vendedor  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where IDFactura = @cmbIDFacturaVar end else begin 	SELECT IDVentas as [ID],p.nombre as [Producto nulo], v.IDFactura,c.nombre as [Cliente],  v.cantidad as [Cantidad],v.PrecioUnitario,fechaVenta as [Fecha de Venta], vendedor   FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto   inner join Clientes as c on v.IDCliente = c.IDCliente   end";
+            String consulta = "Declare @IDFacturaVar varchar(50)  select @IDFacturaVar = IDFactura from Ventas  IF(@IDFacturaVar is not null)  begin  	SELECT IDVentas as [ID],p.nombre as [Producto no nulo], v.IDFactura,c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario,fechaVenta as [Fecha de Venta], vendedor  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where v.fechaVenta >= @dtpInicio and v.fechaVenta <= @dtpFin or IDFactura = @cmbIDFacturaVar  end else begin 	SELECT IDVentas as [ID],p.nombre as [Producto nulo], v.IDFactura,c.nombre as [Cliente],  v.cantidad as [Cantidad],v.PrecioUnitario,fechaVenta as [Fecha de Venta], vendedor   FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto   inner join Clientes as c on v.IDCliente = c.IDCliente   end";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             cmd.Parameters.AddWithValue("@cmbIDFacturaVar", btnCombo.Text);
+            cmd.Parameters.AddWithValue("@dtpInicio", dtpfechaInicio.Value);
+            cmd.Parameters.AddWithValue("@dtpFin", dtpfechaFin.Value);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            conexion.cerrar();
+            return dt;
+        }
+
+        public DataTable llenar_gridVacio()
+        {
+            conexion.abrir();
+            DataTable dt = new DataTable();
+            String consulta = "SELECT IDVentas as [ID],p.nombre as [Producto no nulo], v.IDFactura,c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario,fechaVenta as [Fecha de Venta], vendedor  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where IDFactura = 'vacioss'";
+            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
 
@@ -54,26 +69,6 @@ namespace Desktop.Administrador
             btnCombo.DisplayMember = "Nombre";
             btnCombo.ValueMember = "IDFactura"; //identificador
             btnCombo.SelectedIndex = 0;
-
-
-            /*
-            if (cbmDis.Text == "Verdadera")
-            {
-                cbmDis.Text = "True";
-                cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
-            }
-            else if (cbmDis.Text == "Falsa")
-            {
-                cbmDis.Text = "False";
-                cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
-            }
-            else
-            {
-                MessageBox.Show("No ha seleccionado Disponibilidad");
-                return;
-            }
-            //cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
-            cmd2.ExecuteNonQuery();*/
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -191,7 +186,39 @@ namespace Desktop.Administrador
 
         private void btnCombo_SelectedValueChanged(object sender, EventArgs e)
         {
+            //GridReporte.DataSource = llenar_grid();
+        }
+
+        private void dtpfechaInicio_ValueChanged(object sender, EventArgs e)
+        {
+            btnCombo.Enabled = false;
+        }
+
+        private void dtpfechaFin_ValueChanged(object sender, EventArgs e)
+        {
+            btnCombo.Enabled = false;
+        }
+
+        private void botones2_Click(object sender, EventArgs e)
+        {
+            //aqui viene un llenar grid vacio
+            GridReporte.DataSource = llenar_gridVacio();
+            dtpfechaInicio.Value = DateTime.Now;
+            dtpfechaFin.Value = DateTime.Now;
+            dtpfechaInicio.Enabled = true;
+            dtpfechaFin.Enabled = true;
+            btnCombo.Enabled = true;
+        }
+
+        private void botones1_Click(object sender, EventArgs e)
+        {
             GridReporte.DataSource = llenar_grid();
+        }
+
+        private void btnCombo_DropDown(object sender, EventArgs e)
+        {
+            dtpfechaInicio.Enabled = false;
+            dtpfechaFin.Enabled = false;
         }
     }
 }

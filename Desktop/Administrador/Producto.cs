@@ -22,8 +22,6 @@ namespace Desktop.Administrador
         private void Producto_Load(object sender, EventArgs e)
         {
             conexion.abrir();
-           // llenar_ComboPro();
-            //llenar_ComboCat();
             GridProductos.DataSource = llenar_grid();
         }
 
@@ -39,38 +37,6 @@ namespace Desktop.Administrador
             return dt;
         }
 
-        /*
-        public void llenar_ComboPro()
-        {
-            //conexion.abrir(); 
-            DataTable dt = new DataTable();
-            String consulta = "SELECT IDProveedor,nombre FROM Proveedor";
-            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            //conexion.cerrar();
-            cmbProveedor.DataSource = dt;
-            cmbProveedor.DisplayMember = "Nombre";
-            cmbProveedor.ValueMember = "IdProveedor"; //identificador
-            cmbProveedor.SelectedIndex = 0;
-        }
-        
-        
-        public void llenar_ComboCat()
-        {
-            //conexion.abrir();
-            DataTable dt = new DataTable();
-            String consulta = "Select IDProducto,Categoria from Producto";
-            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            //conexion.cerrar();
-            cbCategoria.DataSource = dt;
-            cbCategoria.DisplayMember = "Categoria";
-            cbCategoria.ValueMember = "IdProducto"; //identificador
-            cbCategoria.SelectedIndex = 0;
-        }
-        */
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -142,72 +108,11 @@ namespace Desktop.Administrador
                     MessageBox.Show("ingrese un numero mayor de cero en Cantidad o Precio");
                 }
 
-
-
-
-
-                /*
-                //Se ingresa a la tabla Productos
-                string insertar2 = "INSERT INTO PRODUCTO (nombre, categoria, marca, precioUnitario, cantidad, disponibilidad) Values (@nombre,@categoria, @marca, @precioUnitario, @cantidad, 'True')";
-                SqlCommand cmd2 = new SqlCommand(insertar2, conexion.conectarbd);
-               // cmd2.Parameters.AddWithValue("@IDProducto", txtCodigo.Text);
-                cmd2.Parameters.AddWithValue("@categoria", txtCategoria.Text);
-                cmd2.Parameters.AddWithValue("@nombre", txtNombre.Text);
-                cmd2.Parameters.AddWithValue("@precioUnitario", txtPrecio.Text);
-                cmd2.Parameters.AddWithValue("@marca", txtMarca.Text);
-                cmd2.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
-
-                cmd2.ExecuteNonQuery();
-                */
-
-
-                /*
-                if (cbmDis.Text == "Verdadera")
-                {
-                    cbmDis.Text = "True";
-                    cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
-                }
-                else if (cbmDis.Text == "Falsa")
-                {
-                    cbmDis.Text = "False";
-                    cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
-                }
-                else
-                {
-                    MessageBox.Show("No ha seleccionado Disponibilidad");
-                    return;
-                }
-                //cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
-                */
-
-
-
-                /*
-                //Se ingresa a la tabla Almacen
-                string insertar = "INSERT INTO ALMACEN (IdProducto,IdProveedor, Cantidad, FechaIngreso) Values (@IdProducto,@IdProveedor,@Cantidad,@FechaIngreso)";
-                SqlCommand cmd = new SqlCommand(insertar, conexion.conectarbd);
-                cmd.Parameters.AddWithValue("@IdProducto", txtCodigo.Text);
-                //cmd.Parameters.AddWithValue("@IdProveedor", cmbProveedor.SelectedValue.ToString());
-                cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
-                //cmd.Parameters.AddWithValue("@FechaIngreso", fechaingreso.Text);
-<<<<<<< Updated upstream
-                cmd.ExecuteNonQuery();
-                */
-                //=======
-                //cmd.ExecuteNonQuery();
-
-                //>>>>>>> Stashed changes
-
-
-
                 GridProductos.DataSource = llenar_grid();
-                //txtCodigo.Clear();
                 txtNombre.Clear();
                 txtCantidad.Clear();
                 txtMarca.Clear();
                 txtPrecio.Clear();
-                //cbmDis.ResetText();
-                //txtDisponibilidadP.Clear();
                 txtCategoria.Clear();
             }
         }
@@ -223,19 +128,6 @@ namespace Desktop.Administrador
                 txtMarca.Text = GridProductos.CurrentRow.Cells[3].Value.ToString();
                 txtPrecio.Text = GridProductos.CurrentRow.Cells[4].Value.ToString();
                 txtCantidad.Text = GridProductos.CurrentRow.Cells[5].Value.ToString();
-
-                /*
-                cbmDis.Text = GridProductos.CurrentRow.Cells[6].Value.ToString();
-                if (cbmDis.Text == "True")
-                {
-                    cbmDis.Text = "Verdadera";
-                }
-                else
-                {
-                    cbmDis.Text = "Falso";
-                }
-                //txtDisponibilidadP.Text = GridProductos.CurrentRow.Cells[6].Value.ToString();
-                */
             }
             catch { }
         }
@@ -251,61 +143,37 @@ namespace Desktop.Administrador
 
             else
             {
-                //Se ingresa a la tabla Productos
-                string actualizar = "UPDATE PRODUCTO SET nombre = @nombre, categoria = @categoria, marca = @marca, precioUnitario = @precioUnitario, cantidad = @cantidad, disponibilidad = @disponibilidad where IDProducto = @IDProducto";
-                SqlCommand cmd2 = new SqlCommand(actualizar, conexion.conectarbd);
-                string id = Convert.ToString(GridProductos.CurrentRow.Cells[0].Value);
-                cmd2.Parameters.AddWithValue("@IDProducto", id);
-                string disponibilidadCheque = Convert.ToString(GridProductos.CurrentRow.Cells[6].Value);
-                cmd2.Parameters.AddWithValue("@categoria", txtCategoria.Text);
-                cmd2.Parameters.AddWithValue("@nombre", txtNombre.Text);
-                cmd2.Parameters.AddWithValue("@precioUnitario", txtPrecio.Text);
-                cmd2.Parameters.AddWithValue("@marca", txtMarca.Text);
-                cmd2.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
-                cmd2.Parameters.AddWithValue("@disponibilidad", disponibilidadCheque);
-                //cmd2.Parameters.AddWithValue("@proveedorId", cmbProveedor.Text);
+                if (MessageBox.Show("¿Esta seguro que desea modificar este registro?", "Advertencia",
+             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    //Se ingresa a la tabla Productos
+                    string actualizar = "UPDATE PRODUCTO SET nombre = @nombre, categoria = @categoria, marca = @marca, precioUnitario = @precioUnitario, cantidad = @cantidad, disponibilidad = @disponibilidad where IDProducto = @IDProducto and marca = @marca";
+                    SqlCommand cmd2 = new SqlCommand(actualizar, conexion.conectarbd);
+                    string id = Convert.ToString(GridProductos.CurrentRow.Cells[0].Value);
+                    cmd2.Parameters.AddWithValue("@IDProducto", id);
+                    string disponibilidadCheque = Convert.ToString(GridProductos.CurrentRow.Cells[6].Value);
+                    cmd2.Parameters.AddWithValue("@categoria", txtCategoria.Text);
+                    cmd2.Parameters.AddWithValue("@nombre", txtNombre.Text);
+                    cmd2.Parameters.AddWithValue("@precioUnitario", txtPrecio.Text);
+                    cmd2.Parameters.AddWithValue("@marca", txtMarca.Text);
+                    cmd2.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
+                    cmd2.Parameters.AddWithValue("@disponibilidad", disponibilidadCheque);
 
-                /*
-                if (cbmDis.Text == "Verdadera")
-                {
-                    cbmDis.Text = "True";
-                    cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
-                }
-                else if (cbmDis.Text == "Falsa")
-                {
-                    cbmDis.Text = "False";
-                    cmd2.Parameters.AddWithValue("@disponibilidad", cbmDis.Text);
+                    cmd2.ExecuteNonQuery();
+
+                    MessageBox.Show("Los datos fueron actualizados con exito");
+
+                    GridProductos.DataSource = llenar_grid();
+                    txtNombre.Clear();
+                    txtCantidad.Clear();
+                    txtMarca.Clear();
+                    txtPrecio.Clear();
+                    txtCategoria.Clear();
                 }
                 else
                 {
-                    MessageBox.Show("No ha seleccionado Disponibilidad");
-                    return;
+
                 }
-                */
-                cmd2.ExecuteNonQuery();
-
-                /*
-                //Se ingresa a la tabla Almacen
-                string actualizar2 = "UPDATE Almacen set  IdProveedor = @IdProveedor, Cantidad = @Cantidad, FechaIngreso = @FechaIngreso where IdProducto = @IdProducto";
-                SqlCommand cmd = new SqlCommand(actualizar2, conexion.conectarbd);
-                //cmd.Parameters.AddWithValue("@IdProducto", txtCodigo.Text);
-              //  cmd.Parameters.AddWithValue("@IdProveedor", cmbProveedor.SelectedValue.ToString());
-                cmd.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
-                //cmd.Parameters.AddWithValue("@FechaIngreso", fechaingreso.Text);
-                cmd.ExecuteNonQuery();*/
-
-
-                MessageBox.Show("Los datos fueron actualizados con exito");
-
-                GridProductos.DataSource = llenar_grid();
-                txtNombre.Clear();
-                txtCantidad.Clear();
-                txtMarca.Clear();
-                txtPrecio.Clear();
-                //txtDisponibilidadP.Clear();
-                txtCategoria.Clear();
-                //cbmDis.ResetText();
-                //txtCodigo.Clear();
             }
         }
 
@@ -318,24 +186,29 @@ namespace Desktop.Administrador
                 return;
             }
 
-
             else
             {
-                string eliminar = "UPDATE PRODUCTO SET  categoria = null, cantidad = 0 where IDProducto = @IDProducto";
-                SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
-                string id = Convert.ToString(GridProductos.CurrentRow.Cells[0].Value);
-                cmd.Parameters.AddWithValue("@IdProducto", id);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Los datos han sido eliminados correctamente");
+                if (MessageBox.Show("¿Esta seguro que desea eliminar este registro?", "Advertencia",
+             MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string eliminar = "UPDATE PRODUCTO SET  categoria = null, cantidad = 0 where IDProducto = @IDProducto";
+                    SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
+                    string id = Convert.ToString(GridProductos.CurrentRow.Cells[0].Value);
+                    cmd.Parameters.AddWithValue("@IdProducto", id);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Los datos han sido eliminados correctamente");
 
-                GridProductos.DataSource = llenar_grid();
-                txtNombre.Clear();
-                txtCantidad.Clear();
-                txtMarca.Clear();
-                txtPrecio.Clear();
-                //txtDisponibilidadP.Clear();
-                txtCategoria.Clear();
-                //txtCodigo.Clear();
+                    GridProductos.DataSource = llenar_grid();
+                    txtNombre.Clear();
+                    txtCantidad.Clear();
+                    txtMarca.Clear();
+                    txtPrecio.Clear();
+                    txtCategoria.Clear();
+                }
+                else
+                {
+
+                }
             }
         }
 

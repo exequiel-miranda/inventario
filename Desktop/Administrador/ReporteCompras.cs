@@ -30,13 +30,14 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDCompras as [N],nombreProducto as [Producto],cantidad as [Cantidad],precio as [Precio],categoria as [Categoria],marca as [Marca],fechaCompra as [Fecha de Compra] FROM Compras";
+            String consulta = "select IDCompras as N, nombreProducto as Producto, cantidad as Cantidad,  precio as Precio,precioTotal as 'Precio Total', categoria as Categoria, marca as Marca,  fechaCompra as Fecha from Compras  where fechaCompra >= @dtpfechaInicio and fechaCompra <= @dtpfechaFin ";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
+            cmd.Parameters.AddWithValue("@dtpfechaInicio", dtpfechaInicio.Value);
+            cmd.Parameters.AddWithValue("@dtpfechaFin", dtpfechaFin.Value);
             da.Fill(dt);
             conexion.cerrar();
             return dt;
-
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -143,6 +144,16 @@ namespace Desktop.Administrador
         private void ReporteCompras_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtpfechaInicio_ValueChanged(object sender, EventArgs e)
+        {
+            GridReporte.DataSource = llenar_grid();
+        }
+
+        private void dtpfechaFin_ValueChanged(object sender, EventArgs e)
+        {
+            GridReporte.DataSource = llenar_grid();
         }
     }
 }

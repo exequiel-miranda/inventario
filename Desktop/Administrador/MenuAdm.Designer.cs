@@ -77,7 +77,7 @@ namespace Desktop.Administrador
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(265, 809);
+            this.MenuVertical.Size = new System.Drawing.Size(265, 695);
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -92,10 +92,10 @@ namespace Desktop.Administrador
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 498);
+            this.button2.Location = new System.Drawing.Point(3, 439);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.button2.Size = new System.Drawing.Size(259, 68);
+            this.button2.Size = new System.Drawing.Size(259, 60);
             this.button2.TabIndex = 8;
             this.button2.Text = "Productos";
             this.button2.UseVisualStyleBackColor = false;
@@ -111,9 +111,9 @@ namespace Desktop.Administrador
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Book Antiqua", 19.9604F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(48, 13);
+            this.button4.Location = new System.Drawing.Point(48, 7);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(161, 35);
+            this.button4.Size = new System.Drawing.Size(161, 49);
             this.button4.TabIndex = 10;
             this.button4.Text = "Inventario";
             this.button4.UseVisualStyleBackColor = false;
@@ -124,9 +124,9 @@ namespace Desktop.Administrador
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 14.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(2, 394);
+            this.label3.Location = new System.Drawing.Point(2, 348);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(266, 31);
+            this.label3.Size = new System.Drawing.Size(253, 29);
             this.label3.TabIndex = 0;
             this.label3.Text = "Generador de Reportes:";
             // 
@@ -135,9 +135,9 @@ namespace Desktop.Administrador
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(28, 51);
+            this.label5.Location = new System.Drawing.Point(28, 45);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(208, 17);
+            this.label5.Size = new System.Drawing.Size(207, 15);
             this.label5.TabIndex = 0;
             this.label5.Text = "________________________________________";
             // 
@@ -146,9 +146,9 @@ namespace Desktop.Administrador
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(28, 717);
+            this.label4.Location = new System.Drawing.Point(28, 633);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 17);
+            this.label4.Size = new System.Drawing.Size(207, 15);
             this.label4.TabIndex = 0;
             this.label4.Text = "________________________________________";
             // 
@@ -163,10 +163,10 @@ namespace Desktop.Administrador
             this.btnCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(3, 82);
+            this.btnCliente.Location = new System.Drawing.Point(3, 72);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnCliente.Size = new System.Drawing.Size(259, 68);
+            this.btnCliente.Size = new System.Drawing.Size(259, 60);
             this.btnCliente.TabIndex = 1;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = false;
@@ -182,10 +182,10 @@ namespace Desktop.Administrador
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(1, 646);
+            this.button3.Location = new System.Drawing.Point(1, 570);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.button3.Size = new System.Drawing.Size(259, 68);
+            this.button3.Size = new System.Drawing.Size(259, 60);
             this.button3.TabIndex = 7;
             this.button3.Text = "Ventas";
             this.button3.UseVisualStyleBackColor = true;
@@ -202,9 +202,9 @@ namespace Desktop.Administrador
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(29, 741);
+            this.button1.Location = new System.Drawing.Point(29, 654);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 57);
+            this.button1.Size = new System.Drawing.Size(198, 50);
             this.button1.TabIndex = 9;
             this.button1.Text = "Cerrar Sesion";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -222,10 +222,10 @@ namespace Desktop.Administrador
             this.btnEmpleados.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpleados.Image")));
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(1, 572);
+            this.btnEmpleados.Location = new System.Drawing.Point(1, 505);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnEmpleados.Size = new System.Drawing.Size(259, 68);
+            this.btnEmpleados.Size = new System.Drawing.Size(259, 60);
             this.btnEmpleados.TabIndex = 6;
             this.btnEmpleados.Text = "Compras";
             this.btnEmpleados.UseVisualStyleBackColor = false;
@@ -242,10 +242,10 @@ namespace Desktop.Administrador
             this.btnVentas.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(3, 304);
+            this.btnVentas.Location = new System.Drawing.Point(3, 268);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnVentas.Size = new System.Drawing.Size(259, 68);
+            this.btnVentas.Size = new System.Drawing.Size(259, 60);
             this.btnVentas.TabIndex = 4;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = false;
@@ -262,10 +262,10 @@ namespace Desktop.Administrador
             this.btnReporte.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(2, 431);
+            this.btnReporte.Location = new System.Drawing.Point(2, 380);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnReporte.Size = new System.Drawing.Size(259, 68);
+            this.btnReporte.Size = new System.Drawing.Size(259, 60);
             this.btnReporte.TabIndex = 5;
             this.btnReporte.Text = "Clientes   ";
             this.btnReporte.UseVisualStyleBackColor = false;
@@ -282,10 +282,10 @@ namespace Desktop.Administrador
             this.btnProducto.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnProducto.Image = ((System.Drawing.Image)(resources.GetObject("btnProducto.Image")));
             this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducto.Location = new System.Drawing.Point(3, 156);
+            this.btnProducto.Location = new System.Drawing.Point(3, 138);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnProducto.Size = new System.Drawing.Size(259, 68);
+            this.btnProducto.Size = new System.Drawing.Size(259, 60);
             this.btnProducto.TabIndex = 2;
             this.btnProducto.Text = "Productos";
             this.btnProducto.UseVisualStyleBackColor = false;
@@ -302,10 +302,10 @@ namespace Desktop.Administrador
             this.btnCompras.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnCompras.Image")));
             this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.Location = new System.Drawing.Point(3, 230);
+            this.btnCompras.Location = new System.Drawing.Point(3, 203);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnCompras.Size = new System.Drawing.Size(259, 68);
+            this.btnCompras.Size = new System.Drawing.Size(259, 60);
             this.btnCompras.TabIndex = 3;
             this.btnCompras.Text = "Compras";
             this.btnCompras.UseVisualStyleBackColor = false;
@@ -320,7 +320,7 @@ namespace Desktop.Administrador
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(265, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(939, 40);
+            this.panel1.Size = new System.Drawing.Size(939, 35);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -334,9 +334,9 @@ namespace Desktop.Administrador
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(896, 8);
+            this.btnCerrar.Location = new System.Drawing.Point(896, 7);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(40, 23);
+            this.btnCerrar.Size = new System.Drawing.Size(40, 20);
             this.btnCerrar.TabIndex = 13;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -351,9 +351,9 @@ namespace Desktop.Administrador
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(834, 8);
+            this.btnMinimizar.Location = new System.Drawing.Point(834, 7);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(20, 23);
+            this.btnMinimizar.Size = new System.Drawing.Size(20, 20);
             this.btnMinimizar.TabIndex = 11;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -368,9 +368,9 @@ namespace Desktop.Administrador
             this.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCyan;
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximizar.Location = new System.Drawing.Point(870, 8);
+            this.btnMaximizar.Location = new System.Drawing.Point(870, 7);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(20, 23);
+            this.btnMaximizar.Size = new System.Drawing.Size(20, 20);
             this.btnMaximizar.TabIndex = 12;
             this.btnMaximizar.UseVisualStyleBackColor = true;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
@@ -378,18 +378,18 @@ namespace Desktop.Administrador
             // Contenedor
             // 
             this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Contenedor.Location = new System.Drawing.Point(265, 40);
+            this.Contenedor.Location = new System.Drawing.Point(265, 35);
             this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(939, 769);
+            this.Contenedor.Size = new System.Drawing.Size(939, 660);
             this.Contenedor.TabIndex = 2;
             this.Contenedor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // MenuAdm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1204, 809);
+            this.ClientSize = new System.Drawing.Size(1204, 695);
             this.Controls.Add(this.Contenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MenuVertical);
