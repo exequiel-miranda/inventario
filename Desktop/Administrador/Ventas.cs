@@ -206,7 +206,7 @@ namespace Desktop.Administrador
 
                     string sepuedeonosepuede = (string)cmd2.ExecuteScalar();
                     //-----------------------------------------------------------------
-
+                    //esasteregg
 
                     if (sepuedeonosepuede == "sepuede")
                     {
