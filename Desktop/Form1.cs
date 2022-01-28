@@ -173,5 +173,16 @@ namespace Desktop
             txtUsuario.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtUsuario.Text);
             txtUsuario.SelectionStart = txtUsuario.Text.Length;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtUsuario.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToLower(txtUsuario.Text);
+            txtUsuario.SelectionStart = txtUsuario.Text.Length;
+        }
     }
 }

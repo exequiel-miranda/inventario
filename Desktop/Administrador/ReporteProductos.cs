@@ -55,8 +55,6 @@ namespace Desktop.Administrador
             btnCombo.DisplayMember = "Nombre";
             btnCombo.ValueMember = "Disponibilidad"; //identificador
             btnCombo.SelectedIndex = 0;
-
-
             /*
             if (cbmDis.Text == "Verdadera")
             {

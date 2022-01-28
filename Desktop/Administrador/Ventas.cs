@@ -46,7 +46,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir(); 
             DataTable dt = new DataTable();
-            String consulta = "select IDProducto, CONCAT(nombre,+ ' ' + marca) as nombre from Producto where Disponibilidad = 'True'  and categoria is not null";
+            String consulta = "Declare @IDProductoVar int  Declare @estavacio varchar(50) select @IDProductoVar = Producto.IDProducto from Producto where Disponibilidad = 'True'  and categoria is not null IF(@IDProductoVar is null)  begin 	select @estavacio =  'vacio'	 	select @estavacio as IDProducto end else begin 	select IDProducto, CONCAT(nombre,+ ' ' + marca) as nombre from Producto  	where Disponibilidad = 'True'  and categoria is not null end";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -62,12 +62,12 @@ namespace Desktop.Administrador
             
             if (int.TryParse(cmbProducto.SelectedValue.ToString(), out s))
             {
-                String consulta = "select PrecioUnitario from Producto where Disponibilidad = 'True' and categoria is not null and IDProducto = @cmb";
+                String consulta = "Declare @IDProductoVar2 int  Declare @estavacio2 int select @IDProductoVar2 = Producto.IDProducto from Producto where Disponibilidad = 'True'  and categoria is not null IF(@IDProductoVar2 is null)  begin 	select @estavacio2 =  0 	select @estavacio2 as IDProducto end else begin 	select PrecioUnitario from Producto  	where Disponibilidad = 'True' and categoria is not null and IDProducto = @cmb  end";
                 SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
                 cmd.Parameters.AddWithValue("@cmb", s);
                 String text = Convert.ToString(cmd.ExecuteScalar());
                 txtPrecioUnitario.Text = text;
-            }
+           }
         }
         
         public void llenar_ComboCliente()
@@ -86,7 +86,7 @@ namespace Desktop.Administrador
         }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtCantidad.Text.Trim()))
+            if (string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(cmbCliente.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
                 txtCantidad.Focus();
@@ -206,7 +206,7 @@ namespace Desktop.Administrador
 
                     string sepuedeonosepuede = (string)cmd2.ExecuteScalar();
                     //-----------------------------------------------------------------
-                    //esasteregg
+                    //esastereggd
 
                     if (sepuedeonosepuede == "sepuede")
                     {

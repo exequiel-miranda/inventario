@@ -46,20 +46,21 @@ namespace Desktop
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtContraseña.Location = new System.Drawing.Point(442, 485);
+            this.txtContraseña.Location = new System.Drawing.Point(442, 428);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(328, 30);
+            this.txtContraseña.Size = new System.Drawing.Size(328, 29);
             this.txtContraseña.TabIndex = 2;
             this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUsuario.Location = new System.Drawing.Point(442, 400);
+            this.txtUsuario.Location = new System.Drawing.Point(442, 353);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(328, 30);
+            this.txtUsuario.Size = new System.Drawing.Size(328, 29);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // label2
             // 
@@ -67,9 +68,9 @@ namespace Desktop
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12.25743F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(442, 456);
+            this.label2.Location = new System.Drawing.Point(442, 402);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 24);
+            this.label2.Size = new System.Drawing.Size(123, 22);
             this.label2.TabIndex = 7;
             this.label2.Text = "CONTRASEÑA:";
             // 
@@ -79,9 +80,9 @@ namespace Desktop
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 12.25743F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(442, 371);
+            this.label3.Location = new System.Drawing.Point(442, 327);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 24);
+            this.label3.Size = new System.Drawing.Size(86, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "USUARIO:";
             // 
@@ -89,9 +90,9 @@ namespace Desktop
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(498, 110);
+            this.pictureBox1.Location = new System.Drawing.Point(498, 97);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(209, 193);
+            this.pictureBox1.Size = new System.Drawing.Size(209, 170);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -107,9 +108,9 @@ namespace Desktop
             this.botonesSalir.FlatAppearance.BorderSize = 0;
             this.botonesSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonesSalir.ForeColor = System.Drawing.Color.White;
-            this.botonesSalir.Location = new System.Drawing.Point(539, 587);
+            this.botonesSalir.Location = new System.Drawing.Point(539, 518);
             this.botonesSalir.Name = "botonesSalir";
-            this.botonesSalir.Size = new System.Drawing.Size(150, 45);
+            this.botonesSalir.Size = new System.Drawing.Size(150, 40);
             this.botonesSalir.TabIndex = 3;
             this.botonesSalir.Text = "INGRESAR";
             this.botonesSalir.TextGroundColor = System.Drawing.Color.White;
@@ -123,9 +124,9 @@ namespace Desktop
             this.btnHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHide.FlatAppearance.BorderSize = 0;
             this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHide.Location = new System.Drawing.Point(725, 487);
+            this.btnHide.Location = new System.Drawing.Point(725, 430);
             this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(34, 26);
+            this.btnHide.Size = new System.Drawing.Size(34, 23);
             this.btnHide.TabIndex = 0;
             this.btnHide.UseVisualStyleBackColor = false;
             this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
@@ -138,9 +139,9 @@ namespace Desktop
             this.btnShow.FlatAppearance.BorderSize = 0;
             this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShow.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnShow.Location = new System.Drawing.Point(725, 487);
+            this.btnShow.Location = new System.Drawing.Point(725, 430);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(34, 26);
+            this.btnShow.Size = new System.Drawing.Size(34, 23);
             this.btnShow.TabIndex = 11;
             this.btnShow.UseVisualStyleBackColor = false;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
@@ -155,9 +156,9 @@ namespace Desktop
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1157, 6);
+            this.btnCerrar.Location = new System.Drawing.Point(1157, 5);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(40, 23);
+            this.btnCerrar.Size = new System.Drawing.Size(40, 20);
             this.btnCerrar.TabIndex = 5;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -172,20 +173,20 @@ namespace Desktop
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(1132, 6);
+            this.btnMinimizar.Location = new System.Drawing.Point(1132, 5);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(20, 23);
+            this.btnMinimizar.Size = new System.Drawing.Size(20, 20);
             this.btnMinimizar.TabIndex = 4;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1204, 809);
+            this.ClientSize = new System.Drawing.Size(1204, 695);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnShow);
@@ -202,6 +203,7 @@ namespace Desktop
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
