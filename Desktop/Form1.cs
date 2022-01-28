@@ -176,7 +176,7 @@ namespace Desktop
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            txtUsuario.Focus();
         }
 
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
