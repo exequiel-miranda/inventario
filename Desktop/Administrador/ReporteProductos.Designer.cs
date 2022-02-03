@@ -58,7 +58,11 @@ namespace Desktop.Administrador
             this.btnCombo.DisplayMember = "4";
             this.btnCombo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCombo.FormattingEnabled = true;
+<<<<<<< Updated upstream
             this.btnCombo.Location = new System.Drawing.Point(239, 114);
+=======
+            this.btnCombo.Location = new System.Drawing.Point(261, 129);
+>>>>>>> Stashed changes
             this.btnCombo.Name = "btnCombo";
             this.btnCombo.Size = new System.Drawing.Size(225, 29);
             this.btnCombo.TabIndex = 1;
@@ -81,8 +85,11 @@ namespace Desktop.Administrador
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.BackColor = System.Drawing.Color.Silver;
+            this.btnEliminar.BackColor = System.Drawing.Color.White;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -111,7 +118,11 @@ namespace Desktop.Administrador
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+<<<<<<< Updated upstream
             this.label5.Location = new System.Drawing.Point(190, 83);
+=======
+            this.label5.Location = new System.Drawing.Point(187, 95);
+>>>>>>> Stashed changes
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(341, 28);
             this.label5.TabIndex = 0;
@@ -130,7 +141,6 @@ namespace Desktop.Administrador
             this.label7.TabIndex = 0;
             this.label7.Text = "Reporte de Productos.";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // ReporteProductos
             // 
@@ -149,7 +159,6 @@ namespace Desktop.Administrador
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReporteProductos";
             this.Text = "ReporteProd";
-            this.Load += new System.EventHandler(this.ReporteProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridReporte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

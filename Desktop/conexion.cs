@@ -10,8 +10,13 @@ namespace Desktop
 {
     class conexion
     {
+<<<<<<< Updated upstream
         //string cadena = @"Data Source=DESKTOP-015KCQB\SQLEXPRESS;Initial Catalog=Inventario;Integrated Security=True";
         string cadena = @"Data Source=TIBO \SQLEXPRESS; Initial Catalog=Inventario; Integrated Security=True";
+=======
+        string cadena = @"Data Source=DESKTOP-015KCQB\SQLEXPRESS;Initial Catalog=Inventario;Integrated Security=True";
+       // string cadena = @"Data Source=TIBO\SQLEXPRESS; Initial Catalog=Inventario; Integrated Security=True";
+>>>>>>> Stashed changes
 
         public SqlConnection conectarbd = new SqlConnection();
         public conexion()

@@ -17,9 +17,11 @@ namespace Desktop.Administrador
 {
     public partial class ReporteVentas : Form
     {
+        String precioF;
         conexion conexion = new conexion();
         public ReporteVentas()
         {
+            
             InitializeComponent();
             
             conexion.abrir();
@@ -31,7 +33,11 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             DataTable dt = new DataTable();
+<<<<<<< Updated upstream
             String consulta = "Declare @IDFacturaVar varchar(50)  select @IDFacturaVar = IDFactura from Ventas  IF(@IDFacturaVar is not null)  begin  	SELECT IDVentas as [N],p.nombre as [Producto], v.IDFactura as [N. de Factura],c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario as [Precio Unitario], precioTotal as [Precio Total],fechaVenta as [Fecha de Venta], vendedor as Vendedor FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where v.fechaVenta >= @dtpInicio and v.fechaVenta <= @dtpFin or IDFactura = @cmbIDFacturaVar  end else begin 	SELECT IDVentas as [N],p.nombre as [Producto], v.IDFactura as [N. de Factura],c.nombre as [Cliente],  v.cantidad as [Cantidad],v.PrecioUnitario as [Precio Unitario], precioTotal as [Precio Total],fechaVenta as [Fecha de Venta], vendedor   FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto   inner join Clientes as c on v.IDCliente = c.IDCliente   end";
+=======
+            String consulta = "Declare @IDFacturaVar varchar(50)  select @IDFacturaVar = IDFactura from Ventas  IF(@IDFacturaVar is not null)  begin  	SELECT IDVentas as [ID],p.nombre as [Producto], v.IDFactura AS [Factura],c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario as [Precio Unitario],v.precioTotal as [Precio Total],fechaVenta as [Fecha de Venta], vendedor  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where v.fechaVenta >= @dtpInicio and v.fechaVenta <= @dtpFin or IDFactura = @cmbIDFacturaVar  end else begin 	SELECT IDVentas as [ID],p.nombre as [Producto], v.IDFactura AS [Factura],c.nombre as [Cliente],  v.cantidad as [Cantidad],v.PrecioUnitario,v.precioTotal as [Precio Total],fechaVenta as [Fecha de Venta], vendedor   FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto   inner join Clientes as c on v.IDCliente = c.IDCliente   end";
+>>>>>>> Stashed changes
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             cmd.Parameters.AddWithValue("@cmbIDFacturaVar", btnCombo.Text);
             cmd.Parameters.AddWithValue("@dtpInicio", dtpfechaInicio.Value);
@@ -43,11 +49,27 @@ namespace Desktop.Administrador
             return dt;
         }
 
+        public void llenar_suma()
+        {
+            conexion.abrir();
+            String consulta = "Declare @IDFacturaVar varchar(50)  select @IDFacturaVar = IDFactura from Ventas IF(@IDFacturaVar is not null)  begin select SUM(precioTotal) from Ventas as v where v.fechaVenta >= @dtpInicio and v.fechaVenta <= @dtpFin or IDFactura =  @cmbIDFacturaVar  end else begin select SUM(precioTotal) from Ventas as v end";
+            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
+            cmd.Parameters.AddWithValue("@cmbIDFacturaVar", btnCombo.Text);
+            cmd.Parameters.AddWithValue("@dtpInicio", dtpfechaInicio.Value);
+            cmd.Parameters.AddWithValue("@dtpFin", dtpfechaFin.Value);
+            precioF = Convert.ToString(cmd.ExecuteScalar());
+            precio.Text = ("Monto total según filtro: $" + precioF);
+        }
+
         public DataTable llenar_gridVacio()
         {
             conexion.abrir();
             DataTable dt = new DataTable();
+<<<<<<< Updated upstream
             String consulta = "SELECT IDVentas as [ID],p.nombre as [Producto], v.IDFactura as 'N. de Factura',c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario as 'Precio Unitario', precioTotal as [Precio Total],fechaVenta as [Fecha de Venta], vendedor  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where IDFactura = 'vacioss'";
+=======
+            String consulta = "SELECT IDVentas as [ID],p.nombre as [Producto], v.IDFactura AS [Factura],c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario as [Precio Unitario],v.precioTotal as [Precio Total],fechaVenta as [Fecha de Venta], vendedor  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where IDFactura = 'vacioss'";
+>>>>>>> Stashed changes
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -74,6 +96,7 @@ namespace Desktop.Administrador
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
+            DataTable dx = new DataTable();
             dt = llenar_grid();
             if (dt.Rows.Count == 0)
             {
@@ -167,23 +190,19 @@ namespace Desktop.Administrador
                                 }
                             }
                         }
+                        Paragraph txt = new Paragraph();
+                        iTextSharp.text.Font txtr = new iTextSharp.text.Font(new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 14));
+                        txt.Add(new Chunk("La suma total es de: $" + precioF, txtr));
+                        txt.SpacingBefore = 25;
+                        txt.SpacingAfter = 25;
+                        txt.Alignment = Element.ALIGN_CENTER;
                         document.Add(table);
+                        document.Add(txt);
                     }
                     document.Close();
                 }
             }
         }
-
-        private void GridReporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void ReporteVentas_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCombo_SelectedValueChanged(object sender, EventArgs e)
         {
             //GridReporte.DataSource = llenar_grid();
@@ -191,18 +210,23 @@ namespace Desktop.Administrador
 
         private void dtpfechaInicio_ValueChanged(object sender, EventArgs e)
         {
+            btnCombo.Text = "";
             btnCombo.Enabled = false;
+            
         }
 
         private void dtpfechaFin_ValueChanged(object sender, EventArgs e)
         {
+            btnCombo.Text = "";
             btnCombo.Enabled = false;
         }
 
         private void botones2_Click(object sender, EventArgs e)
         {
             //aqui viene un llenar grid vacio
+
             GridReporte.DataSource = llenar_gridVacio();
+            
             dtpfechaInicio.Value = DateTime.Now;
             dtpfechaFin.Value = DateTime.Now;
             dtpfechaInicio.Enabled = true;
@@ -213,6 +237,7 @@ namespace Desktop.Administrador
         private void botones1_Click(object sender, EventArgs e)
         {
             GridReporte.DataSource = llenar_grid();
+            llenar_suma();
         }
 
         private void btnCombo_DropDown(object sender, EventArgs e)

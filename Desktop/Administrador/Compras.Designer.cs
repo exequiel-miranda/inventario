@@ -49,6 +49,8 @@ namespace Desktop.Administrador
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPrecioTotal = new System.Windows.Forms.TextBox();
+            this.priceTXT = new System.Windows.Forms.Label();
+            this.precio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -292,12 +294,40 @@ namespace Desktop.Administrador
             this.txtPrecioTotal.TabIndex = 6;
             this.txtPrecioTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioTotal_KeyPress);
             // 
+            // priceTXT
+            // 
+            this.priceTXT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.priceTXT.AutoSize = true;
+            this.priceTXT.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.priceTXT.Location = new System.Drawing.Point(405, 345);
+            this.priceTXT.Name = "priceTXT";
+            this.priceTXT.Size = new System.Drawing.Size(87, 28);
+            this.priceTXT.TabIndex = 72;
+            this.priceTXT.Text = "$ 000.00";
+            // 
+            // precio
+            // 
+            this.precio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.precio.AutoSize = true;
+            this.precio.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.precio.Location = new System.Drawing.Point(405, 310);
+            this.precio.Name = "precio";
+            this.precio.Size = new System.Drawing.Size(144, 31);
+            this.precio.TabIndex = 71;
+            this.precio.Text = "Monto Total:";
+            // 
             // Compras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(730, 659);
+=======
+            this.ClientSize = new System.Drawing.Size(730, 747);
+            this.Controls.Add(this.priceTXT);
+            this.Controls.Add(this.precio);
+>>>>>>> Stashed changes
             this.Controls.Add(this.txtPrecioTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtMarca);
@@ -349,5 +379,7 @@ namespace Desktop.Administrador
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPrecioTotal;
+        private System.Windows.Forms.Label priceTXT;
+        private System.Windows.Forms.Label precio;
     }
 }

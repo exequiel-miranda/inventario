@@ -17,12 +17,14 @@ namespace Desktop.Administrador
 {
     public partial class ReporteCompras : Form
     {
+        String precioF;
         conexion conexion = new conexion();
         public ReporteCompras()
         {
             InitializeComponent();
             conexion.abrir();
             GridReporte.DataSource = llenar_grid();
+            llenar_suma();
             conexion.cerrar();
         }
 
@@ -38,6 +40,16 @@ namespace Desktop.Administrador
             da.Fill(dt);
             conexion.cerrar();
             return dt;
+        }
+        public void llenar_suma()
+        {
+            conexion.abrir();
+            String consulta = "Declare @IDFacturaVar varchar(50)  select @IDFacturaVar = IDCompras from Compras IF(@IDFacturaVar is not null)  begin select SUM(precioTotal) from Compras where fechaCompra >= @dtpfechaInicio and fechaCompra <= @dtpfechaFin end else begin select SUM(precioTotal) from Compras end";
+            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
+            cmd.Parameters.AddWithValue("@dtpfechaInicio", dtpfechaInicio.Value);
+            cmd.Parameters.AddWithValue("@dtpfechaFin", dtpfechaFin.Value);
+            precioF = Convert.ToString(cmd.ExecuteScalar());
+            precio.Text = ("Monto total según filtro: $" + precioF);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -149,11 +161,13 @@ namespace Desktop.Administrador
         private void dtpfechaInicio_ValueChanged(object sender, EventArgs e)
         {
             GridReporte.DataSource = llenar_grid();
+            llenar_suma();
         }
 
         private void dtpfechaFin_ValueChanged(object sender, EventArgs e)
         {
             GridReporte.DataSource = llenar_grid();
+            llenar_suma();
         }
     }
 }

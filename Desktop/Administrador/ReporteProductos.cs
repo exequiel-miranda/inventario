@@ -26,6 +26,7 @@ namespace Desktop.Administrador
             GridReporte.DataSource = llenar_grid();
             conexion.cerrar();
         }
+        //sdfsdfsdfsdf
         public DataTable llenar_grid()
         {
             conexion.abrir();
@@ -33,28 +34,40 @@ namespace Desktop.Administrador
             String consulta = "Declare @VarConversorVerdadero varchar(50) Declare @VarConversonFalse varchar(50) Declare @TotalConverson bit select @VarConversorVerdadero = @cmbDisponibilidad select @VarConversonFalse = @cmbDisponibilidad IF (@VarConversorVerdadero = 'Verdadero') begin 	Select @TotalConverson = 'True' end else if(@VarConversonFalse = 'Falso') begin 	select @TotalConverson = 'False' end Declare @DisponibilidadVar bit    select @DisponibilidadVar = Disponibilidad from Producto  IF(@DisponibilidadVar is not null)  begin  	SELECT IDProducto as [N],nombre as [Producto],categoria as [Categoria],marca as [Marca], precioUnitario as [Precio Unitario], 	cantidad as [Cantidad],Disponibilidad as [Disponibilidad] FROM Producto  	where Disponibilidad = @TotalConverson and categoria is not null  end else begin 	SELECT IDProducto as [N],nombre as [Producto],categoria as [Categoria],marca as [Marca], precioUnitario as [Precio Unitario], 	cantidad as [Cantidad],Disponibilidad as [Disponibilidad] FROM Producto where categoria is not null end"; 
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             cmd.Parameters.AddWithValue("@cmbDisponibilidad", btnCombo.Text);
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
-
             conexion.cerrar();
             return dt;
-
         }
-
 
         public void llenar_ComboPro()
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
+<<<<<<< Updated upstream
             String consulta = "Declare @supervarVerdadero varchar(50) Declare @supervarFalso varchar(50) Declare @DisponibilidadVar bit  Declare @estavacio varchar(50)  select @DisponibilidadVar = Producto.Disponibilidad from Producto  IF(@DisponibilidadVar is null)  begin 	select @estavacio = 'Reporte Vacio'  	select @estavacio as Disponibilidad     end else begin 		select @supervarFalso =  Disponibilidad from Producto where Disponibilidad = 0 group by Disponibilidad   	having COUNT(*) > 0 order by Disponibilidad  	select @supervarVerdadero =  Disponibilidad from Producto where Disponibilidad = 1 group by Disponibilidad   	having COUNT(*) > 0 order by Disponibilidad  	IF(@supervarVerdadero = 1) begin 		select @supervarVerdadero = 'Verdadero' end 	IF(@supervarFalso = 0) begin 		select @supervarFalso = 'Falso' end			select @supervarFalso as Disponibilidad union select @supervarVerdadero as Disponibilidad end";
+=======
+            String consulta = "Declare @DisponibilidadVar bit Declare @estavacio varchar(50) select @DisponibilidadVar = Producto.Disponibilidad from Producto  IF(@DisponibilidadVar is null) begin 	select @estavacio = 'Reporte Vacio' 	select @estavacio as Disponibilidad end else begin select Disponibilidad from Producto group by Disponibilidad  having COUNT(*) > 0 order by Disponibilidad end";
+            //String consulta = "Declare @DisponibilidadVar bit Declare @estavacio varchar(50) select @DisponibilidadVar = Producto.Disponibilidad from Producto IF(@DisponibilidadVar is null) begin select @estavacio = 'Reporte Vacio' Select @estavacio as Disponibilidad end IF(@DisponibilidadVar = 0) begin select @estavacio = 'Falso' Select @estavacio as Disponibilidad end IF(@DisponibilidadVar = 1) begin select @estavacio = 'Verdadero' Select @estavacio as Disponibilidad end else begin select Disponibilidad from Producto group by Disponibilidad having COUNT(*) > 0 order by Disponibilidad end";
+            
+>>>>>>> Stashed changes
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             //conexion.cerrar();
             btnCombo.DataSource = dt;
             btnCombo.DisplayMember = "Nombre";
-            btnCombo.ValueMember = "Disponibilidad"; //identificador
+            btnCombo.ValueMember = "Disponibilidad";
             btnCombo.SelectedIndex = 0;
+<<<<<<< Updated upstream
+=======
+
+
+            //identificador
+            //cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
+            //cmd2.ExecuteNonQuery();*/
+>>>>>>> Stashed changes
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -161,16 +174,8 @@ namespace Desktop.Administrador
 
         private void btnCombo_SelectedValueChanged(object sender, EventArgs e)
         {
+
             GridReporte.DataSource = llenar_grid();
-        }
-
-        private void ReporteProductos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
 
         }
     }

@@ -47,6 +47,8 @@ namespace Desktop.Vendedor
             this.label6 = new System.Windows.Forms.Label();
             this.txtNFactura = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtPrecioTotal = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridCatalogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,11 +57,11 @@ namespace Desktop.Vendedor
             this.GridCatalogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GridCatalogo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridCatalogo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridCatalogo.Location = new System.Drawing.Point(3, 355);
+            this.GridCatalogo.Location = new System.Drawing.Point(3, 423);
             this.GridCatalogo.Name = "GridCatalogo";
             this.GridCatalogo.RowHeadersWidth = 43;
             this.GridCatalogo.RowTemplate.Height = 25;
-            this.GridCatalogo.Size = new System.Drawing.Size(725, 292);
+            this.GridCatalogo.Size = new System.Drawing.Size(725, 240);
             this.GridCatalogo.TabIndex = 0;
             this.GridCatalogo.TabStop = false;
             // 
@@ -161,6 +163,7 @@ namespace Desktop.Vendedor
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(225, 30);
             this.txtCantidad.TabIndex = 5;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // cmbCliente
@@ -258,12 +261,36 @@ namespace Desktop.Vendedor
             this.label5.TabIndex = 0;
             this.label5.Text = "N. de Factura:";
             // 
+            // txtPrecioTotal
+            // 
+            this.txtPrecioTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPrecioTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPrecioTotal.Location = new System.Drawing.Point(93, 382);
+            this.txtPrecioTotal.Name = "txtPrecioTotal";
+            this.txtPrecioTotal.Size = new System.Drawing.Size(225, 30);
+            this.txtPrecioTotal.TabIndex = 11;
+            this.txtPrecioTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Location = new System.Drawing.Point(93, 347);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(139, 31);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Precio Total:";
+            // 
             // VentasVend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(730, 747);
+            this.Controls.Add(this.txtPrecioTotal);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPrecioUnitario);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNFactura);
@@ -310,5 +337,7 @@ namespace Desktop.Vendedor
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNFactura;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtPrecioTotal;
+        private System.Windows.Forms.Label label8;
     }
 }

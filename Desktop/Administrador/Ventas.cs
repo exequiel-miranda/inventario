@@ -15,7 +15,7 @@ namespace Desktop.Administrador
     {
         string myformat = "dd/MM/yyyy hh:mm tt";
         conexion conexion = new conexion();
-
+        String precioF;
         public cmbFechaVenta()
         {
             InitializeComponent();
@@ -27,6 +27,7 @@ namespace Desktop.Administrador
             llenar_ComboPro();
             llenar_ComboCliente();
             llenar_txtPrecio();
+            llenar_suma();
             GridCategoria.DataSource = llenar_grid();
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
@@ -71,7 +72,14 @@ namespace Desktop.Administrador
                 txtPrecioUnitario.Text = text;
            }
         }
-        
+        public void llenar_suma()
+        { 
+            String consulta = "Declare @IDFacturaVar varchar(50)  select @IDFacturaVar = IDFactura from Ventas IF(@IDFacturaVar is not null)  begin select SUM(precioTotal) from Ventas end";
+            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
+            precioF = Convert.ToString(cmd.ExecuteScalar());
+            priceTXT.Text = ("$" + precioF);
+            
+        }
         public void llenar_ComboCliente()
         {
             //conexion.abrir(); 
@@ -154,6 +162,7 @@ namespace Desktop.Administrador
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Los datos fueron agregados con exito");
                         GridCategoria.DataSource = llenar_grid();
+<<<<<<< Updated upstream
                     
                         txtNFactura.Clear();
                         txtPrecioUnitario.Clear();
@@ -161,6 +170,9 @@ namespace Desktop.Administrador
                         dtpFechaVenta.Value = DateTime.Now;
                         txtPrecioTotal.Clear();
                      
+=======
+                        llenar_suma();
+>>>>>>> Stashed changes
                     }
 
                     else
@@ -244,6 +256,7 @@ namespace Desktop.Administrador
                         cmd7.ExecuteNonQuery();
                         MessageBox.Show("Los datos fueron actualizados con exito");
                         GridCategoria.DataSource = llenar_grid();
+<<<<<<< Updated upstream
                         cmbProducto.Text = "";
                         cmbCliente.Text = "";
                         txtNFactura.Clear();
@@ -252,6 +265,9 @@ namespace Desktop.Administrador
                         dtpFechaVenta.Value = DateTime.Now;
                         txtPrecioTotal.Clear();
 
+=======
+                        llenar_suma();
+>>>>>>> Stashed changes
                     }
                     else
                     {
@@ -342,6 +358,7 @@ namespace Desktop.Administrador
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Los datos han sido eliminados correctamente");
                     GridCategoria.DataSource = llenar_grid();
+<<<<<<< Updated upstream
                     btnModificar.Enabled = false;
                     btnEliminar.Enabled = false;
                     cmbProducto.Text = "";
@@ -351,6 +368,9 @@ namespace Desktop.Administrador
                     txtCantidad.Clear();
                     dtpFechaVenta.Value = DateTime.Now;
                     txtPrecioTotal.Clear();
+=======
+                    llenar_suma();
+>>>>>>> Stashed changes
                 }
                 else
                 {

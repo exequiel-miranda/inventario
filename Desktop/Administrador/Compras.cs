@@ -14,16 +14,18 @@ namespace Desktop.Administrador
     public partial class Compras : Form
     {
         string myformat = "dd/MM/yyyy hh:mm:ss";
-
+        String precioF;
         conexion conexion = new conexion();
         public Compras()
         {
             InitializeComponent();
+            
         }
 
         private void Empleados_Load(object sender, EventArgs e)
         {
             conexion.abrir();
+            llenar_suma();
             GridEmpleados.DataSource = llenar_grid();
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
@@ -40,6 +42,14 @@ namespace Desktop.Administrador
             da.Fill(dt);
             //conexion.cerrar();
             return dt;
+
+        }
+        public void llenar_suma()
+        {
+            String consulta = "Declare @IDFacturaVar varchar(50)  select @IDFacturaVar = IDCompras from Compras IF(@IDFacturaVar is not null)  begin select SUM(precioTotal) from Compras end";
+            SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
+            precioF = Convert.ToString(cmd.ExecuteScalar());
+            priceTXT.Text = ("$" + precioF);
 
         }
 
@@ -125,6 +135,7 @@ namespace Desktop.Administrador
                     DateTime stdate = DateTime.ParseExact(DTPfechaCompra.Text, myformat, null);
                     cmd2.Parameters.AddWithValue("@CFechaCompra", stdate);
                     cmd2.ExecuteNonQuery();
+                    llenar_suma();
                     MessageBox.Show("Los datos fueron agregados con exito");
                     GridEmpleados.DataSource = llenar_grid();
                     txtProducto.Clear();
@@ -199,6 +210,7 @@ namespace Desktop.Administrador
                     DateTime stdate = DateTime.ParseExact(DTPfechaCompra.Text, myformat, null);
                     cmd.Parameters.AddWithValue("@fechaCompra", stdate);
                     cmd.ExecuteNonQuery();
+                    llenar_suma();
                     MessageBox.Show("Los datos fueron actualizados con exito");
 
                     GridEmpleados.DataSource = llenar_grid();
@@ -244,6 +256,7 @@ namespace Desktop.Administrador
                     cmd.Parameters.AddWithValue("@cantidad", cant);
                     cmd.Parameters.AddWithValue("@marca", marc);
                     cmd.ExecuteNonQuery();
+                    llenar_suma();
                     MessageBox.Show("Los datos han sido eliminados correctamente");
                     GridEmpleados.DataSource = llenar_grid();
                     txtProducto.Clear();
