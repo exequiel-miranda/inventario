@@ -45,13 +45,13 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
             String consulta = "Declare @supervarVerdadero varchar(50) Declare @supervarFalso varchar(50) Declare @DisponibilidadVar bit  Declare @estavacio varchar(50)  select @DisponibilidadVar = Producto.Disponibilidad from Producto  IF(@DisponibilidadVar is null)  begin 	select @estavacio = 'Reporte Vacio'  	select @estavacio as Disponibilidad     end else begin 		select @supervarFalso =  Disponibilidad from Producto where Disponibilidad = 0 group by Disponibilidad   	having COUNT(*) > 0 order by Disponibilidad  	select @supervarVerdadero =  Disponibilidad from Producto where Disponibilidad = 1 group by Disponibilidad   	having COUNT(*) > 0 order by Disponibilidad  	IF(@supervarVerdadero = 1) begin 		select @supervarVerdadero = 'Verdadero' end 	IF(@supervarFalso = 0) begin 		select @supervarFalso = 'Falso' end			select @supervarFalso as Disponibilidad union select @supervarVerdadero as Disponibilidad end";
-=======
-            String consulta = "Declare @DisponibilidadVar bit Declare @estavacio varchar(50) select @DisponibilidadVar = Producto.Disponibilidad from Producto  IF(@DisponibilidadVar is null) begin 	select @estavacio = 'Reporte Vacio' 	select @estavacio as Disponibilidad end else begin select Disponibilidad from Producto group by Disponibilidad  having COUNT(*) > 0 order by Disponibilidad end";
+//=======
+          //  String consulta = "Declare @DisponibilidadVar bit Declare @estavacio varchar(50) select @DisponibilidadVar = Producto.Disponibilidad from Producto  IF(@DisponibilidadVar is null) begin 	select @estavacio = 'Reporte Vacio' 	select @estavacio as Disponibilidad end else begin select Disponibilidad from Producto group by Disponibilidad  having COUNT(*) > 0 order by Disponibilidad end";
             //String consulta = "Declare @DisponibilidadVar bit Declare @estavacio varchar(50) select @DisponibilidadVar = Producto.Disponibilidad from Producto IF(@DisponibilidadVar is null) begin select @estavacio = 'Reporte Vacio' Select @estavacio as Disponibilidad end IF(@DisponibilidadVar = 0) begin select @estavacio = 'Falso' Select @estavacio as Disponibilidad end IF(@DisponibilidadVar = 1) begin select @estavacio = 'Verdadero' Select @estavacio as Disponibilidad end else begin select Disponibilidad from Producto group by Disponibilidad having COUNT(*) > 0 order by Disponibilidad end";
             
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -60,14 +60,14 @@ namespace Desktop.Administrador
             btnCombo.DisplayMember = "Nombre";
             btnCombo.ValueMember = "Disponibilidad";
             btnCombo.SelectedIndex = 0;
-<<<<<<< Updated upstream
-=======
+//<<<<<<< Updated upstream
+//=======
 
 
             //identificador
             //cmd2.Parameters.AddWithValue("@disponibilidad", txtDisponibilidadP.Text);
             //cmd2.ExecuteNonQuery();*/
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

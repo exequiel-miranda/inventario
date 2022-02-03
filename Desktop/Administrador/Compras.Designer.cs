@@ -321,13 +321,13 @@ namespace Desktop.Administrador
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(730, 659);
-=======
+//=======
             this.ClientSize = new System.Drawing.Size(730, 747);
             this.Controls.Add(this.priceTXT);
             this.Controls.Add(this.precio);
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
             this.Controls.Add(this.txtPrecioTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtMarca);

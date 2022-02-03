@@ -58,11 +58,11 @@ namespace Desktop.Administrador
             this.btnCombo.DisplayMember = "4";
             this.btnCombo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCombo.FormattingEnabled = true;
-<<<<<<< Updated upstream
-            this.btnCombo.Location = new System.Drawing.Point(239, 114);
-=======
+//<<<<<<< Updated upstream
+            //this.btnCombo.Location = new System.Drawing.Point(239, 114);
+//=======
             this.btnCombo.Location = new System.Drawing.Point(261, 129);
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
             this.btnCombo.Name = "btnCombo";
             this.btnCombo.Size = new System.Drawing.Size(225, 29);
             this.btnCombo.TabIndex = 1;
@@ -118,11 +118,11 @@ namespace Desktop.Administrador
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-<<<<<<< Updated upstream
-            this.label5.Location = new System.Drawing.Point(190, 83);
-=======
+//<<<<<<< Updated upstream
+        //    this.label5.Location = new System.Drawing.Point(190, 83);
+//=======
             this.label5.Location = new System.Drawing.Point(187, 95);
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(341, 28);
             this.label5.TabIndex = 0;
