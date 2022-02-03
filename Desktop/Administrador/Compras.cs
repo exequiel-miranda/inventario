@@ -25,6 +25,8 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             GridEmpleados.DataSource = llenar_grid();
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
 
@@ -97,6 +99,9 @@ namespace Desktop.Administrador
 
                 //-----------------------------------------------------------------
                 //ok aqui vemos si el precio total es mayor a cero y la leemos
+
+
+
                 string validacion3 = "Declare @precioTotalVar decimal(9,2) select @precioTotalVar =  @precioTotal select @precioTotal";
                 SqlCommand cmd4434 = new SqlCommand(validacion3, conexion.conectarbd);
                 cmd4434.Parameters.AddWithValue("@precioTotal", txtPrecioTotal.Text);
@@ -108,7 +113,7 @@ namespace Desktop.Administrador
                 if (cantidad > 0 && precioUnitario > 0 && precioTotal > 0)
                 {
                     //Hago el procedimiento almacenado por string
-                    string insertar22 = "Declare @Pnombre varchar(75) select @Pnombre = Producto.nombre from Producto where @CNombreProducto = Producto.nombre Declare @PMarca varchar(75) select @PMarca = Producto.marca from Producto where @CMarca = Producto.marca  IF(@CNombreProducto = @Pnombre     and @CMarca = @PMarca) begin   	insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca, precioTotal)  	values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca, @CprecioTotal)  	update Producto set cantidad = cantidad + @Ccantidad, categoria = @Ccategoria  	where @CNombreProducto = nombre and @CMarca = marca end else begin 	insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca, precioTotal) 	values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca, @CPrecioTotal)  	insert into Producto(nombre, categoria, marca,precioUnitario,cantidad, Disponibilidad) 	values (@CNombreProducto, @Ccategoria,@Cmarca, @Cprecio,@Ccantidad, 'True')  end";
+                    string insertar22 = "Declare @Pnombre varchar(75) select @Pnombre = Producto.nombre from Producto where @CNombreProducto = Producto.nombre Declare @PMarca varchar(75) select @PMarca = Producto.marca from Producto where @CMarca = Producto.marca  IF(@CNombreProducto = @Pnombre     and @CMarca = @PMarca) begin   	insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca, precioTotal)  	values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca, @CprecioTotal)  	update Producto set cantidad = cantidad + @Ccantidad, categoria = @Ccategoria, precioUnitario = @CPrecio  	where @CNombreProducto = nombre and @CMarca = marca end else begin 	insert into Compras(NombreProducto, cantidad,precio,fechaCompra, categoria, marca, precioTotal) 	values(@CNombreProducto, @Ccantidad, @Cprecio,@CfechaCompra, @Ccategoria, @Cmarca, @CPrecioTotal)  	insert into Producto(nombre, categoria, marca,precioUnitario,cantidad, Disponibilidad) 	values (@CNombreProducto, @Ccategoria,@Cmarca, @Cprecio,@Ccantidad, 'True')  end";
                     SqlCommand cmd2 = new SqlCommand(insertar22, conexion.conectarbd);
                     cmd2.Parameters.AddWithValue("@CNombreProducto", txtProducto.Text);
                     cmd2.Parameters.AddWithValue("@Ccantidad", txtCantidad.Text);
@@ -121,19 +126,19 @@ namespace Desktop.Administrador
                     cmd2.Parameters.AddWithValue("@CFechaCompra", stdate);
                     cmd2.ExecuteNonQuery();
                     MessageBox.Show("Los datos fueron agregados con exito");
+                    GridEmpleados.DataSource = llenar_grid();
+                    txtProducto.Clear();
+                    txtCantidad.Clear();
+                    txtPrecio.Clear();
+                    txtCategoria.Clear();
+                    txtMarca.Clear();
+                    txtPrecioTotal.Clear();
                 }
 
                 else
                 {
                     MessageBox.Show("ingrese un numero mayor de cero en Cantidad o Precio");
                 }
-                GridEmpleados.DataSource = llenar_grid();
-                txtProducto.Clear();
-                txtCantidad.Clear();
-                txtPrecio.Clear();
-                txtCategoria.Clear();
-                txtMarca.Clear();
-                txtPrecioTotal.Clear();
             }
         }
 
@@ -141,13 +146,25 @@ namespace Desktop.Administrador
         {
             try
             {
-                txtProducto.Text = GridEmpleados.CurrentRow.Cells[1].Value.ToString();
-                txtCantidad.Text = GridEmpleados.CurrentRow.Cells[2].Value.ToString();
-                txtCategoria.Text = GridEmpleados.CurrentRow.Cells[3].Value.ToString();
-                txtMarca.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
-                DTPfechaCompra.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
-                txtPrecio.Text = GridEmpleados.CurrentRow.Cells[6].Value.ToString();
-                txtPrecioTotal.Text = GridEmpleados.CurrentRow.Cells[7].Value.ToString();
+                if(GridEmpleados.RowCount > 0 )
+                {
+                    txtProducto.Text = GridEmpleados.CurrentRow.Cells[1].Value.ToString();
+                    txtCantidad.Text = GridEmpleados.CurrentRow.Cells[2].Value.ToString();
+                    txtCategoria.Text = GridEmpleados.CurrentRow.Cells[3].Value.ToString();
+                    txtMarca.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
+                    DTPfechaCompra.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
+                    txtPrecio.Text = GridEmpleados.CurrentRow.Cells[6].Value.ToString();
+                    txtPrecioTotal.Text = GridEmpleados.CurrentRow.Cells[7].Value.ToString();
+
+                    btnModificar.Enabled = true;
+                    btnEliminar.Enabled = true;
+               
+                }
+                else
+                {
+
+                    MessageBox.Show("No hay datos");
+                }
             }
             catch { }
         }
@@ -168,7 +185,7 @@ namespace Desktop.Administrador
              MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     //conexion.abrir();
-                    string actualizar = "Declare @cantYa int Declare @CantTotal int select @cantYa = Compras.cantidad  from Compras where @IDCompras = Compras.IDCompras IF(@cantYa > @cantViene)  begin 	select @CantTotal = @cantYa -  @CantViene   	update Producto set cantidad = cantidad - @CantTotal where Producto.nombre = @nombreProducto and Producto.marca = @marca 	UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, precioTotal = @precioTotal, fechaCompra = @fechaCompra, 	cantidad = @cantViene, categoria = @categoria, marca = @marca where IDCompras = @IDCompras end else begin 	select @CantTotal = @CantViene - @cantYa 	update Producto set cantidad = cantidad + @CantTotal where Producto.nombre = @nombreProducto  and Producto.marca = @marca  	UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, precioTotal = @precioTotal,fechaCompra = @fechaCompra,  	cantidad = @cantViene, categoria = @categoria, marca = @marca where IDCompras = @IDCompras  end";
+                    string actualizar = "Declare @ceroProductosono int select @ceroProductosono = Producto.cantidad from Producto where nombre = @nombreProducto  and marca = @marca IF(@ceroProductosono = 0) begin 		UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, precioTotal = @precioTotal, 		fechaCompra = @fechaCompra, 	cantidad = @cantViene, categoria = @categoria, marca = @marca where IDCompras = @IDCompras end else begin 	Declare @cantYa int 	Declare @CantTotal int  	select @cantYa = Compras.cantidad  from Compras where @IDCompras = Compras.IDCompras  	IF(@cantYa > @cantViene)   begin 		select @CantTotal = @cantYa -  @CantViene   		update Producto set cantidad = cantidad - @CantTotal where Producto.nombre = @nombreProducto and Producto.marca = @marca  		UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, precioTotal = @precioTotal, 		fechaCompra = @fechaCompra, 	cantidad = @cantViene, categoria = @categoria, marca = @marca where IDCompras = @IDCompras end else begin 		select @CantTotal = @CantViene - @cantYa  		update Producto set cantidad = cantidad + @CantTotal where Producto.nombre = @nombreProducto  and Producto.marca = @marca  		UPDATE COMPRAS set nombreProducto = @nombreProducto, precio = @precio, precioTotal = @precioTotal,fechaCompra = @fechaCompra, 		cantidad = @cantViene, categoria = @categoria, marca = @marca where IDCompras = @IDCompras  end end";
                     SqlCommand cmd = new SqlCommand(actualizar, conexion.conectarbd);
                     string id = Convert.ToString(GridEmpleados.CurrentRow.Cells[0].Value);
                     cmd.Parameters.AddWithValue("@IDCompras", id);
@@ -216,7 +233,7 @@ namespace Desktop.Administrador
                 if (MessageBox.Show("¿Esta seguro que desea modificar este registro?", "Advertencia",
              MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    string eliminar = "Delete from Compras where IDCompras = @IDCompras update Producto set cantidad = cantidad - @cantidad where nombre = @NombreProducto and marca = @marca	";
+                    string eliminar = "Declare @numerodeProducto int select @numerodeProducto = Producto.cantidad from Producto where nombre = @nombreProducto  and marca = @marca  IF(@numerodeProducto < @cantidad) begin 		Declare @ceroProductosono int  		select @ceroProductosono = Producto.cantidad from Producto where nombre = @nombreProducto  and marca = @marca  		IF(@ceroProductosono = 0) begin 			Delete from Compras where IDCompras = @IDCompras  end else begin Delete from Compras where IDCompras = @IDCompras  			update Producto set cantidad = 0 where nombre = @NombreProducto and marca = @marca	 end end else begin 		IF(@ceroProductosono = 0) begin 			Delete from Compras where IDCompras = @IDCompras  end else begin 		Delete from Compras where IDCompras = @IDCompras   		update Producto set cantidad = cantidad - @cantidad where nombre = @NombreProducto and marca = @marca	 end end";
                     SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
                     string id = Convert.ToString(GridEmpleados.CurrentRow.Cells[0].Value);
                     string name = Convert.ToString(GridEmpleados.CurrentRow.Cells[1].Value);
@@ -234,6 +251,8 @@ namespace Desktop.Administrador
                     txtPrecio.Clear();
                     txtCategoria.Clear();
                     txtMarca.Clear();
+                    btnModificar.Enabled = false;
+                    btnEliminar.Enabled = false;
                 }
                 else
                 {
@@ -308,6 +327,18 @@ namespace Desktop.Administrador
         }
 
         Double s1, s2, suma;
+
+        private void txtCategoria_TextChanged(object sender, EventArgs e)
+        {
+            txtCategoria.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtCategoria.Text);
+            txtCategoria.SelectionStart = txtCategoria.Text.Length;
+        }
+
+        private void txtMarca_TextChanged(object sender, EventArgs e)
+        {
+            txtMarca.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtMarca.Text);
+            txtMarca.SelectionStart = txtMarca.Text.Length;
+        }
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
         {

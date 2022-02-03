@@ -30,7 +30,7 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "select IDCompras as N, nombreProducto as Producto, cantidad as Cantidad,  precio as Precio,precioTotal as 'Precio Total', categoria as Categoria, marca as Marca,  fechaCompra as Fecha from Compras  where fechaCompra >= @dtpfechaInicio and fechaCompra <= @dtpfechaFin ";
+            String consulta = "select IDCompras as N, nombreProducto as Producto, cantidad as Cantidad,  precio as 'Precio Unitario',precioTotal as 'Precio Total', categoria as Categoria, marca as Marca,  fechaCompra as 'Fecha de Compra' from Compras  where fechaCompra >= @dtpfechaInicio and fechaCompra <= @dtpfechaFin ";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             cmd.Parameters.AddWithValue("@dtpfechaInicio", dtpfechaInicio.Value);

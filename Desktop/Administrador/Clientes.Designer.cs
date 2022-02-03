@@ -52,9 +52,9 @@ namespace Desktop.Administrador
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresar.Image = ((System.Drawing.Image)(resources.GetObject("btnIngresar.Image")));
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(241, 661);
+            this.btnIngresar.Location = new System.Drawing.Point(241, 583);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(149, 53);
+            this.btnIngresar.Size = new System.Drawing.Size(149, 47);
             this.btnIngresar.TabIndex = 4;
             this.btnIngresar.Text = "AGREGAR";
             this.btnIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -67,9 +67,9 @@ namespace Desktop.Administrador
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(101, 114);
+            this.label1.Location = new System.Drawing.Point(101, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 31);
+            this.label1.Size = new System.Drawing.Size(93, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
@@ -79,9 +79,9 @@ namespace Desktop.Administrador
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(405, 114);
+            this.label5.Location = new System.Drawing.Point(405, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(175, 31);
+            this.label5.Size = new System.Drawing.Size(161, 28);
             this.label5.TabIndex = 0;
             this.label5.Text = "Número de NIT:";
             // 
@@ -91,9 +91,9 @@ namespace Desktop.Administrador
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(101, 197);
+            this.label6.Location = new System.Drawing.Point(101, 174);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 31);
+            this.label6.Size = new System.Drawing.Size(98, 28);
             this.label6.TabIndex = 0;
             this.label6.Text = "Teléfono:";
             // 
@@ -105,9 +105,9 @@ namespace Desktop.Administrador
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(405, 661);
+            this.btnModificar.Location = new System.Drawing.Point(405, 583);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(149, 53);
+            this.btnModificar.Size = new System.Drawing.Size(149, 47);
             this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -122,9 +122,9 @@ namespace Desktop.Administrador
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(569, 661);
+            this.btnEliminar.Location = new System.Drawing.Point(569, 583);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 53);
+            this.btnEliminar.Size = new System.Drawing.Size(149, 47);
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -133,15 +133,16 @@ namespace Desktop.Administrador
             // 
             // GridClientes
             // 
+            this.GridClientes.AllowUserToAddRows = false;
             this.GridClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GridClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridClientes.Location = new System.Drawing.Point(3, 307);
+            this.GridClientes.Location = new System.Drawing.Point(3, 271);
             this.GridClientes.Name = "GridClientes";
             this.GridClientes.ReadOnly = true;
             this.GridClientes.RowHeadersWidth = 43;
             this.GridClientes.RowTemplate.Height = 25;
-            this.GridClientes.Size = new System.Drawing.Size(725, 326);
+            this.GridClientes.Size = new System.Drawing.Size(725, 288);
             this.GridClientes.TabIndex = 0;
             this.GridClientes.TabStop = false;
             this.GridClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridClientes_CellContentClick);
@@ -151,10 +152,10 @@ namespace Desktop.Administrador
             // 
             this.txtTelefonoC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTelefonoC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTelefonoC.Location = new System.Drawing.Point(101, 230);
+            this.txtTelefonoC.Location = new System.Drawing.Point(101, 203);
             this.txtTelefonoC.Mask = "0000-0000";
             this.txtTelefonoC.Name = "txtTelefonoC";
-            this.txtTelefonoC.Size = new System.Drawing.Size(225, 30);
+            this.txtTelefonoC.Size = new System.Drawing.Size(225, 29);
             this.txtTelefonoC.TabIndex = 3;
             this.txtTelefonoC.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtTelefonoC_MaskInputRejected);
             this.txtTelefonoC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtTelefonoC_MouseDown);
@@ -163,9 +164,9 @@ namespace Desktop.Administrador
             // 
             this.txtNombreC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombreC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNombreC.Location = new System.Drawing.Point(101, 148);
+            this.txtNombreC.Location = new System.Drawing.Point(101, 131);
             this.txtNombreC.Name = "txtNombreC";
-            this.txtNombreC.Size = new System.Drawing.Size(225, 30);
+            this.txtNombreC.Size = new System.Drawing.Size(225, 29);
             this.txtNombreC.TabIndex = 1;
             this.txtNombreC.TextChanged += new System.EventHandler(this.txtNombreC_TextChanged_1);
             this.txtNombreC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreC_KeyPress);
@@ -174,10 +175,10 @@ namespace Desktop.Administrador
             // 
             this.txtCreditoF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCreditoF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCreditoF.Location = new System.Drawing.Point(405, 148);
+            this.txtCreditoF.Location = new System.Drawing.Point(405, 131);
             this.txtCreditoF.Mask = "0000-000000-000-0";
             this.txtCreditoF.Name = "txtCreditoF";
-            this.txtCreditoF.Size = new System.Drawing.Size(225, 30);
+            this.txtCreditoF.Size = new System.Drawing.Size(225, 29);
             this.txtCreditoF.TabIndex = 2;
             this.txtCreditoF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCreditoF_MaskInputRejected);
             this.txtCreditoF.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtCreditoF_MouseDown);
@@ -190,17 +191,17 @@ namespace Desktop.Administrador
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(730, 73);
+            this.label7.Size = new System.Drawing.Size(730, 64);
             this.label7.TabIndex = 0;
             this.label7.Text = "Cliente.";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Clientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(730, 747);
+            this.ClientSize = new System.Drawing.Size(730, 659);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCreditoF);
             this.Controls.Add(this.txtNombreC);

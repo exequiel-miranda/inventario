@@ -49,11 +49,13 @@ namespace Desktop.Administrador
             this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPrecioTotal = new System.Windows.Forms.TextBox();
+            this.labelMarca = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridCategoria)).BeginInit();
             this.SuspendLayout();
             // 
             // GridCategoria
             // 
+            this.GridCategoria.AllowUserToAddRows = false;
             this.GridCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GridCategoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -226,6 +228,7 @@ namespace Desktop.Administrador
             this.label7.TabIndex = 0;
             this.label7.Text = "Ventas.";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label3
             // 
@@ -247,6 +250,7 @@ namespace Desktop.Administrador
             this.txtNFactura.Name = "txtNFactura";
             this.txtNFactura.Size = new System.Drawing.Size(225, 29);
             this.txtNFactura.TabIndex = 3;
+            this.txtNFactura.TextChanged += new System.EventHandler(this.txtNFactura_TextChanged);
             // 
             // label6
             // 
@@ -292,12 +296,24 @@ namespace Desktop.Administrador
             this.txtPrecioTotal.TabIndex = 11;
             this.txtPrecioTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioTotal_KeyPress);
             // 
+            // labelMarca
+            // 
+            this.labelMarca.AutoSize = true;
+            this.labelMarca.BackColor = System.Drawing.Color.Transparent;
+            this.labelMarca.ForeColor = System.Drawing.Color.Transparent;
+            this.labelMarca.Location = new System.Drawing.Point(13, 132);
+            this.labelMarca.Name = "labelMarca";
+            this.labelMarca.Size = new System.Drawing.Size(38, 15);
+            this.labelMarca.TabIndex = 12;
+            this.labelMarca.Text = "label9";
+            // 
             // cmbFechaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(730, 659);
+            this.Controls.Add(this.labelMarca);
             this.Controls.Add(this.txtPrecioTotal);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtPrecioUnitario);
@@ -348,5 +364,6 @@ namespace Desktop.Administrador
         private System.Windows.Forms.TextBox txtPrecioUnitario;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPrecioTotal;
+        private System.Windows.Forms.Label labelMarca;
     }
 }

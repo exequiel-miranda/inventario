@@ -14,6 +14,8 @@ namespace Desktop
 {
     public partial class Form1 : Form
     {
+
+      
         conexion conexion = new conexion();
 
         //Mover Formulario
@@ -24,7 +26,10 @@ namespace Desktop
 
         public Form1()
         {
+  
             InitializeComponent();
+            //txtUsuario.Focus();
+            txtUsuario.Select();
             txtContraseña.PasswordChar = '*';
             //this.ControlBox = false;
             this.DoubleBuffered = true;
@@ -176,7 +181,7 @@ namespace Desktop
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            txtUsuario.Focus();
+           
         }
 
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)

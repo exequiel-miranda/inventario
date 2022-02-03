@@ -23,6 +23,8 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             GridProductos.DataSource = llenar_grid();
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         public DataTable llenar_grid()
@@ -122,12 +124,21 @@ namespace Desktop.Administrador
             //conexion.abrir();
             try
             {
-                //txtCodigo.Text = GridProductos.CurrentRow.Cells[0].Value.ToString();
-                txtNombre.Text = GridProductos.CurrentRow.Cells[1].Value.ToString();
-                txtCategoria.Text = GridProductos.CurrentRow.Cells[2].Value.ToString();
-                txtMarca.Text = GridProductos.CurrentRow.Cells[3].Value.ToString();
-                txtPrecio.Text = GridProductos.CurrentRow.Cells[4].Value.ToString();
-                txtCantidad.Text = GridProductos.CurrentRow.Cells[5].Value.ToString();
+                if (GridProductos.RowCount > 0)
+                {
+                    //txtCodigo.Text = GridProductos.CurrentRow.Cells[0].Value.ToString();
+                    txtNombre.Text = GridProductos.CurrentRow.Cells[1].Value.ToString();
+                    txtCategoria.Text = GridProductos.CurrentRow.Cells[2].Value.ToString();
+                    txtMarca.Text = GridProductos.CurrentRow.Cells[3].Value.ToString();
+                    txtPrecio.Text = GridProductos.CurrentRow.Cells[4].Value.ToString();
+                    txtCantidad.Text = GridProductos.CurrentRow.Cells[5].Value.ToString();
+                    btnModificar.Enabled = true;
+                    btnEliminar.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("No hay datos");
+                }
             }
             catch { }
         }
@@ -147,7 +158,7 @@ namespace Desktop.Administrador
              MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     //Se ingresa a la tabla Productos
-                    string actualizar = "UPDATE PRODUCTO SET nombre = @nombre, categoria = @categoria, marca = @marca, precioUnitario = @precioUnitario, cantidad = @cantidad, disponibilidad = @disponibilidad where IDProducto = @IDProducto and marca = @marca";
+                    string actualizar = "UPDATE PRODUCTO SET nombre = @nombre, categoria = @categoria, marca = @marca, precioUnitario = @precioUnitario, cantidad = @cantidad, disponibilidad = @disponibilidad where IDProducto = @IDProducto";
                     SqlCommand cmd2 = new SqlCommand(actualizar, conexion.conectarbd);
                     string id = Convert.ToString(GridProductos.CurrentRow.Cells[0].Value);
                     cmd2.Parameters.AddWithValue("@IDProducto", id);
@@ -204,6 +215,8 @@ namespace Desktop.Administrador
                     txtMarca.Clear();
                     txtPrecio.Clear();
                     txtCategoria.Clear();
+                    btnModificar.Enabled = false;
+                    btnEliminar.Enabled = false;
                 }
                 else
                 {
@@ -259,6 +272,18 @@ namespace Desktop.Administrador
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtMarca_TextChanged(object sender, EventArgs e)
+        {
+            txtMarca.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtMarca.Text);
+            txtMarca.SelectionStart = txtMarca.Text.Length;
+        }
+
+        private void txtCategoria_TextChanged(object sender, EventArgs e)
+        {
+            txtCategoria.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtCategoria.Text);
+            txtCategoria.SelectionStart = txtCategoria.Text.Length;
         }
     }
 }

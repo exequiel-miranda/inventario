@@ -25,6 +25,8 @@ namespace Desktop.Administrador
             conexion.abrir();
             GridClientes.DataSource = llenar_grid();
             //conexion.cerrar();
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         public DataTable llenar_grid()
@@ -36,6 +38,7 @@ namespace Desktop.Administrador
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             //conexion.cerrar();
+
             return dt;
         }
 
@@ -81,9 +84,20 @@ namespace Desktop.Administrador
             //conexion.abrir();
             try
             {
-                txtNombreC.Text = GridClientes.CurrentRow.Cells[1].Value.ToString();
+
+                if (GridClientes.RowCount > 0)
+                { 
+                    txtNombreC.Text = GridClientes.CurrentRow.Cells[1].Value.ToString();
                 txtCreditoF.Text = GridClientes.CurrentRow.Cells[2].Value.ToString();
                 txtTelefonoC.Text = GridClientes.CurrentRow.Cells[3].Value.ToString();
+                    btnModificar.Enabled = true;
+                    btnEliminar.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("No hay datos");
+                }
+
             }
             catch { }
         }
@@ -149,6 +163,8 @@ namespace Desktop.Administrador
                     txtNombreC.Clear();
                     txtTelefonoC.Clear();
                     txtCreditoF.Clear();
+                    btnModificar.Enabled = false;
+                    btnEliminar.Enabled = false;
                 }
                 else
                 {

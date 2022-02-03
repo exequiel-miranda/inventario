@@ -31,7 +31,7 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "Declare @IDFacturaVar varchar(50)  select @IDFacturaVar = IDFactura from Ventas  IF(@IDFacturaVar is not null)  begin  	SELECT IDVentas as [ID],p.nombre as [Producto no nulo], v.IDFactura,c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario,fechaVenta as [Fecha de Venta], vendedor  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where v.fechaVenta >= @dtpInicio and v.fechaVenta <= @dtpFin or IDFactura = @cmbIDFacturaVar  end else begin 	SELECT IDVentas as [ID],p.nombre as [Producto nulo], v.IDFactura,c.nombre as [Cliente],  v.cantidad as [Cantidad],v.PrecioUnitario,fechaVenta as [Fecha de Venta], vendedor   FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto   inner join Clientes as c on v.IDCliente = c.IDCliente   end";
+            String consulta = "Declare @IDFacturaVar varchar(50)  select @IDFacturaVar = IDFactura from Ventas  IF(@IDFacturaVar is not null)  begin  	SELECT IDVentas as [N],p.nombre as [Producto], v.IDFactura as [N. de Factura],c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario as [Precio Unitario], precioTotal as [Precio Total],fechaVenta as [Fecha de Venta], vendedor as Vendedor FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where v.fechaVenta >= @dtpInicio and v.fechaVenta <= @dtpFin or IDFactura = @cmbIDFacturaVar  end else begin 	SELECT IDVentas as [N],p.nombre as [Producto], v.IDFactura as [N. de Factura],c.nombre as [Cliente],  v.cantidad as [Cantidad],v.PrecioUnitario as [Precio Unitario], precioTotal as [Precio Total],fechaVenta as [Fecha de Venta], vendedor   FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto   inner join Clientes as c on v.IDCliente = c.IDCliente   end";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             cmd.Parameters.AddWithValue("@cmbIDFacturaVar", btnCombo.Text);
             cmd.Parameters.AddWithValue("@dtpInicio", dtpfechaInicio.Value);
@@ -47,7 +47,7 @@ namespace Desktop.Administrador
         {
             conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDVentas as [ID],p.nombre as [Producto no nulo], v.IDFactura,c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario,fechaVenta as [Fecha de Venta], vendedor  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where IDFactura = 'vacioss'";
+            String consulta = "SELECT IDVentas as [ID],p.nombre as [Producto], v.IDFactura as 'N. de Factura',c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario as 'Precio Unitario', precioTotal as [Precio Total],fechaVenta as [Fecha de Venta], vendedor  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where IDFactura = 'vacioss'";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
