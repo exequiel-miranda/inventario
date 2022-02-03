@@ -45,9 +45,9 @@ namespace Desktop.Administrador
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(263, -43);
+            this.label3.Location = new System.Drawing.Point(263, -49);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(358, 43);
+            this.label3.Size = new System.Drawing.Size(374, 45);
             this.label3.TabIndex = 63;
             this.label3.Text = "Reportes de Productos";
             // 
@@ -58,13 +58,9 @@ namespace Desktop.Administrador
             this.btnCombo.DisplayMember = "4";
             this.btnCombo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCombo.FormattingEnabled = true;
-//<<<<<<< Updated upstream
-            //this.btnCombo.Location = new System.Drawing.Point(239, 114);
-//=======
-            this.btnCombo.Location = new System.Drawing.Point(261, 129);
-//>>>>>>> Stashed changes
+            this.btnCombo.Location = new System.Drawing.Point(263, 131);
             this.btnCombo.Name = "btnCombo";
-            this.btnCombo.Size = new System.Drawing.Size(225, 29);
+            this.btnCombo.Size = new System.Drawing.Size(225, 31);
             this.btnCombo.TabIndex = 1;
             this.btnCombo.ValueMember = "4";
             this.btnCombo.SelectedValueChanged += new System.EventHandler(this.btnCombo_SelectedValueChanged);
@@ -74,11 +70,11 @@ namespace Desktop.Administrador
             this.GridReporte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GridReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridReporte.Location = new System.Drawing.Point(3, 160);
+            this.GridReporte.Location = new System.Drawing.Point(3, 181);
             this.GridReporte.Name = "GridReporte";
             this.GridReporte.RowHeadersWidth = 43;
             this.GridReporte.RowTemplate.Height = 25;
-            this.GridReporte.Size = new System.Drawing.Size(725, 433);
+            this.GridReporte.Size = new System.Drawing.Size(725, 491);
             this.GridReporte.TabIndex = 0;
             this.GridReporte.TabStop = false;
             // 
@@ -93,9 +89,9 @@ namespace Desktop.Administrador
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(525, 604);
+            this.btnEliminar.Location = new System.Drawing.Point(525, 685);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(174, 48);
+            this.btnEliminar.Size = new System.Drawing.Size(174, 54);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "GENERAR PDF";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -108,9 +104,9 @@ namespace Desktop.Administrador
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(4, 246);
+            this.label1.Location = new System.Drawing.Point(4, 279);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 21);
+            this.label1.Size = new System.Drawing.Size(0, 22);
             this.label1.TabIndex = 66;
             // 
             // label5
@@ -118,13 +114,9 @@ namespace Desktop.Administrador
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-//<<<<<<< Updated upstream
-        //    this.label5.Location = new System.Drawing.Point(190, 83);
-//=======
-            this.label5.Location = new System.Drawing.Point(187, 95);
-//>>>>>>> Stashed changes
+            this.label5.Location = new System.Drawing.Point(189, 93);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(341, 28);
+            this.label5.Size = new System.Drawing.Size(381, 31);
             this.label5.TabIndex = 0;
             this.label5.Text = "Seleccionar Filtro de Disponibilidad:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,17 +129,17 @@ namespace Desktop.Administrador
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(730, 64);
+            this.label7.Size = new System.Drawing.Size(730, 73);
             this.label7.TabIndex = 0;
             this.label7.Text = "Reporte de Productos.";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ReporteProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(730, 659);
+            this.ClientSize = new System.Drawing.Size(730, 747);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCombo);

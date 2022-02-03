@@ -146,7 +146,14 @@ namespace Desktop.Administrador
                                 }
                             }
                         }
+                        Paragraph txt = new Paragraph();
+                        iTextSharp.text.Font txtr = new iTextSharp.text.Font(new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 14));
+                        txt.Add(new Chunk("La suma total es de: $" + precioF, txtr));
+                        txt.SpacingBefore = 25;
+                        txt.SpacingAfter = 25;
+                        txt.Alignment = Element.ALIGN_CENTER;
                         document.Add(table);
+                        document.Add(txt);
                     }
                     document.Close();
                 }

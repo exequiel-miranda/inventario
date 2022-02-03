@@ -1926,24 +1926,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\exequ\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ruben\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\exequ\\OneDrive\\Documents\\GitHub\\inventario\\Desktop\\Desktop.csproj",
+      "projectUniqueName": "C:\\Users\\ruben\\Desktop\\inventario\\Desktop\\Desktop.csproj",
       "projectName": "Desktop",
-      "projectPath": "C:\\Users\\exequ\\OneDrive\\Documents\\GitHub\\inventario\\Desktop\\Desktop.csproj",
-      "packagesPath": "C:\\Users\\exequ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\exequ\\OneDrive\\Documents\\GitHub\\inventario\\Desktop\\obj\\",
+      "projectPath": "C:\\Users\\ruben\\Desktop\\inventario\\Desktop\\Desktop.csproj",
+      "packagesPath": "C:\\Users\\ruben\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ruben\\Desktop\\inventario\\Desktop\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\exequ\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ruben\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
