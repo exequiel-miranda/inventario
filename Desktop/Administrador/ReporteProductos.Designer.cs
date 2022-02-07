@@ -58,7 +58,7 @@ namespace Desktop.Administrador
             this.btnCombo.DisplayMember = "4";
             this.btnCombo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCombo.FormattingEnabled = true;
-            this.btnCombo.Location = new System.Drawing.Point(263, 131);
+            this.btnCombo.Location = new System.Drawing.Point(247, 161);
             this.btnCombo.Name = "btnCombo";
             this.btnCombo.Size = new System.Drawing.Size(225, 31);
             this.btnCombo.TabIndex = 1;
@@ -70,11 +70,11 @@ namespace Desktop.Administrador
             this.GridReporte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GridReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridReporte.Location = new System.Drawing.Point(3, 181);
+            this.GridReporte.Location = new System.Drawing.Point(3, 218);
             this.GridReporte.Name = "GridReporte";
             this.GridReporte.RowHeadersWidth = 43;
             this.GridReporte.RowTemplate.Height = 25;
-            this.GridReporte.Size = new System.Drawing.Size(725, 491);
+            this.GridReporte.Size = new System.Drawing.Size(725, 449);
             this.GridReporte.TabIndex = 0;
             this.GridReporte.TabStop = false;
             // 
@@ -114,7 +114,7 @@ namespace Desktop.Administrador
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(189, 93);
+            this.label5.Location = new System.Drawing.Point(178, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(381, 31);
             this.label5.TabIndex = 0;

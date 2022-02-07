@@ -75,7 +75,7 @@ namespace Desktop.Administrador
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(569, 784);
+            this.btnEliminar.Location = new System.Drawing.Point(569, 770);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(149, 51);
             this.btnEliminar.TabIndex = 10;
@@ -92,7 +92,7 @@ namespace Desktop.Administrador
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(405, 784);
+            this.btnModificar.Location = new System.Drawing.Point(405, 770);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(149, 51);
             this.btnModificar.TabIndex = 9;
@@ -109,7 +109,7 @@ namespace Desktop.Administrador
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresar.Image = ((System.Drawing.Image)(resources.GetObject("btnIngresar.Image")));
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(238, 784);
+            this.btnIngresar.Location = new System.Drawing.Point(238, 770);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(149, 51);
             this.btnIngresar.TabIndex = 8;
@@ -136,7 +136,7 @@ namespace Desktop.Administrador
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(405, 68);
+            this.label5.Location = new System.Drawing.Point(109, 150);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 31);
             this.label5.TabIndex = 0;
@@ -189,7 +189,7 @@ namespace Desktop.Administrador
             this.GridEmpleados.Name = "GridEmpleados";
             this.GridEmpleados.RowHeadersWidth = 43;
             this.GridEmpleados.RowTemplate.Height = 25;
-            this.GridEmpleados.Size = new System.Drawing.Size(725, 378);
+            this.GridEmpleados.Size = new System.Drawing.Size(725, 372);
             this.GridEmpleados.TabIndex = 0;
             this.GridEmpleados.TabStop = false;
             this.GridEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridEmpleados_CellContentClick);
@@ -243,10 +243,10 @@ namespace Desktop.Administrador
             // 
             this.txtCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCategoria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCategoria.Location = new System.Drawing.Point(405, 101);
+            this.txtCategoria.Location = new System.Drawing.Point(109, 183);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(225, 30);
-            this.txtCategoria.TabIndex = 2;
+            this.txtCategoria.TabIndex = 3;
             this.txtCategoria.TextChanged += new System.EventHandler(this.txtCategoria_TextChanged);
             // 
             // label8
@@ -255,7 +255,7 @@ namespace Desktop.Administrador
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Emoji", 15.68317F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(109, 150);
+            this.label8.Location = new System.Drawing.Point(405, 68);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 31);
             this.label8.TabIndex = 0;
@@ -265,10 +265,10 @@ namespace Desktop.Administrador
             // 
             this.txtMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMarca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMarca.Location = new System.Drawing.Point(109, 182);
+            this.txtMarca.Location = new System.Drawing.Point(405, 100);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(225, 30);
-            this.txtMarca.TabIndex = 3;
+            this.txtMarca.TabIndex = 2;
             this.txtMarca.TextChanged += new System.EventHandler(this.txtMarca_TextChanged);
             // 
             // label3

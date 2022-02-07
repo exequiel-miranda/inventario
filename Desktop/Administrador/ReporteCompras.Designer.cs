@@ -47,11 +47,11 @@ namespace Desktop.Administrador
             this.GridReporte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GridReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridReporte.Location = new System.Drawing.Point(3, 193);
+            this.GridReporte.Location = new System.Drawing.Point(3, 218);
             this.GridReporte.Name = "GridReporte";
             this.GridReporte.RowHeadersWidth = 43;
             this.GridReporte.RowTemplate.Height = 25;
-            this.GridReporte.Size = new System.Drawing.Size(725, 423);
+            this.GridReporte.Size = new System.Drawing.Size(725, 449);
             this.GridReporte.TabIndex = 0;
             this.GridReporte.TabStop = false;
             // 
@@ -66,7 +66,7 @@ namespace Desktop.Administrador
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(525, 660);
+            this.btnEliminar.Location = new System.Drawing.Point(525, 685);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(174, 54);
             this.btnEliminar.TabIndex = 1;
@@ -104,7 +104,7 @@ namespace Desktop.Administrador
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(135, 126);
+            this.label1.Location = new System.Drawing.Point(216, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 28);
             this.label1.TabIndex = 62;
@@ -115,7 +115,7 @@ namespace Desktop.Administrador
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(395, 126);
+            this.label3.Location = new System.Drawing.Point(439, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 28);
             this.label3.TabIndex = 63;
@@ -126,7 +126,7 @@ namespace Desktop.Administrador
             this.dtpfechaInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpfechaInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpfechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfechaInicio.Location = new System.Drawing.Point(209, 128);
+            this.dtpfechaInicio.Location = new System.Drawing.Point(181, 149);
             this.dtpfechaInicio.Name = "dtpfechaInicio";
             this.dtpfechaInicio.Size = new System.Drawing.Size(149, 25);
             this.dtpfechaInicio.TabIndex = 64;
@@ -137,7 +137,7 @@ namespace Desktop.Administrador
             this.dtpfechaFin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpfechaFin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpfechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfechaFin.Location = new System.Drawing.Point(464, 128);
+            this.dtpfechaFin.Location = new System.Drawing.Point(402, 149);
             this.dtpfechaFin.Name = "dtpfechaFin";
             this.dtpfechaFin.Size = new System.Drawing.Size(149, 25);
             this.dtpfechaFin.TabIndex = 65;
@@ -148,7 +148,7 @@ namespace Desktop.Administrador
             this.precio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.precio.AutoSize = true;
             this.precio.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.precio.Location = new System.Drawing.Point(0, 686);
+            this.precio.Location = new System.Drawing.Point(3, 696);
             this.precio.Name = "precio";
             this.precio.Size = new System.Drawing.Size(242, 28);
             this.precio.TabIndex = 69;

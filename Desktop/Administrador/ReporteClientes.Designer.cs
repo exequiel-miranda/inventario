@@ -42,11 +42,11 @@ namespace Desktop.Administrador
             this.GridReporte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GridReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridReporte.Location = new System.Drawing.Point(3, 125);
+            this.GridReporte.Location = new System.Drawing.Point(3, 157);
             this.GridReporte.Name = "GridReporte";
             this.GridReporte.RowHeadersWidth = 43;
             this.GridReporte.RowTemplate.Height = 25;
-            this.GridReporte.Size = new System.Drawing.Size(725, 491);
+            this.GridReporte.Size = new System.Drawing.Size(725, 462);
             this.GridReporte.TabIndex = 0;
             this.GridReporte.TabStop = false;
             // 
@@ -61,7 +61,7 @@ namespace Desktop.Administrador
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(525, 660);
+            this.btnEliminar.Location = new System.Drawing.Point(525, 685);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(174, 54);
             this.btnEliminar.TabIndex = 1;

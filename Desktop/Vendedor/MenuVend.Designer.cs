@@ -52,7 +52,7 @@ namespace Desktop.Vendedor
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(265, 40);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(955, 809);
+            this.panelContenedor.Size = new System.Drawing.Size(955, 807);
             this.panelContenedor.TabIndex = 5;
             this.panelContenedor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -130,7 +130,7 @@ namespace Desktop.Vendedor
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(265, 849);
+            this.MenuVertical.Size = new System.Drawing.Size(265, 847);
             this.MenuVertical.TabIndex = 3;
             this.MenuVertical.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -255,7 +255,7 @@ namespace Desktop.Vendedor
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1220, 849);
+            this.ClientSize = new System.Drawing.Size(1220, 847);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MenuVertical);

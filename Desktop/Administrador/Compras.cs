@@ -36,7 +36,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDCompras as 'N',nombreProducto as 'Producto',cantidad as 'Cantidad', categoria as 'Categoria',marca as 'Marca',fechaCompra as 'Fecha de Compra', precio as 'Precio Unitario', precioTotal as 'Precio Total' FROM Compras";
+            String consulta = "SELECT IDCompras as 'N',nombreProducto as 'Producto',marca as 'Marca',categoria as 'Categoria',cantidad as 'Cantidad', precio as 'Precio Unitario', precioTotal as 'Precio Total', fechaCompra as 'Fecha de Compra' FROM Compras";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -160,13 +160,13 @@ namespace Desktop.Administrador
                 if(GridEmpleados.RowCount > 0 )
                 {
                     txtProducto.Text = GridEmpleados.CurrentRow.Cells[1].Value.ToString();
-                    txtCantidad.Text = GridEmpleados.CurrentRow.Cells[2].Value.ToString();
+                    txtMarca.Text = GridEmpleados.CurrentRow.Cells[2].Value.ToString();
                     txtCategoria.Text = GridEmpleados.CurrentRow.Cells[3].Value.ToString();
-                    txtMarca.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
-                    DTPfechaCompra.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
-                    txtPrecio.Text = GridEmpleados.CurrentRow.Cells[6].Value.ToString();
-                    txtPrecioTotal.Text = GridEmpleados.CurrentRow.Cells[7].Value.ToString();
-
+                    txtCantidad.Text = GridEmpleados.CurrentRow.Cells[4].Value.ToString();
+                    txtPrecio.Text = GridEmpleados.CurrentRow.Cells[5].Value.ToString();
+                    txtPrecioTotal.Text = GridEmpleados.CurrentRow.Cells[6].Value.ToString();
+                    DTPfechaCompra.Text = GridEmpleados.CurrentRow.Cells[7].Value.ToString();
+                    
                     btnModificar.Enabled = true;
                     btnEliminar.Enabled = true;
                

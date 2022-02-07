@@ -33,7 +33,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDCliente as N, nombre as Nombre, creditoFiscal as 'Credito Fiscal', telefono as Telefono  FROM Clientes where creditoFiscal is not null";
+            String consulta = "SELECT IDCliente as N, nombre as Nombre, creditoFiscal as 'Número de NIT', telefono as Telefono  FROM Clientes where creditoFiscal is not null";
             SqlCommand cmd = new SqlCommand(consulta,conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);

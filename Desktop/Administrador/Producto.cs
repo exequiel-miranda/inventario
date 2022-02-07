@@ -31,7 +31,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDProducto as 'N', nombre as 'Producto',categoria as 'Categoria',marca as 'Marca',precioUnitario as 'Precio Unitario',cantidad as 'Cantidad',Disponibilidad FROM Producto  where categoria is not null";
+            String consulta = "SELECT IDProducto as 'N', nombre as 'Producto',marca as 'Marca',categoria as 'Categoria',cantidad as 'Cantidad',precioUnitario as 'Precio Unitario',Disponibilidad FROM Producto  where categoria is not null";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -128,10 +128,11 @@ namespace Desktop.Administrador
                 {
                     //txtCodigo.Text = GridProductos.CurrentRow.Cells[0].Value.ToString();
                     txtNombre.Text = GridProductos.CurrentRow.Cells[1].Value.ToString();
-                    txtCategoria.Text = GridProductos.CurrentRow.Cells[2].Value.ToString();
-                    txtMarca.Text = GridProductos.CurrentRow.Cells[3].Value.ToString();
-                    txtPrecio.Text = GridProductos.CurrentRow.Cells[4].Value.ToString();
-                    txtCantidad.Text = GridProductos.CurrentRow.Cells[5].Value.ToString();
+                    txtMarca.Text = GridProductos.CurrentRow.Cells[2].Value.ToString();
+                    txtCategoria.Text = GridProductos.CurrentRow.Cells[3].Value.ToString();
+                    txtCantidad.Text = GridProductos.CurrentRow.Cells[4].Value.ToString();
+                    txtPrecio.Text = GridProductos.CurrentRow.Cells[5].Value.ToString();
+                    
                     btnModificar.Enabled = true;
                     btnEliminar.Enabled = true;
                 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,7 +38,7 @@ namespace Desktop.Administrador
         {
             //conexion.abrir();
             DataTable dt = new DataTable();
-            String consulta = "SELECT IDVentas as N,p.nombre as Producto, p.marca as Marca, IDFactura as 'N. de Factura',c.nombre as Cliente, v.cantidad as Cantidad, v.PrecioUnitario as 'Precio Unitario', precioTotal as 'Precio Total', fechaVenta as 'Fecha Venta', vendedor as 'Usuario' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
+            String consulta = "SELECT IDVentas as N,IDFactura as 'N. de Factura',p.nombre as Producto, p.marca as Marca, c.nombre as Cliente, v.cantidad as Cantidad, v.PrecioUnitario as 'Precio Unitario', precioTotal as 'Precio Total', usuario as 'Usuario', fechaVenta as 'Fecha Venta' FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto inner join Clientes as c on v.IDCliente = c.IDCliente";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -69,8 +70,10 @@ namespace Desktop.Administrador
                 SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
                 cmd.Parameters.AddWithValue("@cmb", s);
                 String text = Convert.ToString(cmd.ExecuteScalar());
-                txtPrecioUnitario.Text = text;
-           }
+                txtPrecioUnitario.Text = string.Format("$" + "{0:N2}", text);
+
+
+            }
         }
         public void llenar_suma()
         { 
@@ -149,7 +152,7 @@ namespace Desktop.Administrador
 
                     if (sepuedeonosepuede == "sepuede")
                     {
-                        string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad <= @PCantidad) begin insert into Ventas(IDProducto, IDFactura, IDCliente, cantidad, PrecioUnitario, fechaVenta, vendedor, precioTotal) values (@IDProducto,@IDFactura,@IDCliente, @Cantidad,@precioUnitario, @Fecha, 'Administrador', @precioTotal) update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
+                        string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad <= @PCantidad) begin insert into Ventas(IDProducto, IDFactura, IDCliente, cantidad, PrecioUnitario, fechaVenta, usuario, precioTotal) values (@IDProducto,@IDFactura,@IDCliente, @Cantidad,@precioUnitario, @Fecha, 'Administrador', @precioTotal) update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
                         SqlCommand cmd = new SqlCommand(insertar44, conexion.conectarbd);
                         cmd.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
                         cmd.Parameters.AddWithValue("@IDFactura", txtNFactura.Text);
@@ -299,13 +302,15 @@ namespace Desktop.Administrador
                 {
                     btnModificar.Enabled = true;
                     btnEliminar.Enabled = true;
-                    cmbProducto.Text = GridCategoria.CurrentRow.Cells[1].Value.ToString();
-                    labelMarca.Text = GridCategoria.CurrentRow.Cells[2].Value.ToString();
-                    txtNFactura.Text = GridCategoria.CurrentRow.Cells[3].Value.ToString();
+                    txtNFactura.Text = GridCategoria.CurrentRow.Cells[1].Value.ToString();
+                    cmbProducto.Text = GridCategoria.CurrentRow.Cells[2].Value.ToString();
+                    labelMarca.Text = GridCategoria.CurrentRow.Cells[3].Value.ToString();
                     cmbCliente.Text = GridCategoria.CurrentRow.Cells[4].Value.ToString();
                     txtCantidad.Text = GridCategoria.CurrentRow.Cells[5].Value.ToString();
                     txtPrecioUnitario.Text = GridCategoria.CurrentRow.Cells[6].Value.ToString();
-                    dtpFechaVenta.Text = GridCategoria.CurrentRow.Cells[7].Value.ToString();
+                    txtPrecioTotal.Text = GridCategoria.CurrentRow.Cells[7].Value.ToString();
+                    dtpFechaVenta.Text = GridCategoria.CurrentRow.Cells[9].Value.ToString();
+
                 }
                 else
                 {
@@ -426,11 +431,6 @@ namespace Desktop.Administrador
 
         Double s1, s2, suma;
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtNFactura_TextChanged(object sender, EventArgs e)
         {
             txtNFactura.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtNFactura.Text);
@@ -442,7 +442,7 @@ namespace Desktop.Administrador
             Double.TryParse(txtPrecioUnitario.Text, out s1);
             Double.TryParse(txtCantidad.Text, out s2);
             suma = s1 * s2;
-            txtPrecioTotal.Text = Convert.ToString(Math.Round(suma, 2));
+            txtPrecioTotal.Text = Convert.ToString(suma);
         }
     }
 }
