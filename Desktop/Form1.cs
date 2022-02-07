@@ -175,8 +175,8 @@ namespace Desktop
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-            txtUsuario.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtUsuario.Text);
-            txtUsuario.SelectionStart = txtUsuario.Text.Length;
+           txtUsuario.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txtUsuario.Text);
+           txtUsuario.SelectionStart = txtUsuario.Text.Length;
         }
 
         private void Form1_Load(object sender, EventArgs e)

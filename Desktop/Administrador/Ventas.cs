@@ -70,9 +70,7 @@ namespace Desktop.Administrador
                 SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
                 cmd.Parameters.AddWithValue("@cmb", s);
                 String text = Convert.ToString(cmd.ExecuteScalar());
-                txtPrecioUnitario.Text = string.Format("$" + "{0:N2}", text);
-
-
+                txtPrecioUnitario.Text = string.Format("{0:N5s}", text);
             }
         }
         public void llenar_suma()
@@ -80,7 +78,7 @@ namespace Desktop.Administrador
             String consulta = "Declare @IDFacturaVar varchar(50)  select @IDFacturaVar = IDFactura from Ventas IF(@IDFacturaVar is not null)  begin select SUM(precioTotal) from Ventas end";
             SqlCommand cmd = new SqlCommand(consulta, conexion.conectarbd);
             precioF = Convert.ToString(cmd.ExecuteScalar());
-            PriceTXT.Text = ("$" + precioF);
+            PriceTXT.Text = (precioF);
             
         }
         public void llenar_ComboCliente()
@@ -99,7 +97,7 @@ namespace Desktop.Administrador
         }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(cmbCliente.Text.Trim()))
+            if (string.IsNullOrEmpty(txtCantidad.Text.Trim()) || string.IsNullOrEmpty(cmbCliente.Text.Trim()) || string.IsNullOrEmpty(cmbProducto.Text.Trim()))
             {
                 MessageBox.Show("Hay Campos Vacios");
                 txtCantidad.Focus();
@@ -152,7 +150,8 @@ namespace Desktop.Administrador
 
                     if (sepuedeonosepuede == "sepuede")
                     {
-                        string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad <= @PCantidad) begin insert into Ventas(IDProducto, IDFactura, IDCliente, cantidad, PrecioUnitario, fechaVenta, usuario, precioTotal) values (@IDProducto,@IDFactura,@IDCliente, @Cantidad,@precioUnitario, @Fecha, 'Administrador', @precioTotal) update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
+                        string insertar44 = "Declare @PIDProducto int select @PIDProducto = Producto.IDProducto from Producto where @IDProducto = Producto.IDProducto  Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad < @PCantidad)  begin 	insert into Ventas(IDProducto, IDFactura, IDCliente, cantidad, PrecioUnitario, fechaVenta, usuario, precioTotal) 	values (@IDProducto,@IDFactura,@IDCliente, @Cantidad,@precioUnitario, @Fecha, 'Administrador', @precioTotal)  	update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else if(@PIDProducto = @IDProducto AND @Cantidad = @PCantidad) begin 	insert into Ventas(IDProducto, IDFactura, IDCliente, cantidad, PrecioUnitario, fechaVenta, usuario, precioTotal) 	values (@IDProducto,@IDFactura,@IDCliente, @Cantidad,@precioUnitario, @Fecha, 'Administrador', @precioTotal)  	update Producto set cantidad = cantidad - @Cantidad, Disponibilidad = 'False' where @IDProducto = IDProducto end";
+                      //  string insertar44 = "Declare @PIDProducto int select @PIDProducto = Pr-oducto.IDProducto from Producto where @IDProducto = Producto.IDProducto Declare @PCantidad int select @PCantidad = Producto.cantidad from Producto where @IDProducto = Producto.IDProducto IF(@PIDProducto = @IDProducto AND @Cantidad <= @PCantidad) begin insert into Ventas(IDProducto, IDFactura, IDCliente, cantidad, PrecioUnitario, fechaVenta, usuario, precioTotal) values (@IDProducto,@IDFactura,@IDCliente, @Cantidad,@precioUnitario, @Fecha, 'Administrador', @precioTotal) update Producto set cantidad = cantidad - @Cantidad where @IDProducto = IDProducto end else begin select IDVentas from Ventas end";
                         SqlCommand cmd = new SqlCommand(insertar44, conexion.conectarbd);
                         cmd.Parameters.AddWithValue("@IDProducto", cmbProducto.SelectedValue);
                         cmd.Parameters.AddWithValue("@IDFactura", txtNFactura.Text);
@@ -237,10 +236,10 @@ namespace Desktop.Administrador
                     {
 
                         //conexion.abrir();
-                        string actualizar = "Declare @cantYa int Declare @CantTotal int select @cantYa = Ventas.cantidad  from Ventas where @IDVentas = Ventas.IDVentas IF(@cantYa > @cantidad) begin  select @CantTotal = @cantYa - @Cantidad  update Producto set cantidad = cantidad + @CantTotal where Producto.nombre = @nombreProducto and Producto.marca = @marca  update Ventas set IDFactura=@IDFactura,IDCliente = @IDCliente, cantidad = @Cantidad, PrecioUnitario = @precioUnitario, precioTotal = @precioTotal,  fechaVenta = @FechaVenta where IDVentas = @IDVentas  end else begin  select @CantTotal = @Cantidad - @cantYa  update Producto set cantidad = cantidad - @CantTotal where Producto.nombre = @nombreProducto and Producto.marca = @marca update Ventas set IDFactura = @IDFactura, IDCliente = @IDCliente, cantidad = @Cantidad, PrecioUnitario = @precioUnitario, precioTotal = @precioTotal, fechaVenta = @FechaVenta where IDVentas = @IDVentas end";
+                        string actualizar = "Declare @cantYa int Declare @CantTotal int  select @cantYa = Ventas.cantidad  from Ventas where @IDVentas = Ventas.IDVentas Declare @compCantPro int select @compCantPro = Producto.cantidad from Producto where  Producto.nombre = @nombreProducto and Producto.marca = @marca IF(@compCantPro = 0) begin 	update Ventas set IDFactura=@IDFactura,IDCliente = @IDCliente, cantidad = @Cantidad, PrecioUnitario = @precioUnitario,  	precioTotal = @precioTotal,  fechaVenta = @FechaVenta where IDVentas = @IDVentas  end else begin 	IF(@cantYa > @cantidad) begin 		select @CantTotal = @cantYa - @Cantidad  		update Producto set cantidad = cantidad + @CantTotal where Producto.nombre = @nombreProducto and Producto.marca = @marca 		update Ventas set IDFactura=@IDFactura,IDCliente = @IDCliente, cantidad = @Cantidad, PrecioUnitario = @precioUnitario, 		precioTotal = @precioTotal,  fechaVenta = @FechaVenta where IDVentas = @IDVentas  end else begin 		select @CantTotal = @Cantidad - @cantYa   		update Producto set cantidad = cantidad - @CantTotal where Producto.nombre = @nombreProducto and Producto.marca = @marca 		update Ventas set IDFactura = @IDFactura, IDCliente = @IDCliente, cantidad = @Cantidad, PrecioUnitario = @precioUnitario, 		precioTotal = @precioTotal, fechaVenta = @FechaVenta where IDVentas = @IDVentas  end end";
                         SqlCommand cmd7 = new SqlCommand(actualizar, conexion.conectarbd);
                         string id = Convert.ToString(GridCategoria.CurrentRow.Cells[0].Value);
-                        string name = Convert.ToString(GridCategoria.CurrentRow.Cells[1].Value);
+                        string name = Convert.ToString(GridCategoria.CurrentRow.Cells[2].Value);
                         
                         cmd7.Parameters.AddWithValue("@IDVentas", id);
                         cmd7.Parameters.AddWithValue("@nombreProducto", name);
@@ -276,7 +275,7 @@ namespace Desktop.Administrador
                     {
                         string validacion3 = "select cantidad from Producto where @nombreProducto = Producto.nombre and @marca = Producto.marca";
                         SqlCommand cmd0 = new SqlCommand(validacion3, conexion.conectarbd);
-                        string name = Convert.ToString(GridCategoria.CurrentRow.Cells[1].Value);
+                        string name = Convert.ToString(GridCategoria.CurrentRow.Cells[2].Value);
                         cmd0.Parameters.AddWithValue("@nombreProducto", name);
                         cmd0.Parameters.AddWithValue("@marca", labelMarca.Text);
                         cmd0.ExecuteNonQuery();
@@ -430,6 +429,11 @@ namespace Desktop.Administrador
         }
 
         Double s1, s2, suma;
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void txtNFactura_TextChanged(object sender, EventArgs e)
         {

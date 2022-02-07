@@ -109,9 +109,6 @@ namespace Desktop.Administrador
 
                 //-----------------------------------------------------------------
                 //ok aqui vemos si el precio total es mayor a cero y la leemos
-
-
-
                 string validacion3 = "Declare @precioTotalVar decimal(9,2) select @precioTotalVar =  @precioTotal select @precioTotal";
                 SqlCommand cmd4434 = new SqlCommand(validacion3, conexion.conectarbd);
                 cmd4434.Parameters.AddWithValue("@precioTotal", txtPrecioTotal.Text);
@@ -249,8 +246,8 @@ namespace Desktop.Administrador
                     SqlCommand cmd = new SqlCommand(eliminar, conexion.conectarbd);
                     string id = Convert.ToString(GridEmpleados.CurrentRow.Cells[0].Value);
                     string name = Convert.ToString(GridEmpleados.CurrentRow.Cells[1].Value);
-                    string cant = Convert.ToString(GridEmpleados.CurrentRow.Cells[2].Value);
-                    string marc = Convert.ToString(GridEmpleados.CurrentRow.Cells[4].Value);
+                    string cant = Convert.ToString(GridEmpleados.CurrentRow.Cells[4].Value);
+                    string marc = Convert.ToString(GridEmpleados.CurrentRow.Cells[2].Value);
                     cmd.Parameters.AddWithValue("@IDCompras", id);
                     cmd.Parameters.AddWithValue("@NombreProducto", name);
                     cmd.Parameters.AddWithValue("@cantidad", cant);

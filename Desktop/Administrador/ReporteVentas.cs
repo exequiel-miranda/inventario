@@ -66,7 +66,7 @@ namespace Desktop.Administrador
             conexion.abrir();
             DataTable dt = new DataTable();
 //<<<<<<< Updated upstream
-            String consulta = "SELECT IDVentas as [ID],p.nombre as [Producto], v.IDFactura as 'N. de Factura',c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario as 'Precio Unitario', precioTotal as [Precio Total],fechaVenta as [Fecha de Venta], vendedor  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where IDFactura = 'vacioss'";
+            String consulta = "SELECT IDVentas as [ID],p.nombre as [Producto], v.IDFactura as 'N. de Factura',c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario as 'Precio Unitario', precioTotal as [Precio Total],fechaVenta as [Fecha de Venta], usuario  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where IDFactura = 'vacioss'";
 //=======
   //          String consulta = "SELECT IDVentas as [ID],p.nombre as [Producto], v.IDFactura AS [Factura],c.nombre as [Cliente], v.cantidad as [Cantidad],v.PrecioUnitario as [Precio Unitario],v.precioTotal as [Precio Total],fechaVenta as [Fecha de Venta], vendedor  FROM Ventas as v inner join Producto as p on v.IDProducto = p.IDProducto  inner join Clientes as c on v.IDCliente = c.IDCliente  where IDFactura = 'vacioss'";
 //>>>>>>> Stashed changes
@@ -212,13 +212,17 @@ namespace Desktop.Administrador
         {
             btnCombo.Text = "";
             btnCombo.Enabled = false;
-            
+            GridReporte.DataSource = llenar_grid();
+            llenar_suma();
+
         }
 
         private void dtpfechaFin_ValueChanged(object sender, EventArgs e)
         {
             btnCombo.Text = "";
             btnCombo.Enabled = false;
+            GridReporte.DataSource = llenar_grid();
+            llenar_suma();
         }
 
         private void botones2_Click(object sender, EventArgs e)
@@ -244,6 +248,17 @@ namespace Desktop.Administrador
         {
             dtpfechaInicio.Enabled = false;
             dtpfechaFin.Enabled = false;
+        }
+
+        private void btnCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridReporte.DataSource = llenar_grid();
+            llenar_suma();
+        }
+
+        private void ReporteVentas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
